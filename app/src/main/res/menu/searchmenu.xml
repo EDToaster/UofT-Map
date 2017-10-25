@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="40dp">
+
+    <!--<SearchView-->
+    <!--android:id="@+id/search_view"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+
+    <!--android:actionViewClass="android.widget.SearchView"-->
+    <!--android:icon="@drawable/places_ic_search"-->
+
+    <!--app:showAsAction="collapseActionView|ifRoom" />-->
+
+
+</menu>

@@ -1,6 +1,7 @@
 package tech.edt.MapApp;
 
 import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.LatLng;
 
 /**
  * Created by EDT on 2017-10-24.
@@ -8,21 +9,16 @@ import com.google.android.gms.maps.model.BitmapDescriptor;
  */
 
 public abstract class Feature {
-    protected double lat, lng;
+    protected LatLng latlng;
     protected String desc;
     protected BitmapDescriptor bitmap;
 
     public Feature(double lat, double lng, String desc) {
-        this.lat = lat;
-        this.lng = lng;
+        this.latlng = new LatLng(lat, lng);
     }
 
-    public double getLat() {
-        return this.lat;
-    }
-
-    public double getLng() {
-        return this.lng;
+    public LatLng getLatLng() {
+        return this.latlng;
     }
 
     public String getDesc() {
@@ -30,7 +26,7 @@ public abstract class Feature {
     }
 
     public BitmapDescriptor getIcon() {
-        return null;
+        return this.bitmap;
     }
 
 

@@ -1,7 +1,5 @@
 package tech.edt.MapApp;
 
-import android.graphics.BitmapFactory;
-
 /**
  * Created by class on 2017-10-24.
  * Extension of Feature class
@@ -16,7 +14,7 @@ public class Building extends Feature {
         super(lat, lng, desc);
         this.code = code;
         this.address = address;
-        this.bitmap = Util.getBuildlingBMP();
+        this.bitmap = Util.getBuildingBMP();
     }
 
     public String getCode() {

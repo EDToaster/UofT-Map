@@ -11,13 +11,18 @@ import java.io.InputStreamReader;
 
 /**
  * Created by class on 2017-10-24.
+ * Utility class for map app
  */
 
 public class Util {
-    private static BitmapDescriptor BUILDINGBMP = BitmapDescriptorFactory.fromResource(R.drawable.building);
+    private static BitmapDescriptor BUILDINGBMP;
+
+    public static void init() {
+        BUILDINGBMP = BitmapDescriptorFactory.fromResource(R.drawable.building);
+    }
 
 
-    public static BitmapDescriptor getBuildlingBMP() {
+    public static BitmapDescriptor getBuildingBMP() {
         return BUILDINGBMP;
     }
 
@@ -32,12 +37,12 @@ public class Util {
         return sb.toString();
     }
 
-    public static String getStringFromFile(String filePath) throws Exception {
-        File fl = new File(filePath);
-        FileInputStream fin = new FileInputStream(fl);
-        String ret = convertStreamToString(fin);
-        //Make sure you close all streams.
-        fin.close();
-        return ret;
-    }
+//    public static String getStringFromFile(String filePath) throws Exception {
+//        File fl = new File(filePath);
+//        FileInputStream fin = new FileInputStream(fl);
+//        String ret = convertStreamToString(fin);
+//        //Make sure you close all streams.
+//        fin.close();
+//        return ret;
+//    }
 }

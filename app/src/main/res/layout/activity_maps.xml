@@ -1,32 +1,10 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:map="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="tech.edt.MapApp.MapsActivity">
-
-    <!--<EditText-->
-        <!--android:id="@+id/text_search"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:ems="10"-->
-        <!--android:hint="@string/text_search"-->
-        <!--android:inputType="textPersonName"-->
-        <!--android:text="" />-->
-
-    <!--<Button-->
-        <!--android:id="@+id/button_search"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:onClick="jumpTo"-->
-        <!--android:text="@string/button_search" />-->
-
-    <!--<TextView-->
-        <!--android:id="@+id/search_results"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="227dp"-->
-        <!--android:text="" />-->
 
     <fragment
         android:id="@+id/map"
@@ -34,4 +12,19 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-</LinearLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:onClick="changeToSearch"
+        app:fabSize="mini"
+        app:srcCompat="@drawable/places_ic_search"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="9dp"
+        android:id="@+id/floatingActionButton"
+        android:tint="@android:color/background_light" />
+
+
+</RelativeLayout>
