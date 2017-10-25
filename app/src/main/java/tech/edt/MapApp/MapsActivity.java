@@ -1,8 +1,17 @@
 package tech.edt.MapApp;
 
-import android.support.v4.app.FragmentActivity;
+import android.content.res.AssetManager;
+import android.location.Address;
+import android.location.Geocoder;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ProgressBar;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -10,13 +19,32 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
+
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
+    private ArrayList<Feature> features;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        setContentView(R.layout.activity_loading);
+        this.features = new ArrayList<>();
+
+        try {
+            setUpFeatures();
+        } catch (Exception e) {
+            System.exit(1);
+        }
+
         setContentView(R.layout.activity_maps);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
@@ -37,10 +65,77 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-
-        // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        goToNinja(43.6644, -79.3923, 15f);
     }
+
+    private void setUpFeatures() throws IOException, Exception {
+        AssetManager assetManager = getAssets();
+        InputStream input = assetManager.open("building.bmp");
+        String buildings = Util.convertStreamToString(input);
+        JSONObject obj = new JSONObject(buildings);
+        JSONArray arr = obj.getJSONArray("buildings");
+
+        ProgressBar pb = (ProgressBar) findViewById(R.id.loading_bar);
+
+        for (int i = 0; i < arr.length(); i++) {
+            pb.setProgress((int) ((double) arr.length() / (double) i * 100d));
+            JSONObject ij = arr.getJSONObject(i);
+            if (!ij.getString("campus").equals("UTSG"))
+                continue;
+            double lat = ij.getDouble("lat");
+            double lng = ij.getDouble("lng");
+            String desc = ij.getString("name");
+            String code = ij.getString("code");
+
+            JSONObject address = ij.getJSONObject("address");
+            String s = address.getString("street") + "\n" + address.getString("city") + address.getString("province") + address.getString("country") + "\n" + address.getString("postal");
+
+            this.features.add(new Building(lat, lng, desc, code, s));//43.6644, -79.3923
+
+        }
+    }
+
+
+    public void jumpTo(View view) throws IOException {
+//        EditText et = (EditText) findViewById(R.id.text_search);
+//        TextView tv = (TextView) findViewById(R.id.search_results);
+//        tv.setText("");
+//
+//        String loc = et.getText().toString();
+//        Geocoder gc = new Geocoder(this);
+//        List<Address> list = gc.getFromLocationName(loc, 10);
+//
+//        for (Address i : list) tv.append(i.getLocality() + "\n");
+//        tv.append(String.valueOf(list.size()));
+//
+//        Address address = list.get(0);
+//        String locality = address.getLocality();
+//
+//        Toast.makeText(this, locality, Toast.LENGTH_SHORT).show();
+//        double lat = address.getLatitude();
+//        double lng = address.getLongitude();
+//
+//        goToLocation(locality, lat, lng, 15f);
+
+    }
+
+    public void goToNinja(double lat, double lng, float zoom) {
+        LatLng ll = new LatLng(lat, lng);
+        CameraUpdate up = CameraUpdateFactory.newLatLngZoom(ll, zoom);
+        mMap.moveCamera(up);
+    }
+
+
+    public void goToLocation(String locality, double lat, double lng, float zoom) {
+        LatLng ll = new LatLng(lat, lng);
+        mMap.addMarker(new MarkerOptions().position(ll).title(locality));
+        CameraUpdate up = CameraUpdateFactory.newLatLngZoom(ll, zoom);
+        mMap.moveCamera(up);
+    }
+
+    public void goToLocation(String locality, double lat, double lng) {
+        this.goToLocation(locality, lat, lng, 1.0f);
+    }
+
+
 }

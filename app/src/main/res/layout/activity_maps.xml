@@ -1,8 +1,37 @@
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:map="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/map"
-    android:name="com.google.android.gms.maps.SupportMapFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="tech.edt.MapApp.MapsActivity" />
+    android:orientation="vertical"
+    tools:context="tech.edt.MapApp.MapsActivity">
+
+    <!--<EditText-->
+        <!--android:id="@+id/text_search"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:ems="10"-->
+        <!--android:hint="@string/text_search"-->
+        <!--android:inputType="textPersonName"-->
+        <!--android:text="" />-->
+
+    <!--<Button-->
+        <!--android:id="@+id/button_search"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:onClick="jumpTo"-->
+        <!--android:text="@string/button_search" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/search_results"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="227dp"-->
+        <!--android:text="" />-->
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
