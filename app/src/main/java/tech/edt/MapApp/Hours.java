@@ -7,6 +7,7 @@ import org.json.JSONObject;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.TimeZone;
 
 /**
  * Created by class on 2017-10-26.
@@ -29,14 +30,15 @@ public class Hours {
     }
 
     protected class Interval {
-        SimpleDateFormat localDateFormat = new SimpleDateFormat("HH:mm");
+        private SimpleDateFormat localDateFormat = new SimpleDateFormat("hh:mm a");
         private boolean closed;
-        private Date open, close;
+        private long open, close;
 
         protected Interval(JSONObject interval) throws JSONException {
+            localDateFormat.setTimeZone(TimeZone.getTimeZone("EDT"));
             this.closed = interval.getBoolean("closed");
-            this.open = new Date((long) interval.getInt("open") * 1000);
-            this.close = new Date((long) interval.getInt("close") * 1000);
+            this.open = (long) interval.getInt("open") * 1000;
+            this.close = (long) interval.getInt("close") * 1000;
         }
 
         public String toString() {

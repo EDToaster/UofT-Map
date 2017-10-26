@@ -422,22 +422,22 @@
         "monday": {
           "closed": false,
           "open": 28800,
-          "close": 57600
+          "close": 61200
         },
         "tuesday": {
           "closed": false,
           "open": 28800,
-          "close": 57600
+          "close": 61200
         },
         "wednesday": {
           "closed": false,
           "open": 28800,
-          "close": 57600
+          "close": 61200
         },
         "thursday": {
           "closed": false,
           "open": 28800,
-          "close": 57600
+          "close": 61200
         },
         "friday": {
           "closed": false,
