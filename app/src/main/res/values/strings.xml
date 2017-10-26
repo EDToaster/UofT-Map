@@ -4,4 +4,6 @@
     <string name="title_activity_maps">UofT Map</string>
     <string name="title_activity_search_results">Search Results</string>
     <string name="drop_down">▼</string>
+    <string name="toggle_food">Show/Hide Food</string>
+    <string name="toggle_buildings">Show/Hide Buildings</string>
 </resources>
