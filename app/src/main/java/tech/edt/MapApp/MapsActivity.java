@@ -1,24 +1,11 @@
 package tech.edt.MapApp;
 
-import android.content.Context;
 import android.content.res.AssetManager;
-import android.location.Address;
-import android.location.Geocoder;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.widget.CursorAdapter;
-import android.support.v4.widget.SimpleCursorAdapter;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.ExpandableListView;
-import android.widget.ProgressBar;
-import android.widget.SearchView;
-import android.widget.TextView;
-import android.widget.Toast;
 
+import com.arlib.floatingsearchview.FloatingSearchView;
+import com.arlib.floatingsearchview.suggestions.model.SearchSuggestion;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -31,19 +18,24 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
-import java.util.List;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
-    private HashMap<String, Feature> features;
-    private SimpleCursorAdapter myAdapter;
+    private FloatingSearchView mSearchView;
+    public final String CREATOR = "Howard Chen";
 
-    private String[] strArrData = {"No Suggestions"};
+    private HashMap<String, Feature> features;
+    public static String[] keys;
+    public static ArrayList<Feature> values;
+
+    private ArrayList<Feature> suggestions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,10 +55,58 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         } catch (Exception e) {
             System.exit(1);
         }
+
+        values = new ArrayList<Feature>(features.values());
+
+        Collections.sort(values, new Comparator<Feature>() {
+            public int compare(Feature f1, Feature f2) {
+                return f1.toString().compareTo(f2.toString());
+            }
+        });
+
+        mSearchView = (FloatingSearchView) findViewById(R.id.floating_search_view);
+        suggestions = new ArrayList<>();
+
+        mSearchView.setOnQueryChangeListener(new FloatingSearchView.OnQueryChangeListener() {
+            @Override
+            public void onSearchTextChanged(String oldQuery, final String newQuery) {
+                suggestions.clear();
+                if (!newQuery.equals(""))
+                    for (Feature i : values) {
+                        if (i.getStrippedMatchString().contains(newQuery.toLowerCase()))
+                            suggestions.add(i);
+                    }
+
+                //pass them on to the search view
+                mSearchView.swapSuggestions(suggestions);
+
+            }
+
+        });
+        mSearchView.setOnSearchListener(new FloatingSearchView.OnSearchListener() {
+            @Override
+            public void onSuggestionClicked(SearchSuggestion searchSuggestion) {
+                if (searchSuggestion instanceof Feature) {
+                    Feature suggestion = (Feature) searchSuggestion;
+                    mSearchView.setSearchText(suggestion.toShortString());
+                    mSearchView.setSearchFocused(false);
+                    mMap.clear();
+                    LatLng ll = suggestion.getLatLng();
+                    mMap.addMarker(suggestion.getMarkerOptions());
+                    goToNinja(ll, -1f);
+                }
+            }
+
+            @Override
+            public void onSearchAction(String currentQuery) {
+                if (!suggestions.isEmpty())
+                    this.onSuggestionClicked(suggestions.get(suggestions.size() - 1));
+            }
+        });
     }
 
-    public void changeToSearch(View view) {
-        setContentView(R.layout.activity_search);
+    public static boolean implementsInterface(Object object, Class interf) {
+        return interf.isInstance(object);
     }
 
     /**
@@ -81,10 +121,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-        goToNinja(43.6644, -79.3923, 15f);
-        for (Feature i : this.features.values()) {
-            mMap.addMarker(new MarkerOptions().position(i.getLatLng()).icon(i.getIcon()));
-        }
+
+        goToNinja(new LatLng(43.6644, -79.3923), 15f);
+//        for (Feature i : this.features.values()) {
+//            mMap.addMarker(new MarkerOptions().position(i.getLatLng()).icon(i.getIcon()));
+//        }
     }
 
     private void setUpFeatures() throws Exception {
@@ -105,57 +146,23 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             double lng = ij.getDouble("lng");
             String name = ij.getString("name");
             String code = ij.getString("code");
+            String short_name = ij.getString("short_name");
 
             JSONObject address = ij.getJSONObject("address");
             String s = address.getString("street") + "\n" + address.getString("city") + address.getString("province") + address.getString("country") + "\n" + address.getString("postal");
 
-            this.features.put(code + " - " + name, new Building(lat, lng, name, code, s));
+            this.features.put(code + " - " + name, new Building(lat, lng, name, code, s, short_name));
 
         }
 
     }
 
-
-//    public void jumpTo(View view) throws IOException {
-//        EditText et = (EditText) findViewById(R.id.text_search);
-//        TextView tv = (TextView) findViewById(R.id.search_results);
-//        tv.setText("");
-//
-//        String loc = et.getText().toString();
-//        Geocoder gc = new Geocoder(this);
-//        List<Address> list = gc.getFromLocationName(loc, 10);
-//
-//        for (Address i : list) tv.append(i.getLocality() + "\n");
-//        tv.append(String.valueOf(list.size()));
-//
-//        Address address = list.get(0);
-//        String locality = address.getLocality();
-//
-//        Toast.makeText(this, locality, Toast.LENGTH_SHORT).show();
-//        double lat = address.getLatitude();
-//        double lng = address.getLongitude();
-//
-//        goToLocation(locality, lat, lng, 15f);
-
-//    }
-
-    public void goToNinja(double lat, double lng, float zoom) {
-        LatLng ll = new LatLng(lat, lng);
-        CameraUpdate up = CameraUpdateFactory.newLatLngZoom(ll, zoom);
+    public void goToNinja(LatLng ll, float zoom) {
+        CameraUpdate up;
+        if (zoom == -1) up = CameraUpdateFactory.newLatLng(ll);
+        else up = CameraUpdateFactory.newLatLngZoom(ll, zoom);
         mMap.moveCamera(up);
     }
-
-
-//    public void goToLocation(String locality, double lat, double lng, float zoom) {
-//        LatLng ll = new LatLng(lat, lng);
-//        mMap.addMarker(new MarkerOptions().position(ll).title(locality));
-//        CameraUpdate up = CameraUpdateFactory.newLatLngZoom(ll, zoom);
-//        mMap.moveCamera(up);
-//    }
-//
-//    public void goToLocation(String locality, double lat, double lng) {
-//        this.goToLocation(locality, lat, lng, 1.0f);
-//    }
 
 
 }

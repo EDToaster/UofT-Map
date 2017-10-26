@@ -3,5 +3,5 @@
     <string name="search_hint">Search here</string>
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_search_results">Search Results</string>
-    <string name="title_activity_search">Search Interface</string>
+    <string name="drop_down">▼</string>
 </resources>
