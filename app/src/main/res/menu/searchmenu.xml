@@ -1,7 +1,26 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="40dp">
+    android:layout_height="40dp"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MapsActivity">
+
+    <item android:id="@+id/action_location"
+        android:title="action_location"
+        android:orderInCategory="2"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_my_location_black_24dp"/>
+
+    <item android:id="@+id/action_food"
+        android:title="Show/Hide Food"
+        android:orderInCategory="3"
+        app:showAsAction="never"
+        />
+    <item android:id="@+id/action_building"
+        android:titleCondensed="hello"
+        android:title="Show/Hide Buildings"
+        android:orderInCategory="4"
+        app:showAsAction="never"
+        />
 
     <!--<SearchView-->
     <!--android:id="@+id/search_view"-->

@@ -1,5 +1,6 @@
 package tech.edt.MapApp;
 
+import android.*;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.content.res.AssetManager;
@@ -11,6 +12,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.arlib.floatingsearchview.FloatingSearchView;
@@ -112,9 +114,25 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 if (!suggestions.isEmpty())
                     this.onSuggestionClicked(suggestions.get(suggestions.size() - 1));
             }
+
         });
 
-    }
+        mSearchView.setOnMenuItemClickListener(new FloatingSearchView.OnMenuItemClickListener() {
+
+            @Override
+            public void onActionMenuItemSelected(MenuItem item) {
+                if (item.getItemId() == R.id.action_location) {
+                    centerOnMe();
+                } else if (item.getItemId() == R.id.action_food) {
+                    //toggle food
+                } else if (item.getItemId() == R.id.action_building) {
+                    //togle buildings
+                }
+            }
+
+
+
+    });}
 
     private void centerOnMe() {
         LocationManager locationManager = (LocationManager)
@@ -216,6 +234,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         else up = CameraUpdateFactory.newLatLngZoom(ll, zoom);
         mMap.animateCamera(up, 2000, null);
     }
+
+
 
 
 }
