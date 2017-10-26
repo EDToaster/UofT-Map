@@ -3,6 +3,8 @@ package tech.edt.MapApp;
 import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 
+import org.json.JSONArray;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -16,14 +18,20 @@ import java.io.InputStreamReader;
 
 public class Util {
     private static BitmapDescriptor BUILDINGBMP;
+    private static BitmapDescriptor FOODBMP;
 
     public static void init() {
         BUILDINGBMP = BitmapDescriptorFactory.fromResource(R.drawable.building_marker);
+        FOODBMP = BitmapDescriptorFactory.fromResource(R.drawable.food_marker);
     }
 
 
     public static BitmapDescriptor getBuildingBMP() {
         return BUILDINGBMP;
+    }
+
+    public static BitmapDescriptor getFoodBMP() {
+        return FOODBMP;
     }
 
     public static String convertStreamToString(InputStream is) throws Exception {
@@ -37,6 +45,16 @@ public class Util {
         return sb.toString();
     }
 
+    public static String[] toStringArray(JSONArray array) {
+        if (array == null)
+            return null;
+
+        String[] arr = new String[array.length()];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = array.optString(i);
+        }
+        return arr;
+    }
 //    public static String getStringFromFile(String filePath) throws Exception {
 //        File fl = new File(filePath);
 //        FileInputStream fin = new FileInputStream(fl);

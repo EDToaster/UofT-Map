@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.arlib.floatingsearchview.FloatingSearchView;
@@ -25,6 +26,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.InputStream;
@@ -45,6 +47,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public static String[] keys;
     public static ArrayList<Feature> values;
 
+    private static LatLng CAMPUSLATLNG;
+
     private final static int MY_PERMISSIONS_FINE_LOCATION = 101;
     private ArrayList<Feature> suggestions;
 
@@ -60,11 +64,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-        try {
-            setUpFeatures();
-        } catch (Exception e) {
-            System.exit(1);
-        }
+        setUpFeatures();
 
         values = new ArrayList<Feature>(features.values());
 
@@ -76,6 +76,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         mSearchView = (FloatingSearchView) findViewById(R.id.floating_search_view);
         suggestions = new ArrayList<>();
+        CAMPUSLATLNG = new LatLng(43.6644, -79.3923);
 
         mSearchView.setOnQueryChangeListener(new FloatingSearchView.OnQueryChangeListener() {
             @Override
@@ -103,7 +104,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     mMap.clear();
                     LatLng ll = suggestion.getLatLng();
                     mMap.addMarker(suggestion.getMarkerOptions());
-                    goToNinja(ll, -1f);
+                    goToNinja(ll, 18f);
                 }
             }
 
@@ -114,6 +115,35 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
         });
 
+    }
+
+    /**
+     * Manipulates the map once available.
+     * This callback is triggered when the map is ready to be used.
+     * This is where we can add markers or lines, add listeners or move the camera. In this case,
+     * we just add a marker near Sydney, Australia.
+     * If Google Play services is not installed on the device, the user will be prompted to install
+     * it inside the SupportMapFragment. This method will only be triggered once the user has
+     * installed Google Play services and returned to the app.
+     */
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        mMap = googleMap;
+
+        goToNinja(CAMPUSLATLNG, 15f);
+
+        for (Feature i : this.features.values()) {
+            mMap.addMarker(i.getMarkerOptions());
+        }
+
+        // enable my location
+        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+            mMap.setMyLocationEnabled(true);
+        } else {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                requestPermissions(new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, MY_PERMISSIONS_FINE_LOCATION);
+            }
+        }
     }
 
     private void centerOnMe() {
@@ -154,37 +184,21 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         return interf.isInstance(object);
     }
 
-    /**
-     * Manipulates the map once available.
-     * This callback is triggered when the map is ready to be used.
-     * This is where we can add markers or lines, add listeners or move the camera. In this case,
-     * we just add a marker near Sydney, Australia.
-     * If Google Play services is not installed on the device, the user will be prompted to install
-     * it inside the SupportMapFragment. This method will only be triggered once the user has
-     * installed Google Play services and returned to the app.
-     */
-    @Override
-    public void onMapReady(GoogleMap googleMap) {
-        mMap = googleMap;
 
-        goToNinja(new LatLng(43.6644, -79.3923), 15f);
-//        for (Feature i : this.features.values()) {
-//            mMap.addMarker(new MarkerOptions().position(i.getLatLng()).icon(i.getIcon()));
-//        }
-// enable my location
-        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-            mMap.setMyLocationEnabled(true);
-        } else {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                requestPermissions(new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, MY_PERMISSIONS_FINE_LOCATION);
-            }
-        }
-    }
-
-    private void setUpFeatures() throws Exception {
+    private void setUpFeatures() {
         this.features = new HashMap<>();
 
         AssetManager assetManager = getAssets();
+        try {
+            setUpBuildings(assetManager);
+            setUpFood(assetManager);
+        } catch (Exception e) {
+            Log.e("werwer", "Exception", e);
+        }
+    }
+
+    private void setUpBuildings(AssetManager assetManager) throws Exception {
+        //Buildings
         InputStream input = assetManager.open("buildings.json");
         String buildings = Util.convertStreamToString(input);
         JSONObject obj = new JSONObject(buildings);
@@ -202,13 +216,49 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             String short_name = ij.getString("short_name");
 
             JSONObject address = ij.getJSONObject("address");
-            String s = address.getString("street") + "\n" + address.getString("city") + address.getString("province") + address.getString("country") + "\n" + address.getString("postal");
+            String street = address.getString("street");
+            String s = street + "\n" + address.getString("city") + address.getString("province") + address.getString("country") + "\n" + address.getString("postal");
 
-            this.features.put(code + " - " + name, new Building(lat, lng, name, code, s, short_name));
+            this.features.put(code + " - " + name, new Building(lat, lng, name, code, street, s, short_name));
 
         }
-
     }
+
+    private void setUpFood(AssetManager assetManager) throws Exception {
+
+        //Food
+        InputStream input = assetManager.open("food.json");
+        String food = Util.convertStreamToString(input);
+        JSONObject obj = new JSONObject(food);
+        JSONArray arr = obj.getJSONArray("food");
+
+        // lat,  lng,  name, address,  short_name,  url,  imageURL,  desc,  hours,  tags
+        for (int i = 0; i < arr.length(); i++) {
+            JSONObject ij = arr.getJSONObject(i);
+            if (!ij.getString("campus").equals("UTSG"))
+                continue;
+            double lat = ij.getDouble("lat");
+            double lng = ij.getDouble("lng");
+            String name = ij.getString("name");
+            String short_name = ij.getString("short_name");
+            String address = ij.getString("address");
+            String url = ij.getString("url");
+            String imageURL = ij.getString("image");
+            String desc = ij.getString("description");
+            JSONObject h = null;
+            try {
+                h = ij.getJSONObject("hours");
+            } catch (JSONException e) {
+                Log.e("Tag", name, e);
+            }
+            Hours hours = new Hours(h);
+            String[] tags = Util.toStringArray(ij.getJSONArray("tags"));
+
+            this.features.put("Food - " + name, new Food(lat, lng, name, address, short_name, url, imageURL, desc, hours, tags));
+
+        }
+    }
+
 
     public void goToNinja(LatLng ll, float zoom) {
         CameraUpdate up;

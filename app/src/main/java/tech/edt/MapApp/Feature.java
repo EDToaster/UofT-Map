@@ -62,9 +62,14 @@ abstract class Feature implements SearchSuggestion {
         return toString();
     }
 
+    public String getSnippet() {
+        return "";
+    }
+
+
     public MarkerOptions getMarkerOptions() {
         if (markerOptions == null)
-            markerOptions = new MarkerOptions().position(latlng).icon(getIcon()).title(this.toString());
+            markerOptions = new MarkerOptions().position(latlng).icon(getIcon()).title(this.toString()).snippet(getSnippet());
         return markerOptions;
     }
 
