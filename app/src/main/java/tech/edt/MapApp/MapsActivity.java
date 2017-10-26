@@ -88,7 +88,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 suggestions.clear();
                 if (!newQuery.equals(""))
                     for (Feature i : values) {
-                        if (i.getStrippedMatchString().contains(newQuery.toLowerCase()))
+                        String[] toks = newQuery.toLowerCase().trim().split("(\\s+)");
+                        boolean put = true;
+                        for (String tok : toks) {
+                            if (!i.getStrippedMatchString().contains(tok)) {
+                                put = false;
+                                break;
+                            }
+                        }
+                        if (put)
                             suggestions.add(i);
                     }
 
@@ -105,9 +113,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     Feature suggestion = (Feature) searchSuggestion;
                     mSearchView.setSearchText(suggestion.toShortString());
                     mSearchView.setSearchFocused(false);
-                    mMap.clear();
                     LatLng ll = suggestion.getLatLng();
-                    mMap.addMarker(suggestion.getMarkerOptions());
+
+                    suggestion.getMarker(mMap).setVisible(true);
+
                     goToNinja(ll, FOCUSED_ZOOM);
                 }
             }
@@ -130,15 +139,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     //toggle food
 
                 } else if (item.getItemId() == R.id.action_building) {
-                    //togle buildings
-
+                    //toggle buildings
                 }
-
             }
-
-
         });
-
     }
 
     /**
@@ -156,9 +160,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         goToNinja(CAMPUSLATLNG, DEFAULT_ZOOM);
 
-        for (Feature i : this.features.values()) {
-            mMap.addMarker(i.getMarkerOptions());
-        }
+//        for (Feature i : this.features.values()) {
+//            i.getMarker(mMap).setVisible(true); //create the marker
+//        }
 
         // enable my location
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
@@ -217,7 +221,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             setUpBuildings(assetManager);
             setUpFood(assetManager);
         } catch (Exception e) {
-            Log.e("werwer", "Exception", e);
+            Log.e("setUpFeatures", "Exception", e);
         }
     }
 
@@ -282,7 +286,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         }
     }
-
 
     public void goToNinja(LatLng ll, float zoom) {
         CameraUpdate up;
