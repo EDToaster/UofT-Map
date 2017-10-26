@@ -172,7 +172,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         } else {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 requestPermissions(
-                        new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, MY_PERMISSIONS_FINE_LOCATION);
+                        new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION},
+                        MY_PERMISSIONS_FINE_LOCATION);
             }
         }
     }
@@ -269,7 +270,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     address.getString("country") + "\n" +
                     address.getString("postal");
 
-            this.features.put(code + " - " + name, new Building(lat, lng, name, code, street, s, short_name));
+            this.features.put(code + " - " + name, new Building(lat, lng, name, code, street, s,
+                    short_name));
 
         }
     }
@@ -304,7 +306,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             Hours hours = new Hours(h);
             String[] tags = Util.toStringArray(ij.getJSONArray("tags"));
 
-            this.features.put("Food - " + name, new Food(lat, lng, name, address, short_name, url, imageURL, desc, hours, tags));
+            this.features.put("Food - " + name, new Food(lat, lng, name, address, short_name, url,
+                    imageURL, desc, hours, tags));
 
         }
     }
