@@ -31,12 +31,12 @@ public class Hours {
     protected class Interval {
         SimpleDateFormat localDateFormat = new SimpleDateFormat("HH:mm");
         private boolean closed;
-        private int open, close;
+        private Date open, close;
 
         protected Interval(JSONObject interval) throws JSONException {
             this.closed = interval.getBoolean("closed");
-            this.open = interval.getInt("open");
-            this.close = interval.getInt("close");
+            this.open = new Date((long) interval.getInt("open") * 1000);
+            this.close = new Date((long) interval.getInt("close") * 1000);
         }
 
         public String toString() {
