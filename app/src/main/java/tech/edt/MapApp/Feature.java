@@ -3,6 +3,7 @@ package tech.edt.MapApp;
 import android.os.Parcel;
 
 import com.arlib.floatingsearchview.suggestions.model.SearchSuggestion;
+import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
@@ -16,7 +17,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 abstract class Feature implements SearchSuggestion {
     private LatLng latlng;
     private String name;
-    private MarkerOptions markerOptions;
+    private Marker marker;
 
     Feature(double lat, double lng, String name) {
         this.latlng = new LatLng(lat, lng);
@@ -62,10 +63,20 @@ abstract class Feature implements SearchSuggestion {
         return toString();
     }
 
-    public MarkerOptions getMarkerOptions() {
-        if (markerOptions == null)
-            markerOptions = new MarkerOptions().position(latlng).icon(getIcon()).title(this.toString());
-        return markerOptions;
+    public String getSnippet() {
+        return "";
+    }
+
+    public Marker getMarker(GoogleMap mMap) {
+        if (this.marker == null) {
+            this.marker = mMap.addMarker(getMarkerOptions());
+            marker.setVisible(false);
+        }
+        return marker;
+    }
+
+    private MarkerOptions getMarkerOptions() {
+        return new MarkerOptions().position(latlng).icon(getIcon()).title(this.toString()).snippet(getSnippet());
     }
 
 }

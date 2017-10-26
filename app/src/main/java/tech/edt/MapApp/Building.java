@@ -12,14 +12,15 @@ import com.google.android.gms.maps.model.BitmapDescriptor;
 
 public class Building extends Feature implements SearchSuggestion {
 
-    private String code, address, short_name;
+    private String code, address, short_name, short_address;
 
 
-    public Building(double lat, double lng, String name, String code, String address, String short_name) {
+    public Building(double lat, double lng, String name, String code, String short_address, String address, String short_name) {
         super(lat, lng, name);
         this.code = code;
         this.address = address;
         this.short_name = short_name;
+        this.short_address = short_address;
     }
 
     public BitmapDescriptor getIcon() {
@@ -60,5 +61,8 @@ public class Building extends Feature implements SearchSuggestion {
 
     }
 
-
+    @Override
+    public String getSnippet() {
+        return short_address;
+    }
 }
