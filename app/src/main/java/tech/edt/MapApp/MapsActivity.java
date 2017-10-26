@@ -124,9 +124,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 if (item.getItemId() == R.id.action_location) {
                     centerOnMe();
                 } else if (item.getItemId() == R.id.action_food) {
-                    //toggle food
+                    //
                 } else if (item.getItemId() == R.id.action_building) {
-                    //togle buildings
+                    //
                 }
             }
 
@@ -134,33 +134,47 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     });}
 
-    private void centerOnMe() {
-        LocationManager locationManager = (LocationManager)
-                getSystemService(Context.LOCATION_SERVICE);
-        Criteria criteria = new Criteria();
 
-        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            return;
+
+    private void centerOnMe() {
+        try {
+            LocationManager locationManager = (LocationManager)
+                    getSystemService(Context.LOCATION_SERVICE);
+            Criteria criteria = new Criteria();
+
+            if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.
+                    ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.
+                    checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION)
+                    != PackageManager.PERMISSION_GRANTED) {
+                return;
+            }
+            Location location = locationManager.getLastKnownLocation(locationManager
+                    .getBestProvider(criteria, false));
+            double lat = location.getLatitude();
+            double lng = location.getLongitude();
+            LatLng cords = new LatLng(lat, lng);
+            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(cords, 18));
+        }catch (Exception e){//don't know the name whoops
+            Toast.makeText(getApplicationContext(), "Error fetching location",
+                    Toast.LENGTH_LONG).show();
+
         }
-        Location location = locationManager.getLastKnownLocation(locationManager
-                .getBestProvider(criteria, false));
-        double lat = location.getLatitude();
-        double lng = location.getLongitude();
-        LatLng cords = new LatLng(lat, lng);
-        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(cords, 18));
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
+                                           @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         switch (requestCode) {
             case MY_PERMISSIONS_FINE_LOCATION:
                 if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+                    if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.
+                            ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
                         mMap.setMyLocationEnabled(true);
                     }
                 } else {
-                    Toast.makeText(getApplicationContext(), "This app requires location permissions to be granted", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "This app requires location " +
+                            "permissions to be granted", Toast.LENGTH_LONG).show();
                     finish();
                 }
                 break;
@@ -190,11 +204,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 //            mMap.addMarker(new MarkerOptions().position(i.getLatLng()).icon(i.getIcon()));
 //        }
 // enable my location
-        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.
+                ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             mMap.setMyLocationEnabled(true);
         } else {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                requestPermissions(new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, MY_PERMISSIONS_FINE_LOCATION);
+                requestPermissions(new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION},
+                        MY_PERMISSIONS_FINE_LOCATION);
             }
         }
     }
@@ -220,9 +236,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             String short_name = ij.getString("short_name");
 
             JSONObject address = ij.getJSONObject("address");
-            String s = address.getString("street") + "\n" + address.getString("city") + address.getString("province") + address.getString("country") + "\n" + address.getString("postal");
+            String s = address.getString("street") + "\n" + address.getString("city") +
+                    address.getString("province") + address.getString("country") + "\n" +
+                    address.getString("postal");
 
-            this.features.put(code + " - " + name, new Building(lat, lng, name, code, s, short_name));
+            this.features.put(code + " - " + name, new Building(lat, lng, name, code, s,
+                    short_name));
 
         }
 
