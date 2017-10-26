@@ -50,7 +50,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private static LatLng CAMPUSLATLNG;
 
-    private final static int MY_PERMISSIONS_FINE_LOCATION = 101;
+    private static final int MY_PERMISSIONS_FINE_LOCATION = 101;
+    private static final float FOCUSED_ZOOM = 18f;
+    private static final float DEFAULT_ZOOM = 15f;
+
     private ArrayList<Feature> suggestions;
 
     @Override
@@ -105,7 +108,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     mMap.clear();
                     LatLng ll = suggestion.getLatLng();
                     mMap.addMarker(suggestion.getMarkerOptions());
-                    goToNinja(ll, 18f);
+                    goToNinja(ll, FOCUSED_ZOOM);
                 }
             }
 
@@ -115,6 +118,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     this.onSuggestionClicked(suggestions.get(suggestions.size() - 1));
             }
         });
+
         mSearchView.setOnMenuItemClickListener(new FloatingSearchView.OnMenuItemClickListener() {
 
             @Override
@@ -150,7 +154,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        goToNinja(CAMPUSLATLNG, 15f);
+        goToNinja(CAMPUSLATLNG, DEFAULT_ZOOM);
 
         for (Feature i : this.features.values()) {
             mMap.addMarker(i.getMarkerOptions());
@@ -178,8 +182,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .getBestProvider(criteria, false));
         double lat = location.getLatitude();
         double lng = location.getLongitude();
-        LatLng cords = new LatLng(lat, lng);
-        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(cords, 18));
+        LatLng ll = new LatLng(lat, lng);
+        goToNinja(ll, FOCUSED_ZOOM);
     }
 
     @Override
