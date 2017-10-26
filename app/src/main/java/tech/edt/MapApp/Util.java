@@ -18,7 +18,7 @@ public class Util {
     private static BitmapDescriptor BUILDINGBMP;
 
     public static void init() {
-        BUILDINGBMP = BitmapDescriptorFactory.fromResource(R.drawable.building);
+        BUILDINGBMP = BitmapDescriptorFactory.fromResource(R.drawable.building_marker);
     }
 
 

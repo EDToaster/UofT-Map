@@ -1,8 +1,17 @@
 package tech.edt.MapApp;
 
+import android.content.Context;
+import android.content.pm.PackageManager;
 import android.content.res.AssetManager;
+import android.location.Criteria;
+import android.location.Location;
+import android.location.LocationManager;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
+import android.widget.Toast;
 
 import com.arlib.floatingsearchview.FloatingSearchView;
 import com.arlib.floatingsearchview.suggestions.model.SearchSuggestion;
@@ -25,6 +34,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 
+
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
@@ -35,6 +45,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public static String[] keys;
     public static ArrayList<Feature> values;
 
+    private final static int MY_PERMISSIONS_FINE_LOCATION = 101;
     private ArrayList<Feature> suggestions;
 
     @Override
@@ -42,7 +53,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         super.onCreate(savedInstanceState);
         MapsInitializer.initialize(this);
         Util.init();
-
 
         setContentView(R.layout.activity_maps);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
@@ -103,6 +113,41 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     this.onSuggestionClicked(suggestions.get(suggestions.size() - 1));
             }
         });
+
+    }
+
+    private void centerOnMe() {
+        LocationManager locationManager = (LocationManager)
+                getSystemService(Context.LOCATION_SERVICE);
+        Criteria criteria = new Criteria();
+
+        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            return;
+        }
+        Location location = locationManager.getLastKnownLocation(locationManager
+                .getBestProvider(criteria, false));
+        double lat = location.getLatitude();
+        double lng = location.getLongitude();
+        LatLng cords = new LatLng(lat, lng);
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(cords, 18));
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        switch (requestCode) {
+            case MY_PERMISSIONS_FINE_LOCATION:
+                if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+                        mMap.setMyLocationEnabled(true);
+                    }
+                } else {
+                    Toast.makeText(getApplicationContext(), "This app requires location permissions to be granted", Toast.LENGTH_LONG).show();
+                    finish();
+                }
+                break;
+
+        }
     }
 
     public static boolean implementsInterface(Object object, Class interf) {
@@ -126,6 +171,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 //        for (Feature i : this.features.values()) {
 //            mMap.addMarker(new MarkerOptions().position(i.getLatLng()).icon(i.getIcon()));
 //        }
+// enable my location
+        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+            mMap.setMyLocationEnabled(true);
+        } else {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                requestPermissions(new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, MY_PERMISSIONS_FINE_LOCATION);
+            }
+        }
     }
 
     private void setUpFeatures() throws Exception {
@@ -161,7 +214,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         CameraUpdate up;
         if (zoom == -1) up = CameraUpdateFactory.newLatLng(ll);
         else up = CameraUpdateFactory.newLatLngZoom(ll, zoom);
-        mMap.moveCamera(up);
+        mMap.animateCamera(up, 2000, null);
     }
 
 
