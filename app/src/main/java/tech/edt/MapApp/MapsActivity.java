@@ -93,12 +93,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MapsInitializer.initialize(this);
         Util.init();
 
-        setContentView(R.layout.activity_maps);
-        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map);
-        mapFragment.getMapAsync(this);
-
+        //Data Crunching
         setUpFeatures();
         current_selected = UTSG;
 
@@ -111,6 +106,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         Collections.sort(UTSG, cmp);
         Collections.sort(UTM, cmp);
         Collections.sort(UTSC, cmp);
+        //End Data Crunching
+
+        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
+        setContentView(R.layout.activity_maps);
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
+
 
         mSearchView = (FloatingSearchView) findViewById(R.id.floating_search_view);
         CAMPUSLATLNG = new LatLng(43.6644, -79.3923);
