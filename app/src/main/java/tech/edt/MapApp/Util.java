@@ -22,7 +22,7 @@ public class Util {
 
     public static void init() {
         BUILDINGBMP = BitmapDescriptorFactory.fromResource(R.drawable.building_marker);
-        FOODBMP = BitmapDescriptorFactory.fromResource(R.drawable.food_marker);
+        FOODBMP = BitmapDescriptorFactory.fromResource(R.drawable.building_marker);
     }
 
 

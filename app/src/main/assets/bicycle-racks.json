@@ -1,0 +1,1369 @@
+{
+  "name": "Bicycle Racks",
+  "slug": "bicycle-racks",
+  "icon": "http:\/\/map.utoronto.ca\/_assets\/_icons\/marker_bike_racks.png",
+  "sublayers": [
+    {
+      "id": "65",
+      "name": "Bike Rack",
+      "slug": "bike-rack"
+    },
+    {
+      "id": "64",
+      "name": "Bike Share Toronto",
+      "slug": "bike-share-toronto"
+    }
+  ],
+  "markers": [
+    {
+      "id": "127",
+      "title": "Bicycle Parking: Banting Institute",
+      "lat": "43.6603",
+      "lng": "-79.3888",
+      "buildingCode": "016",
+      "desc": "3 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks.jpeg",
+      "alt": "bike rack",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "216",
+      "title": "Bicycle Parking: Bahen Centre",
+      "lat": "43.6603",
+      "lng": "-79.3972",
+      "buildingCode": "080",
+      "desc": "73 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks1.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "217",
+      "title": "Bicycle Parking: Architecture Building",
+      "lat": "43.6586",
+      "lng": "-79.3982",
+      "buildingCode": "028",
+      "desc": "18 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks2.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "230",
+      "title": "Bicycle Parking: Claude T. Bissell Building",
+      "lat": "43.6652",
+      "lng": "-79.3992",
+      "buildingCode": "006A",
+      "desc": "29 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks3.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "231",
+      "title": "Bicycle Parking: Clara Benson Building",
+      "lat": "43.6633",
+      "lng": "-79.4003",
+      "buildingCode": "068",
+      "desc": "38 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks4.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "233",
+      "title": "Bicycle Parking: 370 Huron Street",
+      "lat": "43.6646",
+      "lng": "-79.4004",
+      "buildingCode": "138",
+      "desc": "7 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks5.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "237",
+      "title": "Bicycle Parking: Best Institute",
+      "lat": "43.6603",
+      "lng": "-79.3892",
+      "buildingCode": "052",
+      "desc": "9 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks7.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "240",
+      "title": "Bicycle Parking: 56 Spadina Road",
+      "lat": "43.6697",
+      "lng": "-79.4053",
+      "buildingCode": "153",
+      "desc": "2 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks8.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "242",
+      "title": "Bicycle Parking: Institute for Christian Studies",
+      "lat": "43.6583",
+      "lng": "-79.3975",
+      "buildingCode": "0000",
+      "desc": "5 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks9.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "247",
+      "title": "Bicycle Parking: Canadiana Gallery",
+      "lat": "43.6620",
+      "lng": "-79.3928",
+      "buildingCode": "047",
+      "desc": "1 bicycle rack.",
+      "image": "\/_assets\/_m_b\/racks10.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "249",
+      "title": "Bicycle Parking: 89 Chestnut",
+      "lat": "43.6544",
+      "lng": "-79.3850",
+      "buildingCode": "158",
+      "desc": "19 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks12.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "250",
+      "title": "Bicycle Parking: Cumberland House",
+      "lat": "43.6594",
+      "lng": "-79.3961",
+      "buildingCode": "026",
+      "desc": "1 post & ring bicycle stand.",
+      "image": "\/_assets\/_m_b\/racks13.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "251",
+      "title": "Bicycle Parking: 243 College",
+      "lat": "43.6581",
+      "lng": "-79.3988",
+      "buildingCode": "0000",
+      "desc": "3 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks14.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "252",
+      "title": "Bicycle Parking: Dentistry Building",
+      "lat": "43.6558",
+      "lng": "-79.3869",
+      "buildingCode": "065",
+      "desc": "32 post & ring stands and 3 bicycle racks.",
+      "image": "\/_assets\/_m_b\/racks15.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "253",
+      "title": "Bicycle Parking: Edward Johnson Building",
+      "lat": "43.6666",
+      "lng": "-79.3943",
+      "buildingCode": "051",
+      "desc": "32 post & ring stands and 3 bicycle racks.",
+      "image": "\/_assets\/_m_b\/racks16.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "254",
+      "title": "Bicycle Parking: Early Learning Centre",
+      "lat": "43.6640",
+      "lng": "-79.4012",
+      "buildingCode": "129",
+      "desc": "5 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks17.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "255",
+      "title": "Bicycle Parking: Earth Sciences Centre",
+      "lat": "43.6608",
+      "lng": "-79.3993",
+      "buildingCode": "062",
+      "desc": "43 post & ring stands and 1 bicycle rack.",
+      "image": "\/_assets\/_m_b\/racks19.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "256",
+      "title": "Bicycle Parking: 720 Spadina Avenue",
+      "lat": "43.6655",
+      "lng": "-79.4033",
+      "buildingCode": "189",
+      "desc": "6 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks20.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "258",
+      "title": "Bicycle Parking: Faculty Club",
+      "lat": "43.6613",
+      "lng": "-79.4006",
+      "buildingCode": "075",
+      "desc": "1 bicycle rack.",
+      "image": "\/_assets\/_m_b\/racks21.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "259",
+      "title": "Bicycle Parking: 371 Bloor Street West",
+      "lat": "43.6665",
+      "lng": "-79.4033",
+      "buildingCode": "014",
+      "desc": "29 post & ring stands, 2 racks, and 3 bicycle lockers.",
+      "image": "\/_assets\/_m_b\/racks22.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "260",
+      "title": "Bicycle Parking: FitzGerald Building",
+      "lat": "43.6597",
+      "lng": "-79.3922",
+      "buildingCode": "025",
+      "desc": "43 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks23.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "261",
+      "title": "Bicycle Parking: Falconer Hall",
+      "lat": "43.6666",
+      "lng": "-79.3938",
+      "buildingCode": "050",
+      "desc": "4 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks24.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "262",
+      "title": "Bicycle Parking: Fields Institute",
+      "lat": "43.6586",
+      "lng": "-79.3974",
+      "buildingCode": "105",
+      "desc": "27 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks25.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "263",
+      "title": "Bicycle Parking: Gage Building",
+      "lat": "43.6584",
+      "lng": "-79.3971",
+      "buildingCode": "082",
+      "desc": "2 post & ring stands and 1 bicycle rack.",
+      "image": "\/_assets\/_m_b\/racks26.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "265",
+      "title": "Bicycle Parking: Graduate House",
+      "lat": "43.6634",
+      "lng": "-79.4020",
+      "buildingCode": "064",
+      "desc": "18 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks27.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "266",
+      "title": "Bicycle Parking: School of Graduate Studies",
+      "lat": "43.6620",
+      "lng": "-79.3974",
+      "buildingCode": "043",
+      "desc": "5 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks28.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "267",
+      "title": "Bicycle Parking: Hart House",
+      "lat": "43.6635",
+      "lng": "-79.3950",
+      "buildingCode": "002",
+      "desc": "10 post & ring stands and 2 bicycle racks.",
+      "image": "\/_assets\/_m_b\/racks29.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "268",
+      "title": "Bicycle Parking: Health Sciences Building",
+      "lat": "43.6592",
+      "lng": "-79.3930",
+      "buildingCode": "154",
+      "desc": "15 post & ring stands and 5 bicycle racks.",
+      "image": "\/_assets\/_m_b\/racks31.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "269",
+      "title": "Bicycle Parking: 215 Huron Street",
+      "lat": "43.6593",
+      "lng": "-79.3985",
+      "buildingCode": "067",
+      "desc": "27 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks32.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "270",
+      "title": "Bicycle Parking: Innis College",
+      "lat": "43.6656",
+      "lng": "-79.3992",
+      "buildingCode": "132",
+      "desc": "8 post & ring stands and 4 bicycle racks.",
+      "image": "\/_assets\/_m_b\/racks33.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "272",
+      "title": "Bicycle Parking: Innis Residence",
+      "lat": "43.6659",
+      "lng": "-79.3990",
+      "buildingCode": "133",
+      "desc": "10 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks34.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "273",
+      "title": "Bicycle Parking: 90 Wellesley Street West",
+      "lat": "43.6639",
+      "lng": "-79.3896",
+      "buildingCode": "0000",
+      "desc": "2 bicycle racks.",
+      "image": "\/_assets\/_m_b\/racks35.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "275",
+      "title": "Bicycle Parking: Koffler House",
+      "lat": "43.6605",
+      "lng": "-79.4008",
+      "buildingCode": "145",
+      "desc": "8 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks36.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "277",
+      "title": "Bicycle Parking: Koffler Student Services Centre",
+      "lat": "43.6587",
+      "lng": "-79.3967",
+      "buildingCode": "143",
+      "desc": "60 post & ring stands and 4 bicycle racks.",
+      "image": "\/_assets\/_m_b\/racks37.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "279",
+      "title": "Bicycle Parking: Fasken Martineau Building",
+      "lat": "43.6640",
+      "lng": "-79.4022",
+      "buildingCode": "151",
+      "desc": "2 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks38.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "281",
+      "title": "Bicycle Parking: Lillian Massey Building",
+      "lat": "43.6686",
+      "lng": "-79.3939",
+      "buildingCode": "528",
+      "desc": "12 post & ring stands and 1 bicycle rack.",
+      "image": "\/_assets\/_m_b\/racks39.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "282",
+      "title": "Bicycle Parking: Lash Miller Chemical Laboratories",
+      "lat": "43.6614",
+      "lng": "-79.3975",
+      "buildingCode": "073",
+      "desc": "21 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks40.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "284",
+      "title": "Bicycle Parking: Flavelle House",
+      "lat": "43.6663",
+      "lng": "-79.3939",
+      "buildingCode": "040",
+      "desc": "6 post & ring stands and 1 bicycle rack.",
+      "image": "\/_assets\/_m_b\/racks41.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "285",
+      "title": "Bicycle Parking: Massey College",
+      "lat": "43.6647",
+      "lng": "-79.3971",
+      "buildingCode": "034",
+      "desc": "3 bicycle racks.",
+      "image": "\/_assets\/_m_b\/racks42.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "287",
+      "title": "Bicycle Parking: Mining Building",
+      "lat": "43.6593",
+      "lng": "-79.3939",
+      "buildingCode": "007",
+      "desc": "15 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks43.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "288",
+      "title": "Bicycle Parking: Mechanical Engineering Building",
+      "lat": "43.6600",
+      "lng": "-79.3942",
+      "buildingCode": "022",
+      "desc": "21 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks44.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "290",
+      "title": "Bicycle Parking: Jackman Humanities Building",
+      "lat": "43.6678",
+      "lng": "-79.4001",
+      "buildingCode": "128",
+      "desc": "9 post & ring stands and 2 bicycle racks.",
+      "image": "\/_assets\/_m_b\/racks45.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "291",
+      "title": "Bicycle Parking: 39 Queen's Park Crescent East",
+      "lat": "43.6642",
+      "lng": "-79.3906",
+      "buildingCode": "097",
+      "desc": "9 post & ring stands and 1 bicycle rack.",
+      "image": "\/_assets\/_m_b\/racks46.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "292",
+      "title": "Bicycle Parking: Morrison Hall",
+      "lat": "43.6630",
+      "lng": "-79.3978",
+      "buildingCode": "101",
+      "desc": "1 bicycle rack.",
+      "image": "\/_assets\/_m_b\/racks47.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "293",
+      "title": "Bicycle Parking: McLennan Physical Laboratories",
+      "lat": "43.6603",
+      "lng": "-79.3985",
+      "buildingCode": "078",
+      "desc": "25 post & ring stands and 2 bicycle racks.",
+      "image": "\/_assets\/_m_b\/racks48.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "295",
+      "title": "Bicycle Parking: McMurrich Building",
+      "lat": "43.6610",
+      "lng": "-79.3926",
+      "buildingCode": "004",
+      "desc": "3 bicycle racks.",
+      "image": "\/_assets\/_m_b\/racks49.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "296",
+      "title": "Bicycle Parking: Medical Sciences Building",
+      "lat": "43.6611",
+      "lng": "-79.3942",
+      "buildingCode": "005",
+      "desc": "75 post & ring stands and 2 bicycle racks.",
+      "image": "\/_assets\/_m_b\/racks50.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "297",
+      "title": "Bicycle Parking: Munk School of Global Affairs",
+      "lat": "43.6649",
+      "lng": "-79.3969",
+      "buildingCode": "012A",
+      "desc": "3 bicycle racks.",
+      "image": "\/_assets\/_m_b\/racks51.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "298",
+      "title": "Bicycle Parking: Borden Building North",
+      "lat": "43.6603",
+      "lng": "-79.4002",
+      "buildingCode": "061A",
+      "desc": "2 post & ring stands and 3 bicycle racks.",
+      "image": "\/_assets\/_m_b\/racks52.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "299",
+      "title": "Bicycle Parking: Astronomy & Astrophysics Building",
+      "lat": "43.6604",
+      "lng": "-79.3973",
+      "buildingCode": "036",
+      "desc": "7 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks53.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "300",
+      "title": "Bicycle Parking: Old Admin Building",
+      "lat": "43.6589",
+      "lng": "-79.3927",
+      "buildingCode": "156",
+      "desc": "7 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks54.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "301",
+      "title": "Bicycle Parking: OISE",
+      "lat": "43.6679",
+      "lng": "-79.3983",
+      "buildingCode": "123",
+      "desc": "10 post & ring stands, 6 racks, 5 bicycle lockers.",
+      "image": "\/_assets\/_m_b\/racks55.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "302",
+      "title": "Bicycle Parking: Leslie L. Dan Pharmacy Building",
+      "lat": "43.6599",
+      "lng": "-79.3914",
+      "buildingCode": "161",
+      "desc": "7 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks56.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "303",
+      "title": "Bicycle Parking: Physical Geography Building",
+      "lat": "43.6603",
+      "lng": "-79.3967",
+      "buildingCode": "027",
+      "desc": "10 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks57.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "304",
+      "title": "Bicycle Parking: D.L. Pratt Building",
+      "lat": "43.6597",
+      "lng": "-79.3944",
+      "buildingCode": "008A",
+      "desc": "6 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks58.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "305",
+      "title": "Bicycle Parking: Thomas Fisher Rare Book Library Building",
+      "lat": "43.6640",
+      "lng": "-79.3988",
+      "buildingCode": "006B",
+      "desc": "4 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks59.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "323",
+      "title": "Bicycle Parking: 123 St. George Street",
+      "lat": "43.6669",
+      "lng": "-79.3994",
+      "buildingCode": "088",
+      "desc": "5 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks60.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "324",
+      "title": "Bicycle Parking: John. P. Robarts Library Building",
+      "lat": "43.6644",
+      "lng": "-79.3988",
+      "buildingCode": "006",
+      "desc": "84 post & ring stands and 2 bicycle racks.",
+      "image": "\/_assets\/_m_b\/racks61.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "325",
+      "title": "Bicycle Parking: 254-256 McCaul Street",
+      "lat": "43.6586",
+      "lng": "-79.3934",
+      "buildingCode": "0000",
+      "desc": "10 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks62.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "326",
+      "title": "Bicycle Parking: Joseph L. Rotman School of Management",
+      "lat": "43.6653",
+      "lng": "-79.3988",
+      "buildingCode": "134",
+      "desc": "15 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks63.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "327",
+      "title": "Bicycle Parking: Rehabilitation Sciences Building",
+      "lat": "43.6555",
+      "lng": "-79.3889",
+      "buildingCode": "152",
+      "desc": "14 post & ring stands and 1 bicycle rack.",
+      "image": "\/_assets\/_m_b\/racks64.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "328",
+      "title": "Bicycle Parking: Ramsay Wright Laboratories",
+      "lat": "43.6634",
+      "lng": "-79.3994",
+      "buildingCode": "072",
+      "desc": "43 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks65.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "329",
+      "title": "Bicycle Parking: Louis B. Stewart Observatory",
+      "lat": "43.6633",
+      "lng": "-79.3949",
+      "buildingCode": "120",
+      "desc": "2 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks66.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "330",
+      "title": "Bicycle Parking: Borden Building South",
+      "lat": "43.6600",
+      "lng": "-79.3999",
+      "buildingCode": "061",
+      "desc": "6 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks67.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "331",
+      "title": "Bicycle Parking: Sussex Court",
+      "lat": "43.6651",
+      "lng": "-79.4010",
+      "buildingCode": "077",
+      "desc": "6 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks68.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "332",
+      "title": "Bicycle Parking: Sir Daniel Wilson Residence",
+      "lat": "43.6632",
+      "lng": "-79.3978",
+      "buildingCode": "029",
+      "desc": "6 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks69.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "333",
+      "title": "Bicycle Parking: Sandford Fleming Building",
+      "lat": "43.6603",
+      "lng": "-79.3947",
+      "buildingCode": "009",
+      "desc": "89 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks70.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "334",
+      "title": "Bicycle Parking: Transitional Year Programme",
+      "lat": "43.6606",
+      "lng": "-79.3968",
+      "buildingCode": "039",
+      "desc": "1 bicycle rack.",
+      "image": "\/_assets\/_m_b\/racks71.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "335",
+      "title": "Bicycle Parking: Simcoe Hall",
+      "lat": "43.6611",
+      "lng": "-79.3960",
+      "buildingCode": "010",
+      "desc": "5 post & ring bicycle stands.",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "336",
+      "title": "Bicycle Parking: 246 Bloor St. West",
+      "lat": "43.6681",
+      "lng": "-79.3976",
+      "buildingCode": "111",
+      "desc": "13 post & ring stands and 1 bicycle rack.",
+      "image": "\/_assets\/_m_b\/racks72.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "337",
+      "title": "Bicycle Parking: Gerstein Science Information Centre",
+      "lat": "43.6620",
+      "lng": "-79.3941",
+      "buildingCode": "003",
+      "desc": "17 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks73.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "338",
+      "title": "Bicycle Parking: Sidney Smith Hall",
+      "lat": "43.6625",
+      "lng": "-79.3981",
+      "buildingCode": "033",
+      "desc": "113 post & ring stands and 3 bicycle racks.",
+      "image": "\/_assets\/_m_b\/racks74.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "339",
+      "title": "Bicycle Parking: 40 Sussex Avenue",
+      "lat": "43.6649",
+      "lng": "-79.4018",
+      "buildingCode": "146",
+      "desc": "1 bicycle rack.",
+      "image": "\/_assets\/_m_b\/racks75.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "340",
+      "title": "Bicycle Parking: 203 College Street",
+      "lat": "43.6587",
+      "lng": "-79.3954",
+      "buildingCode": "0000",
+      "address": "203 College Street",
+      "desc": "3 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks76.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "341",
+      "title": "Bicycle Parking: 455 Spadina Avenue",
+      "lat": "43.6583",
+      "lng": "-79.3999",
+      "buildingCode": "171",
+      "desc": "3 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks77.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "342",
+      "title": "Bicycle Parking: C. David Naylor Building",
+      "lat": "43.6606",
+      "lng": "-79.3918",
+      "buildingCode": "011",
+      "desc": "15 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks78.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "343",
+      "title": "Bicycle Parking: University College",
+      "lat": "43.6625",
+      "lng": "-79.3955",
+      "buildingCode": "001",
+      "desc": "12 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks80.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "344",
+      "title": "Bicycle Parking: University College Union",
+      "lat": "43.6633",
+      "lng": "-79.3979",
+      "buildingCode": "023",
+      "desc": "11 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks81.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "345",
+      "title": "Bicycle Parking: Varsity Arena",
+      "lat": "43.6680",
+      "lng": "-79.3969",
+      "buildingCode": "041",
+      "desc": "2 post & ring stands and 1 bicycle rack.",
+      "image": "\/_assets\/_m_b\/racks82.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "346",
+      "title": "Bicycle Parking: Wallberg Building",
+      "lat": "43.6589",
+      "lng": "-79.3956",
+      "buildingCode": "008",
+      "desc": "32 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks83.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "347",
+      "title": "Bicycle Parking: Wetmore Hall",
+      "lat": "43.6619",
+      "lng": "-79.3996",
+      "buildingCode": "032",
+      "desc": "6 post & ring stands and 2 bicycle racks.",
+      "image": "\/_assets\/_m_b\/racks84.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "348",
+      "title": "Bicycle Parking: Wilson Hall",
+      "lat": "43.6615",
+      "lng": "-79.4008",
+      "buildingCode": "032A",
+      "desc": "9 post & ring stands and 7 bicycle racks.",
+      "image": "\/_assets\/_m_b\/racks85.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "349",
+      "title": "Bicycle Parking: Woodsworth College Residence",
+      "lat": "43.6675",
+      "lng": "-79.3994",
+      "buildingCode": "130",
+      "desc": "7 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks86.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "350",
+      "title": "Bicycle Parking: Leighton Goldie McCarthy House (Child Study)",
+      "lat": "43.6696",
+      "lng": "-79.4064",
+      "buildingCode": "053",
+      "desc": "2 bicycle racks.",
+      "image": "\/_assets\/_m_b\/racks87.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "351",
+      "title": "Bicycle Parking: Warren Stevens Building",
+      "lat": "43.6630",
+      "lng": "-79.4017",
+      "buildingCode": "068A",
+      "desc": "49 post & ring stands and 3 bicycle racks.",
+      "image": "\/_assets\/_m_b\/racks88.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "352",
+      "title": "Bicycle Parking: Whitney Hall",
+      "lat": "43.6638",
+      "lng": "-79.3982",
+      "buildingCode": "013",
+      "desc": "9 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks89.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "353",
+      "title": "Bicycle Parking: Woodsworth College",
+      "lat": "43.6664",
+      "lng": "-79.3992",
+      "buildingCode": "038",
+      "desc": "9 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks90.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "354",
+      "title": "Bicycle Parking: 88 College Street",
+      "lat": "43.6606",
+      "lng": "-79.3878",
+      "buildingCode": "090",
+      "desc": "2 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks91.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "724",
+      "title": "Bicycle Parking: Exam Centre",
+      "lat": "43.6584",
+      "lng": "-79.3931",
+      "buildingCode": "155",
+      "desc": "12 post & ring bicycle stands.",
+      "image": "\/_assets\/_m_b\/racks92.jpeg",
+      "alt": "bike racks",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "725",
+      "title": "BIXI Bike Sharing: Madison Ave \/ Bloor St W",
+      "lat": "43.6671",
+      "lng": "-79.4028",
+      "buildingCode": "0000",
+      "desc": "Please visit <a href=\"http:\/\/toronto.bixi.com\" target=\"new\">BIXI Toronto<\/a> to learn more about BIXI and view a complete listing of stations throughout Toronto. Only stations in proximity to U of T are listed here.",
+      "url": "http:\/\/toronto.bixi.com",
+      "kw": "bixi",
+      "sublayers": [
+        "64"
+      ]
+    },
+    {
+      "id": "999",
+      "title": "Soldiers Tower: Bike Parking",
+      "aka": "Bike Parking: Soldiers Tower",
+      "lat": "43.6637",
+      "lng": "-79.3952",
+      "buildingCode": "002",
+      "desc": "38 Ring posts.",
+      "kw": "Bike Parking, Hart House, Soldiers Tower",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "1000",
+      "title": "Edward Johnson Building: West",
+      "aka": "Edward Johnson Building: West",
+      "lat": "43.6665",
+      "lng": "-79.3951",
+      "buildingCode": "051",
+      "sublayers": [
+        "65"
+      ]
+    },
+    {
+      "id": "1001",
+      "title": "BIXI Bike Sharing: St. George St. \/ Bloor St W",
+      "lat": "43.6672",
+      "lng": "-79.3995",
+      "buildingCode": "0000",
+      "desc": "Please visit <a href=\"http:\/\/toronto.bixi.com\" target=\"new\">BIXI Toronto<\/a> to learn more about BIXI and view a complete listing of stations throughout Toronto. Only stations in proximity to U of T are listed here.",
+      "url": "http:\/\/toronto.bixi.com",
+      "kw": "bixi",
+      "sublayers": [
+        "64"
+      ]
+    },
+    {
+      "id": "1002",
+      "title": "BIXI Bike Sharing: Queens Park Cr.  \/ Charles St W",
+      "lat": "43.6671",
+      "lng": "-79.3936",
+      "buildingCode": "0000",
+      "desc": "Please visit <a href=\"http:\/\/toronto.bixi.com\" target=\"new\">BIXI Toronto<\/a> to learn more about BIXI and view a complete listing of stations throughout Toronto. Only stations in proximity to U of T are listed here.",
+      "url": "http:\/\/toronto.bixi.com",
+      "kw": "bixi",
+      "sublayers": [
+        "64"
+      ]
+    },
+    {
+      "id": "1003",
+      "title": "BIXI Bike Sharing: Devonshire Pl \/ Hoskin Ave",
+      "lat": "43.6646",
+      "lng": "-79.3965",
+      "buildingCode": "0000",
+      "desc": "Please visit <a href=\"http:\/\/toronto.bixi.com\" target=\"new\">BIXI Toronto<\/a> to learn more about BIXI and view a complete listing of stations throughout Toronto. Only stations in proximity to U of T are listed here.",
+      "url": "http:\/\/toronto.bixi.com",
+      "kw": "bixi",
+      "sublayers": [
+        "64"
+      ]
+    },
+    {
+      "id": "1004",
+      "title": "BIXI Bike Sharing: Harbord St \/ Huron St",
+      "lat": "43.6637",
+      "lng": "-79.3998",
+      "buildingCode": "0000",
+      "desc": "Please visit <a href=\"http:\/\/toronto.bixi.com\" target=\"new\">BIXI Toronto<\/a> to learn more about BIXI and view a complete listing of stations throughout Toronto. Only stations in proximity to U of T are listed here.",
+      "kw": "bixi",
+      "sublayers": [
+        "64"
+      ]
+    },
+    {
+      "id": "1005",
+      "title": "BIXI Bike Sharing: Spadina Ave \/ Sussex Ave",
+      "lat": "43.6643",
+      "lng": "-79.4023",
+      "buildingCode": "0000",
+      "desc": "Please visit <a href=\"http:\/\/toronto.bixi.com\" target=\"new\">BIXI Toronto<\/a> to learn more about BIXI and view a complete listing of stations throughout Toronto. Only stations in proximity to U of T are listed here.",
+      "url": "http:\/\/toronto.bixi.com",
+      "kw": "bixi",
+      "sublayers": [
+        "64"
+      ]
+    },
+    {
+      "id": "1006",
+      "title": "BIXI Bike Sharing: Queens Park Cr. \/ Wellesley St W",
+      "lat": "43.6634",
+      "lng": "-79.3930",
+      "buildingCode": "0000",
+      "desc": "Please visit <a href=\"http:\/\/toronto.bixi.com\" target=\"new\">BIXI Toronto<\/a> to learn more about BIXI and view a complete listing of stations throughout Toronto. Only stations in proximity to U of T are listed here.",
+      "url": "http:\/\/toronto.bixi.com",
+      "kw": "bixi",
+      "sublayers": [
+        "64"
+      ]
+    },
+    {
+      "id": "1007",
+      "title": "BIXI Bike Sharing: Huron St \/ College St ",
+      "lat": "43.6580",
+      "lng": "-79.3982",
+      "buildingCode": "0000",
+      "desc": "Please visit <a href=\"http:\/\/toronto.bixi.com\" target=\"new\">BIXI Toronto<\/a> to learn more about BIXI and view a complete listing of stations throughout Toronto. Only stations in proximity to U of T are listed here.",
+      "url": "http:\/\/toronto.bixi.com",
+      "kw": "bixi",
+      "sublayers": [
+        "64"
+      ]
+    },
+    {
+      "id": "1008",
+      "title": "BIXI Bike Sharing: Bay St \/ St. Joseph St",
+      "lat": "43.6658",
+      "lng": "-79.3880",
+      "buildingCode": "0000",
+      "desc": "Please visit <a href=\"http:\/\/toronto.bixi.com\" target=\"new\">BIXI Toronto<\/a> to learn more about BIXI and view a complete listing of stations throughout Toronto. Only stations in proximity to U of T are listed here.",
+      "url": "http:\/\/toronto.bixi.com",
+      "kw": "bixi",
+      "sublayers": [
+        "64"
+      ]
+    },
+    {
+      "id": "1009",
+      "title": "BIXI Bike Sharing: University Ave \/ College St ",
+      "lat": "43.6594",
+      "lng": "-79.3905",
+      "buildingCode": "0000",
+      "desc": "Please visit <a href=\"http:\/\/toronto.bixi.com\" target=\"new\">BIXI Toronto<\/a> to learn more about BIXI and view a complete listing of stations throughout Toronto. Only stations in proximity to U of T are listed here.",
+      "url": "http:\/\/toronto.bixi.com",
+      "kw": "bixi",
+      "sublayers": [
+        "64"
+      ]
+    },
+    {
+      "id": "1010",
+      "title": "BIXI Bike Sharing: Grosvenor St",
+      "lat": "43.6622",
+      "lng": "-79.3883",
+      "buildingCode": "0000",
+      "desc": "Please visit <a href=\"http:\/\/toronto.bixi.com\" target=\"new\">BIXI Toronto<\/a> to learn more about BIXI and view a complete listing of stations throughout Toronto. Only stations in proximity to U of T are listed here.",
+      "url": "http:\/\/toronto.bixi.com",
+      "kw": "bixi",
+      "sublayers": [
+        "64"
+      ]
+    },
+    {
+      "id": "1011",
+      "title": "BIXI Bike Sharing: Wilcocks St \/ St. George St. ",
+      "lat": "43.6622",
+      "lng": "-79.3979",
+      "buildingCode": "0000",
+      "desc": "Please visit <a href=\"http:\/\/toronto.bixi.com\" target=\"new\">BIXI Toronto<\/a> to learn more about BIXI and view a complete listing of stations throughout Toronto. Only stations in proximity to U of T are listed here.",
+      "url": "http:\/\/toronto.bixi.com",
+      "kw": "bixi",
+      "sublayers": [
+        "64"
+      ]
+    },
+    {
+      "id": "1012",
+      "title": "BIXI Bike Sharing: Bloor St W \/ Bay St ",
+      "lat": "43.6686",
+      "lng": "-79.3938",
+      "buildingCode": "0000",
+      "desc": "Please visit <a href=\"http:\/\/toronto.bixi.com\" target=\"new\">BIXI Toronto<\/a> to learn more about BIXI and view a complete listing of stations throughout Toronto. Only stations in proximity to U of T are listed here.",
+      "image": "\/_assets\/_m_b\/BIXI_LOGO-EN_K.jpg",
+      "alt": "BIXI LOGO",
+      "url": "http:\/\/toronto.bixi.com",
+      "kw": "bixi",
+      "sublayers": [
+        "64"
+      ]
+    }
+  ]
+}

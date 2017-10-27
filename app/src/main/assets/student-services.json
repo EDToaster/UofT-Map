@@ -1,0 +1,728 @@
+{
+  "name": "Student Services",
+  "slug": "student-services",
+  "icon": "http:\/\/map.utoronto.ca\/_assets\/_icons\/marker_student_services.png",
+  "sublayers": [
+    {
+      "id": "189",
+      "name": "ASKme Hub",
+      "slug": "askme-hub"
+    },
+    {
+      "id": "27",
+      "name": "Bookstore",
+      "slug": "bookstore"
+    },
+    {
+      "id": "25",
+      "name": "Registrars",
+      "slug": "registrars"
+    },
+    {
+      "id": "26",
+      "name": "Student Life",
+      "slug": "student-life"
+    },
+    {
+      "id": "59",
+      "name": "TCard Office",
+      "slug": "tcard-office"
+    }
+  ],
+  "markers": [
+    {
+      "id": "130",
+      "title": "Career Exploration and Education",
+      "lat": "43.6595",
+      "lng": "-79.3971",
+      "buildingCode": "143",
+      "address": "40 St George St, Toronto, ON M5S 2E4, Canada",
+      "desc": "Career Exploration and Education is located in the Student Success Centre and offers services to U of T student and recent graduates to help with choosing a career, getting work experience, developing job-search strategies and finding employment.",
+      "image": "\/_assets\/_m_b\/career.png",
+      "alt": "Career Centre",
+      "url": "http:\/\/www.careers.utoronto.ca\/",
+      "sublayers": [
+        "26"
+      ]
+    },
+    {
+      "id": "134",
+      "title": "University of Toronto Bookstore",
+      "aka": "Bookstore",
+      "lat": "43.6589",
+      "lng": "-79.3968",
+      "buildingCode": "143",
+      "address": "214 College St, Toronto, ON M5T 2Z9",
+      "desc": "Not just for students course books and materials.  The Bookstore is also a source for pleasure reading material, discounted computer software, school supplies and U of T merchandise. ",
+      "phone": "416-640-7900",
+      "image": "\/_assets\/_m_b\/uoft-bookstore.png",
+      "alt": "U of T Bookstore",
+      "url": "http:\/\/www.uoftbookstore.com",
+      "email": "info@uoftbookstore.com",
+      "hours": [
+        {
+          "opens": "12:00",
+          "closes": "17:00"
+        },
+        {
+          "opens": "08:45",
+          "closes": "18:00"
+        },
+        {
+          "opens": "08:45",
+          "closes": "18:00"
+        },
+        {
+          "opens": "08:45",
+          "closes": "18:00"
+        },
+        {
+          "opens": "08:45",
+          "closes": "18:00"
+        },
+        {
+          "opens": "08:45",
+          "closes": "18:00"
+        },
+        {
+          "opens": "10:00",
+          "closes": "17:00"
+        }
+      ],
+      "kw": "book, books, computer, supplies, bookstore",
+      "sublayers": [
+        "27"
+      ]
+    },
+    {
+      "id": "139",
+      "title": "Multi-Faith Centre for Spiritual Study and Practice",
+      "aka": "Multi-Faith",
+      "lat": "43.6605",
+      "lng": "-79.4007",
+      "buildingCode": "145",
+      "address": "569 Spadina Ave, Toronto, ON M5S, Canada",
+      "desc": "The Multi-Faith Centre accommodates a variety of spiritual and faith-based practices, and encourages interfaith dialogue and spiritual development as part of the learning experience for all students.",
+      "image": "\/_assets\/_m_b\/multi-faith.png",
+      "alt": "Multi-faith Centre",
+      "url": "http:\/\/www.multifaith.utoronto.ca",
+      "kw": "faith, religion, religious",
+      "sublayers": [
+        "26"
+      ]
+    },
+    {
+      "id": "143",
+      "title": "Sussex Club House",
+      "aka": "What are you doing after class?",
+      "lat": "43.6648",
+      "lng": "-79.4009",
+      "buildingCode": "0000",
+      "address": "21 Sussex Ave ,Toronto, ON M5S 1J6",
+      "desc": "Home to many student clubs and the central club administration.  And leadership programs!",
+      "image": "\/_assets\/_m_b\/ulife-map.jpg",
+      "alt": "Ulife logo",
+      "url": "http:\/\/ulife.utoronto.ca",
+      "email": "groups.officer@utoronto.ca",
+      "twitter": "@UTulife",
+      "kw": "clubs, leadership, ulife",
+      "sublayers": [
+        "26"
+      ]
+    },
+    {
+      "id": "146",
+      "title": "Registrar Music",
+      "lat": "43.6664",
+      "lng": "-79.3946",
+      "buildingCode": "051",
+      "address": "80 Queens Park, Toronto, ON, M5S 2C5",
+      "desc": "The personal and administrative point of reference for Music students at the University of Toronto.",
+      "phone": "416-978-3740",
+      "image": "\/_assets\/_m_b\/music-reg.png",
+      "alt": "Music logo",
+      "url": "http:\/\/uoft.me\/1bs",
+      "email": "undergrad.music@utoronto.ca",
+      "hours": [
+        {
+          "closed": "1"
+        },
+        {
+          "opens": "09:00",
+          "closes": "16:30"
+        },
+        {
+          "opens": "09:00",
+          "closes": "16:30"
+        },
+        {
+          "opens": "09:00",
+          "closes": "16:30"
+        },
+        {
+          "opens": "09:00",
+          "closes": "16:30"
+        },
+        {
+          "opens": "09:00",
+          "closes": "16:30"
+        },
+        {
+          "closed": "1"
+        }
+      ],
+      "kw": "academic, advising, financial, person.",
+      "sublayers": [
+        "25"
+      ]
+    },
+    {
+      "id": "153",
+      "title": "Centre for International Experience",
+      "aka": "CIE",
+      "lat": "43.6594",
+      "lng": "-79.3959",
+      "buildingCode": "026",
+      "address": "33 St. George Street Toronto, Ontario Canada M5S 2E3",
+      "desc": "The CIE serves international students coming to U of T and domestic students looking to go abroad.",
+      "phone": "416-946-3138 ",
+      "image": "\/_assets\/_m_b\/cie-map.png",
+      "alt": "happy international students",
+      "url": "http:\/\/www.cie.utoronto.ca",
+      "kw": "international, study abroad, domestic, safety",
+      "sublayers": [
+        "26"
+      ]
+    },
+    {
+      "id": "154",
+      "title": "Centre for Community Partnerships",
+      "aka": "CCP",
+      "lat": "43.6606",
+      "lng": "-79.4005",
+      "buildingCode": "145",
+      "address": " 569 Spadina Ave, Ste 315, Toronto, ON M5S 2J7 ",
+      "desc": "Through the Centre for Community Partnerships, University of Toronto students take their learning beyond the campus and into the community. ",
+      "phone": "416.978.6558",
+      "image": "\/_assets\/_m_b\/ccp-map.png",
+      "alt": "Alternative reading week logo",
+      "url": "http:\/\/www.ccp.utoronto.ca\/",
+      "kw": "alternative, reading, week",
+      "sublayers": [
+        "26"
+      ]
+    },
+    {
+      "id": "155",
+      "title": "Academic Success ",
+      "aka": "Academic Success",
+      "lat": "43.6595",
+      "lng": "-79.3969",
+      "buildingCode": "143",
+      "address": " 214 College Street Toronto, Ontario M5T 2Z9 ",
+      "desc": "Academic Success is located within the Student Success Centre and  is dedicated to making sure students achieve their highest possible learning potential. ",
+      "image": "\/_assets\/_m_b\/asc.png",
+      "url": "http:\/\/www.asc.utoronto.ca\/",
+      "kw": "time, stress, success, writing, note-taking, strategy, procrastination",
+      "sublayers": [
+        "26"
+      ]
+    },
+    {
+      "id": "158",
+      "title": "Hart House",
+      "lat": "43.6637",
+      "lng": "-79.3945",
+      "buildingCode": "002",
+      "address": "7 Hart House Circle, Toronto, Ontario M5S 3H3",
+      "desc": "U of T's living laboratory of social, artistic, cultural and recreational experiences where all voices, rhythms and traditions converge.",
+      "phone": "416-978-2452",
+      "image": "\/_assets\/_m_b\/hh.png",
+      "alt": "Hart House",
+      "url": "http:\/\/www.harthouse.utoronto.ca\/",
+      "email": "inquiries@harthouse.ca",
+      "kw": "arts, culture, recreation, theatre, space, Sammys",
+      "sublayers": [
+        "26"
+      ]
+    },
+    {
+      "id": "159",
+      "title": "Registrar Innis College",
+      "lat": "43.6655",
+      "lng": "-79.3997",
+      "buildingCode": "132",
+      "address": "2 Sussex Avenue, Toronto, Ontario",
+      "desc": "Innis College students!  The Registrar's office is your focal point for information and advice of all kinds, personal and academic.",
+      "phone": "416-978-2513 ",
+      "image": "\/_assets\/_m_b\/innis2.png",
+      "alt": "Innis College Crest",
+      "url": "http:\/\/uoft.me\/1bu",
+      "kw": "academic, advising, counselling, scholarships, admissions, financial aid, registrars",
+      "sublayers": [
+        "25"
+      ]
+    },
+    {
+      "id": "160",
+      "title": "Registrar New College",
+      "lat": "43.6621",
+      "lng": "-79.3997",
+      "buildingCode": "032",
+      "address": "300 Huron Street, Room 107, Toronto, ON",
+      "desc": "The Registrars and their staff are responsible for advising and assisting students of New College, who are encouraged to come to this office first with any questions about academic, financial and other matters.",
+      "phone": "416-978-2460",
+      "image": "\/_assets\/_m_b\/new-college1.png",
+      "alt": "Don't worry we are here to help",
+      "url": "http:\/\/uoft.me\/1bq",
+      "email": "newcollege.registrar@utoronto.ca",
+      "kw": "academic, advising, counselling, scholarships, admissions, financial aid, registrars",
+      "sublayers": [
+        "25"
+      ]
+    },
+    {
+      "id": "161",
+      "title": "Registrar Trinity College",
+      "aka": "Trin",
+      "lat": "43.6652",
+      "lng": "-79.3954",
+      "buildingCode": "600",
+      "address": "6 Hoskin Avenue, Toronto, ON M5S 1H8",
+      "desc": "Trinity is the smallest of the seven colleges on the St. George campus of the University of Toronto, with an enrollment of approximately 1850 students.",
+      "phone": "416-978-2687",
+      "access": "Ramp between Chapel and Graham Library",
+      "image": "\/_assets\/_m_b\/trinity.png",
+      "alt": "Trinity College crest",
+      "url": "http:\/\/uoft.me\/1bl",
+      "email": "registrar@trinity.utoronto.ca",
+      "kw": "academic, advising, counselling, scholarships, admissions, financial aid, registrars",
+      "sublayers": [
+        "25"
+      ]
+    },
+    {
+      "id": "163",
+      "title": "Registrar University College",
+      "lat": "43.6626",
+      "lng": "-79.3958",
+      "buildingCode": "001",
+      "address": "15 King\u2019s College Circle, Room 157, Toronto, ON",
+      "desc": "Closed during lunch hour from 12 noon to 1:30pm.",
+      "phone": "416-978-3170",
+      "image": "\/_assets\/_m_b\/univ-college1.png",
+      "alt": "University College crest",
+      "url": "http:\/\/uoft.me\/1br",
+      "kw": "academic, advising, counselling, scholarships, admissions, financial aid, registrars",
+      "sublayers": [
+        "25"
+      ]
+    },
+    {
+      "id": "164",
+      "title": "Registrar Victoria College",
+      "lat": "43.6664",
+      "lng": "-79.3922",
+      "buildingCode": "515",
+      "address": "73 Queen's Park Crescent, Room 106, Toronto, ON",
+      "desc": "The Victoria College Registrar's Office is here to offer support and advice on student questions about academic, career, financial or personal matters.",
+      "phone": "416-585-4508",
+      "image": "\/_assets\/_m_b\/victoria.png",
+      "alt": "Victoria College crest",
+      "url": "http:\/\/uoft.me\/1bo",
+      "email": "vic.registrar@utoronto.ca ",
+      "kw": "academic, advising, counselling, scholarships, admissions, financial aid, registrars",
+      "sublayers": [
+        "25"
+      ]
+    },
+    {
+      "id": "189",
+      "title": "Registrar Woodsworth College",
+      "aka": "Woodsworth",
+      "lat": "43.6667",
+      "lng": "-79.3990",
+      "buildingCode": "038",
+      "address": "119 St. George Street, Room 220, Toronto, ON",
+      "desc": "A student's reliable first stop for information and advice on academic, financial and personal issues related to academic studies. Summer hours July + August close a half hour earlier.",
+      "phone": "416-978-4444",
+      "image": "\/_assets\/_m_b\/woodsworth.png",
+      "alt": "Woodsworth College crest",
+      "url": "http:\/\/uoft.me\/1ci",
+      "email": "wdwregistrar@utoronto.ca",
+      "kw": "academic, advising, counselling, scholarships, admissions, financial aid, registrars",
+      "sublayers": [
+        "25"
+      ]
+    },
+    {
+      "id": "241",
+      "title": "Registrar Applied Science and Engineering",
+      "lat": "43.6599",
+      "lng": "-79.3961",
+      "buildingCode": "070",
+      "address": "35 St. George Street, Rm 157, Toronto, Ontario",
+      "desc": "The Office coordinates enrolment and registration for engineering students. Also scheduling of courses and exams, student records, transfers, re-enrolments; petitions, appeals and graduation.",
+      "phone": "416-978-5896",
+      "image": "\/_assets\/_m_b\/galbraith.png",
+      "alt": "Gailbraith building sign",
+      "url": "http:\/\/uoft.me\/1bn",
+      "email": "registrar@ecf.utoronto.ca",
+      "hours": [
+        {
+          "closed": "1"
+        },
+        {
+          "opens": "09:00",
+          "closes": "17:00"
+        },
+        {
+          "opens": "09:00",
+          "closes": "17:00"
+        },
+        {
+          "opens": "09:00",
+          "closes": "17:00"
+        },
+        {
+          "opens": "09:00",
+          "closes": "17:00"
+        },
+        {
+          "opens": "09:00",
+          "closes": "17:00"
+        },
+        {
+          "closed": "1"
+        }
+      ],
+      "kw": "academic, advising, counselling, scholarships, admissions, financial aid, registrars",
+      "sublayers": [
+        "25"
+      ]
+    },
+    {
+      "id": "243",
+      "title": "Registrar Physical Education and Health",
+      "lat": "43.6629",
+      "lng": "-79.4010",
+      "buildingCode": "068A",
+      "address": "55 Harbord Street, Rm 1050, Toronto, Ontario",
+      "desc": "Academic, personal, financial counselling and referrals available to Kinesiology, Physical Education and Health students.",
+      "phone": "416-978-2944",
+      "image": "\/_assets\/_m_b\/physed.png",
+      "alt": "Girl playing soccer",
+      "url": "http:\/\/uoft.me\/fpeh",
+      "email": "undergrad.peh@utoronto.ca",
+      "kw": "academic, advising, counselling, scholarships, admissions, financial aid, registrars",
+      "sublayers": [
+        "25"
+      ]
+    },
+    {
+      "id": "244",
+      "title": "Registrar St Michaels College",
+      "lat": "43.6648",
+      "lng": "-79.3902",
+      "buildingCode": "407",
+      "address": "121 St. Joseph Street in Alumni Hall, Room 207, Toronto, Ontario, M5S 3C2",
+      "desc": "The personal and administrative point of reference for St. Michael College students at the University of Toronto.",
+      "phone": "416-926-7117",
+      "image": "\/_assets\/_m_b\/st-mikes.png",
+      "alt": "St Michaels College crest",
+      "url": "http:\/\/uoft.me\/1bp",
+      "email": "ask.smc@utoronto.ca",
+      "kw": "academic, advising, counselling, scholarships, admissions, financial aid, registrars",
+      "sublayers": [
+        "25"
+      ]
+    },
+    {
+      "id": "245",
+      "title": "Registrar Graduate Studies",
+      "lat": "43.6618",
+      "lng": "-79.3970",
+      "buildingCode": "0000",
+      "address": "63 St. George Street, Toronto.ca",
+      "desc": "SGS Student Services provides information and assistance regarding registration, enrolment, program progress, thesis publication, convocation and financial support. ",
+      "phone": "416-978-6614",
+      "image": "\/_assets\/_m_b\/grad.png",
+      "alt": "Grad Studies Building",
+      "url": "http:\/\/uoft.me\/1bt",
+      "kw": "academic, advising, counselling, scholarships, admissions, financial aid, registrars",
+      "sublayers": [
+        "25"
+      ]
+    },
+    {
+      "id": "246",
+      "title": "Faculty Registrar Arts and Science & Transcript Centre",
+      "lat": "43.6624",
+      "lng": "-79.3988",
+      "buildingCode": "033",
+      "address": "100 St. George Street, Room 1006 Toronto, ON M5S 3G3",
+      "desc": "Coordinates counselling, registration and enrolment, student records, transfer credit, petitions, final examinations and graduation for Arts and Science students.",
+      "phone": "416-978-3384",
+      "image": "\/_assets\/_m_b\/artsci.png",
+      "alt": "Smiling arts and science students",
+      "url": "http:\/\/uoft.me\/1d3",
+      "kw": "transcript, advising, counselling, registration, enrolment, records, transfer, credit, petition, exam, graduation",
+      "sublayers": [
+        "25"
+      ]
+    },
+    {
+      "id": "308",
+      "title": "Housing ",
+      "lat": "43.6595",
+      "lng": "-79.3972",
+      "buildingCode": "143",
+      "address": "214 College Street, Toronto, ON M5T 2Z9 ",
+      "desc": "U of T has many resources to help students feel at home, including information about housing search tips, finding housing on- and off-campus, family housing, housing emergencies and adapting to life in Toronto.",
+      "phone": "416.978.8045",
+      "image": "\/_assets\/_m_b\/housing.png",
+      "alt": "U of T Residence",
+      "url": "http:\/\/www.housing.utoronto.ca",
+      "email": "housing.services@utoronto.ca",
+      "hours": [
+        {
+          "closed": "1"
+        },
+        {
+          "opens": "09:00",
+          "closes": "17:00"
+        },
+        {
+          "opens": "09:00",
+          "closes": "17:00"
+        },
+        {
+          "opens": "09:00",
+          "closes": "17:00"
+        },
+        {
+          "opens": "09:00",
+          "closes": "17:00"
+        },
+        {
+          "opens": "09:00",
+          "closes": "17:00"
+        },
+        {
+          "closed": "1"
+        }
+      ],
+      "kw": "house, residence, off-campus, rent, emergency",
+      "sublayers": [
+        "26"
+      ]
+    },
+    {
+      "id": "383",
+      "title": "Sexual Gender and Diversity Office",
+      "aka": "LGBTQ",
+      "lat": "43.6649",
+      "lng": "-79.4010",
+      "buildingCode": "0000",
+      "address": "21 Sussex Ave ,Toronto, ON M5S 1J6",
+      "desc": "The office is dedicated to and works towards addressing discrimination based on sexual  and gender diversity. ",
+      "image": "\/_assets\/_m_b\/jude.png",
+      "alt": "Positive space triangle",
+      "url": "http:\/\/www.sgdo.utoronto.ca\/",
+      "kw": "sexual, diversity, gender, lgbtq, discrimination",
+      "sublayers": [
+        "26"
+      ]
+    },
+    {
+      "id": "384",
+      "title": "Family Care Office",
+      "lat": "43.6590",
+      "lng": "-79.3971",
+      "buildingCode": "143",
+      "address": "214 College Street, Toronto, ON M5T 2Z9 ",
+      "desc": "Family Care assists students, staff and faculty at the University of Toronto who are navigating the challenges of balancing family responsibilities with education and\/or work. The Office has always emphasized an inclusive definition of family.",
+      "phone": "416-978-0951",
+      "image": "\/_assets\/_m_b\/family.png",
+      "alt": "Woman hugging baby",
+      "url": "http:\/\/www.familycare.utoronto.ca\/",
+      "email": "family.care@utoronto.ca",
+      "sublayers": [
+        "26"
+      ]
+    },
+    {
+      "id": "391",
+      "title": "First Nations House",
+      "lat": "43.6604",
+      "lng": "-79.4000",
+      "buildingCode": "061A",
+      "address": "563 Spadina Avenue, 3rd floor Toronto, ON M5S 2J7 ",
+      "desc": "First Nations House provides a number of culturally supportive student services and programs to Aboriginal students and the general university community. ",
+      "phone": "416-978-8227 and Toll Free 1-800-810-8069",
+      "image": "\/_assets\/_m_b\/fnh-map.png",
+      "alt": "Hands holding flower",
+      "url": "http:\/\/www.fnh.utoronto.ca",
+      "email": "fnh.info@utoronto.ca",
+      "kw": "aboriginal",
+      "sublayers": [
+        "26"
+      ]
+    },
+    {
+      "id": "392",
+      "title": "Health and Wellness Centre",
+      "aka": "Health and Wellness Centre",
+      "lat": "43.6589",
+      "lng": "-79.3969",
+      "buildingCode": "143",
+      "address": "214 College Street, 2nd Floor, Toronto, Ontario M5T 2Z9 (ROOM 232)",
+      "desc": "The Health and Wellness Centre offers University of Toronto students the same services as a family doctor's office, and more. We provide confidential, comprehensive medical care, counselling and psychological services, travel medicine and education.",
+      "phone": "416-978-8030 and Emergencies 911",
+      "image": "\/_assets\/_m_b\/health-map.png",
+      "alt": "Doctor with patient",
+      "url": "http:\/\/studentlife.utoronto.ca\/hwc",
+      "email": "healthask@mail.studentlife.utoronto.ca",
+      "kw": "medical, confidential, travel, counselling, psychologist",
+      "sublayers": [
+        "26"
+      ]
+    },
+    {
+      "id": "400",
+      "title": "TCard Services",
+      "lat": "43.6594",
+      "lng": "-79.3970",
+      "buildingCode": "143",
+      "address": "214 College Street, 1st Floor, Toronto, ON, Canada, M5T 2Z9",
+      "desc": "Where U of T students get their TCard,  a photo ID smartcard which provides identification for academic purposes, student activities and services, facility access and a Library Card. ",
+      "phone": "416-946-8047",
+      "image": "\/_assets\/_m_b\/tcard2.png",
+      "alt": "Tcard",
+      "url": "http:\/\/tcard.utoronto.ca",
+      "email": "tcard.office@utoronto.ca",
+      "sublayers": [
+        "59"
+      ]
+    },
+    {
+      "id": "1640",
+      "title": "ASKme Information Hub",
+      "aka": "ASKme Hub",
+      "lat": "43.6594",
+      "lng": "-79.3969",
+      "buildingCode": "143",
+      "address": "214 College Street, Toronto, ON M5T 2A1",
+      "desc": "A hub located in the heart of Student Life where you can find answers to your questions about life outside the classroom and general information about U of T.",
+      "alt": "ASKme Information Hub desk with ASKme staff helping a student find answers to her questions.",
+      "url": "http:\/\/uoft.me\/askme",
+      "email": "askme@utoronto.ca",
+      "hours": [
+        {
+          "closed": "1"
+        },
+        {
+          "opens": "09:00",
+          "closes": "017:0"
+        },
+        {
+          "opens": "09:00",
+          "closes": "018:0"
+        },
+        {
+          "opens": "09:00",
+          "closes": "017:0"
+        },
+        {
+          "opens": "09:00",
+          "closes": "017:0"
+        },
+        {
+          "opens": "09:00",
+          "closes": "17:00"
+        },
+        {
+          "closed": "1"
+        }
+      ],
+      "kw": "help, ASKme",
+      "sublayers": [
+        "189"
+      ]
+    },
+    {
+      "id": "1683",
+      "title": "Accessibility Services",
+      "lat": "43.6582",
+      "lng": "-79.3997",
+      "buildingCode": "171",
+      "address": "455 Spadina Ave., 4th Floor, Suite 400",
+      "desc": "Accessibility Services facilitates the inclusion of students with disabilities into all aspects of university life. Our focus is on skills development, especially in the areas of self-advocacy and academic skills.",
+      "phone": "416 978-8060 and TTY 416-978-1902",
+      "image": "\/_assets\/_m_b\/accessibility11.png",
+      "alt": "Young women at service counter",
+      "url": "http:\/\/www.accessibility.utoronto.ca",
+      "email": "accessibility.services@utoronto.ca",
+      "kw": "disability, advocacy, academic",
+      "sublayers": [
+        "26"
+      ]
+    },
+    {
+      "id": "1921",
+      "title": "SGS Student Academic Services",
+      "aka": "SGS Student Academic Services",
+      "lat": "43.6649",
+      "lng": "-79.4034",
+      "buildingCode": "0000",
+      "address": "702 Spadina Avenue",
+      "desc": "This is a temporary location while construction is completed on 63 St. George Street.",
+      "phone": "416-978-6614",
+      "image": "\/_assets\/_m_b\/702-spadina-ave.gif",
+      "alt": "702 Spadina Avenue Toronto Ontario",
+      "email": "graduate.information@utoronto.ca",
+      "hours": [
+        {
+          "closed": "1"
+        },
+        {
+          "opens": "0",
+          "closes": "0"
+        },
+        {
+          "opens": "0",
+          "closes": "0"
+        },
+        {
+          "opens": "0",
+          "closes": "0"
+        },
+        {
+          "opens": "0",
+          "closes": "0"
+        },
+        {
+          "opens": "0",
+          "closes": "0"
+        },
+        {
+          "closed": "1"
+        }
+      ],
+      "sublayers": []
+    },
+    {
+      "id": "1971",
+      "title": "Student Success Centre",
+      "aka": "Academic Success, Career Exploration and Education, Housing and TCard",
+      "lat": "43.6595",
+      "lng": "-79.3973",
+      "buildingCode": "143",
+      "address": "214 College Street, Toronto, Ontario",
+      "desc": "The Student Life departments Academic Success, Career Exploration and Education, Housing are all located in the Student Success Centre right across from the TCard Office.",
+      "sublayers": [
+        "26"
+      ]
+    }
+  ]
+}

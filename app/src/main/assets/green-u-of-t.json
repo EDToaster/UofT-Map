@@ -1,0 +1,1117 @@
+{
+  "name": "Green U of T",
+  "slug": "green-u-of-t",
+  "icon": "http:\/\/map.utoronto.ca\/_assets\/_icons\/marker_green_uoft.png",
+  "sublayers": [
+    {
+      "id": "23",
+      "name": "Green Spaces",
+      "slug": "green-spaces"
+    },
+    {
+      "id": "173",
+      "name": "Local Agriculture & Bee Keeping",
+      "slug": "local-agriculture-bee-keeping"
+    },
+    {
+      "id": "22",
+      "name": "Recycle",
+      "slug": "recycle"
+    },
+    {
+      "id": "20",
+      "name": "Reduce",
+      "slug": "reduce"
+    },
+    {
+      "id": "175",
+      "name": "Reduce, Reuse, Recycle, and Repair",
+      "slug": "reduce-reuse-recycle-and-repair"
+    },
+    {
+      "id": "174",
+      "name": "Renewable Energy",
+      "slug": "renewable-energy"
+    },
+    {
+      "id": "58",
+      "name": "Rethink",
+      "slug": "rethink"
+    },
+    {
+      "id": "21",
+      "name": "Reuse & Repair",
+      "slug": "reuse-repair"
+    },
+    {
+      "id": "172",
+      "name": "The Sustainability Office",
+      "slug": "the-sustainability-office"
+    }
+  ],
+  "markers": [
+    {
+      "id": "213",
+      "title": "Sustainability Office",
+      "lat": "43.6584",
+      "lng": "-79.3929",
+      "buildingCode": "083",
+      "address": "255 McCaul Street ",
+      "desc": "The Sustainability Office exists to help the University of Toronto make significant and measurable progress towards sustainability. It acts as a resource hub for sustainability at the St. George campus. ",
+      "phone": "416-978-6792",
+      "access": "Building is wheelchair accessible. An elevator provided easy-access to all floors.",
+      "url": "http:\/\/sustainability.utoronto.ca\/",
+      "email": "sustainability@utoronto.ca",
+      "twitter": "sustainableuoft",
+      "facebook": "http:\/\/facebook.com\/sustainableuoft",
+      "hours": [
+        {
+          "closed": "1"
+        },
+        {
+          "opens": "09:00",
+          "closes": "17:00"
+        },
+        {
+          "opens": "09:00",
+          "closes": "17:00"
+        },
+        {
+          "opens": "09:00",
+          "closes": "17:00"
+        },
+        {
+          "opens": "09:00",
+          "closes": "17:00"
+        },
+        {
+          "opens": "09:00",
+          "closes": "17:00"
+        },
+        {
+          "closed": "1"
+        }
+      ],
+      "kw": "so, environment, green, energy, sustainability",
+      "sublayers": [
+        "172"
+      ]
+    },
+    {
+      "id": "385",
+      "title": "The Sky Garden",
+      "lat": "43.6599",
+      "lng": "-79.3962",
+      "buildingCode": "070",
+      "address": "35 St. George Street ",
+      "desc": "The Sky Garden is an initiative supported by University of Toronto students, faculty and staff that aims to marry healthy eating and sustainable living. They divide the harvest between volunteers, local food banks, and campus restaurants and cafes.",
+      "access": "Inaccessible to public \u2013 Must be a University of Toronto student involved with the University\u2019s Food and Water Institute. ",
+      "image": "\/_assets\/_m_b\/Sky_Garden.jpg",
+      "alt": "sky Garden",
+      "url": "http:\/\/www.foodandwaterinstitute.org\/skygarden.html",
+      "email": "urbanagriculturesociety@gmail.com",
+      "facebook": "http:\/\/www.facebook.com\/group.php?gid=131545453542292&v=wall",
+      "kw": "sky garden, galbraith",
+      "sublayers": [
+        "23"
+      ]
+    },
+    {
+      "id": "389",
+      "title": "Dig In! Demonstration Gardens (Sid Smith)",
+      "aka": "Dig In!",
+      "lat": "43.6624",
+      "lng": "-79.3987",
+      "buildingCode": "033",
+      "address": "100 St.George Street",
+      "desc": "The Dig In! collective also maintains a series of gardens plots around campus. They are using these spaces to raise awareness about urban agriculture,, local food, and sustainable design issues on campus ",
+      "image": "\/_assets\/_m_b\/Sid_Smith_Dig_In_.jpg",
+      "url": "http:\/\/campusagriculture.ca",
+      "email": "campusagriculture@gmail.com",
+      "facebook": "http:\/\/www.facebook.com\/home.php#!\/group.php?gid=107179269325849&ref=ts",
+      "rss": "http:\/\/campusagriculture.wordpress.com\/feed\/",
+      "sublayers": [
+        "23"
+      ]
+    },
+    {
+      "id": "390",
+      "title": "Dig In! Demonstration Gardens (Robarts)",
+      "aka": "Dig In!",
+      "lat": "43.6645",
+      "lng": "-79.4000",
+      "buildingCode": "006",
+      "address": "130 St.George Street",
+      "desc": "The Dig In! collective also maintains a series of gardens plots around campus. They are using these spaces to raise awareness about urban agriculture,local food, and sustainable design issues on campus",
+      "image": "\/_assets\/_m_b\/Robarts_Dig_In.jpg",
+      "url": "http:\/\/campusagriculture.ca",
+      "email": "campusagriculture@gmail.com",
+      "facebook": "http:\/\/www.facebook.com\/home.php#!\/group.php?gid=107179269325849&ref=ts",
+      "rss": "http:\/\/campusagriculture.wordpress.com\/feed\/",
+      "sublayers": [
+        "23"
+      ]
+    },
+    {
+      "id": "393",
+      "title": "Dig In! Demonstration Gardens (Hart House)",
+      "lat": "43.6643",
+      "lng": "-79.3947",
+      "buildingCode": "002",
+      "address": "7 Hart House Circle",
+      "desc": "The Dig In! collective also maintains a series of gardens plots around campus.  They are using these spaces to raise awareness about urban agriculture, local food, and sustainable design issues on campus.",
+      "image": "\/_assets\/_m_b\/HartHouse_Dig_In.jpg",
+      "url": "http:\/\/campusagriculture.ca",
+      "email": "campusagriculture@gmail.com",
+      "facebook": "http:\/\/www.facebook.com\/home.php#!\/group.php?gid=107179269325849&ref=ts",
+      "rss": "http:\/\/campusagriculture.wordpress.com\/feed\/",
+      "kw": "garden, dig in",
+      "sublayers": [
+        "23"
+      ]
+    },
+    {
+      "id": "394",
+      "title": "Dig In! Demonstration Gardens (Medical Sciences)",
+      "aka": "Dig In!",
+      "lat": "43.6613",
+      "lng": "-79.3941",
+      "buildingCode": "0000",
+      "address": "1 Kings College Circle",
+      "desc": "The Dig In! collective also maintains a series of gardens plots around campus   They are using these spaces to raise awareness about urban agriculture, local food, and sustainable design issues on campus",
+      "image": "\/_assets\/_m_b\/Medical_Science_Dig_In.jpg",
+      "url": "http:\/\/campusagriculture.ca",
+      "email": "campusagriculture@gmail.com",
+      "facebook": "http:\/\/www.facebook.com\/home.php#!\/group.php?gid=107179269325849&ref=ts",
+      "rss": "http:\/\/campusagriculture.wordpress.com\/feed\/",
+      "sublayers": [
+        "23"
+      ]
+    },
+    {
+      "id": "395",
+      "title": "Kahonitake Kitikan",
+      "lat": "43.6643",
+      "lng": "-79.3941",
+      "buildingCode": "002",
+      "address": "7 Hart House Circle",
+      "desc": "Kahonitake Kitikan, located at Hart House, is a garden and sacred meeting space supported by First Nations House. Native plants, medicinal plants, and ceremonial herbs can all be found growing here.<br \/>\n<br \/>\n",
+      "image": "\/_assets\/_m_b\/Kahonitake_Kitikan.jpg",
+      "email": "campusagriculture@gmail.com",
+      "kw": "garden",
+      "sublayers": [
+        "23"
+      ]
+    },
+    {
+      "id": "396",
+      "title": "Food for All Equity Garden",
+      "lat": "43.6633",
+      "lng": "-79.3947",
+      "buildingCode": "002",
+      "address": "7 Hart House Circle",
+      "desc": "The U.T.S.U. Food For All Equity Garden is a project that provides fresh, organic, locally grown produce to the U of T Food and Clothing Bank and also aims to promote food security and sustainability on campus by making use of the space around us.",
+      "phone": "416-978-4911",
+      "image": "\/_assets\/_m_b\/Food_For_All_Equity.jpeg",
+      "url": "http:\/\/www.utsu.ca\/section\/1068",
+      "email": "garden@utsu.ca",
+      "sublayers": [
+        "23"
+      ]
+    },
+    {
+      "id": "397",
+      "title": "UofT Beekeeping Site: Trinity College",
+      "aka": "U of T B.E.E.S",
+      "lat": "43.6655",
+      "lng": "-79.3956",
+      "buildingCode": "600",
+      "address": "6 Hoskin Avenue",
+      "desc": "The UofT Beekeeping Education Enthusiast Society (B.E.E.S.) oversees a number of rooftop apiaries across camps.\u00a0 B.E.E.S. champion organic, non-intrusive beekeeping approaches, and host educational events throughout the year.",
+      "image": "\/_assets\/_m_b\/uoftbees.jpg",
+      "email": "bees.utoronto@gmail.com",
+      "facebook": "https:\/\/www.facebook.com\/home.php?sk=group_132701820111760",
+      "sublayers": [
+        "173"
+      ]
+    },
+    {
+      "id": "577",
+      "title": "Refrotfit King's Circle",
+      "aka": "Retrofit",
+      "lat": "43.6601",
+      "lng": "-79.3944",
+      "buildingCode": "009",
+      "address": "King's College Road",
+      "desc": "A recent pilot project  involved retrofitting metal halide streetlights with LED lights manufactured by Osram Sylvania. The LED product was a retrofit kit which fit inside the existing post-top luminaires. ",
+      "image": "\/_assets\/_m_b\/Kings_College_retrofit.png",
+      "sublayers": [
+        "20"
+      ]
+    },
+    {
+      "id": "579",
+      "title": "Swap Shop",
+      "lat": "43.6600",
+      "lng": "-79.3996",
+      "buildingCode": "061",
+      "address": "487 Spadina Avenue. South Borden Building",
+      "desc": "the U of T Swap Shop is a service run by Facilities & Services to keep surplus furniture, office equipment, supplies etc. in use. It is regularly replenished by U of T departments removing their old furniture. ",
+      "url": "http:\/\/www.fs.utoronto.ca\/recycle\/swap.htm",
+      "email": "reno.strano@utoronto.ca",
+      "hours": [
+        {
+          "closed": "1"
+        },
+        {
+          "closed": "1"
+        },
+        {
+          "closed": "1"
+        },
+        {
+          "opens": "12:00",
+          "closes": "14:00"
+        },
+        {
+          "closed": "1"
+        },
+        {
+          "closed": "1"
+        },
+        {
+          "closed": "1"
+        }
+      ],
+      "sublayers": [
+        "22",
+        "21"
+      ]
+    },
+    {
+      "id": "584",
+      "title": "Bikechain",
+      "aka": "Bike chain",
+      "lat": "43.6604",
+      "lng": "-79.4002",
+      "buildingCode": "061A",
+      "address": "563 Spadina Crescent",
+      "desc": "Bikechain is fully equipped to handle bicycle problems ranging from dirt and rust to flat tires; from loose pedals to bent wheels. The tools are the same quality as those found in commercial bike stores, specifically designed for use on bicycles.",
+      "image": "\/_assets\/_m_b\/Bikechain.png",
+      "alt": "Logo",
+      "url": "http:\/\/bikechain.utoronto.ca\/index.php",
+      "facebook": "http:\/\/www.facebook.com\/groups\/2201798832",
+      "hours": [
+        {
+          "closed": "1"
+        },
+        {
+          "opens": "12:00",
+          "closes": "19:00"
+        },
+        {
+          "opens": "11:00",
+          "closes": "18:00"
+        },
+        {
+          "opens": "11:00",
+          "closes": "17:00"
+        },
+        {
+          "opens": "12:00",
+          "closes": "19:00"
+        },
+        {
+          "opens": "11:00",
+          "closes": "18:00"
+        },
+        {
+          "closed": "1"
+        }
+      ],
+      "sublayers": [
+        "21"
+      ]
+    },
+    {
+      "id": "586",
+      "title": "Solar Project Athletic Center",
+      "aka": "AC",
+      "lat": "43.6626",
+      "lng": "-79.4010",
+      "buildingCode": "068A",
+      "address": "55 Harbord Street Toronto, Ontario, Canada",
+      "desc": "In late 2009, the university installed 100 solar collector panels on the roof of the Athletic Centre, located at Harbord Street and Spadina Avenue.\u00a0 It is currently the biggest initiative of its kind at a Canadian University",
+      "image": "\/_assets\/_m_b\/Athletic_Center.gif",
+      "url": "http:\/\/www.physical.utoronto.ca\/FacilitiesAndMemberships\/Athletic_Centre.aspx",
+      "twitter": "http:\/\/twitter.com\/#!\/Fit4EverybodyUT",
+      "facebook": "http:\/\/www.facebook.com\/Fit4EverybodyUT",
+      "hours": [
+        {
+          "opens": "0",
+          "closes": "0"
+        },
+        {
+          "opens": "0",
+          "closes": "0"
+        },
+        {
+          "opens": "0",
+          "closes": "0"
+        },
+        {
+          "opens": "0",
+          "closes": "0"
+        },
+        {
+          "opens": "0",
+          "closes": "0"
+        },
+        {
+          "opens": "0",
+          "closes": "0"
+        },
+        {
+          "opens": "0",
+          "closes": "0"
+        }
+      ],
+      "sublayers": [
+        "58"
+      ]
+    },
+    {
+      "id": "589",
+      "title": "Solar Project Trinity College",
+      "lat": "43.6650",
+      "lng": "-79.3960",
+      "buildingCode": "600",
+      "address": "6 Hoskin Avenue Toronto, Ontario M5S 1H8",
+      "desc": "In 2008, 252 panels were installe on the roof of the Larkin Building to capture energy from the sun and turn it into electricity.",
+      "image": "\/_assets\/_m_b\/Solar_Panel_Trin.jpg",
+      "url": "http:\/\/www.trinity.utoronto.ca\/News_Events\/News\/default.htm",
+      "sublayers": [
+        "58"
+      ]
+    },
+    {
+      "id": "590",
+      "title": "Exam Center",
+      "lat": "43.6585",
+      "lng": "-79.3928",
+      "buildingCode": "155",
+      "address": "255 McCaul Street, Toronto, ON\u00a0M5T 1W7",
+      "desc": "The Exam Centre, built in 2008, is U of T's First LEED Gold Certified Project. It is home to Facilities and Services and Real Estate Operations. There is a living wall is on your right as you enter the building.",
+      "image": "\/_assets\/_m_b\/Exam_Center.jpg",
+      "url": "http:\/\/sustain.fs.utoronto.ca\/exam-centre-leed-features\/",
+      "hours": [
+        {
+          "opens": "0",
+          "closes": "0"
+        },
+        {
+          "opens": "0",
+          "closes": "0"
+        },
+        {
+          "opens": "0",
+          "closes": "0"
+        },
+        {
+          "opens": "0",
+          "closes": "0"
+        },
+        {
+          "opens": "0",
+          "closes": "0"
+        },
+        {
+          "opens": "0",
+          "closes": "0"
+        },
+        {
+          "opens": "0",
+          "closes": "0"
+        }
+      ],
+      "sublayers": [
+        "23"
+      ]
+    },
+    {
+      "id": "592",
+      "title": "ZooWoods (Beech-Maple ecosystem)",
+      "lat": "43.6629",
+      "lng": "-79.3989",
+      "buildingCode": "033",
+      "address": "25 Harbord Street",
+      "desc": "ZooWoods is an experiment to test whether native plant species will be a better landscaping choice for the environment on campus. ZooWoods is a joint venture between campus groundkeepers and the Department of Zoology.",
+      "image": "\/_assets\/_m_b\/zoowood.jpg",
+      "url": "http:\/\/env.chass.utoronto.ca\/env200y\/zoowoods\/text.html",
+      "sublayers": [
+        "23"
+      ]
+    },
+    {
+      "id": "595",
+      "title": "ZooFoods (Boreal Forest, Carolinian, Prairie Ecosystem)",
+      "lat": "43.6609",
+      "lng": "-79.3995",
+      "buildingCode": "062",
+      "address": "105 St. George Street",
+      "desc": "ZooWoods is an experiment to test whether native plant species will be a better landscaping choice for the environment on campus. ZooWoods is a joint venture between campus groundkeepers and the Department of Zoology. ",
+      "image": "\/_assets\/_m_b\/zoowood1.jpg",
+      "url": "http:\/\/env.chass.utoronto.ca\/env200y\/zoowoods\/text.html#7",
+      "sublayers": [
+        "23"
+      ]
+    },
+    {
+      "id": "597",
+      "title": "The Toronto School of Theology Garden",
+      "lat": "43.6650",
+      "lng": "-79.3910",
+      "buildingCode": "434",
+      "address": "47 Queen's Park Crescent East",
+      "desc": "The collective engages in urban agriculture, educating the community in aspects of gardening, food security, and environmental aspect.",
+      "email": "http:\/\/campusagriculture.ca",
+      "facebook": "https:\/\/www.facebook.com\/groups\/107179269325849\/",
+      "sublayers": [
+        "23"
+      ]
+    },
+    {
+      "id": "598",
+      "title": "The Native Medicine Garden",
+      "lat": "43.6640",
+      "lng": "-79.3937",
+      "buildingCode": "002",
+      "desc": "The collective engages in urban agriculture, educating the community in aspects of gardening, food security, and environmental aspect.",
+      "sublayers": [
+        "23"
+      ]
+    },
+    {
+      "id": "615",
+      "title": "Battery Recycling: Sidney Smith Hall",
+      "lat": "43.6624",
+      "lng": "-79.3986",
+      "buildingCode": "033",
+      "image": "\/_assets\/_m_b\/batt120.jpg",
+      "url": "http:\/\/www.fs.utoronto.ca\/recycle\/rrrr\/battcyc.htm",
+      "sublayers": [
+        "22"
+      ]
+    },
+    {
+      "id": "616",
+      "title": "Battery Recycling: Medical Sciences Building",
+      "lat": "43.6608",
+      "lng": "-79.3938",
+      "buildingCode": "005",
+      "image": "\/_assets\/_m_b\/batt1201.jpg",
+      "url": "http:\/\/www.fs.utoronto.ca\/recycle\/rrrr\/battcyc.htm",
+      "sublayers": [
+        "22"
+      ]
+    },
+    {
+      "id": "617",
+      "title": "Battery Recycling: O.I.S.E",
+      "lat": "43.6682",
+      "lng": "-79.3984",
+      "buildingCode": "123",
+      "image": "\/_assets\/_m_b\/batt1202.jpg",
+      "url": "http:\/\/www.fs.utoronto.ca\/recycle\/rrrr\/battcyc.htm",
+      "sublayers": [
+        "22"
+      ]
+    },
+    {
+      "id": "618",
+      "title": "Battery Recycling: McLennan Labs",
+      "lat": "43.6605",
+      "lng": "-79.3982",
+      "buildingCode": "078",
+      "image": "\/_assets\/_m_b\/batt1203.jpg",
+      "url": "http:\/\/www.fs.utoronto.ca\/recycle\/rrrr\/battcyc.htm",
+      "sublayers": [
+        "22"
+      ]
+    },
+    {
+      "id": "619",
+      "title": "Battery Recycling: Woodsworth Residence",
+      "lat": "43.6672",
+      "lng": "-79.3994",
+      "buildingCode": "130",
+      "image": "\/_assets\/_m_b\/batt1204.jpg",
+      "url": "http:\/\/www.fs.utoronto.ca\/recycle\/rrrr\/battcyc.htm",
+      "sublayers": [
+        "22"
+      ]
+    },
+    {
+      "id": "620",
+      "title": "Battery Recycling: Lash Miller",
+      "lat": "43.6617",
+      "lng": "-79.3980",
+      "buildingCode": "073",
+      "image": "\/_assets\/_m_b\/batt1205.jpg",
+      "url": "http:\/\/www.fs.utoronto.ca\/recycle\/rrrr\/battcyc.htm",
+      "sublayers": [
+        "22"
+      ]
+    },
+    {
+      "id": "621",
+      "title": "Battery Recycling: Robarts Library",
+      "lat": "43.6645",
+      "lng": "-79.3994",
+      "buildingCode": "006",
+      "image": "\/_assets\/_m_b\/batt1206.jpg",
+      "url": "http:\/\/www.fs.utoronto.ca\/recycle\/rrrr\/battcyc.htm",
+      "sublayers": [
+        "22"
+      ]
+    },
+    {
+      "id": "622",
+      "title": "Battery Recycling: Exam Centre",
+      "lat": "43.6585",
+      "lng": "-79.3929",
+      "buildingCode": "155",
+      "image": "\/_assets\/_m_b\/batt1207.jpg",
+      "url": "http:\/\/www.fs.utoronto.ca\/recycle\/rrrr\/battcyc.htm",
+      "sublayers": [
+        "22"
+      ]
+    },
+    {
+      "id": "623",
+      "title": "Battery Recycling: Rotman School of Management",
+      "lat": "43.6652",
+      "lng": "-79.3983",
+      "buildingCode": "134",
+      "image": "\/_assets\/_m_b\/batt1208.jpg",
+      "url": "http:\/\/www.fs.utoronto.ca\/recycle\/rrrr\/battcyc.htm",
+      "sublayers": [
+        "22"
+      ]
+    },
+    {
+      "id": "624",
+      "title": "Battery Recycling: Sussex Court",
+      "lat": "43.6648",
+      "lng": "-79.4009",
+      "buildingCode": "077",
+      "image": "\/_assets\/_m_b\/batt1209.jpg",
+      "url": "http:\/\/www.fs.utoronto.ca\/recycle\/rrrr\/battcyc.htm",
+      "sublayers": [
+        "22"
+      ]
+    },
+    {
+      "id": "625",
+      "title": "Battery Recycling: Health Sciences Building",
+      "lat": "43.6591",
+      "lng": "-79.3928",
+      "buildingCode": "154",
+      "image": "\/_assets\/_m_b\/batt12010.jpg",
+      "url": "http:\/\/www.fs.utoronto.ca\/recycle\/rrrr\/battcyc.htm",
+      "sublayers": [
+        "22"
+      ]
+    },
+    {
+      "id": "694",
+      "title": "Battery Recycling: Swap Shop",
+      "lat": "43.6600",
+      "lng": "-79.3997",
+      "buildingCode": "061",
+      "image": "\/_assets\/_m_b\/batt12011.jpg",
+      "url": "http:\/\/www.fs.utoronto.ca\/recycle\/rrrr\/battcyc.htm",
+      "sublayers": [
+        "22"
+      ]
+    },
+    {
+      "id": "695",
+      "title": "Battery Recycling: Faculty of Dentistry",
+      "lat": "43.6561",
+      "lng": "-79.3870",
+      "buildingCode": "065",
+      "image": "\/_assets\/_m_b\/batt12012.jpg",
+      "url": "http:\/\/www.fs.utoronto.ca\/recycle\/rrrr\/battcyc.htm",
+      "sublayers": [
+        "22"
+      ]
+    },
+    {
+      "id": "696",
+      "title": "Battery Recycling: Galbraith Building",
+      "lat": "43.6598",
+      "lng": "-79.3961",
+      "buildingCode": "070",
+      "image": "\/_assets\/_m_b\/batt12013.jpg",
+      "url": "http:\/\/www.fs.utoronto.ca\/recycle\/rrrr\/battcyc.htm",
+      "sublayers": [
+        "22"
+      ]
+    },
+    {
+      "id": "697",
+      "title": "Battery Recycling: Earth Sciences",
+      "lat": "43.6605",
+      "lng": "-79.3991",
+      "buildingCode": "062",
+      "image": "\/_assets\/_m_b\/batt12014.jpg",
+      "url": "http:\/\/www.fs.utoronto.ca\/recycle\/rrrr\/battcyc.htm",
+      "sublayers": [
+        "22"
+      ]
+    },
+    {
+      "id": "698",
+      "title": "Battery Recycling: Wallberg Building",
+      "lat": "43.6591",
+      "lng": "-79.3954",
+      "buildingCode": "008",
+      "image": "\/_assets\/_m_b\/batt12015.jpg",
+      "url": "http:\/\/www.fs.utoronto.ca\/recycle\/rrrr\/battcyc.htm",
+      "sublayers": [
+        "22"
+      ]
+    },
+    {
+      "id": "699",
+      "title": "Battery Recycling: Bissell Building",
+      "lat": "43.6650",
+      "lng": "-79.3993",
+      "buildingCode": "006A",
+      "image": "\/_assets\/_m_b\/batt12016.jpg",
+      "url": "http:\/\/www.fs.utoronto.ca\/recycle\/rrrr\/battcyc.htm",
+      "sublayers": [
+        "22"
+      ]
+    },
+    {
+      "id": "700",
+      "title": "Battery Recycling: Factor-Inwentash Faculty of Social Work",
+      "lat": "43.6682",
+      "lng": "-79.3978",
+      "buildingCode": "111",
+      "image": "\/_assets\/_m_b\/batt12017.jpg",
+      "url": "http:\/\/www.fs.utoronto.ca\/recycle\/rrrr\/battcyc.htm",
+      "sublayers": [
+        "22"
+      ]
+    },
+    {
+      "id": "701",
+      "title": "Battery Recycling: Munk Centre",
+      "lat": "43.6651",
+      "lng": "-79.3964",
+      "buildingCode": "012A",
+      "image": "\/_assets\/_m_b\/batt12018.jpg",
+      "url": "http:\/\/www.fs.utoronto.ca\/recycle\/rrrr\/battcyc.htm",
+      "sublayers": [
+        "22"
+      ]
+    },
+    {
+      "id": "702",
+      "title": "Battery Recycling: 455 Spadina Ave",
+      "lat": "43.6582",
+      "lng": "-79.3997",
+      "buildingCode": "171",
+      "image": "\/_assets\/_m_b\/batt12019.jpg",
+      "url": "http:\/\/www.fs.utoronto.ca\/recycle\/rrrr\/battcyc.htm",
+      "sublayers": [
+        "22"
+      ]
+    },
+    {
+      "id": "703",
+      "title": "Battery Recycling: Sanford Fleming Building",
+      "lat": "43.6601",
+      "lng": "-79.3952",
+      "buildingCode": "009",
+      "image": "\/_assets\/_m_b\/batt12020.jpg",
+      "url": "Battery Recycling: Sanford Fleming Building",
+      "sublayers": [
+        "22"
+      ]
+    },
+    {
+      "id": "704",
+      "title": "Battery Recycling: Flavelle House",
+      "lat": "43.6658",
+      "lng": "-79.3942",
+      "buildingCode": "040",
+      "url": "http:\/\/www.fs.utoronto.ca\/recycle\/rrrr\/battcyc.htm",
+      "sublayers": [
+        "22"
+      ]
+    },
+    {
+      "id": "705",
+      "title": "Battery Recycling: Warren Stevens Building",
+      "lat": "43.6627",
+      "lng": "-79.4010",
+      "buildingCode": "068A",
+      "image": "\/_assets\/_m_b\/batt12021.jpg",
+      "url": "http:\/\/www.fs.utoronto.ca\/recycle\/rrrr\/battcyc.htm",
+      "sublayers": [
+        "22"
+      ]
+    },
+    {
+      "id": "706",
+      "title": "Battery Recycling: Bahen Centre",
+      "lat": "43.6597",
+      "lng": "-79.3972",
+      "buildingCode": "080",
+      "image": "\/_assets\/_m_b\/batt12022.jpg",
+      "url": "http:\/\/www.fs.utoronto.ca\/recycle\/rrrr\/battcyc.htm",
+      "sublayers": [
+        "22"
+      ]
+    },
+    {
+      "id": "707",
+      "title": "Battery Recycling: Kelly Library",
+      "lat": "43.6647",
+      "lng": "-79.3895",
+      "buildingCode": "429",
+      "image": "\/_assets\/_m_b\/batt12023.jpg",
+      "url": "http:\/\/www.fs.utoronto.ca\/recycle\/rrrr\/battcyc.htm",
+      "sublayers": [
+        "22"
+      ]
+    },
+    {
+      "id": "708",
+      "title": "Battery Recycling: North Borden Building",
+      "lat": "43.6604",
+      "lng": "-79.4001",
+      "buildingCode": "061A",
+      "image": "\/_assets\/_m_b\/batt12024.jpg",
+      "sublayers": [
+        "22"
+      ]
+    },
+    {
+      "id": "709",
+      "title": "Battery Recycling: McMurrich Building",
+      "lat": "43.6612",
+      "lng": "-79.3929",
+      "buildingCode": "004",
+      "image": "\/_assets\/_m_b\/batt12025.jpg",
+      "url": "http:\/\/www.fs.utoronto.ca\/recycle\/rrrr\/battcyc.htm",
+      "sublayers": [
+        "22"
+      ]
+    },
+    {
+      "id": "710",
+      "title": "Battery Recycling: Mechanical Engineering Building",
+      "lat": "43.6601",
+      "lng": "-79.3941",
+      "buildingCode": "022",
+      "image": "\/_assets\/_m_b\/batt12026.jpg",
+      "url": "http:\/\/www.fs.utoronto.ca\/recycle\/rrrr\/battcyc.htm",
+      "sublayers": [
+        "22"
+      ]
+    },
+    {
+      "id": "711",
+      "title": "Battery Recycling: Leslie Dan Pharmacy Building",
+      "lat": "43.6600",
+      "lng": "-79.3917",
+      "buildingCode": "161",
+      "image": "\/_assets\/_m_b\/batt12027.jpg",
+      "url": "http:\/\/www.fs.utoronto.ca\/recycle\/rrrr\/battcyc.htm",
+      "sublayers": [
+        "22"
+      ]
+    },
+    {
+      "id": "712",
+      "title": "Battery Recycling: Haultain Building",
+      "lat": "43.6600",
+      "lng": "-79.3937",
+      "buildingCode": "024",
+      "image": "\/_assets\/_m_b\/batt12028.jpg",
+      "url": "http:\/\/www.fs.utoronto.ca\/recycle\/rrrr\/battcyc.htm",
+      "sublayers": [
+        "22"
+      ]
+    },
+    {
+      "id": "713",
+      "title": "Battery Recycling: Ramsay Wright Laboratories",
+      "lat": "43.6630",
+      "lng": "-79.3991",
+      "buildingCode": "072",
+      "image": "\/_assets\/_m_b\/batt12029.jpg",
+      "url": "http:\/\/www.fs.utoronto.ca\/recycle\/rrrr\/battcyc.htm",
+      "sublayers": [
+        "22"
+      ]
+    },
+    {
+      "id": "714",
+      "title": "Battery Recycling: Edward Johnson Building",
+      "lat": "43.6665",
+      "lng": "-79.3946",
+      "buildingCode": "051",
+      "image": "\/_assets\/_m_b\/batt12030.jpg",
+      "url": "http:\/\/www.fs.utoronto.ca\/recycle\/rrrr\/battcyc.htm",
+      "sublayers": [
+        "22"
+      ]
+    },
+    {
+      "id": "715",
+      "title": "Battery Recycling: Wetmore Hall",
+      "lat": "43.6622",
+      "lng": "-79.4007",
+      "buildingCode": "032",
+      "image": "\/_assets\/_m_b\/batt12031.jpg",
+      "url": "http:\/\/www.fs.utoronto.ca\/recycle\/rrrr\/battcyc.htm",
+      "sublayers": [
+        "22"
+      ]
+    },
+    {
+      "id": "716",
+      "title": "Battery Recycling: Wilson Hall",
+      "lat": "43.6616",
+      "lng": "-79.4006",
+      "buildingCode": "032A",
+      "image": "\/_assets\/_m_b\/batt12032.jpg",
+      "url": "http:\/\/www.fs.utoronto.ca\/recycle\/rrrr\/battcyc.htm",
+      "sublayers": [
+        "22"
+      ]
+    },
+    {
+      "id": "717",
+      "title": "Battery Recycling: Lassonde Mining Building",
+      "lat": "43.6595",
+      "lng": "-79.3934",
+      "buildingCode": "007",
+      "image": "\/_assets\/_m_b\/batt12033.jpg",
+      "url": "http:\/\/www.fs.utoronto.ca\/recycle\/rrrr\/battcyc.htm",
+      "sublayers": [
+        "22"
+      ]
+    },
+    {
+      "id": "718",
+      "title": "Battery Recycling: 371 Bloor Street West",
+      "lat": "43.6666",
+      "lng": "-79.4024",
+      "buildingCode": "014",
+      "image": "\/_assets\/_m_b\/batt12034.jpg",
+      "url": "http:\/\/www.fs.utoronto.ca\/recycle\/rrrr\/battcyc.htm",
+      "sublayers": [
+        "22"
+      ]
+    },
+    {
+      "id": "719",
+      "title": "Battery Recycling: Banting Building",
+      "lat": "43.6605",
+      "lng": "-79.3886",
+      "buildingCode": "016",
+      "image": "\/_assets\/_m_b\/batt12035.jpg",
+      "url": "http:\/\/www.fs.utoronto.ca\/recycle\/rrrr\/battcyc.htm",
+      "sublayers": [
+        "22"
+      ]
+    },
+    {
+      "id": "720",
+      "title": "Battery Recycling: Banting Building",
+      "lat": "43.6605",
+      "lng": "-79.3886",
+      "buildingCode": "016",
+      "image": "\/_assets\/_m_b\/batt12036.jpg",
+      "url": "http:\/\/www.fs.utoronto.ca\/recycle\/rrrr\/battcyc.htm",
+      "sublayers": [
+        "22"
+      ]
+    },
+    {
+      "id": "998",
+      "title": "The Ellen Giles Garden ",
+      "aka": "Ellen Giles Garden",
+      "lat": "43.6677",
+      "lng": "-79.3860",
+      "buildingCode": "0000",
+      "address": "30 Charles Street West ",
+      "desc": "This exciting rooftop garden built in 2004, is run by the Student Family Housing community.",
+      "url": "http:\/\/www.studentfamilyhousing.utoronto.ca\/Page92.aspx",
+      "kw": "Rooftop, Garden, Student Family Housing",
+      "sublayers": [
+        "23"
+      ]
+    },
+    {
+      "id": "1941",
+      "title": "Robarts Green Lawn",
+      "lat": "43.6649",
+      "lng": "-79.4003",
+      "buildingCode": "0000",
+      "address": "130 St George St",
+      "desc": "This is a great place to eat lunch or enjoy a snack in the middle of a day. In the spring, there are cherry blossoms that bloom. Check out the environmental time capsule on the south-west side of Robarts while you're here.",
+      "sublayers": [
+        "23"
+      ]
+    },
+    {
+      "id": "1942",
+      "title": "Huron Washington Parkette",
+      "lat": "43.6661",
+      "lng": "-79.4014",
+      "buildingCode": "0000",
+      "address": "420 Huron St",
+      "desc": "This little area of green space does not seem like much and is often populated by children during after school hours. However, it is a nice place to sit down on a bench or on the grass to take a breather during the early mornings or on a weekend.",
+      "sublayers": [
+        "23"
+      ]
+    },
+    {
+      "id": "1943",
+      "title": "Philosopher's Walk",
+      "lat": "43.6659",
+      "lng": "-79.3950",
+      "buildingCode": "0000",
+      "desc": "Philosopher's Walk is a meandering path that borders the back of Trinity College. There is also an amphitheater and many benches around for people to meet up for a chat or enjoy their lunches on while observing squirrels and sparrows that pass by.",
+      "sublayers": [
+        "23"
+      ]
+    },
+    {
+      "id": "1944",
+      "title": "Lester B. Pearson Garden for Peace and International Understanding",
+      "lat": "43.6663",
+      "lng": "-79.3910",
+      "buildingCode": "0000",
+      "desc": "This little garden is tucked away in Victoria College's Quad. This is a great place for contemplation especially with the sound of the gently waterfall nearby in the quad and the area is relatively secluded with lots of bushes and trees planted.",
+      "sublayers": [
+        "23"
+      ]
+    },
+    {
+      "id": "1945",
+      "title": "Queen's Park",
+      "lat": "43.6643",
+      "lng": "-79.3923",
+      "buildingCode": "0000",
+      "address": "47 Queens Park Crescent E",
+      "desc": "This gigantic green space is in the middle of our campus, dividing the east side from the west. The trees here have identification plates and there are surprisingly informative signs around the park tell you about the history and ecology of the land.",
+      "sublayers": [
+        "23"
+      ]
+    },
+    {
+      "id": "1946",
+      "title": "U of T Food Policy Council Garden",
+      "lat": "43.6636",
+      "lng": "-79.3945",
+      "buildingCode": "0000",
+      "desc": "This is the main location for the U of T Food Policy Council's urban agricultural gardens. They garden mostly in the spring, summer, and early fall and tend to council business during the school year. ",
+      "email": "uoft.fpc@gmail.com",
+      "facebook": "https:\/\/www.facebook.com\/UofTFPC",
+      "sublayers": [
+        "23"
+      ]
+    },
+    {
+      "id": "1947",
+      "title": "Front Campus",
+      "lat": "43.6617",
+      "lng": "-79.3951",
+      "buildingCode": "0000",
+      "desc": "This is one of the most iconic and used green spaces on the U of T St. George Campus. It is often pictured with the magnificent University College Building and used as a shortcut to get to class in the various building around King's College Circle.",
+      "sublayers": [
+        "23"
+      ]
+    },
+    {
+      "id": "1948",
+      "title": "Sir Daniel's Quad",
+      "lat": "43.6626",
+      "lng": "-79.3970",
+      "buildingCode": "0000",
+      "address": "73 St. George Street",
+      "desc": "This is a one of the more populated quads on campus, belong to University College. During the warmer days and months, this is a great spot to lie down, have a picnic, or throw a frisbee around. During the colder months, this is also a great battlefie",
+      "sublayers": [
+        "23"
+      ]
+    },
+    {
+      "id": "1949",
+      "title": "Knox College Quad",
+      "lat": "43.6615",
+      "lng": "-79.3964",
+      "buildingCode": "575",
+      "address": "59 St George St",
+      "desc": "This hidden gem of a quad is often unknown to many non-Knox affiliated students on campus. In the warmer seasons, it is a popular place for weddings and photoshoots. During the school year, it is a beautiful, secluded, and quiet place for meditation.",
+      "sublayers": [
+        "23"
+      ]
+    },
+    {
+      "id": "1951",
+      "title": "Terrence Donnelly Centre ",
+      "aka": "Bamboo Garden",
+      "lat": "43.6600",
+      "lng": "-79.3929",
+      "buildingCode": "0000",
+      "address": "160 College St ",
+      "desc": "It's also one of the rare indoor green spaces we have! There are benches for sitting both beside and enclosed within the bamboo. This is a great place to have lunch, meditate, or doodle on a lunch break.",
+      "sublayers": [
+        "23"
+      ]
+    },
+    {
+      "id": "1953",
+      "title": "Koffler House \u2013 Green living wall",
+      "lat": "43.6606",
+      "lng": "-79.4004",
+      "buildingCode": "0000",
+      "address": "569 Spadina Crescent",
+      "desc": "This Living Wall is located on the Second Floor of the Multi-Faith Centre and it is located in the aptly named Meditation Room. It is a cozy space used as a drop in space for prayers, but is also open to any students who want to meditate.",
+      "sublayers": [
+        "23"
+      ]
+    },
+    {
+      "id": "1954",
+      "title": "Earth Sciences Greenhouse",
+      "lat": "43.6605",
+      "lng": "-79.3991",
+      "buildingCode": "0000",
+      "desc": "There are a couple of greenhouses on the top floors of this building complex. The Earth Science Greenhouse is open during the daytime and is accessible through the elevators inside the Earth Science Building.",
+      "sublayers": [
+        "23"
+      ]
+    },
+    {
+      "id": "1955",
+      "title": "Faculty of Forestry Woods",
+      "lat": "43.6604",
+      "lng": "-79.3993",
+      "buildingCode": "0000",
+      "desc": "This small piece of land is secluded and good for quiet stroll.",
+      "sublayers": [
+        "23"
+      ]
+    }
+  ]
+}
