@@ -3,6 +3,8 @@ package tech.edt.MapApp;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.content.res.AssetManager;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationManager;
@@ -12,7 +14,11 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.arlib.floatingsearchview.FloatingSearchView;
@@ -24,6 +30,7 @@ import com.google.android.gms.maps.MapsInitializer;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import org.json.JSONArray;
@@ -44,8 +51,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private FloatingSearchView mSearchView;
     public final String CREATOR = "Howard Chen";
 
-    private HashMap<String, Feature> features;
-    public static String[] keys;
+    private ArrayList<Feature> features;
     public static ArrayList<Feature> values;
 
     private static LatLng CAMPUSLATLNG;
@@ -70,7 +76,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         setUpFeatures();
 
-        values = new ArrayList<Feature>(features.values());
+        values = (ArrayList<Feature>) features.clone();
 
         Collections.sort(values, new Comparator<Feature>() {
             public int compare(Feature f1, Feature f2) {
@@ -157,12 +163,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+//        mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+//            @Override
+//            public boolean onMarkerClick(Marker marker) {
+//
+//            }
+//        });
 
         goToNinja(CAMPUSLATLNG, DEFAULT_ZOOM);
 
-//        for (Feature i : this.features.values()) {
-//            i.getMarker(mMap).setVisible(true); //create the marker
-//        }
+        for (Feature i : this.features)
+            i.getMarker(mMap); //create the marker for each feature
+
 
         // enable my location
         if (ActivityCompat.checkSelfPermission(
@@ -172,10 +184,50 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         } else {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 requestPermissions(
-                        new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION},
-                        MY_PERMISSIONS_FINE_LOCATION);
+                        new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, MY_PERMISSIONS_FINE_LOCATION);
             }
         }
+
+        mMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
+
+            @Override
+            public void onInfoWindowClick(Marker marker) {
+                Feature f = (Feature) marker.getTag();
+                if (f instanceof Building) {
+                    BuildingInfoDialog bid = new BuildingInfoDialog(MapsActivity.this, (Building) f);
+                    bid.show();
+                }
+            }
+        });
+        mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+
+            @Override
+            public View getInfoWindow(Marker marker) {
+                return null;
+            }
+
+            @Override
+            public View getInfoContents(Marker marker) {
+
+                LinearLayout info = new LinearLayout(getBaseContext());
+                info.setOrientation(LinearLayout.VERTICAL);
+
+                TextView title = new TextView(getBaseContext());
+                title.setTextColor(Color.BLACK);
+                title.setGravity(Gravity.CENTER);
+                title.setTypeface(null, Typeface.BOLD);
+                title.setText(marker.getTitle());
+
+                TextView snippet = new TextView(getBaseContext());
+                snippet.setTextColor(Color.GRAY);
+                snippet.setText(marker.getSnippet());
+
+                info.addView(title);
+                info.addView(snippet);
+
+                return info;
+            }
+        });
     }
 
     private void centerOnMe() {
@@ -233,7 +285,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
     private void setUpFeatures() {
-        this.features = new HashMap<>();
+        this.features = new ArrayList<>();
 
         AssetManager assetManager = getAssets();
         try {
@@ -265,13 +317,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             JSONObject address = ij.getJSONObject("address");
             String street = address.getString("street");
             String s = street + "\n" +
-                    address.getString("city") +
-                    address.getString("province") +
+                    address.getString("city") + " " +
+                    address.getString("province") + " " +
                     address.getString("country") + "\n" +
                     address.getString("postal");
 
-            this.features.put(code + " - " + name, new Building(lat, lng, name, code, street, s,
-                    short_name));
+            this.features.add(new Building(lat, lng, name, code, street, s, short_name));
 
         }
     }
@@ -306,8 +357,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             Hours hours = new Hours(h);
             String[] tags = Util.toStringArray(ij.getJSONArray("tags"));
 
-            this.features.put("Food - " + name, new Food(lat, lng, name, address, short_name, url,
-                    imageURL, desc, hours, tags));
+            this.features.add(new Food(lat, lng, name, address, short_name, url, imageURL, desc, hours, tags));
 
         }
     }
