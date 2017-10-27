@@ -1,0 +1,2401 @@
+[
+  {
+    "name": "230 College Street",
+    "value": "028",
+    "campus": "utsg",
+    "keywords": [
+      "cm",
+      "230 college"
+    ]
+  },
+  {
+    "name": "Annesley Hall",
+    "value": "506",
+    "campus": "utsg",
+    "keywords": [
+      "an",
+      "annesley"
+    ]
+  },
+  {
+    "name": "Anthropology Building",
+    "value": "079",
+    "campus": "utsg",
+    "keywords": [
+      "ap",
+      "anthropology"
+    ]
+  },
+  {
+    "name": "Astronomy & Astrophysics Building",
+    "value": "036",
+    "campus": "utsg",
+    "keywords": [
+      "ab",
+      "astronomy"
+    ]
+  },
+  {
+    "name": "Back Campus Fields",
+    "value": "094",
+    "campus": "utsg",
+    "keywords": [
+      "bk",
+      "back campus"
+    ]
+  },
+  {
+    "name": "Bahen Centre for Information Technology",
+    "value": "080",
+    "campus": "utsg",
+    "keywords": [
+      "ba",
+      "bahen centre"
+    ]
+  },
+  {
+    "name": "Bancroft Building",
+    "value": "057",
+    "campus": "utsg",
+    "keywords": [
+      "bf",
+      "bancroft bld"
+    ]
+  },
+  {
+    "name": "Banting Institute",
+    "value": "016",
+    "campus": "utsg",
+    "keywords": [
+      "bi",
+      "banting inst"
+    ]
+  },
+  {
+    "name": "Best Institute",
+    "value": "052",
+    "campus": "utsg",
+    "keywords": [
+      "cb",
+      "best inst."
+    ]
+  },
+  {
+    "name": "Birge-Carnegie Library",
+    "value": "503",
+    "campus": "utsg",
+    "keywords": [
+      "bc",
+      "birge-carneg"
+    ]
+  },
+  {
+    "name": "Bloor Street West-371",
+    "value": "014",
+    "campus": "utsg",
+    "keywords": [
+      "fe",
+      "bloor w-371"
+    ]
+  },
+  {
+    "name": "Borden Building North",
+    "value": "061A",
+    "campus": "utsg",
+    "keywords": [
+      "nb",
+      "borden north"
+    ]
+  },
+  {
+    "name": "Borden Building South",
+    "value": "061",
+    "campus": "utsg",
+    "keywords": [
+      "sb",
+      "borden south"
+    ]
+  },
+  {
+    "name": "Brennan Hall",
+    "value": "411",
+    "campus": "utsg",
+    "keywords": [
+      "br",
+      "brennan hall"
+    ]
+  },
+  {
+    "name": "Burwash Hall",
+    "value": "504",
+    "campus": "utsg",
+    "keywords": [
+      "bw",
+      "burwash hall"
+    ]
+  },
+  {
+    "name": "Burwash Residence (Lower Houses)",
+    "value": "505",
+    "campus": "utsg",
+    "keywords": [
+      "lb",
+      "burwashlower"
+    ]
+  },
+  {
+    "name": "Burwash Residence (Upper Houses)",
+    "value": "505A",
+    "campus": "utsg",
+    "keywords": [
+      "ub",
+      "burwashupper"
+    ]
+  },
+  {
+    "name": "C. David Naylor Building",
+    "value": "011",
+    "campus": "utsg",
+    "keywords": [
+      "nl",
+      "naylor"
+    ]
+  },
+  {
+    "name": "Canadiana Gallery",
+    "value": "047",
+    "campus": "utsg",
+    "keywords": [
+      "cg",
+      "canadiana"
+    ]
+  },
+  {
+    "name": "Cardinal Flahiff Building",
+    "value": "430",
+    "campus": "utsg",
+    "keywords": [
+      "cf",
+      "card flahiff"
+    ]
+  },
+  {
+    "name": "Carr Hall",
+    "value": "426",
+    "campus": "utsg",
+    "keywords": [
+      "cr",
+      "carr hall"
+    ]
+  },
+  {
+    "name": "Central Steam Plant",
+    "value": "018",
+    "campus": "utsg",
+    "keywords": [
+      "st",
+      "steam plant"
+    ]
+  },
+  {
+    "name": "Centre for Engineering Innovation and Entrepreneurship (Under Construction)",
+    "value": "087",
+    "campus": "utsg",
+    "keywords": [
+      "ce",
+      ""
+    ]
+  },
+  {
+    "name": "Charles St. West-30",
+    "value": "790",
+    "campus": "utsg",
+    "keywords": [
+      "-",
+      "charlesw-30"
+    ]
+  },
+  {
+    "name": "Charles St. West-35",
+    "value": "791",
+    "campus": "utsg",
+    "keywords": [
+      "-",
+      "charlesw-35"
+    ]
+  },
+  {
+    "name": "Charles Street West-65",
+    "value": "516",
+    "campus": "utsg",
+    "keywords": [
+      "lh",
+      "charlesstw-65"
+    ]
+  },
+  {
+    "name": "Chestnut Residence and Conference Centre",
+    "value": "158",
+    "campus": "utsg",
+    "keywords": [
+      "cn",
+      "chestnut-89",
+      "Chestnut Residence"
+    ]
+  },
+  {
+    "name": "Clara Benson Building",
+    "value": "068",
+    "campus": "utsg",
+    "keywords": [
+      "bn",
+      "clara benson"
+    ]
+  },
+  {
+    "name": "Claude T. Bissell Building",
+    "value": "006A",
+    "campus": "utsg",
+    "keywords": [
+      "bl",
+      "bissell bldg"
+    ]
+  },
+  {
+    "name": "College Street - 245",
+    "value": "085",
+    "campus": "utsg",
+    "keywords": [
+      "cx",
+      "college st-245"
+    ]
+  },
+  {
+    "name": "College Street-229",
+    "value": "179",
+    "campus": "utsg",
+    "keywords": [
+      "cz",
+      "college-229"
+    ]
+  },
+  {
+    "name": "College Street-88",
+    "value": "090",
+    "campus": "utsg",
+    "keywords": [
+      "zc",
+      "college-88",
+      "Network of Ex in Simulation Clinical Teaching & Learning"
+    ]
+  },
+  {
+    "name": "College Street-92",
+    "value": "071",
+    "campus": "utsg",
+    "keywords": [
+      "og",
+      "college-92",
+      "Obstetrics and Gynaecology"
+    ]
+  },
+  {
+    "name": "Communication House",
+    "value": "092",
+    "campus": "utsg",
+    "keywords": [
+      "cx",
+      "comm house"
+    ]
+  },
+  {
+    "name": "Convocation Hall",
+    "value": "010A",
+    "campus": "utsg",
+    "keywords": [
+      "ch",
+      "con hall"
+    ]
+  },
+  {
+    "name": "Cumberland House",
+    "value": "026",
+    "campus": "utsg",
+    "keywords": [
+      "cu",
+      "cumberland"
+    ]
+  },
+  {
+    "name": "D.L. Pratt Building",
+    "value": "008A",
+    "campus": "utsg",
+    "keywords": [
+      "pt",
+      "d.l. pratt"
+    ]
+  },
+  {
+    "name": "Daniels Building",
+    "value": "054",
+    "campus": "utsg",
+    "keywords": [
+      "da",
+      "daniels"
+    ]
+  },
+  {
+    "name": "Dentistry Building",
+    "value": "065",
+    "campus": "utsg",
+    "keywords": [
+      "dn",
+      "dentistry"
+    ]
+  },
+  {
+    "name": "Devonshire Place-100 (Demolished Feb, 2012)",
+    "value": "141",
+    "campus": "utsg",
+    "keywords": [
+      "mf",
+      "devonshire-100"
+    ]
+  },
+  {
+    "name": "E.J. Pratt Library",
+    "value": "514",
+    "campus": "utsg",
+    "keywords": [
+      "pr",
+      "pratt lib"
+    ]
+  },
+  {
+    "name": "Early Learning Centre",
+    "value": "129",
+    "campus": "utsg",
+    "keywords": [
+      "er",
+      "early learn"
+    ]
+  },
+  {
+    "name": "Earth Sciences Centre",
+    "value": "062",
+    "campus": "utsg",
+    "keywords": [
+      "es",
+      "earth sci"
+    ]
+  },
+  {
+    "name": "Edward Johnson Building",
+    "value": "051",
+    "campus": "utsg",
+    "keywords": [
+      "ej",
+      "edward johns"
+    ]
+  },
+  {
+    "name": "Edward Street-123",
+    "value": "193",
+    "campus": "utsg",
+    "keywords": [
+      "ed",
+      "edward-123"
+    ]
+  },
+  {
+    "name": "Electrometallurgy Lab",
+    "value": "093",
+    "campus": "utsg",
+    "keywords": [
+      "el",
+      "electrometal"
+    ]
+  },
+  {
+    "name": "Elmsley Hall",
+    "value": "405",
+    "campus": "utsg",
+    "keywords": [
+      "eh",
+      "elmsley"
+    ]
+  },
+  {
+    "name": "Emmanuel College",
+    "value": "502",
+    "campus": "utsg",
+    "keywords": [
+      "em",
+      "emmanuel"
+    ]
+  },
+  {
+    "name": "Engineering Annex",
+    "value": "021",
+    "campus": "utsg",
+    "keywords": [
+      "ea",
+      "eng annex"
+    ]
+  },
+  {
+    "name": "Enrolment Services",
+    "value": "127",
+    "campus": "utsg",
+    "keywords": [
+      "ad",
+      "enrol serv",
+      "Enrolment Services"
+    ]
+  },
+  {
+    "name": "Exam Centre",
+    "value": "155",
+    "campus": "utsg",
+    "keywords": [
+      "ex",
+      "exam centre"
+    ]
+  },
+  {
+    "name": "Factor-Inwentash Faculty of Social Work",
+    "value": "111",
+    "campus": "utsg",
+    "keywords": [
+      "sk",
+      "social work",
+      "Factor-Inwentash Faculty of Social Work"
+    ]
+  },
+  {
+    "name": "Faculty Club",
+    "value": "075",
+    "campus": "utsg",
+    "keywords": [
+      "fc",
+      "faculty club"
+    ]
+  },
+  {
+    "name": "Faculty of Law",
+    "value": "040",
+    "campus": "utsg",
+    "keywords": [
+      "lw",
+      "law"
+    ]
+  },
+  {
+    "name": "Falconer Hall",
+    "value": "050",
+    "campus": "utsg",
+    "keywords": [
+      "fh",
+      "falconer hal"
+    ]
+  },
+  {
+    "name": "Fasken Martineau Building",
+    "value": "151",
+    "campus": "utsg",
+    "keywords": [
+      "lg",
+      "martineau"
+    ]
+  },
+  {
+    "name": "Fields Inst for Research in Math Science",
+    "value": "105",
+    "campus": "utsg",
+    "keywords": [
+      "fi",
+      "fields inst"
+    ]
+  },
+  {
+    "name": "Fisher House",
+    "value": "420",
+    "campus": "utsg",
+    "keywords": [
+      "fs",
+      "fisher house"
+    ]
+  },
+  {
+    "name": "FitzGerald Building",
+    "value": "025",
+    "campus": "utsg",
+    "keywords": [
+      "fg",
+      "fitzgerald"
+    ]
+  },
+  {
+    "name": "Founders House",
+    "value": "428",
+    "campus": "utsg",
+    "keywords": [
+      "bh",
+      "founders"
+    ]
+  },
+  {
+    "name": "Gage Building",
+    "value": "082",
+    "campus": "utsg",
+    "keywords": [
+      "ga",
+      "gage bldg"
+    ]
+  },
+  {
+    "name": "Galbraith Building",
+    "value": "070",
+    "campus": "utsg",
+    "keywords": [
+      "gb",
+      "galbraith"
+    ]
+  },
+  {
+    "name": "George Ignatieff Theatre",
+    "value": "603",
+    "campus": "utsg",
+    "keywords": [
+      "gi",
+      "g ignatieff"
+    ]
+  },
+  {
+    "name": "Gerald Larkin Building",
+    "value": "602",
+    "campus": "utsg",
+    "keywords": [
+      "la",
+      "larkin bldg"
+    ]
+  },
+  {
+    "name": "Gerstein Science Information Centre in the Sigmund Samuel Library Bldg",
+    "value": "003",
+    "campus": "utsg",
+    "keywords": [
+      "sm",
+      "sig samuel",
+      "Sigmund Samuel Library Building\/Gerstein Science Information Centre"
+    ]
+  },
+  {
+    "name": "Gilson House",
+    "value": "422",
+    "campus": "utsg",
+    "keywords": [
+      "gh",
+      "gilson house"
+    ]
+  },
+  {
+    "name": "Goldring Centre for High Performance Sport",
+    "value": "042",
+    "campus": "utsg",
+    "keywords": [
+      "go",
+      "gc high perf"
+    ]
+  },
+  {
+    "name": "Goldring Student Centre",
+    "value": "507",
+    "campus": "utsg",
+    "keywords": [
+      "gc",
+      "goldring ctr"
+    ]
+  },
+  {
+    "name": "Graduate House",
+    "value": "064",
+    "campus": "utsg",
+    "keywords": [
+      "gd",
+      "graduate hse"
+    ]
+  },
+  {
+    "name": "Graduate Students' Union",
+    "value": "056",
+    "campus": "utsg",
+    "keywords": [
+      "gu",
+      "g.s.u."
+    ]
+  },
+  {
+    "name": "Hart House",
+    "value": "002",
+    "campus": "utsg",
+    "keywords": [
+      "hh",
+      "hart house"
+    ]
+  },
+  {
+    "name": "Haultain Building",
+    "value": "024",
+    "campus": "utsg",
+    "keywords": [
+      "ha",
+      "haultain"
+    ]
+  },
+  {
+    "name": "Health Sciences Building",
+    "value": "154",
+    "campus": "utsg",
+    "keywords": [
+      "hs",
+      "health sci"
+    ]
+  },
+  {
+    "name": "Huron Street-215",
+    "value": "067",
+    "campus": "utsg",
+    "keywords": [
+      "hu",
+      "huron-215"
+    ]
+  },
+  {
+    "name": "Huron Street-370",
+    "value": "138",
+    "campus": "utsg",
+    "keywords": [
+      "ca",
+      "huron st-370",
+      "Campus Co-op Day Care"
+    ]
+  },
+  {
+    "name": "Innis College",
+    "value": "132",
+    "campus": "utsg",
+    "keywords": [
+      "in",
+      "innis coll"
+    ]
+  },
+  {
+    "name": "Innis College Student Residence",
+    "value": "133",
+    "campus": "utsg",
+    "keywords": [
+      "is",
+      "innis resid"
+    ]
+  },
+  {
+    "name": "Isabel Bader Theatre",
+    "value": "509",
+    "campus": "utsg",
+    "keywords": [
+      "bt",
+      "badertheatre"
+    ]
+  },
+  {
+    "name": "J. M. Kelly Library",
+    "value": "429",
+    "campus": "utsg",
+    "keywords": [
+      "kl",
+      "j.m. kelly"
+    ]
+  },
+  {
+    "name": "J. Robert S. Prichard Alumni House",
+    "value": "019",
+    "campus": "utsg",
+    "keywords": [
+      "dr",
+      "prichard hse"
+    ]
+  },
+  {
+    "name": "Jackman Humanities Building",
+    "value": "128",
+    "campus": "utsg",
+    "keywords": [
+      "jh",
+      "jackman"
+    ]
+  },
+  {
+    "name": "John P. Robarts Library Building",
+    "value": "006",
+    "campus": "utsg",
+    "keywords": [
+      "rl",
+      "robarts"
+    ]
+  },
+  {
+    "name": "Knox College",
+    "value": "575",
+    "campus": "utsg",
+    "keywords": [
+      "kx",
+      "knox"
+    ]
+  },
+  {
+    "name": "Koffler House",
+    "value": "145",
+    "campus": "utsg",
+    "keywords": [
+      "kp",
+      "koffler hse"
+    ]
+  },
+  {
+    "name": "Koffler Student Services Centre",
+    "value": "143",
+    "campus": "utsg",
+    "keywords": [
+      "ks",
+      "koffler cent"
+    ]
+  },
+  {
+    "name": "Lash Miller Chemical Laboratories",
+    "value": "073",
+    "campus": "utsg",
+    "keywords": [
+      "lm",
+      "lash miller"
+    ]
+  },
+  {
+    "name": "Lassonde Mining Building",
+    "value": "007",
+    "campus": "utsg",
+    "keywords": [
+      "mb",
+      "mining"
+    ]
+  },
+  {
+    "name": "Leighton Goldie McCarthy House (Child Study)",
+    "value": "053",
+    "campus": "utsg",
+    "keywords": [
+      "wr",
+      "mccarthy"
+    ]
+  },
+  {
+    "name": "Leslie L. Dan Pharmacy Building",
+    "value": "161",
+    "campus": "utsg",
+    "keywords": [
+      "pb",
+      "dan pharmacy"
+    ]
+  },
+  {
+    "name": "Lillian Massey Building",
+    "value": "528",
+    "campus": "utsg",
+    "keywords": [
+      "li",
+      "l massey"
+    ]
+  },
+  {
+    "name": "Loretto College",
+    "value": "401",
+    "campus": "utsg",
+    "keywords": [
+      "lc",
+      "loretto"
+    ]
+  },
+  {
+    "name": "Louis B. Stewart Observatory (UTSU)",
+    "value": "120",
+    "campus": "utsg",
+    "keywords": [
+      "so",
+      "stewart obsv"
+    ]
+  },
+  {
+    "name": "Luella Massey Studio Theatre",
+    "value": "091",
+    "campus": "utsg",
+    "keywords": [
+      "gm",
+      "studio thtre"
+    ]
+  },
+  {
+    "name": "Macdonald-Mowat House",
+    "value": "172",
+    "campus": "utsg",
+    "keywords": [
+      "mm",
+      "mowat house"
+    ]
+  },
+  {
+    "name": "Margaret Addison Hall",
+    "value": "508",
+    "campus": "utsg",
+    "keywords": [
+      "mg",
+      "m addison"
+    ]
+  },
+  {
+    "name": "Maritain House",
+    "value": "423",
+    "campus": "utsg",
+    "keywords": [
+      "mn",
+      "maritain"
+    ]
+  },
+  {
+    "name": "MARS 2",
+    "value": "195",
+    "campus": "utsg",
+    "keywords": [
+      "m2",
+      "mars 2"
+    ]
+  },
+  {
+    "name": "Massey College",
+    "value": "034",
+    "campus": "utsg",
+    "keywords": [
+      "ma",
+      "massey coll"
+    ]
+  },
+  {
+    "name": "Max Gluskin House",
+    "value": "104",
+    "campus": "utsg",
+    "keywords": [
+      "ge",
+      "gluskin house"
+    ]
+  },
+  {
+    "name": "McCaul Street-254\/256",
+    "value": "083",
+    "campus": "utsg",
+    "keywords": [
+      "rm",
+      "mccaul-254\/6"
+    ]
+  },
+  {
+    "name": "McCorkell House",
+    "value": "427",
+    "campus": "utsg",
+    "keywords": [
+      "mz",
+      "mccorkell"
+    ]
+  },
+  {
+    "name": "McLennan Physical Laboratories",
+    "value": "078",
+    "campus": "utsg",
+    "keywords": [
+      "mp",
+      "mclennan lab"
+    ]
+  },
+  {
+    "name": "McMurrich Building",
+    "value": "004",
+    "campus": "utsg",
+    "keywords": [
+      "mr",
+      "mcmurrich"
+    ]
+  },
+  {
+    "name": "Mechanical Engineering Building",
+    "value": "022",
+    "campus": "utsg",
+    "keywords": [
+      "mc",
+      "mech eng"
+    ]
+  },
+  {
+    "name": "Medical Sciences Building",
+    "value": "005",
+    "campus": "utsg",
+    "keywords": [
+      "ms",
+      "msb"
+    ]
+  },
+  {
+    "name": "More House",
+    "value": "419",
+    "campus": "utsg",
+    "keywords": [
+      "mh",
+      "more house"
+    ]
+  },
+  {
+    "name": "Morrison Hall",
+    "value": "101",
+    "campus": "utsg",
+    "keywords": [
+      "mo",
+      "morrisonhall"
+    ]
+  },
+  {
+    "name": "Munk School of Global Affairs - Graham Library",
+    "value": "012C",
+    "campus": "utsg",
+    "keywords": [
+      "mu",
+      "munk east"
+    ]
+  },
+  {
+    "name": "Munk School of Global Affairs at the Observatory",
+    "value": "089",
+    "campus": "utsg",
+    "keywords": [
+      "mk",
+      "munk-observ"
+    ]
+  },
+  {
+    "name": "Munk School of Global Affairs at Trinity",
+    "value": "012A",
+    "campus": "utsg",
+    "keywords": [
+      "mu",
+      "munk-trinity"
+    ]
+  },
+  {
+    "name": "Muzzo Family Alumni Hall",
+    "value": "407",
+    "campus": "utsg",
+    "keywords": [
+      "ah",
+      "alumni hall"
+    ]
+  },
+  {
+    "name": "New College III",
+    "value": "131",
+    "campus": "utsg",
+    "keywords": [
+      "nr",
+      "new coll iii"
+    ]
+  },
+  {
+    "name": "Nona Macdonald Visitors Centre",
+    "value": "575A",
+    "campus": "utsg",
+    "keywords": [
+      "vi",
+      "visitors ctr"
+    ]
+  },
+  {
+    "name": "Northrop Frye Hall",
+    "value": "515",
+    "campus": "utsg",
+    "keywords": [
+      "nf",
+      "northrop"
+    ]
+  },
+  {
+    "name": "Odette (Louis) Hall",
+    "value": "415",
+    "campus": "utsg",
+    "keywords": [
+      "oh",
+      "odette hall"
+    ]
+  },
+  {
+    "name": "Old Admin Bldg (Board of Ed)",
+    "value": "156",
+    "campus": "utsg",
+    "keywords": [
+      "oa",
+      "old admin"
+    ]
+  },
+  {
+    "name": "Ontario Institute for Studies in Education",
+    "value": "123",
+    "campus": "utsg",
+    "keywords": [
+      "oi",
+      "oise"
+    ]
+  },
+  {
+    "name": "Phelan House",
+    "value": "417",
+    "campus": "utsg",
+    "keywords": [
+      "ph",
+      "phelan"
+    ]
+  },
+  {
+    "name": "Queen's Park Crescent East-39",
+    "value": "097",
+    "campus": "utsg",
+    "keywords": [
+      "me",
+      "queenpk-39"
+    ]
+  },
+  {
+    "name": "Queen's Park Crescent East-43",
+    "value": "433",
+    "campus": "utsg",
+    "keywords": [
+      "xq",
+      "queen's e-43"
+    ]
+  },
+  {
+    "name": "Queen's Park Crescent East-59",
+    "value": "418",
+    "campus": "utsg",
+    "keywords": [
+      "pi",
+      "qp cres e-59"
+    ]
+  },
+  {
+    "name": "Queen's Park Crsc. E.-39A",
+    "value": "097A",
+    "campus": "utsg",
+    "keywords": [
+      "ml",
+      "queens pk39a",
+      "McLuhan Program"
+    ]
+  },
+  {
+    "name": "Queen's Park-90",
+    "value": "017",
+    "campus": "utsg",
+    "keywords": [
+      "pl",
+      "queen'spk-90"
+    ]
+  },
+  {
+    "name": "Ramsay Wright Laboratories",
+    "value": "072",
+    "campus": "utsg",
+    "keywords": [
+      "rw",
+      "ramsaywright"
+    ]
+  },
+  {
+    "name": "Regis College",
+    "value": "478",
+    "campus": "utsg",
+    "keywords": [
+      "rg",
+      "regis"
+    ]
+  },
+  {
+    "name": "Rehabilitation Sciences Building",
+    "value": "152",
+    "campus": "utsg",
+    "keywords": [
+      "ru",
+      "rehab sci"
+    ]
+  },
+  {
+    "name": "Rosebrugh Building",
+    "value": "020",
+    "campus": "utsg",
+    "keywords": [
+      "rs",
+      "rosebrugh"
+    ]
+  },
+  {
+    "name": "Rotman School of Management",
+    "value": "134",
+    "campus": "utsg",
+    "keywords": [
+      "rt",
+      "rotmanschool"
+    ]
+  },
+  {
+    "name": "Rowell Jackman Hall",
+    "value": "518",
+    "campus": "utsg",
+    "keywords": [
+      "rj",
+      "jackman hall"
+    ]
+  },
+  {
+    "name": "Sam Sorbara Hall Student Residence",
+    "value": "435",
+    "campus": "utsg",
+    "keywords": [
+      "sr",
+      "sorbara hall"
+    ]
+  },
+  {
+    "name": "Sandford Fleming Building",
+    "value": "009",
+    "campus": "utsg",
+    "keywords": [
+      "sf",
+      "sandford flm"
+    ]
+  },
+  {
+    "name": "School of Continuing Studies",
+    "value": "103",
+    "campus": "utsg",
+    "keywords": [
+      "cs",
+      "scs"
+    ]
+  },
+  {
+    "name": "School of Graduate Studies",
+    "value": "043",
+    "campus": "utsg",
+    "keywords": [
+      "gs",
+      "sgs"
+    ]
+  },
+  {
+    "name": "Sidney Smith Hall",
+    "value": "033",
+    "campus": "utsg",
+    "keywords": [
+      "ss",
+      "sidney smith"
+    ]
+  },
+  {
+    "name": "Simcoe Hall",
+    "value": "010",
+    "campus": "utsg",
+    "keywords": [
+      "si",
+      "simcoe hall"
+    ]
+  },
+  {
+    "name": "Sir Daniel Wilson Residence",
+    "value": "029",
+    "campus": "utsg",
+    "keywords": [
+      "sd",
+      "sir daniel"
+    ]
+  },
+  {
+    "name": "Soldiers' Tower",
+    "value": "102",
+    "campus": "utsg",
+    "keywords": [
+      "tr",
+      "soldiers twr"
+    ]
+  },
+  {
+    "name": "Spadina Ave-455",
+    "value": "171",
+    "campus": "utsg",
+    "keywords": [
+      "tt",
+      "spadina-455"
+    ]
+  },
+  {
+    "name": "Spadina Ave-713",
+    "value": "142",
+    "campus": "utsg",
+    "keywords": [
+      "sa",
+      "spadina-713"
+    ]
+  },
+  {
+    "name": "Spadina Avenue-665",
+    "value": "066",
+    "campus": "utsg",
+    "keywords": [
+      "xg",
+      "spadina-665"
+    ]
+  },
+  {
+    "name": "Spadina Avenue-703",
+    "value": "125",
+    "campus": "utsg",
+    "keywords": [
+      "ia",
+      "spadina-703"
+    ]
+  },
+  {
+    "name": "Spadina Avenue-720",
+    "value": "189",
+    "campus": "utsg",
+    "keywords": [
+      "fa",
+      "spadina-720"
+    ]
+  },
+  {
+    "name": "Spadina Road-56",
+    "value": "153",
+    "campus": "utsg",
+    "keywords": [
+      "cd",
+      "spadinard-56"
+    ]
+  },
+  {
+    "name": "St. Basil's Church",
+    "value": "413",
+    "campus": "utsg",
+    "keywords": [
+      "bs",
+      "basil church"
+    ]
+  },
+  {
+    "name": "St. George Street-121",
+    "value": "110",
+    "campus": "utsg",
+    "keywords": [
+      "ir",
+      "stgeorge-121",
+      "Centre for Industrial Relations & Human Resources"
+    ]
+  },
+  {
+    "name": "St. George Street-162",
+    "value": "106",
+    "campus": "utsg",
+    "keywords": [
+      "co",
+      "st.george-162"
+    ]
+  },
+  {
+    "name": "St. George Street-45",
+    "value": "027",
+    "campus": "utsg",
+    "keywords": [
+      "pg",
+      "st. george-45"
+    ]
+  },
+  {
+    "name": "St. George Street-49",
+    "value": "039",
+    "campus": "utsg",
+    "keywords": [
+      "sg",
+      "st.george-49",
+      "Transitional Year Programme"
+    ]
+  },
+  {
+    "name": "St. George Street123",
+    "value": "088",
+    "campus": "utsg",
+    "keywords": [
+      "wa",
+      "stgeorge-123"
+    ]
+  },
+  {
+    "name": "St. Hilda's College",
+    "value": "608",
+    "campus": "utsg",
+    "keywords": [
+      "hi",
+      "st. hilda's"
+    ]
+  },
+  {
+    "name": "Stephenson House",
+    "value": "513",
+    "campus": "utsg",
+    "keywords": [
+      "sn",
+      "stephenson"
+    ]
+  },
+  {
+    "name": "Stewart Building",
+    "value": "192",
+    "campus": "utsg",
+    "keywords": [
+      "ep",
+      "stewartbldg",
+      "Rotman South - Executive Programs"
+    ]
+  },
+  {
+    "name": "Sullivan House",
+    "value": "425",
+    "campus": "utsg",
+    "keywords": [
+      "sv",
+      "sullivan"
+    ]
+  },
+  {
+    "name": "Sussex Avenue-40",
+    "value": "146",
+    "campus": "utsg",
+    "keywords": [
+      "su",
+      "sussex-40"
+    ]
+  },
+  {
+    "name": "Sussex Court",
+    "value": "077",
+    "campus": "utsg",
+    "keywords": [
+      "sc",
+      "sussex court"
+    ]
+  },
+  {
+    "name": "Teefy Hall",
+    "value": "421",
+    "campus": "utsg",
+    "keywords": [
+      "tf",
+      "teefy hall"
+    ]
+  },
+  {
+    "name": "Terrence Donnelly Ctr for Cellular & Biomolecular Res",
+    "value": "160",
+    "campus": "utsg",
+    "keywords": [
+      "dc",
+      "donnellyccbr"
+    ]
+  },
+  {
+    "name": "Thomas Fisher Rare Book Library Building",
+    "value": "006B",
+    "campus": "utsg",
+    "keywords": [
+      "rb",
+      "rare book"
+    ]
+  },
+  {
+    "name": "Toronto School of Theology",
+    "value": "434",
+    "campus": "utsg",
+    "keywords": [
+      "th",
+      "t.s.t."
+    ]
+  },
+  {
+    "name": "Trinity College",
+    "value": "600",
+    "campus": "utsg",
+    "keywords": [
+      "tc",
+      "trinity coll"
+    ]
+  },
+  {
+    "name": "TWH-Krembil Discovery Tower",
+    "value": "194",
+    "campus": "utsg",
+    "keywords": [
+      "kt",
+      "twh-krembil"
+    ]
+  },
+  {
+    "name": "University College",
+    "value": "001",
+    "campus": "utsg",
+    "keywords": [
+      "uc",
+      "uc"
+    ]
+  },
+  {
+    "name": "University College Union",
+    "value": "023",
+    "campus": "utsg",
+    "keywords": [
+      "up",
+      "uc union"
+    ]
+  },
+  {
+    "name": "Varsity Centre",
+    "value": "030A",
+    "campus": "utsg",
+    "keywords": [
+      "va",
+      "varsity centre"
+    ]
+  },
+  {
+    "name": "Varsity Pavilion",
+    "value": "041",
+    "campus": "utsg",
+    "keywords": [
+      "vp",
+      "vars pavilion"
+    ]
+  },
+  {
+    "name": "Victoria College",
+    "value": "501",
+    "campus": "utsg",
+    "keywords": [
+      "vc",
+      "victoria"
+    ]
+  },
+  {
+    "name": "Wallberg Building",
+    "value": "008",
+    "campus": "utsg",
+    "keywords": [
+      "wb",
+      "wallberg"
+    ]
+  },
+  {
+    "name": "Warren Stevens Building",
+    "value": "068A",
+    "campus": "utsg",
+    "keywords": [
+      "ws",
+      "warren stevn",
+      "Warren Stevens Bldg \/ Athletic Centre"
+    ]
+  },
+  {
+    "name": "Wellesley Street West -90",
+    "value": "098B",
+    "campus": "utsg",
+    "keywords": [
+      "jp",
+      "wellesley-90"
+    ]
+  },
+  {
+    "name": "Wetmore Hall-New College",
+    "value": "032",
+    "campus": "utsg",
+    "keywords": [
+      "we",
+      "wetmore hall"
+    ]
+  },
+  {
+    "name": "Whitney Hall",
+    "value": "013",
+    "campus": "utsg",
+    "keywords": [
+      "wt",
+      "whitney hall"
+    ]
+  },
+  {
+    "name": "Wilson Hall-New College",
+    "value": "032A",
+    "campus": "utsg",
+    "keywords": [
+      "wi",
+      "wilson hall"
+    ]
+  },
+  {
+    "name": "Windle House",
+    "value": "416",
+    "campus": "utsg",
+    "keywords": [
+      "wn",
+      "windle house"
+    ]
+  },
+  {
+    "name": "Woodsworth College",
+    "value": "038",
+    "campus": "utsg",
+    "keywords": [
+      "ww",
+      "woodsworth"
+    ]
+  },
+  {
+    "name": "Woodsworth College Residence",
+    "value": "130",
+    "campus": "utsg",
+    "keywords": [
+      "wo",
+      "woodswrthrez"
+    ]
+  },
+  {
+    "name": "Wycliffe College",
+    "value": "675",
+    "campus": "utsg",
+    "keywords": [
+      "wy",
+      "wycliffe"
+    ]
+  },
+  {
+    "name": "Academic Annex",
+    "value": "335",
+    "campus": "utm",
+    "keywords": [
+      "ax",
+      "acad annex"
+    ]
+  },
+  {
+    "name": "Biology Research Greenhouse",
+    "value": "338",
+    "campus": "utm",
+    "keywords": [
+      "bg",
+      "bio greenhse"
+    ]
+  },
+  {
+    "name": "Central Utilities Plant",
+    "value": "312",
+    "campus": "utm",
+    "keywords": [
+      "-",
+      "central util"
+    ]
+  },
+  {
+    "name": "Communication, Culture & Technology",
+    "value": "329",
+    "campus": "utm",
+    "keywords": [
+      "cc",
+      "cct"
+    ]
+  },
+  {
+    "name": "Deerfield Hall",
+    "value": "340",
+    "campus": "utm",
+    "keywords": [
+      "dh",
+      "",
+      "Deerfield Hall"
+    ]
+  },
+  {
+    "name": "Erindale Hall Residence (Phase VII)",
+    "value": "325",
+    "campus": "utm",
+    "keywords": [
+      "-",
+      "erindale hall"
+    ]
+  },
+  {
+    "name": "Erindale Studio Theatre",
+    "value": "316",
+    "campus": "utm",
+    "keywords": [
+      "dw",
+      "erindale thtr"
+    ]
+  },
+  {
+    "name": "Forensic Anthropology Field School",
+    "value": "302",
+    "campus": "utm",
+    "keywords": [
+      "-",
+      "forensic schl"
+    ]
+  },
+  {
+    "name": "Grounds Storage Facility",
+    "value": "336",
+    "campus": "utm",
+    "keywords": [
+      "gf",
+      "grounds"
+    ]
+  },
+  {
+    "name": "Hazel McCallion Academic Learning Centre",
+    "value": "331",
+    "campus": "utm",
+    "keywords": [
+      "hm",
+      "mccallion alc"
+    ]
+  },
+  {
+    "name": "Innovation Complex",
+    "value": "314A",
+    "campus": "utm",
+    "keywords": [
+      "kn",
+      ""
+    ]
+  },
+  {
+    "name": "Instructional Centre (UTM)",
+    "value": "334",
+    "campus": "utm",
+    "keywords": [
+      "ib",
+      "instr ctr"
+    ]
+  },
+  {
+    "name": "Kaneff Centre",
+    "value": "314",
+    "campus": "utm",
+    "keywords": [
+      "kn",
+      "kaneff",
+      "Kaneff Centre"
+    ]
+  },
+  {
+    "name": "Leacock Lane Res - Block P (Phase IV)",
+    "value": "323P",
+    "campus": "utm",
+    "keywords": [
+      "-",
+      "leacock-p"
+    ]
+  },
+  {
+    "name": "Leacock Lane Res - Block Q (Phase IV)",
+    "value": "323Q",
+    "campus": "utm",
+    "keywords": [
+      "-",
+      "leacock-q"
+    ]
+  },
+  {
+    "name": "Leacock Lane Res - Block R (Phase IV)",
+    "value": "323R",
+    "campus": "utm",
+    "keywords": [
+      "-",
+      "leacock-r"
+    ]
+  },
+  {
+    "name": "Leacock Lane Res - Block S (Phase IV)",
+    "value": "323S",
+    "campus": "utm",
+    "keywords": [
+      "-",
+      "leacock-s"
+    ]
+  },
+  {
+    "name": "Lislehurst (Principal's Residence)",
+    "value": "301",
+    "campus": "utm",
+    "keywords": [
+      "-",
+      "lislehurst"
+    ]
+  },
+  {
+    "name": "MaGrath Valley Res - Block T (Phase V)",
+    "value": "323T",
+    "campus": "utm",
+    "keywords": [
+      "-",
+      "magrath-t"
+    ]
+  },
+  {
+    "name": "MaGrath Valley Res - Block U (Phase V)",
+    "value": "323U",
+    "campus": "utm",
+    "keywords": [
+      "-",
+      "magrath-u"
+    ]
+  },
+  {
+    "name": "MaGrath Valley Res - Block V (Phase V)",
+    "value": "323V",
+    "campus": "utm",
+    "keywords": [
+      "-",
+      "magrath-v"
+    ]
+  },
+  {
+    "name": "MaGrath Valley Res - Block W (Phase V)",
+    "value": "323W",
+    "campus": "utm",
+    "keywords": [
+      "-",
+      "magrath-w"
+    ]
+  },
+  {
+    "name": "MaGrath Valley Res - Block X (Phase V)",
+    "value": "323X",
+    "campus": "utm",
+    "keywords": [
+      "-",
+      "magrath-x"
+    ]
+  },
+  {
+    "name": "MaGrath Valley Res - Block Y (Phase V)",
+    "value": "323Y",
+    "campus": "utm",
+    "keywords": [
+      "-",
+      "magrath-y"
+    ]
+  },
+  {
+    "name": "McLuhan Court Res - Block H (Phase II)",
+    "value": "323H",
+    "campus": "utm",
+    "keywords": [
+      "-",
+      "mcluhan - h"
+    ]
+  },
+  {
+    "name": "McLuhan Court Res - Block I (Phase II)",
+    "value": "323I",
+    "campus": "utm",
+    "keywords": [
+      "-",
+      "mcluhan-i"
+    ]
+  },
+  {
+    "name": "McLuhan Court Res - Block J (Phase II)",
+    "value": "323J",
+    "campus": "utm",
+    "keywords": [
+      "-",
+      "mcluhan-j"
+    ]
+  },
+  {
+    "name": "McLuhan Court Res - Block K (Phase II)",
+    "value": "323K",
+    "campus": "utm",
+    "keywords": [
+      "-",
+      "mcluhan-k"
+    ]
+  },
+  {
+    "name": "North Building",
+    "value": "311",
+    "campus": "utm",
+    "keywords": [
+      "ne",
+      "north bldg"
+    ]
+  },
+  {
+    "name": "North Building Reconstruction  (Under Construction)",
+    "value": "341",
+    "campus": "utm",
+    "keywords": [
+      "-",
+      ""
+    ]
+  },
+  {
+    "name": "Oscar Peterson Hall (Phase VIII)",
+    "value": "326",
+    "campus": "utm",
+    "keywords": [
+      "-",
+      "oscarpeterson"
+    ]
+  },
+  {
+    "name": "Paleomagnetism Laboratory",
+    "value": "317",
+    "campus": "utm",
+    "keywords": [
+      "-",
+      "paleomag lab"
+    ]
+  },
+  {
+    "name": "Putnam Place Res - Block L  (Phase III)",
+    "value": "323L",
+    "campus": "utm",
+    "keywords": [
+      "-",
+      "putnam-l"
+    ]
+  },
+  {
+    "name": "Putnam Place Res - Block M (Phase III)",
+    "value": "323M",
+    "campus": "utm",
+    "keywords": [
+      "-",
+      "putman-m"
+    ]
+  },
+  {
+    "name": "Putnam Place Res - Block N (Phase III)",
+    "value": "323N",
+    "campus": "utm",
+    "keywords": [
+      "-",
+      "putman-n"
+    ]
+  },
+  {
+    "name": "Putnam Place Res - Block O (Phase III)",
+    "value": "323O",
+    "campus": "utm",
+    "keywords": [
+      "-",
+      "putnam-o"
+    ]
+  },
+  {
+    "name": "Recreation, Athletics & Wellness Centre",
+    "value": "332",
+    "campus": "utm",
+    "keywords": [
+      "ra",
+      "rawc"
+    ]
+  },
+  {
+    "name": "Roy Ivor Hall Res - House A (Phase VI)",
+    "value": "324A",
+    "campus": "utm",
+    "keywords": [
+      "-",
+      "ivor hall-a"
+    ]
+  },
+  {
+    "name": "Roy Ivor Hall Res - House B (Phase VI)",
+    "value": "324B",
+    "campus": "utm",
+    "keywords": [
+      "-",
+      "ivor hall-b"
+    ]
+  },
+  {
+    "name": "Roy Ivor Hall Res - House C (Phase VI)",
+    "value": "324C",
+    "campus": "utm",
+    "keywords": [
+      "-",
+      "ivor hall-c"
+    ]
+  },
+  {
+    "name": "Roy Ivor Hall Res - House D (Phase VI)",
+    "value": "324D",
+    "campus": "utm",
+    "keywords": [
+      "-",
+      ""
+    ]
+  },
+  {
+    "name": "Schreiberwood Res - Block A (Phase I)",
+    "value": "323A",
+    "campus": "utm",
+    "keywords": [
+      "-",
+      "schreiberwood-a"
+    ]
+  },
+  {
+    "name": "Schreiberwood Res - Block B (Phase I)",
+    "value": "323B",
+    "campus": "utm",
+    "keywords": [
+      "-",
+      "schreiberwood-b"
+    ]
+  },
+  {
+    "name": "Schreiberwood Res - Block C (Phase I)",
+    "value": "323C",
+    "campus": "utm",
+    "keywords": [
+      "-",
+      "schreiberwood-c"
+    ]
+  },
+  {
+    "name": "Schreiberwood Res - Block D (Phase I)",
+    "value": "323D",
+    "campus": "utm",
+    "keywords": [
+      "-",
+      "schreiberwood-d"
+    ]
+  },
+  {
+    "name": "Schreiberwood Res - Block E (Phase I)",
+    "value": "323E",
+    "campus": "utm",
+    "keywords": [
+      "-",
+      "schreiberwood-e"
+    ]
+  },
+  {
+    "name": "Schreiberwood Res - Block F (Phase I)",
+    "value": "323F",
+    "campus": "utm",
+    "keywords": [
+      "-",
+      "schreiberwood-f"
+    ]
+  },
+  {
+    "name": "Schreiberwood Res - Block G (Phase I)",
+    "value": "323G",
+    "campus": "utm",
+    "keywords": [
+      "-",
+      "schreiberwood-g"
+    ]
+  },
+  {
+    "name": "Terrence Donnelly Health Sciences Complex",
+    "value": "333",
+    "campus": "utm",
+    "keywords": [
+      "hb",
+      "healthsci (utm)"
+    ]
+  },
+  {
+    "name": "UTM Alumni House",
+    "value": "330",
+    "campus": "utm",
+    "keywords": [
+      "wc",
+      "utm alumni"
+    ]
+  },
+  {
+    "name": "UTM Student Centre",
+    "value": "328",
+    "campus": "utm",
+    "keywords": [
+      "xr",
+      "utm-stdt ctr"
+    ]
+  },
+  {
+    "name": "William G. Davis Building",
+    "value": "313",
+    "campus": "utm",
+    "keywords": [
+      "dv",
+      "davis bldg"
+    ]
+  },
+  {
+    "name": "Academic Resource Centre",
+    "value": "201",
+    "campus": "utsc",
+    "keywords": [
+      "ac",
+      "arc"
+    ]
+  },
+  {
+    "name": "Arts & Admin Building",
+    "value": "204",
+    "campus": "utsc",
+    "keywords": [
+      "aa",
+      "arts & admin"
+    ]
+  },
+  {
+    "name": "Bladen Wing (B-Wing)",
+    "value": "200B",
+    "campus": "utsc",
+    "keywords": [
+      "bv",
+      "b-wing"
+    ]
+  },
+  {
+    "name": "Block A (Student Townhouse Res-Phase I)",
+    "value": "210A",
+    "campus": "utsc",
+    "keywords": [
+      "-",
+      "block a-pse i"
+    ]
+  },
+  {
+    "name": "Block B (Student Townhouse Res-Phase I)",
+    "value": "210B",
+    "campus": "utsc",
+    "keywords": [
+      "-",
+      "block b-pse i"
+    ]
+  },
+  {
+    "name": "Block C (Student Townhouse Res-Phase I)",
+    "value": "210C",
+    "campus": "utsc",
+    "keywords": [
+      "-",
+      "block c-pse i"
+    ]
+  },
+  {
+    "name": "Block D (Student Townhouse Res-Phase I)",
+    "value": "210D",
+    "campus": "utsc",
+    "keywords": [
+      "-",
+      "block d-pse i"
+    ]
+  },
+  {
+    "name": "Block E (Student Townhouse Res-Phase I)",
+    "value": "210E",
+    "campus": "utsc",
+    "keywords": [
+      "-",
+      "block e-pse i"
+    ]
+  },
+  {
+    "name": "Block F (Student Townhouse Res-Phase II)",
+    "value": "210F",
+    "campus": "utsc",
+    "keywords": [
+      "-",
+      "block f-pse ii"
+    ]
+  },
+  {
+    "name": "Block G (Student Townhouse Res-Phase II)",
+    "value": "210G",
+    "campus": "utsc",
+    "keywords": [
+      "-",
+      "block g-pse ii"
+    ]
+  },
+  {
+    "name": "Block H (Student Townhouse Res-Phase II)",
+    "value": "210H",
+    "campus": "utsc",
+    "keywords": [
+      "-",
+      "block h-pse ii"
+    ]
+  },
+  {
+    "name": "Block I (Student Townhouse Res-Phase II)",
+    "value": "210I",
+    "campus": "utsc",
+    "keywords": [
+      "-",
+      "block i-pse ii"
+    ]
+  },
+  {
+    "name": "Block J(Student Townhouse Res-Phase III)",
+    "value": "210J",
+    "campus": "utsc",
+    "keywords": [
+      "-",
+      "block j-pse iii"
+    ]
+  },
+  {
+    "name": "Block K(Student Townhouse Res-Phase III)",
+    "value": "210K",
+    "campus": "utsc",
+    "keywords": [
+      "-",
+      "block k-pse iii"
+    ]
+  },
+  {
+    "name": "Block L(Student Townhouse Res-Phase III)",
+    "value": "210L",
+    "campus": "utsc",
+    "keywords": [
+      "-",
+      "block l-pse iii"
+    ]
+  },
+  {
+    "name": "Block M(Student Townhouse Res-Phase III)",
+    "value": "210M",
+    "campus": "utsc",
+    "keywords": [
+      "-",
+      "block m-pse iii"
+    ]
+  },
+  {
+    "name": "Coach House - Old Kingston Rd",
+    "value": "261",
+    "campus": "utsc",
+    "keywords": [
+      "-",
+      "coach house"
+    ]
+  },
+  {
+    "name": "Environmental Science & Chemistry",
+    "value": "207",
+    "campus": "utsc",
+    "keywords": [
+      "ev",
+      "env sci&chem"
+    ]
+  },
+  {
+    "name": "Harbutt House (Vacant)",
+    "value": "260",
+    "campus": "utsc",
+    "keywords": [
+      "-",
+      "harbutt hse"
+    ]
+  },
+  {
+    "name": "Highland Hall (Under Construction)",
+    "value": "200R",
+    "campus": "utsc",
+    "keywords": [
+      "hl",
+      "highland"
+    ]
+  },
+  {
+    "name": "Humanities Wing (H-Wing)",
+    "value": "200H",
+    "campus": "utsc",
+    "keywords": [
+      "hw",
+      "h-wing"
+    ]
+  },
+  {
+    "name": "Instructional Centre (UTSC)",
+    "value": "206",
+    "campus": "utsc",
+    "keywords": [
+      "ic",
+      "instr ctr"
+    ]
+  },
+  {
+    "name": "Joan Foley Hall (Student Res-Phase IV)",
+    "value": "211",
+    "campus": "utsc",
+    "keywords": [
+      "fl",
+      "foley hall"
+    ]
+  },
+  {
+    "name": "Miller Lash House",
+    "value": "263",
+    "campus": "utsc",
+    "keywords": [
+      "-",
+      "miller lash"
+    ]
+  },
+  {
+    "name": "N'sheemaehn Child Care Centre",
+    "value": "231",
+    "campus": "utsc",
+    "keywords": [
+      "-",
+      "utsc childcare"
+    ]
+  },
+  {
+    "name": "Portable 101",
+    "value": "200J",
+    "campus": "utsc",
+    "keywords": [
+      "po",
+      "portable 101"
+    ]
+  },
+  {
+    "name": "Portable 102",
+    "value": "200K",
+    "campus": "utsc",
+    "keywords": [
+      "po",
+      "portable 102"
+    ]
+  },
+  {
+    "name": "Portable 103",
+    "value": "200L",
+    "campus": "utsc",
+    "keywords": [
+      "po",
+      "portable 103"
+    ]
+  },
+  {
+    "name": "Portable 104",
+    "value": "200N",
+    "campus": "utsc",
+    "keywords": [
+      "po",
+      "portable 104"
+    ]
+  },
+  {
+    "name": "Portable 105",
+    "value": "200P",
+    "campus": "utsc",
+    "keywords": [
+      "po",
+      "portable 105"
+    ]
+  },
+  {
+    "name": "Portable 106",
+    "value": "200Q",
+    "campus": "utsc",
+    "keywords": [
+      "po",
+      "portable 106"
+    ]
+  },
+  {
+    "name": "Science Research Building",
+    "value": "205",
+    "campus": "utsc",
+    "keywords": [
+      "sy",
+      "sci research"
+    ]
+  },
+  {
+    "name": "Science Wing (S-Wing)",
+    "value": "200S",
+    "campus": "utsc",
+    "keywords": [
+      "sw",
+      "s-wing"
+    ]
+  },
+  {
+    "name": "Social Sciences Building",
+    "value": "200M",
+    "campus": "utsc",
+    "keywords": [
+      "mw",
+      "social sci"
+    ]
+  },
+  {
+    "name": "Student Residence Centre",
+    "value": "230",
+    "campus": "utsc",
+    "keywords": [
+      "vl",
+      "stnt res ctr"
+    ]
+  },
+  {
+    "name": "Toronto Pan Am Sports Centre",
+    "value": "208",
+    "campus": "utsc",
+    "keywords": [
+      "aq",
+      "tpasc"
+    ]
+  },
+  {
+    "name": "UTSC Student Centre",
+    "value": "203",
+    "campus": "utsc",
+    "keywords": [
+      "sl",
+      "student ctr"
+    ]
+  }
+]

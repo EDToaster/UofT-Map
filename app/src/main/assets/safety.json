@@ -1,0 +1,343 @@
+{
+  "name": "Safety",
+  "slug": "safety",
+  "icon": "http:\/\/map.utoronto.ca\/_assets\/_icons\/marker_safety.png",
+  "sublayers": [
+    {
+      "id": "60",
+      "name": "Campus Police",
+      "slug": "campus-police"
+    },
+    {
+      "id": "61",
+      "name": "Community Safety Office",
+      "slug": "community-safety-office"
+    },
+    {
+      "id": "62",
+      "name": "Emergency Phones",
+      "slug": "emergency-phones"
+    }
+  ],
+  "markers": [
+    {
+      "id": "169",
+      "title": "Philosopher's Walk Emergency Phone North",
+      "lat": "43.6673",
+      "lng": "-79.3953",
+      "buildingCode": "051",
+      "desc": "Emergency calls can also be made from any campus Bell Canada phone. Simply dial 416-978-2222 and you will be connected with a Campus Community Police dispatcher in the same manner as using one of the emergency call stations. ",
+      "image": "\/_assets\/_m_b\/PhilosophersWalkNorth.png",
+      "sublayers": [
+        "62"
+      ]
+    },
+    {
+      "id": "190",
+      "title": "Margaret Addison Emergency Phone",
+      "lat": "43.6682",
+      "lng": "-79.3930",
+      "buildingCode": "508",
+      "desc": "Emergency calls can also be made from any campus Bell Canada phone. Simply dial 416-978-2222 and you will be connected with a Campus Community Police dispatcher in the same manner as using one of the emergency call stations. ",
+      "image": "\/_assets\/_m_b\/margaretadd.PNG",
+      "sublayers": [
+        "62"
+      ]
+    },
+    {
+      "id": "191",
+      "title": "Victoria College\/Queen's Park Emergency Phone",
+      "lat": "43.6663",
+      "lng": "-79.3927",
+      "buildingCode": "515",
+      "desc": "Emergency calls can also be made from any campus Bell Canada phone. Simply dial 416-978-2222 and you will be connected with a Campus Community Police dispatcher in the same manner as using one of the emergency call stations. ",
+      "image": "\/_assets\/_m_b\/.png",
+      "sublayers": [
+        "62"
+      ]
+    },
+    {
+      "id": "192",
+      "title": "Safety Marker",
+      "lat": "43.6668",
+      "lng": "-79.3918",
+      "buildingCode": "501",
+      "desc": "Emergency calls can also be made from any campus Bell Canada phone. Simply dial 416-978-2222 and you will be connected with a Campus Community Police dispatcher in the same manner as using one of the emergency call stations. ",
+      "image": "\/_assets\/_m_b\/OldVicSouth.png",
+      "sublayers": []
+    },
+    {
+      "id": "193",
+      "title": "EJ Pratt Emergency Phone East",
+      "lat": "43.6667",
+      "lng": "-79.3911",
+      "buildingCode": "514",
+      "desc": "Emergency calls can also be made from any campus Bell Canada phone. Simply dial 416-978-2222 and you will be connected with a Campus Community Police dispatcher in the same manner as using one of the emergency call stations. ",
+      "image": "\/_assets\/_m_b\/EJParttEast.png",
+      "sublayers": [
+        "62"
+      ]
+    },
+    {
+      "id": "194",
+      "title": "Sidney Smith Emergency Box East",
+      "lat": "43.6629",
+      "lng": "-79.3990",
+      "buildingCode": "033",
+      "desc": "Emergency calls can also be made from any campus Bell Canada phone. Simply dial 416-978-2222 and you will be connected with a Campus Community Police dispatcher in the same manner as using one of the emergency call stations. ",
+      "image": "\/_assets\/_m_b\/SidSmith2.png",
+      "sublayers": [
+        "62"
+      ]
+    },
+    {
+      "id": "195",
+      "title": "Best Institute Emergency Phone",
+      "lat": "43.6605",
+      "lng": "-79.3892",
+      "buildingCode": "052",
+      "desc": "Emergency calls can also be made from any campus Bell Canada phone. Simply dial 416-978-2222 and you will be connected with a Campus Community Police dispatcher in the same manner as using one of the emergency call stations. ",
+      "image": "\/_assets\/_m_b\/BestInstitute.png",
+      "sublayers": [
+        "62"
+      ]
+    },
+    {
+      "id": "196",
+      "title": "Banting Institute Emergency Phone",
+      "lat": "43.6606",
+      "lng": "-79.3886",
+      "buildingCode": "016",
+      "desc": "Emergency calls can also be made from any campus Bell Canada phone. Simply dial 416-978-2222 and you will be connected with a Campus Community Police dispatcher in the same manner as using one of the emergency call stations. ",
+      "image": "\/_assets\/_m_b\/21Banting.png",
+      "sublayers": [
+        "62"
+      ]
+    },
+    {
+      "id": "197",
+      "title": "92 College Street Emergency Phone",
+      "lat": "43.6607",
+      "lng": "-79.3882",
+      "buildingCode": "071",
+      "desc": "Emergency calls can also be made from any campus Bell Canada phone. Simply dial 416-978-2222 and you will be connected with a Campus Community Police dispatcher in the same manner as using one of the emergency call stations. ",
+      "sublayers": [
+        "62"
+      ]
+    },
+    {
+      "id": "198",
+      "title": "Old Vic Emergency Phone",
+      "lat": "43.6671",
+      "lng": "-79.3920",
+      "buildingCode": "501",
+      "desc": "Emergency calls can also be made from any campus Bell Canada phone. Simply dial 416-978-2222 and you will be connected with a Campus Community Police dispatcher in the same manner as using one of the emergency call stations. ",
+      "image": "\/_assets\/_m_b\/OldVicNorth.png",
+      "sublayers": [
+        "62"
+      ]
+    },
+    {
+      "id": "200",
+      "title": "McCaul Street Emergency Box",
+      "lat": "43.6586",
+      "lng": "-79.3934",
+      "buildingCode": "083",
+      "desc": "Emergency calls can also be made from any campus Bell Canada phone. Simply dial 416-978-2222 and you will be connected with a Campus Community Police dispatcher in the same manner as using one of the emergency call stations. ",
+      "image": "\/_assets\/_m_b\/McCaulStreet.PNG",
+      "sublayers": [
+        "62"
+      ]
+    },
+    {
+      "id": "201",
+      "title": "Carr Hall Emergency Phone",
+      "lat": "43.6654",
+      "lng": "-79.3905",
+      "buildingCode": "426",
+      "desc": "Emergency calls can also be made from any campus Bell Canada phone. Simply dial 416-978-2222 and you will be connected with a Campus Community Police dispatcher in the same manner as using one of the emergency call stations. ",
+      "image": "\/_assets\/_m_b\/carrhall.JPG",
+      "sublayers": [
+        "62"
+      ]
+    },
+    {
+      "id": "203",
+      "title": "Gerstein Emergency Phone",
+      "lat": "43.6620",
+      "lng": "-79.3941",
+      "buildingCode": "003",
+      "desc": "Emergency calls can also be made from any campus Bell Canada phone. Simply dial 416-978-2222 and you will be connected with a Campus Community Police dispatcher in the same manner as using one of the emergency call stations. ",
+      "image": "\/_assets\/_m_b\/Gerstein.png",
+      "sublayers": [
+        "62"
+      ]
+    },
+    {
+      "id": "204",
+      "title": "Sidney Smith Emergency Box South",
+      "lat": "43.6626",
+      "lng": "-79.3995",
+      "buildingCode": "033",
+      "desc": "Emergency calls can also be made from any campus Bell Canada phone. Simply dial 416-978-2222 and you will be connected with a Campus Community Police dispatcher in the same manner as using one of the emergency call stations. ",
+      "image": "\/_assets\/_m_b\/SidSmith.png",
+      "sublayers": [
+        "62"
+      ]
+    },
+    {
+      "id": "205",
+      "title": "UTS Emergency Box",
+      "lat": "43.6664",
+      "lng": "-79.4027",
+      "buildingCode": "014",
+      "desc": "Emergency calls can also be made from any campus Bell Canada phone. Simply dial 416-978-2222 and you will be connected with a Campus Community Police dispatcher in the same manner as using one of the emergency call stations. ",
+      "image": "\/_assets\/_m_b\/UTSBloor.png",
+      "sublayers": [
+        "62"
+      ]
+    },
+    {
+      "id": "206",
+      "title": "Varsity Centre Emergency Box",
+      "lat": "43.6667",
+      "lng": "-79.3982",
+      "buildingCode": "030A",
+      "desc": "Emergency calls can also be made from any campus Bell Canada phone. Simply dial 416-978-2222 and you will be connected with a Campus Community Police dispatcher in the same manner as using one of the emergency call stations. ",
+      "image": "\/_assets\/_m_b\/VarsityCentre.png",
+      "sublayers": [
+        "62"
+      ]
+    },
+    {
+      "id": "207",
+      "title": "University College Emergency Phone",
+      "lat": "43.6635",
+      "lng": "-79.3972",
+      "buildingCode": "001",
+      "image": "\/_assets\/_m_b\/UCReznikoff.png",
+      "sublayers": [
+        "62"
+      ]
+    },
+    {
+      "id": "208",
+      "title": "Earth Science Emergency Phone North",
+      "lat": "43.6612",
+      "lng": "-79.3998",
+      "buildingCode": "062",
+      "desc": "Emergency calls can also be made from any campus Bell Canada phone. Simply dial 416-978-2222 and you will be connected with a Campus Community Police dispatcher in the same manner as using one of the emergency call stations. ",
+      "image": "\/_assets\/_m_b\/EarthScienceNorth.png",
+      "sublayers": [
+        "62"
+      ]
+    },
+    {
+      "id": "209",
+      "title": "South Borden Buliding Emergency Phone",
+      "lat": "43.6604",
+      "lng": "-79.3994",
+      "buildingCode": "061",
+      "desc": "Emergency calls can also be made from any campus Bell Canada phone. Simply dial 416-978-2222 and you will be connected with a Campus Community Police dispatcher in the same manner as using one of the emergency call stations. ",
+      "image": "\/_assets\/_m_b\/EarthScienceSouth.png",
+      "sublayers": [
+        "62"
+      ]
+    },
+    {
+      "id": "210",
+      "title": "Kings College Circle Emergency Phone",
+      "lat": "43.6623",
+      "lng": "-79.3965",
+      "buildingCode": "029",
+      "desc": "Emergency calls can also be made from any campus Bell Canada phone. Simply dial 416-978-2222 and you will be connected with a Campus Community Police dispatcher in the same manner as using one of the emergency call stations. ",
+      "image": "\/_assets\/_m_b\/KingsCollegeNorthWest.png",
+      "sublayers": [
+        "62"
+      ]
+    },
+    {
+      "id": "211",
+      "title": "Hart House Emergency Phone",
+      "lat": "43.6638",
+      "lng": "-79.3952",
+      "buildingCode": "078",
+      "desc": "Emergency calls can also be made from any campus Bell Canada phone. Simply dial 416-978-2222 and you will be connected with a Campus Community Police dispatcher in the same manner as using one of the emergency call stations. ",
+      "image": "\/_assets\/_m_b\/harthouse.PNG",
+      "sublayers": [
+        "62"
+      ]
+    },
+    {
+      "id": "212",
+      "title": "McLennan Lab Emergency Meeting Place",
+      "lat": "43.6609",
+      "lng": "-79.3979",
+      "buildingCode": "078",
+      "desc": "Emergency calls can also be made from any campus Bell Canada phone. Simply dial 416-978-2222 and you will be connected with a Campus Community Police dispatcher in the same manner as using one of the emergency call stations. ",
+      "image": "\/_assets\/_m_b\/McLennan.png",
+      "sublayers": [
+        "62"
+      ]
+    },
+    {
+      "id": "307",
+      "title": "Brennan Hall Emergency Box",
+      "lat": "43.6666",
+      "lng": "-79.3898",
+      "buildingCode": "0000",
+      "desc": "Emergency calls can also be made from any campus Bell Canada phone. Simply dial 416-978-2222 and you will be connected with a Campus Community Police dispatcher in the same manner as using one of the emergency call stations. ",
+      "sublayers": [
+        "62"
+      ]
+    },
+    {
+      "id": "369",
+      "title": "Facutly of Music Emergency Phone",
+      "lat": "43.6668",
+      "lng": "-79.3953",
+      "buildingCode": "051",
+      "desc": "Emergency calls can also be made from any campus Bell Canada phone. Simply dial 416-978-2222 and you will be connected with a Campus Community Police dispatcher in the same manner as using one of the emergency call stations. ",
+      "image": "\/_assets\/_m_b\/philosopherswalksouth.png",
+      "sublayers": [
+        "62"
+      ]
+    },
+    {
+      "id": "721",
+      "title": "Campus Police",
+      "lat": "43.6648",
+      "lng": "-79.4011",
+      "buildingCode": "077",
+      "address": "21 Sussex Ave., Toronto, ON M5S 1J6",
+      "desc": "Campus police are open 24\/7, 365 days per year.",
+      "phone": "Info: 416-978-2323 Emergency: 416-978-2222",
+      "access": "Accessible elevator",
+      "image": "\/_assets\/_m_b\/campus-police-map.png",
+      "alt": "policeman on bike",
+      "url": "http:\/\/www.campuspolice.utoronto.ca",
+      "kw": "police, safety, security",
+      "sublayers": [
+        "60"
+      ]
+    },
+    {
+      "id": "722",
+      "title": "Community Safety Office",
+      "lat": "43.6649",
+      "lng": "-79.4008",
+      "buildingCode": "077",
+      "address": "21 Sussex Ave., 2nd Fl., Toronto ON M5S 1J6",
+      "desc": "Support for students, staff and faculty with respect to personal safety concerns.",
+      "phone": "416-978-1485",
+      "access": "Accessible elevator",
+      "image": "\/_assets\/_m_b\/cso-map.png",
+      "alt": "CSO logo",
+      "url": "http:\/\/www.communitysafety.utoronto.ca",
+      "kw": "cso, safety",
+      "sublayers": [
+        "61"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4567 @@
+{
+  "name": "Accessibility",
+  "slug": "accessibility",
+  "icon": "http:\/\/map.utoronto.ca\/_assets\/_icons\/marker_accessibility.png",
+  "sublayers": [
+    {
+      "id": "4",
+      "name": "Non-powered Entrances",
+      "slug": "non-powered-entrances-doors"
+    },
+    {
+      "id": "3",
+      "name": "Powered Entrances",
+      "slug": "powered-entrances-accessible-entrances-doors"
+    }
+  ],
+  "markers": [
+    {
+      "id": "514",
+      "title": "Accessible entrance for Convocation Hall and Simcoe Hall",
+      "lat": "43.6609",
+      "lng": "-79.3958",
+      "buildingCode": "0000",
+      "desc": "Powered exterior door<br \/>\nMore powered doors inside<br \/>\nAccessible washroom inside to the right<br \/>\nElevator inside to the right leads to upper floors of Simcoe Hall ONLY; Convocation hall has no elevators<br \/>\n",
+      "image": "\/_assets\/_m_b\/CH_acc.jpg",
+      "alt": "powered door",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "515",
+      "title": "Main Entrance to Convocation Hall",
+      "lat": "43.6609",
+      "lng": "-79.3953",
+      "buildingCode": "010A",
+      "desc": "3 sets of wood doors are the main public entrance<br \/>\n2 steps up to these manual doors<br \/>\n",
+      "image": "\/_assets\/_m_b\/CH_main1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "516",
+      "title": "Main Entrance to Simcoe Hall",
+      "lat": "43.6609",
+      "lng": "-79.3959",
+      "buildingCode": "010",
+      "desc": "Several stairs up to large non-powered double doors.  Entrances faces north and is clearly visible from King's College Circle.",
+      "image": "\/_assets\/_m_b\/SI1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "517",
+      "title": "Main entrance to the Visitor's Centre",
+      "lat": "43.6611",
+      "lng": "-79.3962",
+      "buildingCode": "0000",
+      "desc": "Level path leads to a powered door.  <br \/>\nEntry faces south and is visible when walking north around King's College Circle.<br \/>\nThere is no access to Knox College from this entrance.",
+      "image": "\/_assets\/_m_b\/KX_A1.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "518",
+      "title": "Main Entrance to Medical Sciences Building",
+      "lat": "43.6611",
+      "lng": "-79.3935",
+      "buildingCode": "005",
+      "desc": "Several sets of glass powered doors<br \/>\nUnder the concrete awning, on the raised concrete patio<br \/>\nThere is a wheelchair ramp from King's College circle leading to the concrete patio",
+      "image": "\/_assets\/_m_b\/MS_main1.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "519",
+      "title": "JJR Macleod Auditorium entrance",
+      "aka": "MS 2158",
+      "lat": "43.6612",
+      "lng": "-79.3935",
+      "buildingCode": "0000",
+      "desc": "Power glass doors, to your left under the concrete awning.<br \/>\nAcross from the entrance to the MSB.<br \/>\nReachable by ramp from Kings College Circle.<br \/>\nMacleod hall has its own washrooms on the main floor.",
+      "image": "\/_assets\/_m_b\/MS_McC1.jpg",
+      "alt": "powered entrance",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "520",
+      "title": "West wing entrance to Medical Sciences Building",
+      "lat": "43.6611",
+      "lng": "-79.3938",
+      "buildingCode": "005",
+      "desc": "Manual glass door leading into the west wing.<br \/>\nIt is located right at the top of the wheelchair ramp.<br \/>\nThis entrance faces east and is not visible from the street.",
+      "image": "\/_assets\/_m_b\/MS_A2.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "521",
+      "title": "Northeast entrance to Medical Sciences Building",
+      "lat": "43.6609",
+      "lng": "-79.3929",
+      "buildingCode": "005",
+      "desc": "Manual glass doors at the top of a large covered stair.<br \/>\nEntrance faces east but is not clearly visible from Queen's Park Crescent",
+      "image": "\/_assets\/_m_b\/MS_A10.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "522",
+      "title": "Accessible entrance to  MSB and CCBR",
+      "lat": "43.6605",
+      "lng": "-79.3927",
+      "buildingCode": "005",
+      "desc": "Powered glass doors at the top of a long out-door ramp.<br \/>\n*** Ramp subject to closure in winder due to snow.<br \/>\nThis leads to the cafe area; MSB (Medical Science is to your right and CCBR (Donnolley building) is to your left.",
+      "image": "\/_assets\/_m_b\/MS_A8.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "523",
+      "title": "Northwest entrance to Medical Sciences Building",
+      "lat": "43.6609",
+      "lng": "-79.3945",
+      "buildingCode": "005",
+      "desc": "Non-powered door leading to stairwell",
+      "image": "\/_assets\/_m_b\/MS_A4.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "524",
+      "title": "Southwest entrance",
+      "lat": "43.6604",
+      "lng": "-79.3943",
+      "buildingCode": "005",
+      "desc": "Non-powered door leading to stairwell",
+      "image": "\/_assets\/_m_b\/MS_A5.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "525",
+      "title": "Entrance to MSB and CCBR",
+      "lat": "43.6605",
+      "lng": "-79.3932",
+      "buildingCode": "005",
+      "desc": "Non-powered glass door at top of large out-door concrete staircase",
+      "image": "\/_assets\/_m_b\/DC_A3.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "526",
+      "title": "Main entrance to the CCBR",
+      "lat": "43.6599",
+      "lng": "-79.3928",
+      "buildingCode": "160",
+      "desc": "Powered glass doors at the top of a long low-slope walkway.<br \/>\n(slope of 1:20)<br \/>\nEntrance faces south and is clearly visible from College Street",
+      "image": "\/_assets\/_m_b\/DC_A2.JPG",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "527",
+      "title": "West entrance to McMurrich",
+      "lat": "43.6611",
+      "lng": "-79.3930",
+      "buildingCode": "004",
+      "desc": "West side door visible from the raised patio at Medical Science. <br \/>\nGo up the zig-zag stairs, under the outdoor overhang and straight ahead.<br \/>\nNon-powered door leading to stairs going up and down. For the elevator, go up or down one half floor.",
+      "image": "\/_assets\/_m_b\/MR_w1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "528",
+      "title": "Accessible \/ Main entrance (Queen's Park side)",
+      "lat": "43.6611",
+      "lng": "-79.3927",
+      "buildingCode": "004",
+      "desc": "Powered door entrance facing Queens Park West.<br \/>\nThere is no parking (or vehicle stop area) off queens park or around this entrance.<br \/>\nThe elevator is to the right inside this entrance.<br \/>\n(110816)",
+      "image": "\/_assets\/_m_b\/MR_east1.jpg",
+      "alt": "powered door",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "529",
+      "title": "Loading Bay (non-public entrance)",
+      "lat": "43.6614",
+      "lng": "-79.3929",
+      "buildingCode": "004",
+      "desc": "This is the loading Bay for McMurrich.<br \/>\nRing bell for service. Not a public entrance.<br \/>\nFor deliveries, leave note in windshield to avoid ticket.<br \/>\nEnter parking area from the King's College Circle side only.",
+      "sublayers": []
+    },
+    {
+      "id": "532",
+      "title": "Main entrance to The Gerstein Science Information Centre",
+      "lat": "43.6622",
+      "lng": "-79.3941",
+      "buildingCode": "003",
+      "desc": "Manual glass doors at the top of 4 concrete outdoor stairs.  Entrance faces east and is visible from King's College Circle.",
+      "image": "\/_assets\/_m_b\/SM_A2.JPG",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "533",
+      "title": "Accessible entrance to Gerstein Science Information Center",
+      "lat": "43.6622",
+      "lng": "-79.3941",
+      "buildingCode": "003",
+      "desc": "Powered door located at grade to the left of the main entrance.<br \/>\nLook for the blue awning.  <br \/>\nRing Bell for assistance in opening door.",
+      "image": "\/_assets\/_m_b\/SM_access1.jpg",
+      "alt": "power entrance",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "534",
+      "title": "Accessible entrance to Canadiana building",
+      "lat": "43.6619",
+      "lng": "-79.3928",
+      "buildingCode": "047",
+      "desc": "Powered door at the top of concrete out-door ramp.<br \/>\nThere is no parking on this side of the building<br \/>\n(facing Queen's Park West)",
+      "image": "\/_assets\/_m_b\/CG_A1.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "535",
+      "title": "Accessible entrance to the University of Toronto Student's Union",
+      "aka": "Stewart Observatory building entrance",
+      "lat": "43.6632",
+      "lng": "-79.3948",
+      "buildingCode": "120",
+      "desc": "Powered door at the top of a low-slope but narrow access ramp.<br \/>\nYou may have to ring for access; this is an old wood door that sometimes has difficultly operating properly.",
+      "image": "\/_assets\/_m_b\/SO1.jpg",
+      "alt": "powered entrance",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "536",
+      "title": "Huron St. entrance to Sid Smith",
+      "lat": "43.6626",
+      "lng": "-79.3990",
+      "buildingCode": "033",
+      "desc": "Powered doors on raised concrete patio.<br \/>\nthe patio is reachable by stairs or by a ramp under the awning to the left of the stairs.<br \/>\n",
+      "image": "\/_assets\/_m_b\/SS_A4.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "537",
+      "title": "Main entrance to Sid Smith ",
+      "aka": "St. George street entrance",
+      "lat": "43.6627",
+      "lng": "-79.3985",
+      "buildingCode": "033",
+      "desc": "Powered doors facing large raised concrete patio.<br \/>\n*** There is no ramp leading up to the patio from St. George. The doors are powered to provide access to the patio from inside the building. ",
+      "image": "\/_assets\/_m_b\/SS_A5.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "538",
+      "title": "North loading bay entrance to Sid Smith",
+      "lat": "43.6628",
+      "lng": "-79.3987",
+      "buildingCode": "033",
+      "desc": "Powered door from the north loading bay. The slope down to the loading bays from St. George is steep; from the Huron side there is stair access only.",
+      "image": "\/_assets\/_m_b\/SS_A7.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "539",
+      "title": "Entrance to Sid's Cafe",
+      "aka": "South entrance to Sid Smith",
+      "lat": "43.6620",
+      "lng": "-79.3985",
+      "buildingCode": "033",
+      "desc": "Powered doors at the bottom of a steep, rough ramp. <br \/>\nThere are also stairs.<br \/>\nEntrance faces Wilcox street.",
+      "image": "\/_assets\/_m_b\/SS_A2.jpg",
+      "alt": "powered door",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "540",
+      "title": "Main entrance to Lash Miller Chemical laboratories",
+      "lat": "43.6617",
+      "lng": "-79.3978",
+      "buildingCode": "073",
+      "desc": "Powered doors under large awning.<br \/>\nThree steps up with a long low-slope ramp to the right.<br \/>\nEntrance faces St. George street.",
+      "image": "\/_assets\/_m_b\/LM_A4.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "541",
+      "title": "Rear accessible entrance to Lash Miller",
+      "lat": "43.6615",
+      "lng": "-79.3981",
+      "buildingCode": "073",
+      "desc": "Ramp and stairs leading to powered door.  Entrance is located in the rear of the building next to the metal pillars and outdoor seating at the end of the mid-block courtyard.<br \/>\n",
+      "image": "\/_assets\/_m_b\/LM_A1.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "542",
+      "title": "Willcocks entrance to Lash Miller Chemical Laboratories",
+      "lat": "43.6619",
+      "lng": "-79.3980",
+      "buildingCode": "073",
+      "desc": "Manual door one step up from a rough and narrow sidewalk on Willcocks street.  Entrance faces north onto the pedstrian seating area on Willcocks Street. ",
+      "image": "\/_assets\/_m_b\/LM_A5.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "543",
+      "title": "Secondary St. George St. entrance to Lash Miller",
+      "lat": "43.6611",
+      "lng": "-79.3976",
+      "buildingCode": "073",
+      "desc": "Powered door approached by stairs and accessible ramp.  The entrance faces east and is visible from St. George Street.  The curving, accessible ramp at the rear of the building in the exterior courtyard.  ",
+      "image": "\/_assets\/_m_b\/LM_A3.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "544",
+      "title": "Main entrance to McLennon Physics",
+      "aka": "Eastern entrance",
+      "lat": "43.6607",
+      "lng": "-79.3982",
+      "buildingCode": "078",
+      "desc": "Powered entrance at grade.<br \/>\nThe entrance is only visible from the street looking through the parkette from St. George street.<br \/>\n",
+      "image": "\/_assets\/_m_b\/MP_A3.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "545",
+      "title": "Huron street accessible entrance to McLennon Physics",
+      "aka": "West entrance",
+      "lat": "43.6607",
+      "lng": "-79.3983",
+      "buildingCode": "078",
+      "desc": "Powered door reachable via concrete patio facing Huron street that extends northward along the building face.  The ramp to this platform is at the north end of this platform and is steep and uneven.<br \/>\nThe entrance is partially visible from the street.",
+      "image": "\/_assets\/_m_b\/MP_A2.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "547",
+      "title": "Main entrance to Astronomy & Astrophysics Building",
+      "lat": "43.6607",
+      "lng": "-79.3972",
+      "buildingCode": "036",
+      "desc": "One step up leading to manual door.<br \/>\nDoorway is clearly visible from the street.",
+      "image": "\/_assets\/_m_b\/AB_A2.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "548",
+      "title": "Secondary entrance to Astronomy & Astrophysics Building",
+      "lat": "43.6605",
+      "lng": "-79.3974",
+      "buildingCode": "036",
+      "desc": "Non-powered door at grade facing Russell street.<br \/>\nEntrance is clearly visible from the street.",
+      "image": "\/_assets\/_m_b\/AB_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "549",
+      "title": "Main entrance to Anthropology (accessible)",
+      "lat": "43.6600",
+      "lng": "-79.3984",
+      "buildingCode": "079",
+      "desc": "5 steps up to powered doors, facing Russell street. <br \/>\nA out-door ramp is located to the left of the stairs.<br \/>\nThe entrance is clearly visible from the street.",
+      "image": "\/_assets\/_m_b\/AP_A2.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "550",
+      "title": "Secondary entrance to Anthropology",
+      "lat": "43.6600",
+      "lng": "-79.3986",
+      "buildingCode": "079",
+      "desc": "Manual door at the top of 5 stairs.<br \/>\nClearly visible from Russell street.<br \/>\n",
+      "image": "\/_assets\/_m_b\/AP_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "565",
+      "title": "Main entrance to Ramsey Wright",
+      "lat": "43.6632",
+      "lng": "-79.3993",
+      "buildingCode": "072",
+      "desc": "Powered door accessible by ramp and stairs.<br \/>\nEntrance is on north side of the building, facing Harbord Ave.<br \/>\nThe entrance is set back from the street, but is visible from Harbord.<br \/>\n",
+      "image": "\/_assets\/_m_b\/rw.jpg",
+      "alt": "picture of entrance",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "566",
+      "title": "South courtyard entrance to Ramsey Wright",
+      "lat": "43.6633",
+      "lng": "-79.3988",
+      "buildingCode": "072",
+      "desc": "Manual door reachable by outdoor stairway.<br \/>\nThe doorway is on the west side of the building.<br \/>\nIt is somewhat visible from the intersection of Harbord and Huron.",
+      "image": "\/_assets\/_m_b\/RW_A3.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "567",
+      "title": "Secondary entrance to Ramsey Wright",
+      "lat": "43.6634",
+      "lng": "-79.3987",
+      "buildingCode": "072",
+      "desc": "Manual door reachable by outdoor stairs.<br \/>\nDoorway is on the east side of the building, facing St. George.<br \/>\nThis entrance is visible from the street.",
+      "image": "\/_assets\/_m_b\/RW_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "568",
+      "title": "Northeast entrance to Ramsey Wright ",
+      "lat": "43.6636",
+      "lng": "-79.3989",
+      "buildingCode": "072",
+      "desc": "Secondary entrance.<br \/>\nThis is a manual door reachable by outdoor stairs.<br \/>\nEntrance is on the north west corner of the building, facing Huron.<br \/>\nThe entrance is visible from Harbord St.",
+      "image": "\/_assets\/_m_b\/RW_A2.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "572",
+      "title": "Main entrance to John P. Robarts Library",
+      "lat": "43.6646",
+      "lng": "-79.3989",
+      "buildingCode": "006",
+      "desc": "Powered door at sidewalk grade level.<br \/>\nEntrance is on East side of the building, facing St. George St.<br \/>\nThe entrance is clearly visible from St. George, on either side of the concrete spire.",
+      "image": "\/_assets\/_m_b\/Robarts_A3.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "573",
+      "title": "Main entrance to Innis College Student Residence",
+      "lat": "43.6659",
+      "lng": "-79.3988",
+      "buildingCode": "133",
+      "desc": "A level path leads to a powered, glass door under a steel arch.   Entrance faces west and is clearly visible from St. George Street.",
+      "image": "\/_assets\/_m_b\/IS_A2.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "575",
+      "title": "Entrance to Thomas Fisher Rare Book Library",
+      "lat": "43.6642",
+      "lng": "-79.3991",
+      "buildingCode": "006B",
+      "desc": "Manual door at the top of a large outdoor staircase.<br \/>\nThe entrance ison the east side of the building, facing St. George.<br \/>\nThis entrance is clearly visible from St. George, and serves as a cross-over entrance between Rare Books and Robarts library.",
+      "image": "\/_assets\/_m_b\/Robarts_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "576",
+      "title": "Main entrance to Claude T. Bissel Building",
+      "aka": "iSchool",
+      "lat": "43.6648",
+      "lng": "-79.3993",
+      "buildingCode": "006A",
+      "desc": "Powered door reachable by a long stair from St. George Street leads to the vestibule connecting Robarts Library and the Bissel Building. Entry to the Bissel building is located within this vestibule.  Entrance stair is visible from St. George Street.",
+      "image": "\/_assets\/_m_b\/Robarts_A4.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "578",
+      "title": "Main entrance to Innis College",
+      "lat": "43.6657",
+      "lng": "-79.3993",
+      "buildingCode": "132",
+      "desc": "Powered door under a building colonnade.<br \/>\nThe sidewalk level is raised up, by several stairs to the south and by a slight ramp to the north.<br \/>\nThe entrance faces east and is partially visible (under the colonnade) from St. George.",
+      "image": "\/_assets\/_m_b\/IC_A3.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "581",
+      "title": "SE entrance to Innis College",
+      "lat": "43.6655",
+      "lng": "-79.3994",
+      "buildingCode": "132",
+      "desc": "Secondary manual door at street level.<br \/>\nThis entrance faces south and is visible from Sussex Ave.",
+      "image": "\/_assets\/_m_b\/IC_A2.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "582",
+      "title": "SW entrance to Innis",
+      "lat": "43.6654",
+      "lng": "-79.3996",
+      "buildingCode": "132",
+      "desc": "Secondary manual door at street level.<br \/>\nThis entrance faces south and is visible from Sussex Ave.",
+      "image": "\/_assets\/_m_b\/IC_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "583",
+      "title": "NW entrance to Innis College",
+      "lat": "43.6656",
+      "lng": "-79.3997",
+      "buildingCode": "132",
+      "desc": "Secondary powered door at street level.<br \/>\nThis entrance faces north and is not visible from the street.",
+      "image": "\/_assets\/_m_b\/IC_A4.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "585",
+      "title": "NW entrance to Innis",
+      "lat": "43.6657",
+      "lng": "-79.3995",
+      "buildingCode": "132",
+      "desc": "Secondary manual door at street level.<br \/>\nThis entrance faces west and is not visible from the street.",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "594",
+      "title": "Main entrance to Knox College",
+      "lat": "43.6614",
+      "lng": "-79.3970",
+      "buildingCode": "575",
+      "desc": "Heavy double manual doors up several stairs from the sidewalk.<br \/>\nThis entrance faces west and is clearly visible from the street.<br \/>\nYou can use this entrance to cross through the courtyard breezeway on your way to the Knox chapel.",
+      "image": "\/_assets\/_m_b\/KX_A4.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "599",
+      "title": "Main entrance to University College",
+      "lat": "43.6625",
+      "lng": "-79.3955",
+      "buildingCode": "001",
+      "desc": "Large manual doors reachable via outdoor stairs.<br \/>\nThis entrance faces south and is clearly visible from the circle.",
+      "image": "\/_assets\/_m_b\/UC.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "600",
+      "title": "Main accessible entrance to UC",
+      "lat": "43.6632",
+      "lng": "-79.3955",
+      "buildingCode": "001",
+      "desc": "Powered door at the end of the colonnade inside the UC courtyard.<br \/>\nThe door faces west, but is reached by the steeply sloped (1:8) road\/path entrance on the north side of the building. This pathway is located at the very end of Tower Road.",
+      "image": "\/_assets\/_m_b\/UC_A10.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "601",
+      "title": "Main entrance to the University of Toronto Arts Centre",
+      "lat": "43.6631",
+      "lng": "-79.3958",
+      "buildingCode": "001",
+      "desc": "Powered door under the colonnade in the UC courtyard.<br \/>\nThe door faces south, and is reached by crossing through UC, into the courtyard and under the colonnade.<br \/>\nThe wheelchair route requires using the steep road\/path at th end of Tower Road.",
+      "image": "\/_assets\/_m_b\/UC_A9.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "602",
+      "title": "Main entrance to Hart House",
+      "lat": "43.6636",
+      "lng": "-79.3948",
+      "buildingCode": "002",
+      "desc": "Very heavy powered doors at the top of an exterior stairway.  Entrance faces south and is visible from Hart House Circle.<br \/>\nPower door mechanism operated by turning and pulling gently on the handles.<br \/>\n",
+      "image": "\/_assets\/_m_b\/HH_main1.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "603",
+      "title": "Entrance to Sammy's Student Exchange",
+      "lat": "43.6637",
+      "lng": "-79.3944",
+      "buildingCode": "002",
+      "desc": "Manual door that is below grade, down several stairs from sidewalk level.<br \/>\nThe entrance faces south and is visible in the corner of the outdoor patio.<br \/>\n",
+      "image": "\/_assets\/_m_b\/HH_cafe1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "604",
+      "title": "Main accessible entrance to Hart House",
+      "lat": "43.6637",
+      "lng": "-79.3951",
+      "buildingCode": "002",
+      "desc": "Powered door at the top of a wheelchair accessible ramp. This entrance faces south, onto Tower road.  It is clearly visible from the parking area.  Entrance also provides accessible entry into the Justina M. Barnicke Gallery.<br \/>\n",
+      "image": "\/_assets\/_m_b\/hh2.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "605",
+      "title": "Entrance to Hart House Theatre",
+      "lat": "43.6636",
+      "lng": "-79.3946",
+      "buildingCode": "002",
+      "desc": "Manual door that is below grade, down a set of stairs under a black awning.<br \/>\nThis entrance faces south and can be seen from the circle if you look for the black awning.<br \/>\n",
+      "image": "\/_assets\/_m_b\/HH_theatre1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "606",
+      "title": "Secondary entrance to Hart House",
+      "lat": "43.6637",
+      "lng": "-79.3942",
+      "buildingCode": "002",
+      "desc": "Heavy manual door at the top of an exterior stair.<br \/>\nEntrance faces south and is clearly visible from the circle.<br \/>\n",
+      "image": "\/_assets\/_m_b\/HH_east1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "626",
+      "title": "Main entrance to Alumni House",
+      "lat": "43.6621",
+      "lng": "-79.3965",
+      "buildingCode": "019",
+      "desc": "Powered door approachable by ramp and stair.<br \/>\nThe entrance faces east and is clearly visible from the circle.<br \/>\n",
+      "image": "\/_assets\/_m_b\/dr1.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "627",
+      "title": "Main entrance to SGS",
+      "lat": "43.6619",
+      "lng": "-79.3972",
+      "buildingCode": "043",
+      "desc": "Manual door approachable by outdoor stair.<br \/>\nThe entrances faces west and is clearly visible from St. George St.",
+      "image": "\/_assets\/_m_b\/gs.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "628",
+      "title": "Main entrance to Macdonald Mowat",
+      "lat": "43.6617",
+      "lng": "-79.3970",
+      "buildingCode": "172",
+      "desc": "Powered door approachable by ramp and stair.<br \/>\nThe door faces south and is visible from St. George st. if one is approaching from the south.",
+      "image": "\/_assets\/_m_b\/mm.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "629",
+      "title": "Main entrance to Trinity",
+      "lat": "43.6651",
+      "lng": "-79.3955",
+      "buildingCode": "600",
+      "desc": "Manual door approachable by several sets of stairs.  Entry faces south and is clearly visible from Hoskin Avenue.",
+      "image": "\/_assets\/_m_b\/TC.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "630",
+      "title": "Main accessible entrance for Trinity",
+      "lat": "43.6652",
+      "lng": "-79.3961",
+      "buildingCode": "600",
+      "desc": "Powered door approachable by stair and ramp.<br \/>\nThe door faces west and is clearly visible from the parking lane on the west side of Trinity.<br \/>\nThe entrance is not visible from Hoskin Ave. ",
+      "image": "\/_assets\/_m_b\/TC_A11.JPG",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "631",
+      "title": "North Entrance to Trinity College",
+      "lat": "43.6657",
+      "lng": "-79.3963",
+      "buildingCode": "600",
+      "desc": "Manual door approachable by level path.<br \/>\nEntrance on the north side of Trinity, leading inside to the dining hall area only.<br \/>\nThis entrance is somewhat difficult on the building interior, but is the only level entrance for the dining area.",
+      "image": "\/_assets\/_m_b\/TC_A7.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "632",
+      "title": "Main Entrance to the Trinity Chapel",
+      "lat": "43.6649",
+      "lng": "-79.3959",
+      "buildingCode": "600",
+      "desc": "Powered door approachable by level path and leads directly into the chapel (and only the chapel). The entrance faces east and is visible from Hoskin Ave.  Door is typically locked but can be opened on request during chapel services.",
+      "image": "\/_assets\/_m_b\/TC_A12.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "633",
+      "title": "Main entrance to Law",
+      "lat": "43.6662",
+      "lng": "-79.3939",
+      "buildingCode": "040",
+      "desc": "Powered door approachable by level path. The entrance faces north-east and is clearly visible from the Faculty of Law parking area. The Colonnade is clearly visible from Queen's Park West.",
+      "image": "\/_assets\/_m_b\/LW_(2).jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "634",
+      "title": "Secondary entrance to Law",
+      "lat": "43.6661",
+      "lng": "-79.3942",
+      "buildingCode": "040",
+      "desc": "Manual entrance approachable via a raised walkway which has a ramp and stairs. The courtyard is not visible from the street, and access to it requires going up many steps from Philosopher's walk.",
+      "image": "\/_assets\/_m_b\/LW_A4.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "635",
+      "title": "Main entrance to Music",
+      "lat": "43.6666",
+      "lng": "-79.3944",
+      "buildingCode": "051",
+      "desc": "Powered door approachable by ramp and stair. The doorway faces east and is clearly visible from the Law\/Music parking area. The entrance is not visible from Queen's Park Crescent.",
+      "image": "\/_assets\/_m_b\/ej.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "636",
+      "title": "Secondary entrance to Music",
+      "lat": "43.6665",
+      "lng": "-79.3948",
+      "buildingCode": "051",
+      "desc": "Manual door approachable from a narrow bridge from Philosopher's walk. The door faces west and is not visible from any roadway.",
+      "image": "\/_assets\/_m_b\/EJ_A2.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "637",
+      "title": "Main entrance to the Varsity Pavillion",
+      "lat": "43.6663",
+      "lng": "-79.3967",
+      "buildingCode": "041",
+      "desc": "Powered door approachable by a low-slope covered pathway from Devonshire. The entrance faces west and is recognizable from the street by the modern colonnade leading to the doorway.",
+      "image": "\/_assets\/_m_b\/VP_A1.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "638",
+      "title": "North entrance to the Varsity Pavilion",
+      "lat": "43.6679",
+      "lng": "-79.3969",
+      "buildingCode": "041",
+      "desc": "Powered door approachable from level sidewalk. The entrance faces north and is clearly visible from the Bloor street. It is adjacent to the Varsity box office.",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "639",
+      "title": "Rear entrance to Varsity Centre",
+      "aka": "Rear entrance to Varsity Arena",
+      "lat": "43.6668",
+      "lng": "-79.3958",
+      "buildingCode": "030A",
+      "desc": "Powered door approachable by level path from the parking lot. The entrance faces east over Philosopher's Walk, and is partially hidden from the parking lot. The path up from Philosopher's Walk is very steep (1:9).",
+      "image": "\/_assets\/_m_b\/VA_A3.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "640",
+      "title": "Main entrance to the John W. Graham Library",
+      "lat": "43.6651",
+      "lng": "-79.3963",
+      "buildingCode": "012A",
+      "desc": "Powered door approachable by stair and ramp. The entrance faces east into the parking lane way between Trinity College and the Munk School.",
+      "image": "\/_assets\/_m_b\/mu2.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "641",
+      "title": "Main entrance to the north wing of the Munk School",
+      "lat": "43.6652",
+      "lng": "-79.3970",
+      "buildingCode": "012A",
+      "desc": "Powered door approachable by level path under an open colonnade. The entrance faces west and is partially visible from Devonshire Ave.",
+      "image": "\/_assets\/_m_b\/MU_A10.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "642",
+      "title": "Main entrance to the south wing of the Munk School",
+      "lat": "43.6647",
+      "lng": "-79.3968",
+      "buildingCode": "012A",
+      "desc": "Powered door approachable by level path under an open colonnade. The entrance is partially visible from Devonshire Ave.",
+      "image": "\/_assets\/_m_b\/MU_A5.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "643",
+      "title": "Main entrance to the Ignatieff Theatre",
+      "lat": "43.6657",
+      "lng": "-79.3972",
+      "buildingCode": "603",
+      "desc": "Powered door approachable by stair from the west and ramp (and stair) from the east.The entrance faces west and is visible from Devonshire Ave. The route from the parking lot is the path around the building starting on the east side.",
+      "image": "\/_assets\/_m_b\/GI_(2).jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "644",
+      "title": "Main entrance to Gerald Larkin",
+      "lat": "43.6656",
+      "lng": "-79.3971",
+      "buildingCode": "602",
+      "desc": "Manual glasss door approachable from stairs to the west and a ramp at the east end of the colonnade. The entrance is partially visible from the street, somewhat obscured by the colonnade beside.",
+      "image": "\/_assets\/_m_b\/la.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "645",
+      "title": "Secondary accessible entrance to Gerald Larkin Building",
+      "lat": "43.6656",
+      "lng": "-79.3967",
+      "buildingCode": "602",
+      "desc": "Powered door approachable from the level path to the parking lot (to the north), a ramp to the south and a stairway to the east. The entrance is not visible from the street and is under the cover of a concrete colonnade.",
+      "image": "\/_assets\/_m_b\/LA_A3.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "646",
+      "title": "Entrance to the Massey courtyard",
+      "lat": "43.6647",
+      "lng": "-79.3972",
+      "buildingCode": "034",
+      "desc": "A manual entrance with the residence porter and courtyard located directly inside.",
+      "image": "\/_assets\/_m_b\/MA_V.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "647",
+      "title": "Main entrance to St. Hilda's",
+      "lat": "43.6658",
+      "lng": "-79.3977",
+      "buildingCode": "608",
+      "desc": "Manual door approached by 4 stairs from the circular drive.<br \/>\nThe entrance faces west and is clearly visible from Devonshire Place. ",
+      "image": "\/_assets\/_m_b\/HI_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "648",
+      "title": "Designated accessible entrance to St. Hilda's",
+      "lat": "43.6653",
+      "lng": "-79.3976",
+      "buildingCode": "608",
+      "desc": "The lane way on the south side of St. Hilda's leads to the designated accessible entrance, however the door is not powered. There is a bell to ring for assistance. ",
+      "image": "\/_assets\/_m_b\/HI_A2.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "649",
+      "title": "Main entrance to the University College Union",
+      "lat": "43.6633",
+      "lng": "-79.3976",
+      "buildingCode": "023",
+      "desc": "Powered door approached by a level pathway along the south side of the building. The entrance is not visible from the street, tucked behind a covered wooden porch.",
+      "image": "\/_assets\/_m_b\/up.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "650",
+      "title": "Main entrance to Morrison Hall",
+      "lat": "43.6631",
+      "lng": "-79.3978",
+      "buildingCode": "101",
+      "desc": "Powered entrance approachable by level path. The entrance faces west and is clearly visible from St. George street.",
+      "image": "\/_assets\/_m_b\/MO_V.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "651",
+      "title": "Accessible entrance to Galbraith and Sanford Fleming",
+      "lat": "43.6603",
+      "lng": "-79.3955",
+      "buildingCode": "070",
+      "desc": "Powered door approached by a low-slope ramp. This entrance serves as the accessible entrance for both Sanford Fleming and Galbraith buildings. It is on the North side of Sanford Fleming and is clearly visible from Galbraith rd.",
+      "image": "\/_assets\/_m_b\/gb2.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "652",
+      "title": "South main entrance to Sanford Fleming",
+      "lat": "43.6600",
+      "lng": "-79.3948",
+      "buildingCode": "009",
+      "desc": "Manual doorway approachable by stair from King's College road. The entrance faces west and is clearly visible from the street.",
+      "image": "\/_assets\/_m_b\/sf.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "653",
+      "title": "North main entrance to Sanford Fleming",
+      "lat": "43.6603",
+      "lng": "-79.3949",
+      "buildingCode": "009",
+      "desc": "Manual doorway approachable by stair from King's College road. The entrance faces west and is clearly visible from the street.",
+      "image": "\/_assets\/_m_b\/SF_(2).jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "654",
+      "title": "Main entrance to Galbraith",
+      "lat": "43.6599",
+      "lng": "-79.3963",
+      "buildingCode": "070",
+      "desc": "Manual doors approachable by stair from King's College Road. The entrances face west and are clearly visible from the street.<br \/>\n",
+      "image": "\/_assets\/_m_b\/gb1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "655",
+      "title": "Main entrance to Cumberland house",
+      "lat": "43.6594",
+      "lng": "-79.3960",
+      "buildingCode": "026",
+      "desc": "Powered door approached by stair or by curving landscape ramp. This entrance faces west and is visible from the street. ",
+      "image": "\/_assets\/_m_b\/cu.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "656",
+      "title": "Main entrance to the Eng. Annex",
+      "lat": "43.6597",
+      "lng": "-79.3952",
+      "buildingCode": "021",
+      "desc": "Antique manual door approached by 3 steps from the pedestrian alley between the Pratt and Sanford Fleming buildings.",
+      "image": "\/_assets\/_m_b\/EA_A1.JPG",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "657",
+      "title": "Designated accessible entrance to the Engineering Annex",
+      "lat": "43.6597",
+      "lng": "-79.3954",
+      "buildingCode": "021",
+      "desc": "The ramp designates the north entrance as the most accessible, however the door does not have a power opener. The ramp is short and steep and faces the pedestrian alley between the Pratt and Sanford Fleming buildings.",
+      "image": "\/_assets\/_m_b\/EA_A2.JPG",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "658",
+      "title": "Accessible entrance to the Pratt and Wallberg buildings",
+      "lat": "43.6595",
+      "lng": "-79.3945",
+      "buildingCode": "008A",
+      "desc": "Powered door approached by an extensive white-railed access ramp. The entrance faces east, and the ramp is visible from King's College road. Via a cross-through the Pratt building, this entrance also serves as the accessible entrance for Wallberg.",
+      "image": "\/_assets\/_m_b\/pt.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "660",
+      "title": "Main Entrance to the Pratt Building",
+      "lat": "43.6597",
+      "lng": "-79.3946",
+      "buildingCode": "008A",
+      "desc": "Manual door approached by a level path. The entrance faces north and is only partially visible from King's College road.",
+      "image": "\/_assets\/_m_b\/PT_A2.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "661",
+      "title": "Main entrance to Wallberg (east)",
+      "lat": "43.6591",
+      "lng": "-79.3948",
+      "buildingCode": "008",
+      "desc": "Wallberg has 2 main entrances facing College street. Each has manual doors approached by a large stair, clearly visible from the street.",
+      "image": "\/_assets\/_m_b\/wb.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "662",
+      "title": "Main entrance to Wallberg (west)",
+      "lat": "43.6590",
+      "lng": "-79.3956",
+      "buildingCode": "008",
+      "desc": "Wallberg has 2 main entrances facing College street. Each has manual doors approached by a large stair, clearly visible from the street.",
+      "image": "\/_assets\/_m_b\/wb1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "663",
+      "title": "Main entrance to the Koffler Student Services Centre",
+      "lat": "43.6589",
+      "lng": "-79.3966",
+      "buildingCode": "143",
+      "desc": "Manual door approached by a substantial outdoor stair. The entrance faces south and is clearly visible from College street.",
+      "image": "\/_assets\/_m_b\/KS_A2.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "664",
+      "title": "Main entrance to the Campus Bookstore",
+      "lat": "43.6588",
+      "lng": "-79.3970",
+      "buildingCode": "143",
+      "desc": "This door at the south-west corner of Koffler leads directly into the Campus Bookstore. The entrance is at grade but does not have a power opener. The bookstore can be used as a cross-through into the rest of the Koffler building.",
+      "image": "\/_assets\/_m_b\/KS_A3.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "665",
+      "title": "Cross over from Bahen Centre to the Koffler building.",
+      "lat": "43.6594",
+      "lng": "-79.3974",
+      "buildingCode": "143",
+      "desc": "Interior power doors and a ramp allow cross-over from Koffler into the Bahen Centre. Near this crossover, Bahen has elevators leading to the underground parking garage.",
+      "image": "\/_assets\/_m_b\/BA_A7.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "666",
+      "title": "Accessible entrance to the Koffler Student Services Centre",
+      "lat": "43.6593",
+      "lng": "-79.3967",
+      "buildingCode": "143",
+      "desc": "Power door approached by stairs and a ramp. The entrance faces east and is clearly visible from St. George st.",
+      "image": "\/_assets\/_m_b\/KS_A1.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "667",
+      "title": "Main Entrance to the Bahen Centre for Information Technology",
+      "lat": "43.6598",
+      "lng": "-79.3968",
+      "buildingCode": "080",
+      "desc": "Powered door approached by ramp and stair. The entrance faces west and is clearly visible from St. George st.",
+      "image": "\/_assets\/_m_b\/ba.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "668",
+      "title": "Courtyard accessible entrance to the Bahen Centre",
+      "lat": "43.6592",
+      "lng": "-79.3975",
+      "buildingCode": "080",
+      "desc": "Powered door approached by level path. The entrance faces south into the Bahen courtyard, and is not visible from the street.",
+      "image": "\/_assets\/_m_b\/BA_A5.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "669",
+      "title": "Parking elevator accessible entrance",
+      "lat": "43.6593",
+      "lng": "-79.3973",
+      "buildingCode": "080",
+      "desc": "Powered door approached by level path. The entrance faces south into the Bahen courtyard, and is not visible from the street. The below-grade parking elevators are just inside this entrance.",
+      "image": "\/_assets\/_m_b\/ba2.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "670",
+      "title": "West side entrance to the Bahen Centre",
+      "lat": "43.6594",
+      "lng": "-79.3979",
+      "buildingCode": "080",
+      "desc": "Powered door approached by level path. This entrance faces west into the narrow pedestrian lane that runs from Russell St. to the Bahen Centre. It is not visible from the street.",
+      "image": "\/_assets\/_m_b\/BA_A8.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "671",
+      "title": "North accessible entrance to the Bahen Centre.",
+      "lat": "43.6600",
+      "lng": "-79.3970",
+      "buildingCode": "080",
+      "desc": "Powered door approached by level sidewalk. The entrance faces north and is visible from the street if travelling south down St. George St.",
+      "image": "\/_assets\/_m_b\/BA_A3.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "672",
+      "title": "Entrance to the Victorian House at the Bahen Centre",
+      "lat": "43.6602",
+      "lng": "-79.3971",
+      "buildingCode": "080",
+      "desc": "Manual entrance approached by several outdoor stairs. The entrance face east onto St. George St. and is clearly visible from the street. ",
+      "image": "\/_assets\/_m_b\/BA_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "673",
+      "title": "Main entrance to the Fields Institute",
+      "lat": "43.6587",
+      "lng": "-79.3975",
+      "buildingCode": "105",
+      "desc": "Powered entrance approached by level path, under a large modern awning. The entrance faces south and is clearly visible from College St.",
+      "image": "\/_assets\/_m_b\/FI_A2.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "674",
+      "title": "Courtyard entrance to the Field's Institute",
+      "lat": "43.6589",
+      "lng": "-79.3976",
+      "buildingCode": "105",
+      "desc": "Manual entrance approachable by stair only, via the rear patio. This entrance faces south and is only visible from within the pedestrian courtyard.",
+      "image": "\/_assets\/_m_b\/FI_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "676",
+      "title": "Accessible entrance to the Architecture building",
+      "lat": "43.6586",
+      "lng": "-79.3981",
+      "buildingCode": "028",
+      "desc": "Powered door approached by level sidewalk. There is a short ramp on the building interior inside the entrance. The door faces west and is clearly visible from Huron St.",
+      "image": "\/_assets\/_m_b\/cu2.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "677",
+      "title": "Main entrance to 215 Huron St.",
+      "lat": "43.6594",
+      "lng": "-79.3985",
+      "buildingCode": "067",
+      "desc": "Powered door approached by level sidewalk. This entrance faces west and is clearly visible from Huron St.",
+      "image": "\/_assets\/_m_b\/HU_A1.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "678",
+      "title": "Main entrance to Gage Building",
+      "lat": "43.6582",
+      "lng": "-79.3970",
+      "buildingCode": "082",
+      "desc": "Manual door approached by stair only. This entrance faces east into the Gage parking lot, and is visible from College St. when travelling west.",
+      "image": "\/_assets\/_m_b\/ga1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "679",
+      "title": "Main entrance to the mining building",
+      "lat": "43.6594",
+      "lng": "-79.3934",
+      "buildingCode": "007",
+      "desc": "Manual door approached by a large stair. This entrance faces south and is clearly visible from College St.",
+      "image": "\/_assets\/_m_b\/MB_(2).jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "680",
+      "title": "Accessible entrance to the Mining Building",
+      "lat": "43.6594",
+      "lng": "-79.3933",
+      "buildingCode": "007",
+      "desc": "Powered entrance approached by a ramp. The entrance faces east and is difficult to see because it is built into the side of the stair of the main entrance. The blue accessibility sign is clearly visible. ",
+      "image": "\/_assets\/_m_b\/mb2.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "681",
+      "title": "Main entrance to the Haultain Building",
+      "lat": "43.6598",
+      "lng": "-79.3936",
+      "buildingCode": "024",
+      "desc": "Manual door approached by stair. The entrance faces and is visible only from the service\/pedestrian route through the engineering annex.",
+      "image": "\/_assets\/_m_b\/ha1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "682",
+      "title": "Secondary entrance to Mining",
+      "lat": "43.6596",
+      "lng": "-79.3933",
+      "buildingCode": "007",
+      "desc": "Manual door approached by a small stair. This entrance faces north and is only visible from the service\/pedestrian alley of the mining\/engineering annex.",
+      "image": "\/_assets\/_m_b\/MB_A2.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "683",
+      "title": "Designated accessible entrance to the Haultain Building",
+      "lat": "43.6600",
+      "lng": "-79.3938",
+      "buildingCode": "024",
+      "desc": "Powered door approached by a very short, steep and rough curb ramp right at the entrance. It is a steel service door roughly for accessible use. The entrance faces west and is only visible from within the dead-end alley.",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "684",
+      "title": "Main entrance to Mechanical Engineering",
+      "lat": "43.6600",
+      "lng": "-79.3941",
+      "buildingCode": "022",
+      "desc": "Powered door approached by a long level path. The entrance faces west and is clearly visible, under a large awning, from King's College road. ",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "685",
+      "title": "Secondary accessible entrance to Mechanical Engineering",
+      "lat": "43.6603",
+      "lng": "-79.3942",
+      "buildingCode": "022",
+      "desc": "Powered door approachable by level path. This entrance faces north and is visible from the street.",
+      "image": "\/_assets\/_m_b\/MC_A2.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "686",
+      "title": "North entrance to the Rosebrugh Building",
+      "lat": "43.6604",
+      "lng": "-79.3932",
+      "buildingCode": "020",
+      "desc": "Powered entrance approached by level path. The entrance faces north but is not visible from King's College road. The route to the entrance, down the parking road for the Medical Science, is somewhat sloped.",
+      "image": "\/_assets\/_m_b\/RS_A1.JPG",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "687",
+      "title": "Main entrance to the Rosebrugh Building",
+      "lat": "43.6598",
+      "lng": "-79.3930",
+      "buildingCode": "020",
+      "desc": "Manual door approached by level sidewalk. The entrance faces east, sharing the wide modern pedestrian concourse that leads to to the Donnelly building. It is partially visible from the street.",
+      "image": "\/_assets\/_m_b\/RS_A2.JPG",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "689",
+      "title": "Accessible entrance to the Fitzgerald Building",
+      "lat": "43.6598",
+      "lng": "-79.3923",
+      "buildingCode": "025",
+      "desc": "Powered door approachable by straight level path. The entrance faces south and is clearly visible from College Street.",
+      "image": "\/_assets\/_m_b\/fg2.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "690",
+      "title": "Main entrance to the Pharmacy Building",
+      "lat": "43.6599",
+      "lng": "-79.3914",
+      "buildingCode": "161",
+      "desc": "Powered door approached by level path. This entrance faces west and is visible from the street. ",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "691",
+      "title": "Secondary entrance to the Pharmacy Building",
+      "lat": "43.6601",
+      "lng": "-79.3919",
+      "buildingCode": "161",
+      "desc": "Manual door approached by level path. This entrance faces north and is not visible from the street.",
+      "image": "\/_assets\/_m_b\/PB_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "692",
+      "title": "Main entrance to the C. David Naylor Building",
+      "lat": "43.6605",
+      "lng": "-79.3917",
+      "buildingCode": "011",
+      "desc": "Manual door approached by a large outdoor stair. The entrance faces north-east and is somewhat visible from Queen's Park West. ",
+      "image": "\/_assets\/_m_b\/tz1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "693",
+      "title": "Accessible entrance to C. David Naylor Building",
+      "lat": "43.6602",
+      "lng": "-79.3919",
+      "buildingCode": "011",
+      "desc": "Powered door approached by a sloped path. This entrance faces west, into the service\/pedestrian corridor between this building and Pharmacy. It is located next to the building loading bay. The entrance is not visible from the street.",
+      "image": "\/_assets\/_m_b\/tz2.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "727",
+      "title": "Main entrance",
+      "lat": "43.6604",
+      "lng": "-79.3966",
+      "buildingCode": "027",
+      "desc": "Manual door at the top of an exposed stair (6 steps).<br \/>\nEntrance faces west and is clearly visible from St. George Street.",
+      "image": "\/_assets\/_m_b\/PG_A2.JPG",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "728",
+      "title": "Secondary entrance to the Physical Geography Building",
+      "lat": "43.6603",
+      "lng": "-79.3964",
+      "buildingCode": "027",
+      "desc": "Manual door at the top of an exposed stair.<br \/>\nEntrance faces south and is visible from Galbraith road.",
+      "image": "\/_assets\/_m_b\/PG_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "729",
+      "title": "Main Entrance to 49 St. George Street",
+      "lat": "43.6606",
+      "lng": "-79.3967",
+      "buildingCode": "039",
+      "desc": "Manual door at the top of an exposed stair.<br \/>\nEntrance faces south and is visible from the street.<br \/>\n",
+      "image": "\/_assets\/_m_b\/SG_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "730",
+      "title": "East Entrance to Howard Ferguson Dining Hall",
+      "lat": "43.6631",
+      "lng": "-79.3970",
+      "buildingCode": "029",
+      "desc": "Six steps leading up to manual door.<br \/>\nEntrance is not visible from St. George Street and lightly obscured by vegeation when approaching from Back Campus.<br \/>\n",
+      "image": "\/_assets\/_m_b\/SD_A11.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "731",
+      "title": "South Entrance to Sir Daniel Wilson Residence",
+      "lat": "43.6629",
+      "lng": "-79.3974",
+      "buildingCode": "029",
+      "desc": "Six steps leading up to manual door.<br \/>\nEntrance is not visible from St. George Street and faces south onto the exterior courtyard.  ",
+      "image": "\/_assets\/_m_b\/SD_A2.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "732",
+      "title": "Northwest courtyard entrance to Sir Daniel Wilson Residence",
+      "aka": "London House",
+      "lat": "43.6627",
+      "lng": "-79.3975",
+      "buildingCode": "029",
+      "desc": "Six steps leading up to manual door. <br \/>\nEntrance is not visible from St. George Street and faces east onto the exterior courtyard.  ",
+      "image": "\/_assets\/_m_b\/SD_A3.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "733",
+      "title": "Central passageway entrance",
+      "lat": "43.6625",
+      "lng": "-79.3974",
+      "buildingCode": "029",
+      "desc": "Single high step to a manual door.<br \/>\nEntrance is visually obscured from St. George Street and faces east into the central passageway.  ",
+      "image": "\/_assets\/_m_b\/SD_A4.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "734",
+      "title": "Southwest courtyard entrance to Sir Daniel Wilson Residence",
+      "aka": "Hutton House",
+      "lat": "43.6623",
+      "lng": "-79.3974",
+      "buildingCode": "029",
+      "desc": "Six steps leading to a manual door.  <br \/>\nEntrance is not visible from St. George Street and faces east onto the exterior courtyard.  ",
+      "image": "\/_assets\/_m_b\/SD_A5.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "735",
+      "title": "Second southwest exterior courtyard entrance to Sir Daniel Wilson Residence",
+      "aka": "Wallace House",
+      "lat": "43.6623",
+      "lng": "-79.3972",
+      "buildingCode": "029",
+      "desc": "Six steps leading to a manual door. <br \/>\nEntrance is not visible from St. George Street and faces north onto the exterior courtyard.  <br \/>\n",
+      "image": "\/_assets\/_m_b\/SD_A6.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "736",
+      "title": "South exterior courtyard entrance to Sir Daniel Wilson Residence",
+      "aka": "Taylor House",
+      "lat": "43.6623",
+      "lng": "-79.3970",
+      "buildingCode": "029",
+      "desc": "Six steps leading to a manual door.<br \/>\nEntrance is not visible from St. George Street and faces North onto the exterior courtyard.  ",
+      "image": "\/_assets\/_m_b\/SD_A7.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "737",
+      "title": "Southeast exterior courtyard entrance to Sir Daniel Wilson Residence",
+      "aka": "Jeanneret House",
+      "lat": "43.6623",
+      "lng": "-79.3968",
+      "buildingCode": "029",
+      "desc": "Six steps leading to a manual door.<br \/>\nEntrance is not visible from St. George Street and faces north onto the exterior courtyard.  ",
+      "image": "\/_assets\/_m_b\/SD_A8.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "738",
+      "title": "East entrance to Sir Daniel Wilson Residence",
+      "lat": "43.6623",
+      "lng": "-79.3967",
+      "buildingCode": "029",
+      "desc": "Six steps leading to a manual door. <br \/>\nEntrance is not visible from St. George Street and lightly obscured from King's College Circle.",
+      "image": "\/_assets\/_m_b\/SD_A9.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "739",
+      "title": "East entrance to Medical Sciences Building",
+      "lat": "43.6607",
+      "lng": "-79.3922",
+      "buildingCode": "005",
+      "desc": "Entrance is visible from Queen's Park Crescent pathway and sidewalk. <br \/>\nPath leads to a small step at a manual door.  ",
+      "image": "\/_assets\/_m_b\/MS_A9.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "740",
+      "title": "West Entrance to C. David Naylor Building",
+      "lat": "43.6604",
+      "lng": "-79.3922",
+      "buildingCode": "011",
+      "desc": "Entrance is below grade and accessed by stairs.  Approach is from the North via the Medical Sciences Building or South via the rear walkways of the Dan Pharmacy Building.  Pathway leading to entrance is narrow and not visible from Queen's Park Cres.",
+      "image": "\/_assets\/_m_b\/TZ_A2.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "741",
+      "title": "South Entry to the Pharmacy Building",
+      "lat": "43.6598",
+      "lng": "-79.3916",
+      "buildingCode": "161",
+      "desc": "Entrance approached from a level pathway and is visible from College Street.  Door is operated by a power opener from the inside only.  Recommend using the main accessible entry immediately to the east and also visible from College Street. ",
+      "image": "\/_assets\/_m_b\/PB_A3.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "742",
+      "title": "North Entrance to the Fitzgerald Building",
+      "lat": "43.6604",
+      "lng": "-79.3926",
+      "buildingCode": "025",
+      "desc": "Stairs lead to a manual doorway.  Entrance faces north and is directly opposite the south entrance to the Meidcal Sciences Building.  Not visible from Queen's Park Crescent.  ",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "743",
+      "title": "Rear Entry to the Fitzgerald Building",
+      "lat": "43.6603",
+      "lng": "-79.3925",
+      "buildingCode": "025",
+      "desc": "A single step and a manual door leads to an interior stairway.  Entry is not visible from the street and approached by a narrow pathway at the rear of the builiding. ",
+      "image": "\/_assets\/_m_b\/FG_A4.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "744",
+      "title": "Second Rear Entrance to Fitzgerald Building",
+      "lat": "43.6599",
+      "lng": "-79.3923",
+      "buildingCode": "025",
+      "desc": "An uneven, textured pathway leads to a manual door with a single step.  The entrance faces east and most easily approached from the south via the pathway between the Fitzgerald and Pharmacy buildings. ",
+      "image": "\/_assets\/_m_b\/FG_A2.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "745",
+      "title": "Interior connection between CCBR and Medical Sciences Building",
+      "lat": "43.6605",
+      "lng": "-79.3930",
+      "buildingCode": "005",
+      "desc": "Interior Hallway provides a level and accessible through connection between the main levels of the Donnelly Centre for Cellular and Biomolecular Research and the Medical Sciences Building. ",
+      "image": "\/_assets\/_m_b\/MS_A7.jpg",
+      "sublayers": [
+        "4",
+        "3"
+      ]
+    },
+    {
+      "id": "746",
+      "title": "East Entry to the Mining Building",
+      "lat": "43.6596",
+      "lng": "-79.3929",
+      "buildingCode": "007",
+      "desc": "A long, angled stairway leads to a manual door.  <br \/>\nEntrance faces east and is obscured behind trees when viewed from College Street.  <br \/>\nGuard rails around stairs block all but the northerly approach. ",
+      "image": "\/_assets\/_m_b\/MB_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "747",
+      "title": "West Entrance to the Mining Building",
+      "lat": "43.6594",
+      "lng": "-79.3939",
+      "buildingCode": "007",
+      "desc": "Large stairs lead to a manual door.  Entrance faces west and is easily visible from College Street and Kings College Road.<br \/>\n",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "748",
+      "title": "North Entrance to the Mechanical Engineering Building",
+      "lat": "43.6603",
+      "lng": "-79.3938",
+      "buildingCode": "022",
+      "desc": "A single step leads to a manual door.  Entrance faces north and is visible, but distant, from King's College Road.  Approached by a level pathway and driveway from King's College Road.",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "749",
+      "title": "Courtyard Entrance to the D.L. Pratt Building",
+      "lat": "43.6595",
+      "lng": "-79.3948",
+      "buildingCode": "008A",
+      "desc": "Single step leads to a manual door.  Entrance faces east and is partially visible from King's College Road when walking north.  Entrance serves the parking lot immediately adjacent.<br \/>\n",
+      "image": "\/_assets\/_m_b\/PT_A3.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "750",
+      "title": "South Entrance to the Sanford Fleming Building",
+      "lat": "43.6599",
+      "lng": "-79.3949",
+      "buildingCode": "009",
+      "desc": "Short stair leading to a manual door.  Entrance faces south and is not visible from King's College Rd.  Approached along pathway between the Sanford Fleming and D.L. Pratt buildings which can be obstructed by locked bicycles. <br \/>\n<br \/>\n",
+      "image": "\/_assets\/_m_b\/SF_A2.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "751",
+      "title": "Southwest Entrance to the Sanford Fleming Building",
+      "lat": "43.6598",
+      "lng": "-79.3955",
+      "buildingCode": "009",
+      "desc": "Short stair leads to a manual door.  Entrance faces south and can be approached from St. George Street or King's College Road via the passage that runs along the south wall of the Sanford Fleming Building. Entrance also serves the Galbraith Building.",
+      "image": "\/_assets\/_m_b\/SF_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "752",
+      "title": "Northeast Entrance to the Galbraith Building",
+      "lat": "43.6603",
+      "lng": "-79.3956",
+      "buildingCode": "070",
+      "desc": "Level pathway leads to a manual door under a covered awning.  Entrance faces North onto Galbraith Road but is obscured from St. George Street or King's College Circle.  ",
+      "image": "\/_assets\/_m_b\/GB_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "753",
+      "title": "Northwest Entrance to the Galbraith Building",
+      "lat": "43.6601",
+      "lng": "-79.3963",
+      "buildingCode": "070",
+      "desc": "Level pathway leads to a manual door.  Entrance faces north and is clearly visible from St. George Street.  Entrance is located immediately adjacent to the building service entry.  <br \/>\n<br \/>\n  ",
+      "image": "\/_assets\/_m_b\/GB_A4.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "754",
+      "title": "Rear Entrance to the Cumberland House",
+      "lat": "43.6595",
+      "lng": "-79.3958",
+      "buildingCode": "026",
+      "desc": "Stair leads to a manual door.  Entrance faces east and is not visible from the street.  Level approach is from the pathway on the north side of Cumberland House.",
+      "image": "\/_assets\/_m_b\/CU_A2.JPG",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "755",
+      "title": "Rear Entrance to the Wallberg Building (west)",
+      "lat": "43.6591",
+      "lng": "-79.3957",
+      "buildingCode": "008",
+      "desc": "Stairs lead down to a manual door and interior stairwell.  Entrance faces north onto the rear parking lot of the Wallburg Building and is not visible from the street. ",
+      "image": "\/_assets\/_m_b\/WB_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "756",
+      "title": "Rear entrance to the Wallberg Building (east)",
+      "lat": "43.6594",
+      "lng": "-79.3950",
+      "buildingCode": "008",
+      "desc": "Stair leads up to a manual door.  Entry faces west onto the rear parking lot of the Wallberg Building and is not visible from the street.  Entry also provides access to the D.L. Pratt Building.<br \/>\n<br \/>\n",
+      "image": "\/_assets\/_m_b\/WB_A2.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "757",
+      "title": "East Entrance to the Wallberg Building",
+      "lat": "43.6593",
+      "lng": "-79.3943",
+      "buildingCode": "008",
+      "desc": "A single step leads to a manual doorway.  Entry faces east and is clearly visible from King's College Road.",
+      "image": "\/_assets\/_m_b\/WB_A5.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "758",
+      "title": "Accessible Entrance to 49 St. George Street",
+      "lat": "43.6606",
+      "lng": "-79.3965",
+      "buildingCode": "039",
+      "desc": "Powered door is approached by a long accessible ramp that begins near the front entry facing St. George Street.  <br \/>\nThe entry itself faces east and located at the southeast corner of the building. ",
+      "image": "\/_assets\/_m_b\/SG_A2.JPG",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "759",
+      "title": "Second Entrance to Knox College ",
+      "lat": "43.6615",
+      "lng": "-79.3963",
+      "buildingCode": "575",
+      "desc": "Stairs leading to a manual wood door. <br \/>\nEntrance faces east and is clearly visible from King's College road.  ",
+      "image": "\/_assets\/_m_b\/KX_A2.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "760",
+      "title": "Rear entry to Alumni House",
+      "lat": "43.6620",
+      "lng": "-79.3968",
+      "buildingCode": "019",
+      "desc": "Single step leads to a manual door with and opened using a doorbell.  <br \/>\nDelivery and courier entry facing west onto the service access road.  <br \/>\nVisible from St. George Street but not King's College Circle.<br \/>\n",
+      "image": "\/_assets\/_m_b\/DR_A2.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "761",
+      "title": "Secondary Entrance to University College Union",
+      "lat": "43.6634",
+      "lng": "-79.3978",
+      "buildingCode": "023",
+      "desc": "Short stair leads to a covered porch and manual door.  Entrance faces west and is clearly visible from St. George Street. ",
+      "image": "\/_assets\/_m_b\/UP_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "762",
+      "title": "North Entrance to Falconer Hall",
+      "lat": "43.6668",
+      "lng": "-79.3940",
+      "buildingCode": "050",
+      "desc": "A single step leads to a manual door.  Entrance is approached from the adjacent courtyard to the north.  Entry is small but visible from Avenue Road when approached from the north. <br \/>\n<br \/>\n",
+      "image": "\/_assets\/_m_b\/FH_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "763",
+      "title": "Main Entrance to Falconer Hall",
+      "lat": "43.6667",
+      "lng": "-79.3938",
+      "buildingCode": "050",
+      "desc": "Stair leads to a covered manual door.  <br \/>\nEntrance faces east and is visible from Avenue road.",
+      "image": "\/_assets\/_m_b\/FH_A2.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "764",
+      "title": "Accessible Entrance to Falconer Hall",
+      "lat": "43.6666",
+      "lng": "-79.3940",
+      "buildingCode": "050",
+      "desc": "An accessible ramp leads to a powered doorway.  <br \/>\nEntrance faces south and is not visible from Avenue Road.  <br \/>\nThe entrance ramp is approached along a level path from both the street and the parking lot to the south.  ",
+      "image": "\/_assets\/_m_b\/FH_A3.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "765",
+      "title": "Main Entrance to the Law Library",
+      "lat": "43.6658",
+      "lng": "-79.3940",
+      "buildingCode": "040",
+      "desc": "Stair leads to a manual covered door.  <br \/>\nEntrance faces south and partially obscured by fencing and vegetation when walking along Queen's Park Crescent West. <br \/>\n",
+      "image": "\/_assets\/_m_b\/LW_A2.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "766",
+      "title": "West courtyard entry to trinity college",
+      "lat": "43.6653",
+      "lng": "-79.3960",
+      "buildingCode": "600",
+      "desc": "Short stair leads to a manual door.  Entry faces east into the central courtyard and is not visible from Hoskin Avenue.",
+      "image": "\/_assets\/_m_b\/TC_A9.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "767",
+      "title": "Southwest courtyard entrance to Trinity College",
+      "lat": "43.6652",
+      "lng": "-79.3960",
+      "buildingCode": "600",
+      "desc": "Level path leads to a sloped lip at the base of a manual door.  Entrance faces east onto the central courtyard and is not visible from Hoskin Avenue. <br \/>\n<br \/>\n",
+      "image": "\/_assets\/_m_b\/TC_A10.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "768",
+      "title": "Northwest courtyard entrance to Trinity College",
+      "lat": "43.6656",
+      "lng": "-79.3961",
+      "buildingCode": "600",
+      "desc": "Stairs lead to a manual doorway.   Entrance faces east onto the central courtyard and not visible from Hoskin Avenue.  Entrance can be approached via the passageway entering the from the north end of Trinity College. ",
+      "image": "\/_assets\/_m_b\/TC_A8.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "769",
+      "title": "North courtyard entrance to Trinity College",
+      "lat": "43.6657",
+      "lng": "-79.3959",
+      "buildingCode": "600",
+      "desc": "Stairs lead to covered manual door.  Entrance faces south onto the central courtyard and is not visible from Hoskin Avenue. <br \/>\n",
+      "image": "\/_assets\/_m_b\/TC_A5.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "770",
+      "title": "Southeast entrance to Trinity College",
+      "lat": "43.6652",
+      "lng": "-79.3951",
+      "buildingCode": "600",
+      "desc": "Short stair leads to a manual door.  Entrance faces south and is obscured from sight along Hoskin Avenue but can be approached from the path leading to the main entrance.",
+      "image": "\/_assets\/_m_b\/TC_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "771",
+      "title": "South wing courtyard entrance to he Munk School",
+      "lat": "43.6648",
+      "lng": "-79.3965",
+      "buildingCode": "012A",
+      "desc": "Single step leads to a manual door.  Entrance faces north onto the central courtyard and is largely obscured from Devonshire Place. ",
+      "image": "\/_assets\/_m_b\/MU_A4.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "772",
+      "title": "Second courtyard entrance to south wing of the Munk School",
+      "lat": "43.6648",
+      "lng": "-79.3964",
+      "buildingCode": "012A",
+      "desc": "A small step leads to a manual door.  Door faces northwest and opens onto the corner of the central courtyard.  Entry is not visible from Devonshire place.",
+      "image": "\/_assets\/_m_b\/MU_A9.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "773",
+      "title": "Central entrance to the Munk School courtyard",
+      "lat": "43.6651",
+      "lng": "-79.3965",
+      "buildingCode": "012A",
+      "desc": "A single step leads to a manual door.  The entrance faces west onto the cenral courtyard of the Munk School and is partially obscured from sight along Devonshire Place by fencing and vegetation. <br \/>\n",
+      "image": "\/_assets\/_m_b\/MU_A6.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "774",
+      "title": "Northeast courtyard entrance to the Munk School",
+      "lat": "43.6653",
+      "lng": "-79.3966",
+      "buildingCode": "012A",
+      "desc": "Level path leads to a manual door.  Entrance faces southwest onto the accessible courtyard and is largely obscured from sight along Devonshire Place.<br \/>\n",
+      "image": "\/_assets\/_m_b\/MU_A8.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "775",
+      "title": "North courtyard entrance to the Munk School",
+      "lat": "43.6652",
+      "lng": "-79.3967",
+      "buildingCode": "012A",
+      "desc": "A single step leads to a manual door.  Entrance faces south and is largely obscured from sight along Devonshire Place.<br \/>\n",
+      "image": "\/_assets\/_m_b\/MU_A7.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "776",
+      "title": "Northeast rear entrance to the Munk School",
+      "lat": "43.6653",
+      "lng": "-79.3965",
+      "buildingCode": "012A",
+      "desc": "A level path leads to a covered, powered door.  Entrance faces east and opens onto the parking between the Munk School and Trinity College.  ",
+      "image": "\/_assets\/_m_b\/MU_A1.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "777",
+      "title": "Southeast rear entrance to the Munk School",
+      "lat": "43.6649",
+      "lng": "-79.3963",
+      "buildingCode": "012A",
+      "desc": "Short stair leads to a covered, maual door.  Entrance faces east and opens onto the partking between the Munk School and Trinity College.  The doorway is partially obscured from sight along Hoskin Avenue but the stairs leading up are clearly visible.",
+      "image": "\/_assets\/_m_b\/MU_A3.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "778",
+      "title": "Southwest entrance to Varsity Arena",
+      "lat": "43.6667",
+      "lng": "-79.3962",
+      "buildingCode": "030A",
+      "desc": "The manual door is approached along a level pathway running under the stadium seating of the Varsity Centre.  Primary access to this pathway is through the Varsity Centre entrance to the south which is visible from Devonshire Place.  ",
+      "image": "\/_assets\/_m_b\/VA_A2.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "779",
+      "lat": "43.6669",
+      "lng": "-79.3962",
+      "buildingCode": "030A",
+      "desc": "The powered door is approached along a level pathway running under the stadium seating of the Varsity Centre.  Primary access to this pathway is through the Varsity Centre entrance to the south which is visible from Devonshire Place.  ",
+      "image": "\/_assets\/_m_b\/VA_A1.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "780",
+      "title": "Northwest entrance to Varsity Arena",
+      "lat": "43.6671",
+      "lng": "-79.3963",
+      "buildingCode": "030A",
+      "desc": "The manual door is approached along a level pathway running under the stadium seating of the Varsity Centre.  Primary access to this pathway is through the Varsity Centre entrance to the south which is visible from Devonshire Place.",
+      "image": "\/_assets\/_m_b\/VA_A4.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "781",
+      "title": "Main entrance to 246 Bloor Street",
+      "aka": "Main entrance to Social Work",
+      "lat": "43.6681",
+      "lng": "-79.3977",
+      "buildingCode": "111",
+      "desc": "A level path leads directly from the powered door to the Bloor Street sidewalk.  The entrance faces south and located under a covered recess in the facade of the building.  ",
+      "image": "\/_assets\/_m_b\/SK_A1.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "782",
+      "title": "Rear accessible entrance to 246 Bloor Street West",
+      "aka": "Accessible entrance to Social Work",
+      "lat": "43.6684",
+      "lng": "-79.3979",
+      "buildingCode": "111",
+      "desc": "A powered door is approached by a level surface leading to the parking lot located at the rear of the Social Work building.  It is also approachable through the parkette along Bloor Street to the south.  The entrance is not visible from the street.",
+      "image": "\/_assets\/_m_b\/SK_A2.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "783",
+      "title": "East entrance to OISE",
+      "lat": "43.6685",
+      "lng": "-79.3984",
+      "buildingCode": "123",
+      "desc": "A manual door opens onto a covered colonnade. It is approchable by a metal staircase leading to the parking lot to the east or the pathway and ramp at the front of the building to the south.<br \/>\nThe entrance faces east and is not visible from the street.",
+      "image": "\/_assets\/_m_b\/OI_A1.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "784",
+      "title": "Main Entrance to 123 St. George Street",
+      "lat": "43.6669",
+      "lng": "-79.3993",
+      "buildingCode": "088",
+      "desc": "3 steps leading to a manual, glass door located under a covered porch.  Door faces east and is visible from St. George Street. <br \/>\n",
+      "image": "\/_assets\/_m_b\/RE_A1.JPG",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "785",
+      "title": "Main accessible entrance to OISE(UofT)",
+      "lat": "43.6683",
+      "lng": "-79.3986",
+      "buildingCode": "123",
+      "desc": "A glass revolving doorway and an adjacent accessible entrance with a powered door faces west.  Follow the colonnade along the west wall which can be accessed via the stairs and accessible ramp along Bloor Street.  Door not visible from the street. ",
+      "image": "\/_assets\/_m_b\/OI_A2.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "786",
+      "title": "Second Entrance to OISE(UofT)",
+      "lat": "43.6685",
+      "lng": "-79.3988",
+      "buildingCode": "123",
+      "desc": "Level path leads to a manual glass door.  Entrance faces south and is located under a long colonnade.  Approachable from the south via stairs and accessible ramp along Bloor street. ",
+      "image": "\/_assets\/_m_b\/OI_A3.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "787",
+      "lat": "43.6689",
+      "lng": "-79.3988",
+      "buildingCode": "0000",
+      "desc": "A level path leads to a set of three manual, wooden doors.  Entrance faces north and is located beside the vehicle ramp leading to the underground parking lot.  Entrance is visible from the street though partially obscured by a concrete pillar. ",
+      "image": "\/_assets\/_m_b\/OI_A4.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "788",
+      "title": "Main Entrance to Woodsworth College Residence",
+      "lat": "43.6674",
+      "lng": "-79.3994",
+      "buildingCode": "130",
+      "desc": "A level path leads to a covered, powered door.  Entrance faces north and is visible from Bloor street.",
+      "image": "\/_assets\/_m_b\/WO_A1.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "789",
+      "title": "Main Entrance to Rotman Commerce",
+      "lat": "43.6673",
+      "lng": "-79.3995",
+      "buildingCode": "130",
+      "desc": "A level path leads to a powered door.  Entrance faces west and a large departmental sign marks the entrance, which is visible from St. George Street.   ",
+      "image": "\/_assets\/_m_b\/WO_A2.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "790",
+      "title": "Second entrance to Woodsworth College Residence",
+      "lat": "43.6670",
+      "lng": "-79.3993",
+      "buildingCode": "130",
+      "desc": "Stairs and a ramp lead to a covered, powered door.  Entrance faces west and is visible from the street.  The accessible ramp serves both this entrance and the accessible entrances in the central, exterior courtyard of the building.",
+      "image": "\/_assets\/_m_b\/WO_A3.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "791",
+      "title": "Exterior courtyard entrance to Woodsworth College Residence",
+      "lat": "43.6672",
+      "lng": "-79.3992",
+      "buildingCode": "130",
+      "desc": "A level path leads to a powered, glass door.   Entrance faces south onto an exterior courtyard and is approachable via the accessible ramp along St. George Street.  The door is not visible from the street.<br \/>\n<br \/>\n",
+      "image": "\/_assets\/_m_b\/WO_A4.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "792",
+      "title": "Southeast entrance to Woodsworth College Residence",
+      "lat": "43.6671",
+      "lng": "-79.3988",
+      "buildingCode": "130",
+      "desc": "A level path leads to a powered, glass door.  Entrance faces south and is approachable from the accessible entrance along St. George Street or the path leading east towards the parking lot along Devonshire Place.  Door is not visible from the street.",
+      "image": "\/_assets\/_m_b\/WO_A5.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "793",
+      "title": "Southeast entrance to University College",
+      "lat": "43.6627",
+      "lng": "-79.3951",
+      "buildingCode": "001",
+      "desc": "Two flights of stairs lead to a manual door.  Entrance faces south and located in a corner making it visible only when approaching from the west.  <br \/>\n",
+      "image": "\/_assets\/_m_b\/UC_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "794",
+      "title": "Southwest entrance to University College",
+      "lat": "43.6625",
+      "lng": "-79.3960",
+      "buildingCode": "001",
+      "desc": "A single step leads up to a manual door.  The entrance faces south and is largely obscured by colonnade which shelters the path leading towards the door.  Look for the archway east of the adjacent circular tower. <br \/>\n",
+      "image": "\/_assets\/_m_b\/UC_A3.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "795",
+      "title": "Rear entrance to Tower Room of University College",
+      "lat": "43.6624",
+      "lng": "-79.3963",
+      "buildingCode": "001",
+      "desc": "A level sidewalk path leads to a manual door.  Entrance is located at the rear of the circular tower and is not visible from King's College road.  Entry is wheelchair accessible but only opened from the inside for specific events. ",
+      "image": "\/_assets\/_m_b\/UC_A4.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "797",
+      "title": "Entrance to the University College Alumni Bookshop",
+      "lat": "43.6627",
+      "lng": "-79.3961",
+      "buildingCode": "001",
+      "desc": "Stairs lead to a covered, manual door.  Entrance faces south inside the archway connecting the courtyard of University College and the major pedestrian pathway that connects King's College Circle ad Hoskin Avenue.",
+      "image": "\/_assets\/_m_b\/UC_A5.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "798",
+      "title": "Southwest courtyard entrance to University College",
+      "lat": "43.6627",
+      "lng": "-79.3960",
+      "buildingCode": "001",
+      "desc": "Single step leads to a covered, manual door.  Entrance faces north and is located inside the archway connecting the University College courtyard and the pedestrian pathway that connects King's College Circle and Hoskin Avenue.  ",
+      "image": "\/_assets\/_m_b\/UC_A6.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "799",
+      "title": "Northwest Entrance to University College",
+      "lat": "43.6631",
+      "lng": "-79.3963",
+      "buildingCode": "001",
+      "desc": "Three steps lead to a manual door facing east.  Entrance is not visible from any streets but is visible from the pedestrian pathway west of University College.<br \/>\n",
+      "image": "\/_assets\/_m_b\/UC_A8.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "800",
+      "title": "Entrance to the refectory at University College",
+      "lat": "43.6631",
+      "lng": "-79.3966",
+      "buildingCode": "001",
+      "desc": "A downward sloping ramp leads to a powered door facing south.  Entrance is not visible from any streets but a large sign along the pedestrian pathway to the west of University College marks the beginning of the accessible ramp.  ",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "801",
+      "title": "Northeast entrance to University College",
+      "lat": "43.6633",
+      "lng": "-79.3955",
+      "buildingCode": "001",
+      "desc": "Two steps lead to a manual door.  Entrance face east and is located at the base of Soldier's Tower immediately adjacent.  Door is visible through the archway leading to King's College Circle and when approaching along tower road from the north. ",
+      "image": "\/_assets\/_m_b\/UC_A11.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "802",
+      "title": "East entrance to University College",
+      "lat": "43.6630",
+      "lng": "-79.3951",
+      "buildingCode": "001",
+      "desc": "Stairs lead up to a large, manual door.  Entrance faces east on and is prominently visible from Hart House Circle.  ",
+      "image": "\/_assets\/_m_b\/UC_A12.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "803",
+      "title": "North entrance to Hart House",
+      "lat": "43.6641",
+      "lng": "-79.3952",
+      "buildingCode": "002",
+      "desc": "Single step leads to a covered, manual door facing north.  Entrance is located under a covered archway that can be seen from Tower Road.  ",
+      "image": "\/_assets\/_m_b\/HH_A7.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "804",
+      "title": "Main Entrance to Crux Books Wycliffe College",
+      "lat": "43.6643",
+      "lng": "-79.3954",
+      "buildingCode": "675",
+      "desc": "A level path leads to a covered manual door.   The entrance faces north and is located under a covered recess in the wall.  The bookstore sign can be seen from tower road.  ",
+      "image": "\/_assets\/_m_b\/WY_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "805",
+      "title": "Main accessible entrance to Wycliffe College",
+      "lat": "43.6643",
+      "lng": "-79.3952",
+      "buildingCode": "675",
+      "desc": "A level path leads towards a manual door with a bell to ring for assistance.    The entrance is located in a courtyard parking lot and approached from Tower Road to the east.  ",
+      "image": "\/_assets\/_m_b\/WY_A2.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "806",
+      "title": "West entrance to Wycliffe College",
+      "lat": "43.6643",
+      "lng": "-79.3955",
+      "buildingCode": "675",
+      "desc": "Six steps lead to a covered manual door.  Entrance faces south and is visible from Tower Road.",
+      "image": "\/_assets\/_m_b\/WY_A3.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "807",
+      "title": "Main Entrance to Wycliffe College",
+      "lat": "43.6646",
+      "lng": "-79.3951",
+      "buildingCode": "675",
+      "desc": "Stairs lead to a covered manual door with a bell to ring for entry.  Entrance faces north and is clearly visible from Hoskin Avenue.",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "808",
+      "title": "East entrance to Wycliffe College",
+      "lat": "43.6643",
+      "lng": "-79.3949",
+      "buildingCode": "675",
+      "desc": "Stairs lead to a covered porch.  Entrance faces east and is approached through the parking lot opening onto Queen's Park Crescent.  The elevated porch is visible when standing directly in line with the driveway leading towards it. <br \/>\n",
+      "image": "\/_assets\/_m_b\/WY_A5.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "809",
+      "title": "Main Entrance to Whitney Hall",
+      "lat": "43.6637",
+      "lng": "-79.3980",
+      "buildingCode": "013",
+      "desc": "A manual, double door is approached by a set of six stairs and leads to a central vestibule inside.  Entrance faces west and is clearly visible from St. George Street.",
+      "image": "\/_assets\/_m_b\/WT_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "810",
+      "title": "Main courtyard entrance to Whitney Hall",
+      "lat": "43.6638",
+      "lng": "-79.3979",
+      "buildingCode": "013",
+      "desc": "Six stairs leads to a manual, double door.  Entrance faces east on the exterior courtyard and is approachable from the pedestrian pathway to the east.  ",
+      "image": "\/_assets\/_m_b\/WT_A2.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "811",
+      "title": "Southwest courtyard entrance to Whitney Hall",
+      "aka": "Falconer House",
+      "lat": "43.6636",
+      "lng": "-79.3978",
+      "buildingCode": "013",
+      "desc": "Three stairs and a step leads to a manual door.  This residence entrance opens onto the exterior courtyard and requires a key to open. ",
+      "image": "\/_assets\/_m_b\/WT_A3.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "812",
+      "title": "South courtyard entrance to Whitney Hall",
+      "lat": "43.6636",
+      "lng": "-79.3977",
+      "buildingCode": "013",
+      "desc": "Stairs leads to a manual door.  This residence entrance opens onto the exterior courtyard and requires a key to open. ",
+      "image": "\/_assets\/_m_b\/WT_A4.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "813",
+      "title": "Southeast entrance to Whitney Hall",
+      "aka": "Maion Ferguson House",
+      "lat": "43.6637",
+      "lng": "-79.3975",
+      "buildingCode": "013",
+      "desc": "Stairs leads to a manual door.  This residence entrance opens onto the exterior courtyard and requires a key to open. ",
+      "image": "\/_assets\/_m_b\/WT_A5.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "814",
+      "title": "Southeast entrance to Whitney Hall",
+      "lat": "43.6638",
+      "lng": "-79.3974",
+      "buildingCode": "013",
+      "desc": "A single step leads to a manual door.  This residence entrance faces north and is visible when approaching from the north along the pedestrian pathway east of the building.<br \/>\n",
+      "image": "\/_assets\/_m_b\/WT_A6.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "815",
+      "title": "Northeast entrance to Whitney Hall",
+      "lat": "43.6639",
+      "lng": "-79.3975",
+      "buildingCode": "013",
+      "desc": "A single step leads to a manual door.  Entrance faces south and is obscured by the nearby landscaping.  Door is approachable from the main courtyard or the pedestrian pathway to the east.",
+      "image": "\/_assets\/_m_b\/WT_A7.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "816",
+      "title": "Northeast courtyard entrance to Whitney Hall",
+      "aka": "Mullock House",
+      "lat": "43.6640",
+      "lng": "-79.3977",
+      "buildingCode": "013",
+      "desc": "Three stairs and a step leads to a manual door.  This residence entrance opens onto the exterior courtyard and requires a key to open. ",
+      "image": "\/_assets\/_m_b\/WT_A8.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "817",
+      "title": "North courtyard entrance to Whitney Hall",
+      "lat": "43.6640",
+      "lng": "-79.3978",
+      "buildingCode": "013",
+      "desc": "Seven steps lead to a manual door.  This residence entrance opens onto the exterior courtyard and requires a key to open. ",
+      "image": "\/_assets\/_m_b\/WT_A9.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "818",
+      "title": "Northwest courtyard entrance to Whitney Hall",
+      "lat": "43.6639",
+      "lng": "-79.3979",
+      "buildingCode": "013",
+      "desc": "Three steps lead to a manual door.  This residence entrance opens onto the exterior courtyard and requires a key to open. ",
+      "image": "\/_assets\/_m_b\/WT_A10.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "819",
+      "title": "Harbord Street Entrance to Thomas Fisher Rare Book Library",
+      "lat": "43.6642",
+      "lng": "-79.3992",
+      "buildingCode": "006B",
+      "desc": "Long staircase leads to a powered entrance to the large vestibule connecting Robarts Library and Thomas Fisher Rare Book Library.  The entrance stair is clearly visible from Harbord street.  ",
+      "image": "\/_assets\/_m_b\/robarts_A2.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "821",
+      "title": "Sussex Avenue entrance to Claude T. Bissel Building",
+      "lat": "43.6648",
+      "lng": "-79.3994",
+      "buildingCode": "006A",
+      "desc": "A long ramp leads to a powered door.  The powered door to the left of the revolving door provides the only accessible entrance to the Bissel Building.  The interior connection between Robarts Library and the Bissel Building is not accessible. ",
+      "image": "\/_assets\/_m_b\/Robarts_A5.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "822",
+      "title": "Rear entrance to Max Gluskin House",
+      "aka": "Department of Economics",
+      "lat": "43.6660",
+      "lng": "-79.3997",
+      "buildingCode": "104",
+      "desc": "Stairs lead up to a manual door.  Entrance faces west and is approachable from the path between Max Gluskin House and Innis College to the south.  Door not visible from St. George Street.",
+      "image": "\/_assets\/_m_b\/IC_A11.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "823",
+      "title": "Secondary courtyard entrance to Max Gluskin House",
+      "aka": "Department of Economics",
+      "lat": "43.6661",
+      "lng": "-79.3998",
+      "buildingCode": "104",
+      "desc": "Three steps lead to a manual door.   Entrance faces west and is hidden in a recess in the wall leading to the exterior courtyard.   Door is not visible from the street and approachable from the path south of Max Gluskin House.",
+      "image": "\/_assets\/_m_b\/GE_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "824",
+      "title": "Courtyard entrance to Max Gluskin House",
+      "aka": "Department of Economics",
+      "lat": "43.6661",
+      "lng": "-79.4000",
+      "buildingCode": "104",
+      "desc": "A ramp and step lead up to a manual glass door.  Entrance faces south onto the exterior courtyard and is not visible from the street.  Approach along the pathway along the south side of the building.",
+      "image": "\/_assets\/_m_b\/GE_A3.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "825",
+      "title": "Secondary rear entrance to Max Gluskin House",
+      "aka": "Department of Economics",
+      "lat": "43.6661",
+      "lng": "-79.3996",
+      "buildingCode": "104",
+      "desc": "Five steps lead to a manual, glass door.   Entrance is located at the end of a narrow passage at the rear of the building that opens onto the courtyard.  It is not visible from St George Street.  ",
+      "image": "\/_assets\/_m_b\/GE_A4.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "826",
+      "title": "Main entrance to the Max Gluskin House",
+      "aka": "Department of Economics",
+      "lat": "43.6661",
+      "lng": "-79.3996",
+      "buildingCode": "104",
+      "desc": "Stairs and an accessible ramp lead to a powered, glass door.  The entrance faces east and is clearly visible from St. George Street. ",
+      "image": "\/_assets\/_m_b\/GE_A5.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "827",
+      "title": "Main entrance to Joseph L. Rotman School of Management",
+      "lat": "43.6655",
+      "lng": "-79.3986",
+      "buildingCode": "134",
+      "desc": "A level path leads to a pair of manual, glass doors.   The entrance is located under a large, glass awning and is clearly visible from St. George Street. <br \/>\n",
+      "image": "\/_assets\/_m_b\/RT_A1.JPG",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "828",
+      "title": "Main accessible entrance to Joseph L. Rotman School of Management",
+      "lat": "43.6655",
+      "lng": "-79.3986",
+      "buildingCode": "134",
+      "desc": "A level path leads to a powered door.  Entrance faces north and is located just around the side of the brick pillar of the main entrance.  The door is obscured under a covered pathway but the main entrance is clearly identified by a glass awning. ",
+      "image": "\/_assets\/_m_b\/RT_A2.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "829",
+      "title": "Southwest entrance to Rotman School of Management",
+      "lat": "43.6651",
+      "lng": "-79.3986",
+      "buildingCode": "134",
+      "desc": "Three steps leads up to a manual, glass door under a glass awning.  Entrance faces west and is clearly visible from St. George Street.",
+      "image": "\/_assets\/_m_b\/RT_A3.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "830",
+      "title": "Rear entrance to Rotman School of Management",
+      "lat": "43.6653",
+      "lng": "-79.3981",
+      "buildingCode": "134",
+      "desc": "A level path leads to a powered glass door.  Entrance opens onto the rear laneway and is not visible from the street.",
+      "image": "\/_assets\/_m_b\/RT_A6.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "831",
+      "title": "Secondary rear entrance to Rotman School of Management",
+      "lat": "43.6655",
+      "lng": "-79.3982",
+      "buildingCode": "134",
+      "desc": "A level path leads to a powered, glass door.  Entrance opens onto the rear laneway and is not visible from St. George Street. ",
+      "image": "\/_assets\/_m_b\/RT_A7.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "832",
+      "title": "Courtyard entrance to Innis College Student Residence",
+      "lat": "43.6659",
+      "lng": "-79.3987",
+      "buildingCode": "133",
+      "desc": "A level path leads to a powered, glass door.  Entrance faces east onto the exterior courtyard and is only visible from the rear laneway.",
+      "image": "\/_assets\/_m_b\/IS_A1.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "833",
+      "title": "Entrance to Campus Express corner store",
+      "lat": "43.6657",
+      "lng": "-79.3987",
+      "buildingCode": "133",
+      "desc": "A level path leads to a manual glass door located under a glass awning.  Entrance faces southwest and is partially obscured by vegetation when walking along St. George street.  Entrance is sometimes propped open in good weather.  ",
+      "image": "\/_assets\/_m_b\/IS_A3.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "834",
+      "title": "North Entrance to Woodsworth College",
+      "lat": "43.6670",
+      "lng": "-79.3990",
+      "buildingCode": "038",
+      "desc": "A level path leads to a manual door.   Entrance faces north and is not visible from the street.  Approach from the pathway north of the building at St. George Street and look for a window box overhanging the entrance. ",
+      "image": "\/_assets\/_m_b\/WW_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "835",
+      "title": "North courtyard entrance to Woodsworth College",
+      "lat": "43.6669",
+      "lng": "-79.3990",
+      "buildingCode": "038",
+      "desc": "A level path leads to a manual, double door.   Entrance faces south and opens onto an exterior courtyard. Door is not visible from St. George Street but is approached from the west along the pathway just south of 123 St. George Street.  ",
+      "image": "\/_assets\/_m_b\/WW_A2.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "836",
+      "title": "East courtyard entrance to Woodsworth College",
+      "lat": "43.6666",
+      "lng": "-79.3987",
+      "buildingCode": "038",
+      "desc": "Three steps lead to a manual, double door.   Entrance faces west and opens onto the exterior courtyard.  Door is not easily seen from St. George street but the brick archway leading to the courtyard is visible. ",
+      "image": "\/_assets\/_m_b\/WW_A4.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "837",
+      "title": "Southwest courtyard entrance to Woodsworth College",
+      "lat": "43.6665",
+      "lng": "-79.3989",
+      "buildingCode": "038",
+      "desc": "A ramp leads to a step up to a manual door.  Entrance faces east onto the exterior courtyard and is not visible from the street.   The entrance is located behind the brick archway leading to the courtyard which is visible from St. George Street. ",
+      "image": "\/_assets\/_m_b\/WW_A5.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "838",
+      "title": "Main entrance to Woodsworth College",
+      "lat": "43.6663",
+      "lng": "-79.3990",
+      "buildingCode": "038",
+      "desc": "A level path leads to a covered, manual door.  Entrance is clearly visible from St. George Street and located under a tall concrete spire.  ",
+      "image": "\/_assets\/_m_b\/WW_A7.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "839",
+      "title": "Second Entrance to Woodsworth College",
+      "lat": "43.6665",
+      "lng": "-79.3991",
+      "buildingCode": "038",
+      "desc": "Seven steps lead to a manual, double door.  Entrance faces west and is clearly visible from St. George Street. ",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "840",
+      "title": "Main Entrance to 121 St. George Street",
+      "aka": "Centre for Industrial Relations and Human Resources",
+      "lat": "43.6667",
+      "lng": "-79.3992",
+      "buildingCode": "110",
+      "desc": "Eight steps lead to a covered, manual door.  Entrance faces west and is clearly visible from St. George Street.",
+      "image": "\/_assets\/_m_b\/IR_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "841",
+      "title": "Main entrance to School of Continuing Studies",
+      "lat": "43.6667",
+      "lng": "-79.3997",
+      "buildingCode": "103",
+      "desc": "Stairs and an accessible ramp lead to a covered, powered door.  Entrance faces east and is clearly visible from St. George Street.  The accessible ramp runs through the tall grass landscaping.  ",
+      "image": "\/_assets\/_m_b\/CS_A1.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "842",
+      "title": "Main Entrance to Jackman Humanities Building",
+      "lat": "43.6677",
+      "lng": "-79.4002",
+      "buildingCode": "128",
+      "desc": "A level path leads to an automatic sliding door.  Entrance faces east and is clearly visible from St. George Street.<br \/>\n<br \/>\n  ",
+      "image": "\/_assets\/_m_b\/JH_A1.JPG",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "843",
+      "title": "Rear accessible entrance to Jackman Humanities Builing",
+      "lat": "43.6677",
+      "lng": "-79.4004",
+      "buildingCode": "128",
+      "desc": "A powered door is approachable along a level path leading to the parking and drop off area at the rear of the building.  Entrance faces west and is not visible from the street.  There are vehicular and pedestrian access routes to the north and west. ",
+      "image": "\/_assets\/_m_b\/JH_A2.jpg",
+      "sublayers": []
+    },
+    {
+      "id": "844",
+      "title": "West entrance to Jackman Humanities Building",
+      "lat": "43.6677",
+      "lng": "-79.4006",
+      "buildingCode": "128",
+      "desc": "A level path leads to a manual door.  Entrance faces west and is not visible from the street.  Approach from Bloor Street along the laneway to the west of the building. ",
+      "image": "\/_assets\/_m_b\/JH_A3.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "845",
+      "title": "East entrance to 371 Bloor Street West",
+      "aka": "University of Toronto Schools",
+      "lat": "43.6668",
+      "lng": "-79.4016",
+      "buildingCode": "014",
+      "desc": "Five steps lead to a manual, double door.  Entrance faces east, is clearly visible from Huron Street and obscured by trees when approaching from Bloor Street West.",
+      "image": "\/_assets\/_m_b\/FE_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "846",
+      "title": "Main entrance to 371 Bloor Street West",
+      "aka": "University of Toronto Schools",
+      "lat": "43.6668",
+      "lng": "-79.4023",
+      "buildingCode": "014",
+      "desc": "Stairs lead up to a series of manual doors.  Entrance faces north and is clearly visible from Bloor Street West.",
+      "image": "\/_assets\/_m_b\/FE_A2.JPG",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "847",
+      "title": "Main accessible entrance to 371 Bloor Street West",
+      "aka": "University of Toronto Schools",
+      "lat": "43.6667",
+      "lng": "-79.4026",
+      "buildingCode": "014",
+      "desc": "A level path leads to a manual double door.  Entrance faces northeast and is visible from Bloor Street West.  Door is locked.  Contact the following for access:<br \/>\n<br \/>\nFacilities - 416 254 5446<br \/>\nSociology - 416 946 4058<br \/>\nStudent Services - 416 978 2277",
+      "image": "\/_assets\/_m_b\/FE_A3.JPG",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "848",
+      "title": "West entrance to 371 Bloor Street West",
+      "aka": "University of Toronto Schools",
+      "lat": "43.6665",
+      "lng": "-79.4031",
+      "buildingCode": "014",
+      "desc": "A single step leads to a covered, manual door.  Entrance faces west and is partially obscured by trees and vegetation.  ",
+      "image": "\/_assets\/_m_b\/FE_A4.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "849",
+      "title": "Main entrance to 713 Spadina Avenue",
+      "lat": "43.6660",
+      "lng": "-79.4029",
+      "buildingCode": "142",
+      "desc": "Stairs lead to a covered porch with a manual door.  Entrance faces west and is clearly visible from Spadina Avenue. ",
+      "image": "\/_assets\/_m_b\/SA_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "850",
+      "title": "Main entrance to 703 Spadina Avenue",
+      "lat": "43.6657",
+      "lng": "-79.4028",
+      "buildingCode": "125",
+      "desc": "Stairs lead to a covered porch with a manual door.  Entrance faces west and is clearly visible from Spadina Avenue.  ",
+      "image": "\/_assets\/_m_b\/IA_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "851",
+      "title": "Main entrance to 720 Spadina Avenue",
+      "lat": "43.6655",
+      "lng": "-79.4034",
+      "buildingCode": "189",
+      "desc": "A level path leads to a powered, glass door.  Entrance faces east and is clearly visible from Spadina Avenue.",
+      "image": "\/_assets\/_m_b\/FA_A1.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "852",
+      "title": "Main entrance to 40 Sussex Avenue",
+      "lat": "43.6650",
+      "lng": "-79.4018",
+      "buildingCode": "146",
+      "desc": "Short stair leads to a manual door.  Entrance faces south and is clearly visible from Sussex Avenue.  ",
+      "image": "\/_assets\/_m_b\/SU_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "853",
+      "title": "Side entrance to 40 Sussex Avenue",
+      "lat": "43.6650",
+      "lng": "-79.4018",
+      "buildingCode": "146",
+      "desc": "A short wooden stair leads to narrow manual door with an additional screen door in front of it.  Entrance faces south and is only visible from Sussex Avenue when standing directly in front of it.",
+      "image": "\/_assets\/_m_b\/SU_A2.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "854",
+      "title": "Main entrance to Sussex Court",
+      "lat": "43.6649",
+      "lng": "-79.4009",
+      "buildingCode": "077",
+      "desc": "A covered stairway leads to a manual door.  The accessible entry is adjacent to it and consists of a powered door level to the sidewalk.  This entry leads to an accessible lift to the main floor.   Entrance faces south and is visible from Sussex Ave.",
+      "image": "\/_assets\/_m_b\/SC_A1.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "855",
+      "title": "Main entrance to 370 Huron Street",
+      "aka": "Campus Co-op Day Care Centre",
+      "lat": "43.6646",
+      "lng": "-79.4007",
+      "buildingCode": "138",
+      "desc": "Stairs lead to a porch with a manual door.  Entrance is locked with keypad access only.  Door faces south and is not easily visible from Huron Street but the path and wooden stairs is easily visilbe when approaching from the south. ",
+      "image": "\/_assets\/_m_b\/ca_a1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "856",
+      "title": "Main entrance to Studio Theatre",
+      "lat": "43.6643",
+      "lng": "-79.4010",
+      "buildingCode": "091",
+      "desc": "Brick stairs lead to a manual double door.  Entrance faces south and is clearly visible from Glen Morris Street.",
+      "image": "\/_assets\/_m_b\/GM_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "857",
+      "title": "Main entrance to Early Learning Centre",
+      "lat": "43.6640",
+      "lng": "-79.4012",
+      "buildingCode": "129",
+      "desc": "Stairs and an accessible ramp lead to a powered, glass door.  Entrance faces north and is clearly visible from Glen Morris Street.  The accessible ramp is approached from the east of the building near the parking lot.",
+      "image": "\/_assets\/_m_b\/ER_A1.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "859",
+      "title": "East entrance to Early Learning Centre",
+      "lat": "43.6639",
+      "lng": "-79.4010",
+      "buildingCode": "129",
+      "desc": "A curb ramp leads to a covered, manual door.  Entrance faces east and is only visible when approaching from the east.  Door is locked and requires a key card to open. ",
+      "image": "\/_assets\/_m_b\/ER_A2.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "860",
+      "title": "Main entrance to Graduate House",
+      "lat": "43.6633",
+      "lng": "-79.4016",
+      "buildingCode": "064",
+      "desc": "Stairs and an accessible ramp lead to a covered, powered door.  Entrance is set back behind the concrete pillars at the top of the stairs facing Harbord Street. ",
+      "image": "\/_assets\/_m_b\/GD_A1.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "861",
+      "title": "Main entrance to Grad Room cafe",
+      "lat": "43.6633",
+      "lng": "-79.4018",
+      "buildingCode": "064",
+      "desc": "The pair of doors at the southeast corner of the Graduate House are level to the sidewalk.   Both doors are clearly visible from the corner of Spadina Avenue and Harbord Street.  The door facing south is powered.  ",
+      "image": "\/_assets\/_m_b\/GD_A2.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "862",
+      "title": "South entrance to Faskin Martineau Building",
+      "lat": "43.6641",
+      "lng": "-79.4019",
+      "buildingCode": "151",
+      "desc": "Seven steps leads to a manual, glass door located in a small recess at the south side of the building.  Entrance faces south and is only visible when facing directly towards it on Glen Morris Street however, the path leading towards it is visible.",
+      "image": "\/_assets\/_m_b\/LG_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "863",
+      "title": "Main accessible entrance to Faskin Martineau Building",
+      "lat": "43.6641",
+      "lng": "-79.4019",
+      "buildingCode": "151",
+      "desc": "A long circular ramp leads is approached from Glen Morris Street and leads to a glass door at the rear of the building with a bell to ring for assistance.  The ramp runs through the rear garden, the path to which is visible from Glen Morris Street. ",
+      "image": "\/_assets\/_m_b\/LG_A2.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "864",
+      "title": "Main entrance to Fisken Martineau Building",
+      "lat": "43.6640",
+      "lng": "-79.4021",
+      "buildingCode": "151",
+      "desc": "A brick stair leads to a manual door.  Entrance faces west and is clearly visible from Spadina Avenue.",
+      "image": "\/_assets\/_m_b\/LG_A3.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "865",
+      "title": "Main entrance to 315 Bloor Street West",
+      "lat": "43.6675",
+      "lng": "-79.3985",
+      "buildingCode": "156",
+      "desc": "Stairs lead to a manual, double door.  Entrance faces north and is clearly visible from Bloor Street West. ",
+      "image": "\/_assets\/_m_b\/AO_A1.JPG",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "866",
+      "title": "Second north entrance to Bahen Centre for Information Technology",
+      "lat": "43.6600",
+      "lng": "-79.3972",
+      "buildingCode": "080",
+      "desc": "A level path leads to a manual, glass door.  Entrance is hidden in the corner of a small courtyard opposite the brick house and behind the bicycle parking racks.  <br \/>\n",
+      "image": "\/_assets\/_m_b\/BA_A2.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "867",
+      "title": "South entrance to McLennan Physical laboratories",
+      "lat": "43.6605",
+      "lng": "-79.3983",
+      "buildingCode": "078",
+      "desc": "Stairs lead up to an elevated platform and a series of manual, glass doors.  Entrance faces south and is partially visible from Russell Street. ",
+      "image": "\/_assets\/_m_b\/MP_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "868",
+      "title": "Second courtyard entrance to Lash Miller Chemical Laboratories",
+      "lat": "43.6616",
+      "lng": "-79.3982",
+      "buildingCode": "073",
+      "desc": "A single step leads up to a manual door.  Entrance is located at the rear of the building next to the outdoor seating and metal pillars.  <br \/>\n<br \/>\n  ",
+      "image": "\/_assets\/_m_b\/LM_A2.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "869",
+      "title": "Southeast entrance to Sidney Smith Hall",
+      "lat": "43.6621",
+      "lng": "-79.3983",
+      "buildingCode": "033",
+      "desc": "Stairs lead down to a manual, glass door.  Entrance faces east and is slightly obscured from Willcocks street as it is located below street level.",
+      "image": "\/_assets\/_m_b\/SS_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "870",
+      "title": "Southwest entrance to Sidney Smith Hall",
+      "lat": "43.6620",
+      "lng": "-79.3988",
+      "buildingCode": "033",
+      "desc": "A concrete stair leads down to to a manual, glass door.   Entrance faces west and is visible from the corner of Huron Street and Willcocks Street.",
+      "image": "\/_assets\/_m_b\/SS_A3.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "871",
+      "title": "Second loading bay entrance to Sidney Smith hall",
+      "lat": "43.6627",
+      "lng": "-79.3990",
+      "buildingCode": "033",
+      "desc": "A manual, glass door is approached by a rough loading ramp from St. George Street or stairs from Huron Street.  Entrance faces north and is not visible from the street. ",
+      "image": "\/_assets\/_m_b\/SS_A8.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "872",
+      "title": "Second St. George Street entrance to Sidney Smith Hall",
+      "lat": "43.6622",
+      "lng": "-79.3983",
+      "buildingCode": "033",
+      "desc": "A series of manual, glass doors is approachable by the stairs leading to the raised patio facing St. George Street.",
+      "image": "\/_assets\/_m_b\/SS_A6.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "873",
+      "title": "Southwest entrance to Ramsay Wright",
+      "aka": "Centre for Biological Timing and Cognition",
+      "lat": "43.6628",
+      "lng": "-79.3995",
+      "buildingCode": "072",
+      "desc": "Stairs and accessible ramp lead to a powered, glass door.  Entrance faces south and is visible from Huron Street when approaching from the south.  Door requires a keycard to open.  ",
+      "image": "\/_assets\/_m_b\/RW_A5.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "874",
+      "title": "Main entrance to Warren Stevens Building",
+      "aka": "Athletics Centre",
+      "lat": "43.6631",
+      "lng": "-79.4010",
+      "buildingCode": "068A",
+      "desc": "A manual door is approached by a level path.  Entrance faces north and difficult to see from Harbord Street.  The doors are located under the large awning facing St. George Street.  ",
+      "image": "\/_assets\/_m_b\/WS_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "875",
+      "title": "Main accessible entrance to Warren Stevens Building",
+      "aka": "Athletics Centre",
+      "lat": "43.6630",
+      "lng": "-79.4013",
+      "buildingCode": "068A",
+      "desc": "A powered, glass door is approached by a level pathway.  Entrance faces north and is difficult to see from Harbord Street.  It is located under the concrete awning next to the large, red windows facing Harbord Street. <br \/>\n",
+      "image": "\/_assets\/_m_b\/WS_A2.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "876",
+      "title": "South entrance to Warren Stevens Building",
+      "aka": "Athletics Centre",
+      "lat": "43.6625",
+      "lng": "-79.4010",
+      "buildingCode": "068A",
+      "desc": "A powered door is approached by a level pathway.  Entrance is located under a concrete awning and faces the outdoor seating area directly in front of it.  The door is difficult to see from Classic Avenue.",
+      "image": "\/_assets\/_m_b\/WS_A3.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "877",
+      "title": "North entrance to Wetmore Hall - New College",
+      "lat": "43.6624",
+      "lng": "-79.4004",
+      "buildingCode": "032",
+      "desc": "A level concrete path leads to a powered, wooden door.   Entrance faces east and is visible when approaching from the east along Classic Avenue. <br \/>\n<br \/>\n",
+      "image": "\/_assets\/_m_b\/WE_A1.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "879",
+      "title": "Southeast entrance to Wetmore Hall - New College",
+      "lat": "43.6620",
+      "lng": "-79.3996",
+      "buildingCode": "032",
+      "desc": "Stairs lead up to a manual, wood door.  Entrance faces east and is clearly visible from Huron Street.",
+      "image": "\/_assets\/_m_b\/WE_A2.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "880",
+      "title": "Northeast courtyard entrance to Wetmore Hall - New College",
+      "lat": "43.6623",
+      "lng": "-79.4000",
+      "buildingCode": "032",
+      "desc": "Six stairs lead up to a manual, wooden door.  Entrance faces south and opens onto the exterior courtyard.  It is not visible from Willcocks Street. ",
+      "image": "\/_assets\/_m_b\/WE_A3.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "881",
+      "title": "Northwest courtyard entrance to Wetmore Hall - New College",
+      "lat": "43.6622",
+      "lng": "-79.4004",
+      "buildingCode": "032",
+      "desc": "Four steps lead up to a manual, wooden door.  Entrance faces south and opens onto the exterior courtyard.  it is not visible from the street. <br \/>\n<br \/>\n",
+      "image": "\/_assets\/_m_b\/WE_A4.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "882",
+      "title": "West courtyard entrance to Wilson Hall",
+      "lat": "43.6618",
+      "lng": "-79.4009",
+      "buildingCode": "032A",
+      "desc": "Ramp and stairs lead down to a powered door.   Entrance faces east and opens onto the exterior courtyard.  It is not visible from the street but is clearly visible from within the courtyard.",
+      "image": "\/_assets\/_m_b\/WI_A6.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "883",
+      "title": "South entrance to Wilson Hall",
+      "lat": "43.6617",
+      "lng": "-79.4002",
+      "buildingCode": "032A",
+      "desc": "An accessible ramp leads to a powered door.  Entrance faces east and is clearly visible from Willcocks Street.",
+      "image": "\/_assets\/_m_b\/WI_A7.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "884",
+      "title": "Main entrance to Wilson Hall",
+      "lat": "43.6616",
+      "lng": "-79.4004",
+      "buildingCode": "032A",
+      "desc": "An accessible ramp leads to a powered door.  Entrance faces east and is clearly visible from Willcocks Street.",
+      "image": "\/_assets\/_m_b\/WI_A8.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "885",
+      "title": "Southeast entrance to Wilson Hall",
+      "lat": "43.6615",
+      "lng": "-79.4008",
+      "buildingCode": "032A",
+      "desc": "Level path leads to a manual, wooden door.  Entrance faces south and is clearly visible from Willcocks Street.",
+      "image": "\/_assets\/_m_b\/WI_A9.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "886",
+      "title": "Main Entrance to New College Residence",
+      "lat": "43.6612",
+      "lng": "-79.4008",
+      "buildingCode": "131",
+      "desc": "A long staircase leads to a manual glass door.  Entrance faces north and is located under the large awning leading into the building.  It is not clearly visible from Willcocks Street.",
+      "image": "\/_assets\/_m_b\/NR_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "887",
+      "title": "Main accessible entrance to New College Residence",
+      "lat": "43.6611",
+      "lng": "-79.4010",
+      "buildingCode": "131",
+      "desc": "A level path leads to a powered, glass door.  Entrance faces north and is clearly visible from Willcocks Street.",
+      "image": "\/_assets\/_m_b\/NR_A2.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "888",
+      "title": "West entrance to New College Residence",
+      "lat": "43.6608",
+      "lng": "-79.4008",
+      "buildingCode": "131",
+      "desc": "Level path leads to a powered, glass door.  Entrance faces west and is clearly visible from Spadina Avenue. ",
+      "image": "\/_assets\/_m_b\/NR_A3.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "889",
+      "title": "Rear courtyard entrance to New College Residence",
+      "lat": "43.6609",
+      "lng": "-79.4007",
+      "buildingCode": "131",
+      "desc": "Level path leads to a powered, glass door.  Entrance faces east onto the rear courtyard and is not visible from the street.  Approach along the path leading north between New College Residence and Faculty Club or from the south along Bancroft Avenue.",
+      "image": "\/_assets\/_m_b\/NR_A4.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "890",
+      "title": "Main entrance to Faculty Club",
+      "lat": "43.6613",
+      "lng": "-79.4005",
+      "buildingCode": "075",
+      "desc": "Four steps leads to a manual, wooden door.  Entrance faces north and is clearly visible from Willcocks Street. ",
+      "image": "\/_assets\/_m_b\/FC_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "891",
+      "title": "Accessible entrance to Faculty Club",
+      "lat": "43.6611",
+      "lng": "-79.4004",
+      "buildingCode": "075",
+      "desc": "A powered door is approached along an accessible, wooden ramp in the alley on the east side of the building.  Entrance faces east and is not clearly visible from the street. ",
+      "image": "\/_assets\/_m_b\/FC_A2.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "892",
+      "title": "Main Entrance to the Koffler Institute",
+      "aka": "Multi-Fath Centre",
+      "lat": "43.6606",
+      "lng": "-79.4005",
+      "buildingCode": "145",
+      "desc": "A shallow ramp leads to a powered, glass door.  Entrance faces east and is clearly visible at the end of Bancroft Avenue.",
+      "image": "\/_assets\/_m_b\/KP_A1.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "893",
+      "title": "Main entrance to the Graduate Students' Union",
+      "lat": "43.6607",
+      "lng": "-79.4002",
+      "buildingCode": "056",
+      "desc": "Three steps leads to a manual, wooden door.  Entrance faces south and is clearly visible from Bancroft Avenue.<br \/>\n",
+      "image": "\/_assets\/_m_b\/GU_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "894",
+      "title": "Northwest entrance to Earth Sciences Centre",
+      "lat": "43.6613",
+      "lng": "-79.4000",
+      "buildingCode": "062",
+      "desc": "A level path leads to a powered, glass door.  Entrance faces north and is recessed into the building making it difficult to see until standing directly in front of it on Willcocks Street. ",
+      "image": "\/_assets\/_m_b\/ES_A1.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "895",
+      "title": "Northeast entrance to Earth Sciences Centre",
+      "lat": "43.6613",
+      "lng": "-79.3996",
+      "buildingCode": "062",
+      "desc": "A level path leads to a manual, glass door.  Entrance is located under the round, red brick tower and not visible from the intersection of Willcocks Street and St. George Street. ",
+      "image": "\/_assets\/_m_b\/ES_A2.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "896",
+      "title": "East courtyard entrance to Earth Sciences Centre",
+      "lat": "43.6611",
+      "lng": "-79.3994",
+      "buildingCode": "062",
+      "desc": "A level path leads to a manual, glass door.  Entrance faces east onto the exterior courtyard and is located under the covered colonnade.  The colonnade is visible from Bancroft Avenue. <br \/>\n<br \/>\n",
+      "image": "\/_assets\/_m_b\/ES_A4.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "897",
+      "title": "Second courtyard entrance to Earth Sciences Centre",
+      "lat": "43.6609",
+      "lng": "-79.3993",
+      "buildingCode": "062",
+      "desc": "A level path leads to a powered, glass door.  Entrance opens onto the exterior courtyard and is located under the covered colonnade.  The colonnade is visible from Bancroft Avenue.",
+      "image": "\/_assets\/_m_b\/ES_A5.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "898",
+      "title": "Bancroft entrance to Earth Science Centre",
+      "lat": "43.6607",
+      "lng": "-79.4000",
+      "buildingCode": "062",
+      "desc": "Stairs and an accessible ramp leads to a manual, glass door.  Entrance faces south and is clearly visible from Bancroft Avenue.",
+      "image": "\/_assets\/_m_b\/ES_A8.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "899",
+      "title": "Second Bancraft entrance to Earth Science Centre",
+      "lat": "43.6606",
+      "lng": "-79.3997",
+      "buildingCode": "062",
+      "desc": "Four stairs lead to a manual, glass door.  Entrance faces north and is clearly visible from Bancroft Avenue.",
+      "image": "\/_assets\/_m_b\/ES_A9.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "900",
+      "title": "Third Bancroft entrance to Earth Science Centre",
+      "lat": "43.6606",
+      "lng": "-79.3995",
+      "buildingCode": "062",
+      "desc": "A curved accessible ramp leads to a powered, glass door.  The entry to the ramp is under the colonnade and leads around the round, red brick tower.  ",
+      "image": "\/_assets\/_m_b\/ES_A10.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "901",
+      "title": "Third courtyard entrance to Earth Sciences Centre",
+      "lat": "43.6607",
+      "lng": "-79.3992",
+      "buildingCode": "062",
+      "desc": "A level path leads to a manual, double door.   The entrance faces west onto the covered colonnade and is largely hidden until walking directly in front of it along Bancroft Avenue.  ",
+      "image": "\/_assets\/_m_b\/ES_A11.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "902",
+      "title": "East entrance to Earth Sciences Centre",
+      "lat": "43.6607",
+      "lng": "-79.3991",
+      "buildingCode": "062",
+      "desc": "A level path leads to a manual, glass door.  Entrance faces east and is clearly visible from Huron Street. ",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "903",
+      "title": "Northwest courtyard entrance to Earth Sciences Centre",
+      "lat": "43.6605",
+      "lng": "-79.3995",
+      "buildingCode": "062",
+      "desc": "Stairs lead to a manual, glass door.  Entrance faces east and is located at the northwest corner of the natural forest courtyard in the South Block of Earth Sciences.  Entrance is obscured even when standing inside the courtyard. ",
+      "image": "\/_assets\/_m_b\/ES_A13.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "904",
+      "title": "West entrance to Earth Sciences Centre",
+      "lat": "43.6603",
+      "lng": "-79.3996",
+      "buildingCode": "062",
+      "desc": "Five stairs lead to a manual glass door.  Entrance faces west onto the service driveway behind Borden Building and is not visible from the Spadina Avenue. <br \/>\n",
+      "image": "\/_assets\/_m_b\/ES_A15.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "905",
+      "title": "Main entrance to Borden Building South",
+      "lat": "43.6601",
+      "lng": "-79.3999",
+      "buildingCode": "061",
+      "desc": "Stairs lead to a covered, manual door.  Entrance faces west and is clearly visible from Spadina Avenue. Located just beside the driveway entrance under the bridge that connect to Borden Building North. ",
+      "image": "\/_assets\/_m_b\/SB_A11.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "906",
+      "title": "Main entrance to North Borden Building",
+      "lat": "43.6603",
+      "lng": "-79.4002",
+      "buildingCode": "061A",
+      "desc": "Four steps lead to a covered, double door.  Entrance faces east and is located on a covered, brick patio which is clearly visible from Spadina Crescent.",
+      "image": "\/_assets\/_m_b\/NB_A2.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "907",
+      "title": "Main accessible entrance to Borden Building North",
+      "lat": "43.6605",
+      "lng": "-79.4001",
+      "buildingCode": "061A",
+      "desc": "Stairs and an accessible ramp lead to a powered door.  Entrance faces west and is visible when approaching from the west on Bancroft Avenue.  ",
+      "image": "\/_assets\/_m_b\/NB_A3.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "908",
+      "title": "Main accessible entrance to Bancroft Building",
+      "lat": "43.6610",
+      "lng": "-79.3996",
+      "buildingCode": "057",
+      "desc": "a level path leads to a powered, glass door.  Entrance faces northeast onto the exterior courtyard of Earth Sciences Centre.  Approach from the pathway leading around the building from Bancroft Avenue.",
+      "image": "\/_assets\/_m_b\/BF_A1.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "909",
+      "title": "Main entrance to Bancroft Building",
+      "lat": "43.6608",
+      "lng": "-79.3997",
+      "buildingCode": "057",
+      "desc": "A single step leads to a manual door.  Entrance faces south and is clearly visible from Bancroft Avenue. ",
+      "image": "\/_assets\/_m_b\/BF_A2.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "910",
+      "title": "Main entrance to 1 Spadina Crescent",
+      "lat": "43.6594",
+      "lng": "-79.4006",
+      "buildingCode": "054",
+      "desc": "Stairs lead to a manual wooden door.  Entrance faces south and is clearly visible from Spadina Crescent.  There is no pedestrian crossing that directly serves this entrance - vehicle drop off only. ",
+      "image": "\/_assets\/_m_b\/SP_A2.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "911",
+      "title": "East entrance to 1 Spadina Crescent",
+      "lat": "43.6596",
+      "lng": "-79.4003",
+      "buildingCode": "054",
+      "desc": "Stairs lead to a manual, double door.  Entrance faces east and is visible from Spadina Crescent.  There is a pedestrian crossing on Spadina Crescent that provides access to this entrance.  ",
+      "image": "\/_assets\/_m_b\/SP_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "914",
+      "title": "Main entrance to E.J. Pratt Library",
+      "lat": "43.6665",
+      "lng": "-79.3913",
+      "buildingCode": "514",
+      "desc": "Stairs and an accessible ramp lead to a powered, glass door.  Entrance faces north and is clearly visible from the main pedestrian pathay through the centre of Victoria University.  However, It is not visible from any streets.  ",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "915",
+      "title": "Main accessible entrance to Northrop Frye Hall",
+      "lat": "43.6663",
+      "lng": "-79.3924",
+      "buildingCode": "515",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "916",
+      "title": "Main accessible entrance to Victoria College",
+      "lat": "43.6669",
+      "lng": "-79.3918",
+      "buildingCode": "501",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "917",
+      "title": "Main entrance to Emmanuel College",
+      "lat": "43.6667",
+      "lng": "-79.3929",
+      "buildingCode": "502",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "918",
+      "title": "Main entrance to Isabel Bader Theatre",
+      "lat": "43.6673",
+      "lng": "-79.3926",
+      "buildingCode": "509",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "919",
+      "title": "Rear entrance to Isabel Bader Theatre",
+      "lat": "43.6671",
+      "lng": "-79.3925",
+      "buildingCode": "509",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "920",
+      "title": "Main accessible entrance to Birge-Carnegie Library",
+      "lat": "43.6671",
+      "lng": "-79.3928",
+      "buildingCode": "503",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "921",
+      "title": "Main entrance to Lillian Massey Building",
+      "lat": "43.6683",
+      "lng": "-79.3938",
+      "buildingCode": "528",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "925",
+      "title": "Main Entrance to 254\/256 McCaul Street",
+      "lat": "43.6585",
+      "lng": "-79.3934",
+      "buildingCode": "083",
+      "desc": "Two steps lead to a covered, manual door.  Entrance faces East and is clearly visible from McCaul Street. ",
+      "image": "\/_assets\/_m_b\/RM_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "926",
+      "title": "Main Accessible Entrance to 245\/246 McCaul Street",
+      "lat": "43.6585",
+      "lng": "-79.3935",
+      "buildingCode": "083",
+      "desc": "A level path leads t a covered, powered door.  Entrance is located at the rear of the building and faces west towards the parking lot.  The entrance is located in a narrow recess in the wall but is clearly visible from the parking lot. ",
+      "image": "\/_assets\/_m_b\/RM_A2.JPG",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "927",
+      "title": "Main Entrance to Exam Centre",
+      "lat": "43.6586",
+      "lng": "-79.3931",
+      "buildingCode": "155",
+      "desc": "A level path leads to a covered, powered entrance.    Entrance faces west and is clearly visible from McCaul Street. ",
+      "image": "\/_assets\/_m_b\/EX_A1.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "928",
+      "title": "Main Entrance to Health Sciences Building",
+      "lat": "43.6591",
+      "lng": "-79.3929",
+      "buildingCode": "154",
+      "desc": "An accessible ramp, located at the west end of the entrance, leads to a powerd door.   Entrance faces north and is clearly visible from College Street.  ",
+      "image": "\/_assets\/_m_b\/HS_A1.JPG",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "930",
+      "title": "Main Entrance to Stewart Building",
+      "lat": "43.6594",
+      "lng": "-79.3921",
+      "buildingCode": "192",
+      "desc": "Large stair leads to a covered manual door.  Entrance faces North and is located under the large, double arch atop the brick stair case. ",
+      "image": "\/_assets\/_m_b\/EP_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "931",
+      "title": "Accessible Entrance to Stewart Building",
+      "lat": "43.6593",
+      "lng": "-79.3922",
+      "buildingCode": "192",
+      "desc": "A level path leads to a manual door.  Entrance faces west and visible from College Street when approach from the west.  Door is locked and requires a key card to enter. Contact reception (416-978-8977) or event co-ordinator to arrange for entry.",
+      "image": "\/_assets\/_m_b\/EP_A2.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "932",
+      "title": "West Entrance to Best Institute",
+      "lat": "43.6604",
+      "lng": "-79.3895",
+      "buildingCode": "052",
+      "desc": "Stairs lead to a manual, double door.  Entrance faces west onto a parkette and is partially visible from College Street when approaching from the west. ",
+      "image": "\/_assets\/_m_b\/CB_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "933",
+      "title": "Main Entrance to Best Institute",
+      "lat": "43.6603",
+      "lng": "-79.3892",
+      "buildingCode": "052",
+      "desc": "Stairs lead to a manual door.  Entrance faces north and is located at the top of the stair case leading up and behind the stone wall.  The entrance is partially visible from College Street. ",
+      "image": "\/_assets\/_m_b\/CB_A2.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "934",
+      "title": "West entrance to Banting Institute",
+      "lat": "43.6605",
+      "lng": "-79.3889",
+      "buildingCode": "016",
+      "desc": "Level path leads to a manual double door.  Entrance faces west onto the side laneway and is partially visible when approaching along College Street from the west. ",
+      "image": "\/_assets\/_m_b\/BI_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "935",
+      "title": "Main Entrance to Banting Institute",
+      "lat": "43.6605",
+      "lng": "-79.3886",
+      "buildingCode": "016",
+      "desc": "Five stairs lead to a manual, double door.  Entrance faces south and is clearly visible from College Street. ",
+      "image": "\/_assets\/_m_b\/BI_A2.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "936",
+      "title": "Main Entrance to 92 College Street",
+      "aka": "Department of Obstetrics & Gynaecology",
+      "lat": "43.6605",
+      "lng": "-79.3881",
+      "buildingCode": "071",
+      "desc": "Stairs lead to a manual, double door.  Entrance faces south and is clearly visible from College Street. ",
+      "image": "\/_assets\/_m_b\/OG_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "937",
+      "title": "Main Entrance to 88 College Street",
+      "lat": "43.6606",
+      "lng": "-79.3879",
+      "buildingCode": "090",
+      "desc": "Large stair lead to a manual, double door.  Entrance faces south and is clearly visible from College Street. ",
+      "image": "\/_assets\/_m_b\/ZC_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "938",
+      "title": "Main Accessible Entrance to 88 College Street. ",
+      "lat": "43.6609",
+      "lng": "-79.3878",
+      "buildingCode": "090",
+      "desc": "A steep, accessible ramp leads to a manual door.  Entrance faces east and is clearly visible from Elizabeth Street.  Buzzer is currently not operational, contact staff for assistance (416-978-4695).<br \/>\n",
+      "image": "\/_assets\/_m_b\/ZC_A2.JPG",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "939",
+      "title": "Main Entrance to 90 Wellesley Street",
+      "aka": "Main Entrance to Faculty of Music",
+      "lat": "43.6640",
+      "lng": "-79.3895",
+      "buildingCode": "0000",
+      "desc": "Three steps lead to a covered series of manual, wooden doors.   Entrance faces east and is located under a large awning which is clearly visible from Wellesley Street. ",
+      "image": "\/_assets\/_m_b\/JP_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "940",
+      "title": "East Accessible Entrance to 90 Wellesley Street",
+      "lat": "43.6642",
+      "lng": "-79.3894",
+      "buildingCode": "0000",
+      "desc": "A level path leads to a covered, powered door.  There is a 1\" bump along the path leading to the doors. Entrance faces east towards the side parking lot and is recessed into the building.  It is not visible from Wellesley Street.",
+      "phone": "Faculty of Music",
+      "image": "\/_assets\/_m_b\/JP_A2.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "941",
+      "title": "Main Accessible Entrance to 90 Wellesley Street",
+      "aka": "Regis College",
+      "lat": "43.6639",
+      "lng": "-79.3900",
+      "buildingCode": "478",
+      "desc": "An accessible ramp leads to a powered, glass door.  Entrance faces south and is clearly visible from Wellesley Street. <br \/>\n  ",
+      "image": "\/_assets\/_m_b\/JP_A3.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "942",
+      "title": "West Entrance to Regis College",
+      "lat": "43.6640",
+      "lng": "-79.3905",
+      "buildingCode": "478",
+      "desc": "Six stairs lead to a covered, manual door.  Entrance faces west and located under a covered, brick archway which is clearly visible from Queen's Park Crescent East.  <br \/>\nNOTE: This entrance is typically locked. ",
+      "image": "\/_assets\/_m_b\/JP_A4.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "943",
+      "title": "Rear Accessible Entrance to Regis College",
+      "lat": "43.6641",
+      "lng": "-79.3900",
+      "buildingCode": "478",
+      "desc": "A level path leads to a powered, glass door.  Entrance faces North into the exterior courtyard which is approached along the pedestrian pathway at the north side of the building.  Entrance is not visible from Queen's Park Crescent. ",
+      "image": "\/_assets\/_m_b\/JP_A5.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "944",
+      "title": "Main Entrance to 39A Queen's Park Crescent East.",
+      "aka": "McLuhan Program",
+      "lat": "43.6643",
+      "lng": "-79.3898",
+      "buildingCode": "097A",
+      "desc": "A single step is located immediately inside the manual door.  The building is set back from Queen's Park Crescent East within the parking area of the surrounding buildings.  Entrance faces west and is partially visible from the street. ",
+      "image": "\/_assets\/_m_b\/ML_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "945",
+      "title": "Main Entrance to 39 Queen's Park Crescent East",
+      "aka": "Centre for Medieval Studies",
+      "lat": "43.6642",
+      "lng": "-79.3905",
+      "buildingCode": "097",
+      "desc": "Stairs lead to a covered, manual door.  Entrance faces west and is located under a covered porch which is clearly visible from Queen's Park Crescent East.",
+      "image": "\/_assets\/_m_b\/ME_A1.JPG",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "946",
+      "title": "South Entrance to Toronto School of Theology",
+      "lat": "43.6647",
+      "lng": "-79.3907",
+      "buildingCode": "434",
+      "desc": "A wooden ramp leads to a manual covered door.   Entrance faces south onto the side and rear parking lot.  Doors are not powered and may require assistance to open.  Accessible parking is immediately adjacent to the ramp. ",
+      "image": "\/_assets\/_m_b\/TH_A1.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "947",
+      "title": "Main Entrance to Toronto School of Theology",
+      "lat": "43.6647",
+      "lng": "-79.3908",
+      "buildingCode": "434",
+      "desc": "Seven steps lead to a covered manual door.  Entrance faces west and is clearly visible from Queen's Park Crescent East.",
+      "image": "\/_assets\/_m_b\/TH_A2.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "948",
+      "title": "North Entrance to Toronto School of Theology",
+      "lat": "43.6648",
+      "lng": "-79.3906",
+      "buildingCode": "434",
+      "desc": "Four steps lead to a covered manual door.  Entrance faces north and is clearly visible from St. Joseph Street.",
+      "image": "\/_assets\/_m_b\/TH_A3.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "949",
+      "title": "Accessible Entrance to Muzzo Family Alumni Hall",
+      "lat": "43.6646",
+      "lng": "-79.3901",
+      "buildingCode": "407",
+      "desc": "An accessible concrete ramp slopes down towards a powered door.  Entrance is located at the southeast corner of the building and faces the rear parking lot.  Pedestrians may approach most safely along the pathway along east side of the building. ",
+      "image": "\/_assets\/_m_b\/AH_A2.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "950",
+      "title": "Main Entrance to Muzzo Family Alumni Hall",
+      "lat": "43.6648",
+      "lng": "-79.3904",
+      "buildingCode": "407",
+      "desc": "Stairs lead up to a manual, single door.   Entrance faces north and is clearly visible from St. Joseph Street. ",
+      "image": "\/_assets\/_m_b\/AH_A1.JPG",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "951",
+      "title": "Main Entrance to J.M. Kelly Library",
+      "lat": "43.6651",
+      "lng": "-79.3896",
+      "buildingCode": "429",
+      "desc": "A powered, glass door is approached by a small accessible curb ramp at the west end of the front plaza (near bike racks).   Entrance faces north and is located under the large, concrete awning which is clearly visible from the street. ",
+      "image": "\/_assets\/_m_b\/KL_A1.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "952",
+      "title": "Main Entrance to Cardinal Flahiff Building",
+      "aka": "St. Michael's College Faculty of Theology",
+      "lat": "43.6653",
+      "lng": "-79.3883",
+      "buildingCode": "430",
+      "desc": "A single step leads to a manual, double door.   Entrance to the Faculty of Theology is at the far east end of the building, faces north, and is clearly visible from St. Joseph Street. ",
+      "image": "\/_assets\/_m_b\/CF_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "953",
+      "title": "Main Entrance to Odette Hall",
+      "lat": "43.6663",
+      "lng": "-79.3889",
+      "buildingCode": "415",
+      "desc": "An accessible ramp leads to a large, powered door.  Entrance faces south towards and can be seen at a distance from St. Joseph Street.   Accessible parking is located immediately adjacent the entrance. <br \/>\n",
+      "image": "\/_assets\/_m_b\/OH_A1.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "954",
+      "title": "Main Entrance to St. Basil's Church",
+      "lat": "43.6662",
+      "lng": "-79.3891",
+      "buildingCode": "413",
+      "desc": "Seven stairs lead to a pair of manual, wooden doors.  Entrance faces east onto the church plaza but can be difficult to see in the distance from St. Joseph Street.  There is an interior connection to St. Basil's Church from the adjoining Odette Hall.",
+      "image": "\/_assets\/_m_b\/BS_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "955",
+      "title": "East Accessible Entrance to Brennan Hall",
+      "lat": "43.6663",
+      "lng": "-79.3896",
+      "buildingCode": "411",
+      "desc": "A level path leads to powered, glass doors.  Entrance faces east and is not visible from the street.  Entrance must be approached St. Basil's Church and Odette Hall to the east as there is no accessible path leading from Brennan Hall's main entrance.",
+      "image": "\/_assets\/_m_b\/BR_A1.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "956",
+      "title": "Main Entrance to Brennan Hall",
+      "lat": "43.6662",
+      "lng": "-79.3899",
+      "buildingCode": "411",
+      "desc": "Stairs lead to manual, glass doors.  Entrance faces south and is clearly visible when approaching from the south along Elmsley Place. ",
+      "image": "\/_assets\/_m_b\/BR_A2.JPG",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "957",
+      "title": "North Accessible Entrance to Brennan Hall",
+      "lat": "43.6666",
+      "lng": "-79.3897",
+      "buildingCode": "411",
+      "desc": "A level path leads to a series of manual, glass doors.  Entrance is approached along the paths and ramps in the sunken courtyard between Brennan Hall and Elmsley Hall.  ",
+      "image": "\/_assets\/_m_b\/BR_A3.JPG",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "958",
+      "title": "South Entrance to Elmsley Hall",
+      "lat": "43.6665",
+      "lng": "-79.3904",
+      "buildingCode": "405",
+      "desc": "A level path and short ramp leads to a manual, double door.  Entrance is located under the stone underpass between Elmsley Hall and Brennan Hall to the east.  This is the only level access into the building. ",
+      "image": "\/_assets\/_m_b\/EH_A1.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "959",
+      "title": "Rear Courtyard Entrance to Elmsley Hall",
+      "lat": "43.6669",
+      "lng": "-79.3904",
+      "buildingCode": "405",
+      "desc": "A single step leads to a manual, glass door.  Entrance faces south onto the rear courtyard and is not visible from the street.  ",
+      "image": "\/_assets\/_m_b\/EH_A2.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "961",
+      "title": "Main Entrance to Loretto College",
+      "lat": "43.6673",
+      "lng": "-79.3901",
+      "buildingCode": "401",
+      "desc": "A pair of stairs leads up to covered, manual doors.  Entrance faces south and is partially obscured from sight by landscaping along St. Mary's Street. <br \/>\n",
+      "image": "\/_assets\/_m_b\/LC_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "962",
+      "title": "Main Accessible Entrance to Loretto College",
+      "lat": "43.6674",
+      "lng": "-79.3897",
+      "buildingCode": "401",
+      "desc": "A level path leads to powered, covered doors.  Entrance faces south directly onto the front driveway and is clearly visible from St. Mary's Street.   ",
+      "image": "\/_assets\/_m_b\/LC_A2.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "963",
+      "title": "South Entrance to Rowell Jackmann Hall",
+      "lat": "43.6672",
+      "lng": "-79.3907",
+      "buildingCode": "518",
+      "desc": "A level path leads to a manual, double door.  Entrance faces south and is clearly visible from the end of St. Mary's Street.  Keycard access is required to enter the building.",
+      "image": "\/_assets\/_m_b\/RJ_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "964",
+      "title": "Main Entrance to Rowell Jackman Hall",
+      "lat": "43.6677",
+      "lng": "-79.3909",
+      "buildingCode": "518",
+      "desc": "A level path leads to a powered, glass door.  Entrance faces north and is clearly visible from Charles Street. Keycard access is required to enter the building.",
+      "image": "\/_assets\/_m_b\/RJ_A2.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "965",
+      "title": "West Entrance to Rowell Jackman Hall",
+      "lat": "43.6676",
+      "lng": "-79.3911",
+      "buildingCode": "518",
+      "desc": "A level path leads to a manual glass door.  Entrance faces west and opens onto the pedestrian pathway leading to Charles Street and St. Mary's Street.  Keycard access is required to access the building. ",
+      "image": "\/_assets\/_m_b\/RJ_A3.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "966",
+      "title": "Main Entrance to Burwash Hall",
+      "lat": "43.6676",
+      "lng": "-79.3915",
+      "buildingCode": "504",
+      "desc": "Three steps leads to manual wooden doors.  Entrance faces north and is clearly visible from Charles Street. ",
+      "image": "\/_assets\/_m_b\/BW_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "967",
+      "title": "Main Accessible Entrance to Burwash Hall",
+      "lat": "43.6675",
+      "lng": "-79.3915",
+      "buildingCode": "504",
+      "desc": "An accesible ramp leads to a manual wooden door.   Door is unlocked and opened from the inside.  Entrance faces north and is clearly visible from Charles Street. <br \/>\n",
+      "image": "\/_assets\/_m_b\/BW_A5.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "968",
+      "title": "Rear Entrance to Burwash Hall",
+      "lat": "43.6674",
+      "lng": "-79.3920",
+      "buildingCode": "504",
+      "desc": "Five steps lead to a covered, manual door.  Entrance faces south towards the rear plaza and is not visible from Charles Street.  <br \/>\n<br \/>\n",
+      "image": "\/_assets\/_m_b\/BW_A3.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "969",
+      "title": "Entrance to Burwash Hall Guest House",
+      "lat": "43.6674",
+      "lng": "-79.3920",
+      "buildingCode": "504",
+      "desc": "A single step leads to a covered, manual door.  Entrance is located under a covered archway which is clearly visible from the street. ",
+      "image": "\/_assets\/_m_b\/BW_A4.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "970",
+      "title": "North Entrance to Burwash Residences (Upper Houses)",
+      "lat": "43.6676",
+      "lng": "-79.3914",
+      "buildingCode": "505A",
+      "desc": "A level path leads to a manual, wooden door.  Entrance faces north and is clearly visible from Charles Street.  Building is accessed via keycard only. ",
+      "image": "\/_assets\/_m_b\/LB_A1.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "971",
+      "title": "Northwest entrance to Burwash Hall (Upper Houses)",
+      "aka": "North House",
+      "lat": "43.6675",
+      "lng": "-79.3913",
+      "buildingCode": "505A",
+      "desc": "Three steps leads to a covered, manual door.  Entrance faces west onto the Victoria College Courtyard and is not visible from Charles Street.  Entry to building requires a keycard. ",
+      "image": "\/_assets\/_m_b\/LB_A2.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "972",
+      "title": "South Entrance to Burwash Hall (Upper Houses)",
+      "aka": "Gate House",
+      "lat": "43.6670",
+      "lng": "-79.3910",
+      "buildingCode": "505A",
+      "desc": "Two steps lead to a covered, wooded door.  Entrance is located under a large stone archway and is not visible from the end of St. Mary's Street. ",
+      "image": "\/_assets\/_m_b\/LB_A3.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "973",
+      "title": "South Entrance to Burwash Hall (Lower Houses)",
+      "aka": "Bowles & Gandier House",
+      "lat": "43.6662",
+      "lng": "-79.3909",
+      "buildingCode": "505",
+      "desc": "A single step leads to covered, manual doors.  Entrances are located under a covered arch and face an exterior courtyard.  Entry to building requires a keycard. ",
+      "image": "\/_assets\/_m_b\/LB_A4.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "974",
+      "title": "Southwest Entrance to Burwash Hall (Lower Residences)",
+      "aka": "Caven House",
+      "lat": "43.6663",
+      "lng": "-79.3909",
+      "buildingCode": "505",
+      "desc": "Four steps leads to a covered, manual door.  Entrance faces west onto an exterior courtyard and is not visible from St. Mary's Street.  Entry to building requires a keycard. ",
+      "image": "\/_assets\/_m_b\/LB_A5.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "975",
+      "title": "West Entrance to Burwash Hall (Lower Residences)",
+      "aka": "Nelles House",
+      "lat": "43.6665",
+      "lng": "-79.3909",
+      "buildingCode": "505",
+      "desc": "Three steps lead to a covered, manual door.  Entrance faces west onto an exterior courtyard and is not visible from St. Mary's Street.  Entry to building requires a keycard. ",
+      "image": "\/_assets\/_m_b\/LB_A6.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "976",
+      "title": "Northwest Entrance to Burwash Hall (Lower Houses)",
+      "aka": "Ryerson House",
+      "lat": "43.6666",
+      "lng": "-79.3910",
+      "buildingCode": "505",
+      "desc": "A single step leads to a covered, manual door.  Entrance faces west and is not visible from St. Mary's Street.  Entry to building requires a keycard. ",
+      "image": "\/_assets\/_m_b\/LB_A7.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "977",
+      "title": "North Entrance to Burwash House (Lower Houses)",
+      "aka": "South House",
+      "lat": "43.6668",
+      "lng": "-79.3911",
+      "buildingCode": "505",
+      "desc": "Three steps leads to a covered, manual door.  Entrance faces west and is not visible from St. Mary's Street. Entry to building requires a keycard. ",
+      "image": "\/_assets\/_m_b\/LB_A8.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "978",
+      "title": "Southwest Entrance to Burwash Hall (Upper Residences)",
+      "aka": "Gate House",
+      "lat": "43.6671",
+      "lng": "-79.3912",
+      "buildingCode": "505A",
+      "desc": "Three steps lead to a covered, manual door.  Entrance faces west onto the Victoria College courtyard and is not visible from St. Mary's Street.  Entry to building requires a keycard. ",
+      "image": "\/_assets\/_m_b\/LB_A9.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "979",
+      "title": "West Entrance to Burwash Hall (Upper Houses)",
+      "aka": "Middle House",
+      "lat": "43.6673",
+      "lng": "-79.3912",
+      "buildingCode": "505A",
+      "desc": "Three steps lead to a covered, manual door.  Entrance faces west onto the Victoria College courtyard and is not visible from St. Mary's Street.   Entry to building requires a keycard. ",
+      "image": "\/_assets\/_m_b\/LB_A10.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "980",
+      "title": "Second Entrance to Margaret Addison Hall",
+      "lat": "43.6682",
+      "lng": "-79.3924",
+      "buildingCode": "508",
+      "desc": "A single step leads to a manual, glass door.  Entrance faces west and is difficult to see from Charles Street.  ",
+      "image": "\/_assets\/_m_b\/MG_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "981",
+      "title": "Main Entrance to Margaret Addison Hall",
+      "lat": "43.6682",
+      "lng": "-79.3925",
+      "buildingCode": "508",
+      "desc": "A sidewalk and temporary ramp lead to a manual, glass door.  Assistance may be required to open doors.  Entrance faces west onto the vehicle drop-off zone but is not clearly visible from Charles Street. ",
+      "image": "\/_assets\/_m_b\/MG_A2.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "982",
+      "title": "South Entrance to Annesley Hall",
+      "lat": "43.6676",
+      "lng": "-79.3929",
+      "buildingCode": "506",
+      "desc": "Stairs lead up to a manual, double door.  Entrance faces west and is opens onto the landing atop the large stairs.  Entrance is not visible from Charles Street.  ",
+      "image": "\/_assets\/_m_b\/AN_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "983",
+      "title": "Main Entrance to Annesley Hall",
+      "lat": "43.6677",
+      "lng": "-79.3932",
+      "buildingCode": "506",
+      "desc": "Stairs lead to a covered, manual door.  Entrance faces west and is located at the end of a circular driveway set back from Queen's Park Crescent.   Entrance is slightly obscured from the street.  ",
+      "image": "\/_assets\/_m_b\/AN_A2.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "984",
+      "title": "Southwest Entrance to Sam Sorbara Hall Student Residence",
+      "lat": "43.6655",
+      "lng": "-79.3892",
+      "buildingCode": "435",
+      "desc": "Four stairs lead to a manual, glass door.  Entrance faces north and is not visible St. Joseph Street.  Entry to building requires a keycard. ",
+      "image": "\/_assets\/_m_b\/SR_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "985",
+      "title": "Northwest Entrance to Sam Sorbara Hall Student Residence",
+      "lat": "43.6659",
+      "lng": "-79.3892",
+      "buildingCode": "435",
+      "desc": "One step leads to a manual, glass door.  Entrance faces south and is not visible from St. Joseph Street. Entry to building requires a keycard. ",
+      "image": "\/_assets\/_m_b\/SR_A2.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "986",
+      "title": "Secondary Entrance to Sam Sorbara Student Residence",
+      "lat": "43.6660",
+      "lng": "-79.3890",
+      "buildingCode": "435",
+      "desc": "A level path leads to a powered, glass door.  Entrance faces east and is not easily visible from St. Joseph Street.  Entry to building requires a keycard. <br \/>\n",
+      "image": "\/_assets\/_m_b\/SR_A3.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "987",
+      "title": "Main Entrance to Sam Sorbara Hall Student Residence",
+      "lat": "43.6656",
+      "lng": "-79.3886",
+      "buildingCode": "435",
+      "desc": "A level path leads to a powered, glass door.  Entrance faces east and is visible from St. Joseph Street when approaching from the east.  Entry to building requires a keycard. ",
+      "image": "\/_assets\/_m_b\/SR_A4.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "988",
+      "title": "Main Entrance to Pontifical Institute of Medieval Studies",
+      "lat": "43.6656",
+      "lng": "-79.3911",
+      "buildingCode": "418",
+      "desc": "A single step leads to manual, wooden doors.   Entrance faces south and is obscured from sight along Queen's Park Crescent East.  ",
+      "image": "\/_assets\/_m_b\/PI_A3.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "989",
+      "title": "Main Entrance to More House",
+      "lat": "43.6656",
+      "lng": "-79.3908",
+      "buildingCode": "419",
+      "desc": "A single step leads to a manual, wooden door.  Entrance faces east and is not visible from Queen's Park Crescent East.  Access to building requires a keycard. ",
+      "image": "\/_assets\/_m_b\/PI_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "990",
+      "title": "Main Entrance to Fisher House",
+      "lat": "43.6655",
+      "lng": "-79.3908",
+      "buildingCode": "420",
+      "desc": "Three steps lead to a manual, wooden door.  Entrance faces west and is not visible from Queen's Park Crescent East.  Access to building requires a keycard. ",
+      "image": "\/_assets\/_m_b\/PI_A2.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "992",
+      "title": "Rear Entrance to Carr Hall",
+      "lat": "43.6653",
+      "lng": "-79.3906",
+      "buildingCode": "426",
+      "desc": "A level path leads to a manual, glass door.  Entrance faces north and is not visible from the St. Joseph Street. ",
+      "image": "\/_assets\/_m_b\/CR_A1.jpg",
+      "sublayers": [
+        "4"
+      ]
+    },
+    {
+      "id": "993",
+      "title": "Main Entrance to Carr Hall",
+      "lat": "43.6651",
+      "lng": "-79.3905",
+      "buildingCode": "426",
+      "desc": "A level path leads from the sidewalk to powered, glass doors.  Entrance faces east and is visible from St. Joseph Street when approaching from the east.",
+      "image": "\/_assets\/_m_b\/CR_A2.jpg",
+      "sublayers": [
+        "3"
+      ]
+    },
+    {
+      "id": "994",
+      "title": "East Entrance to Carr Hall",
+      "lat": "43.6653",
+      "lng": "-79.3902",
+      "buildingCode": "426",
+      "desc": "A single step leads to manual, glass doors.  Entrance faces east and is visible from St. Joseph Street when approaching from the east. ",
+      "image": "\/_assets\/_m_b\/CR_A3.jpg",
+      "sublayers": [
+        "4"
+      ]
+    }
+  ]
+}
