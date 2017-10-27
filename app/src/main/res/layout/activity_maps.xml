@@ -18,7 +18,6 @@
         android:layout_height="match_parent"
         app:floatingSearch_close_search_on_keyboard_dismiss="false"
         app:floatingSearch_leftActionMode="showSearch"
-        app:floatingSearch_menu="@menu/searchmenu"
         app:floatingSearch_searchBarMarginLeft="@dimen/search_bar_left_icon_left_margin"
         app:floatingSearch_searchBarMarginRight="@dimen/search_bar_right_icon_right_margin"
         app:floatingSearch_searchHint="@string/search_hint"
