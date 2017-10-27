@@ -12,4 +12,10 @@
 
 
     <string name="layout_margin">24dp</string>
+    <string name="drawer_item_home" >Home</string>
+    <string name="drawer_item_settings" >Settings</string>
+    <string name="drawer_item_UTSG">St. Geroge</string>
+    <string name="drawer_item_campus">Campus</string>
+    <string name="drawer_item_UTSC">Missisauga</string>
+    <string name="drawer_item_UTM">Scarborough</string>
 </resources>

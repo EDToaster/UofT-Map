@@ -1,0 +1,1133 @@
+{
+  "name": "Student Spaces",
+  "slug": "student_spaces",
+  "icon": "http:\/\/map.utoronto.ca\/_assets\/_icons\/marker_student_spaces.png",
+  "sublayers": [
+    {
+      "id": "47",
+      "name": "Common Areas",
+      "slug": "common-areas"
+    },
+    {
+      "id": "46",
+      "name": "Community Hubs",
+      "slug": "community-hubs"
+    },
+    {
+      "id": "41",
+      "name": "Libraries",
+      "slug": "libraries"
+    },
+    {
+      "id": "48",
+      "name": "Student Govt",
+      "slug": "student-government"
+    }
+  ],
+  "markers": [
+    {
+      "id": "142",
+      "title": "John P. Robarts Research Library",
+      "aka": "Robarts",
+      "lat": "43.6644",
+      "lng": "-79.3995",
+      "buildingCode": "006",
+      "address": "130 St. George Street, Toronto, Ontario, M5S 1A5",
+      "desc": "<p>The main humanities and social sciences library of the University of Toronto Libraries and the largest individual library in the university.&nbsp;<\/p>",
+      "phone": "416-978-8450",
+      "access": "Main Accessible Entrance facing St. George Street",
+      "image": "\/_assets\/_m_b\/robarts.png",
+      "alt": "Inside Robarts doors",
+      "url": "http:\/\/www.library.utoronto.ca\/robarts\/",
+      "email": "library.info@utoronto.ca",
+      "twitter": "@uoftlibraries",
+      "kw": "peacock",
+      "sublayers": [
+        "41"
+      ]
+    },
+    {
+      "id": "222",
+      "title": "University of Toronto Students' Union",
+      "aka": "UTSU",
+      "lat": "43.6631",
+      "lng": "-79.3947",
+      "buildingCode": "120",
+      "address": "12 Hart House Circle, Toronto, Onrario, M5S 3J9",
+      "desc": "Represents all full-time undergraduate students at the University of Toronto.",
+      "phone": "416-978-4911",
+      "access": "Accessible ramp to main entrance",
+      "image": "\/_assets\/_m_b\/stewartobservatory.jpg",
+      "alt": "UTSU building",
+      "url": "http:\/\/www.utsu.ca\/",
+      "email": "frontdesk@utsu.ca",
+      "twitter": "@UTSU98",
+      "facebook": "https:\/\/www.facebook.com\/home.php?sk=group_2218399704",
+      "hours": [
+        {
+          "closed": "1"
+        },
+        {
+          "opens": "9:00",
+          "closes": "18:00"
+        },
+        {
+          "opens": "9:00",
+          "closes": "18:00"
+        },
+        {
+          "opens": "9:00",
+          "closes": "18:00"
+        },
+        {
+          "opens": "9:00",
+          "closes": "18:00"
+        },
+        {
+          "opens": "9:00",
+          "closes": "18:00"
+        },
+        {
+          "closed": "1"
+        }
+      ],
+      "kw": "UTSU, SAC",
+      "sublayers": [
+        "48"
+      ]
+    },
+    {
+      "id": "223",
+      "title": "Graduate Students' Union",
+      "aka": "GSU",
+      "lat": "43.6608",
+      "lng": "-79.4003",
+      "buildingCode": "056",
+      "address": "16 Bancroft Avenue, Toronto, Ontario, M5S 1C1",
+      "desc": "Represents all graduate students on all three campuses of the University of Toronto.",
+      "phone": "416-978-2391",
+      "access": "There is no accessible entrance to this building.",
+      "image": "\/_assets\/_m_b\/GSU.jpg",
+      "alt": "Graduate Students' Union",
+      "url": "http:\/\/www.utgsu.ca",
+      "email": "info@utgsu.ca",
+      "kw": "GSU,Graduates Students' Union,GSU pub",
+      "sublayers": [
+        "48"
+      ]
+    },
+    {
+      "id": "224",
+      "title": "Association of Part-time Undergraduate Students (Student Services Office)",
+      "aka": "APUS",
+      "lat": "43.6624",
+      "lng": "-79.3986",
+      "buildingCode": "033",
+      "address": "100 St. George Street, Toronto, Ontario, M5S 3G3",
+      "desc": "Represents all part-time undergraduate students on all three campuses at the University of Toronto.",
+      "phone": "416-978-3993",
+      "access": "The south side ramp is steep and long; the best accessible access is via the covered ramp on the west side of the building.",
+      "image": "\/_assets\/_m_b\/apus.jpg",
+      "alt": "APUS",
+      "url": "http:\/\/apus.utoronto.ca\/",
+      "email": "info.apus@utoronto.ca ",
+      "hours": [
+        {
+          "closed": "1"
+        },
+        {
+          "opens": "10:00",
+          "closes": "19:00"
+        },
+        {
+          "opens": "10:00",
+          "closes": "19:00"
+        },
+        {
+          "opens": "10:00",
+          "closes": "19:00"
+        },
+        {
+          "opens": "10:00",
+          "closes": "19:00"
+        },
+        {
+          "opens": "10:00",
+          "closes": "17:00"
+        },
+        {
+          "closed": "1"
+        }
+      ],
+      "kw": "APUS",
+      "sublayers": [
+        "48"
+      ]
+    },
+    {
+      "id": "225",
+      "title": "Gerstein Science Information Centre",
+      "aka": "Gerstein Library",
+      "lat": "43.6621",
+      "lng": "-79.3937",
+      "buildingCode": "003",
+      "address": "7 & 9 King's College Circle Toronto, Ontario, M5S 1A5",
+      "desc": "Science & Health Sciences Library.",
+      "phone": "416-978-2280",
+      "access": "The Accessible Entrance is located just to the left of the main entrance stair (outside), and has a call button for the door lock to be released by an",
+      "image": "\/_assets\/_m_b\/gerstein.jpg",
+      "alt": "Front doors of Gerstein Library",
+      "url": "http:\/\/www.library.utoronto.ca\/gerstein\/",
+      "email": "ask.gerstein@utoronto.ca",
+      "twitter": "@GersteinLibrary",
+      "kw": "Science and Medicine Library",
+      "sublayers": [
+        "41"
+      ]
+    },
+    {
+      "id": "227",
+      "title": "Architecture Landscape & Design Library (Shore + Moffat)",
+      "aka": "Shore + Moffat Library",
+      "lat": "43.6587",
+      "lng": "-79.3979",
+      "buildingCode": "028",
+      "address": "230 College Street, 2nd Floor, Toronto, Ontario, M5T 1R2",
+      "desc": "The Library holds over 28,000 volumes, with a focus on contemporary architecture, landscape architecture, and urban design (20th & 21st centuries).",
+      "phone": "416-978-2649",
+      "access": "The accessible entrance is located facing Huron street. The Second floor is accessible via elevator.",
+      "image": "\/_assets\/_m_b\/shoremoffat1.jpg",
+      "alt": "Students studying at Architecture Library",
+      "url": "http:\/\/www.daniels.utoronto.ca\/library",
+      "email": "library@daniels.utoronto.ca",
+      "kw": "architecture,shore,moffat",
+      "sublayers": [
+        "41"
+      ]
+    },
+    {
+      "id": "228",
+      "title": "Business Information Centre (Joseph L Rotman) ",
+      "aka": "BIC",
+      "lat": "43.6653",
+      "lng": "-79.3982",
+      "buildingCode": "134",
+      "address": "105 St George Street, Room 272,Toronto, Ontario, M5S 3E6",
+      "desc": "The Business Information Centre (BIC) is the library and resource centre which supports the faculty and staff of the Rotman School of Management and the Rotman Commerce program.   ",
+      "phone": "416-978-3421",
+      "access": "Accessible Entrance at North West Corner",
+      "image": "\/_assets\/_m_b\/bic.jpg",
+      "alt": "Rotman Business Information Centre",
+      "url": "http:\/\/www.rotman.utoronto.ca\/bic\/index.htm",
+      "email": "bicstaff@rotman.utoronto.ca",
+      "kw": "Rotman,BIC",
+      "sublayers": [
+        "41"
+      ]
+    },
+    {
+      "id": "229",
+      "title": "Career Resource Library",
+      "lat": "43.6595",
+      "lng": "-79.3969",
+      "buildingCode": "143",
+      "address": "Career Centre, 214 College St, Toronto, Ontario, M5T 2Z9",
+      "desc": "Use the Career Resource Library in-person or online to access the resources and information you need to answer all your career-related questions. ",
+      "phone": "416-978-8002",
+      "access": "Accessible Ramp on St. George Street entrance.",
+      "url": "http:\/\/www.careers.utoronto.ca\/libResource\/library.aspx?tr=",
+      "email": "careercentre@mail.careers.utoronto.ca",
+      "kw": "careers,jobs",
+      "sublayers": [
+        "41"
+      ]
+    },
+    {
+      "id": "232",
+      "title": "Chemistry Library (A D Allen)",
+      "lat": "43.6616",
+      "lng": "-79.3985",
+      "buildingCode": "073",
+      "address": "80 St George Street, Room 480,Toronto, Ontario, M5S 1A5",
+      "desc": "The collection serves the research and information needs of the faculty and graduate students in the Department of Chemistry. It is primarily composed of chemistry books and journals.",
+      "phone": "416-978-3587",
+      "access": "Accessible Main Entrance facing St. George Street.",
+      "image": "\/_assets\/_m_b\/chemistry.jpg",
+      "alt": "Chemistry Library",
+      "url": "http:\/\/www.chem.utoronto.ca\/facilities\/chemlib\/",
+      "email": "pmeindl@chem.utoronto.ca",
+      "sublayers": [
+        "41"
+      ]
+    },
+    {
+      "id": "238",
+      "title": "Criminology Information Service & Library",
+      "lat": "43.6619",
+      "lng": "-79.3929",
+      "buildingCode": "047",
+      "address": "14 Queens Park Crescent West Toronto, Ontario, M5S 3K9",
+      "desc": "Houses the leading Canadian research collection of criminological material, consisting of more than 25,000 books, journals, government reports, statistics and other documents, which can be accessed in person or electronically.",
+      "phone": "416-978-7068",
+      "access": "Accessibility ramp at front entrance.",
+      "url": "http:\/\/www.criminology.utoronto.ca\/lib\/index.html",
+      "email": "tom.finlay@utoronto.ca",
+      "kw": "criminology,sociology",
+      "sublayers": [
+        "41"
+      ]
+    },
+    {
+      "id": "357",
+      "title": "Association of Part-time Undergraduate Students (Administrative Offices)",
+      "aka": "APUS",
+      "lat": "43.6604",
+      "lng": "-79.4000",
+      "buildingCode": "061A",
+      "address": "563 Spadina Avenue. 2nd floor",
+      "desc": "All part-time undergraduate students on all three campuses of the University of Toronto are members of the Association of Part-time Undergraduate Students.",
+      "phone": "416-978-0831",
+      "image": "\/_assets\/_m_b\/apus2.jpg",
+      "alt": "APUS logo",
+      "url": "http:\/\/www.apus.utoronto.ca\/",
+      "email": "info.apus@utoronto.ca",
+      "hours": [
+        {
+          "closed": "1"
+        },
+        {
+          "opens": "10:01",
+          "closes": "17:00"
+        },
+        {
+          "opens": "10:00",
+          "closes": "17:00"
+        },
+        {
+          "opens": "10:00",
+          "closes": "17:00"
+        },
+        {
+          "opens": "10:00",
+          "closes": "17:00"
+        },
+        {
+          "opens": "10:00",
+          "closes": "17:00"
+        },
+        {
+          "closed": "1"
+        }
+      ],
+      "kw": "part-time",
+      "sublayers": [
+        "48"
+      ]
+    },
+    {
+      "id": "358",
+      "title": "Dentistry Library (Harry R Abbott)",
+      "lat": "43.6563",
+      "lng": "-79.3871",
+      "buildingCode": "065",
+      "address": "124 Edward Street, Rm 267, Toronto, Ontario, M5G 1G6",
+      "desc": "30,000 volumes. Collection stresses dentistry and oral health. Some other biological sciences books are available.",
+      "phone": "416-979-4916 Ext. ext. 4560 ",
+      "image": "\/_assets\/_m_b\/dentistrylibrary.jpg",
+      "alt": "Stacks inside the Dentistry Library",
+      "url": "http:\/\/www.library.utoronto.ca\/dentistry\/",
+      "email": "library.dentistry@utoronto.ca",
+      "sublayers": [
+        "41"
+      ]
+    },
+    {
+      "id": "360",
+      "title": "Department of Art Library",
+      "aka": "Art Library",
+      "lat": "43.6623",
+      "lng": "-79.3986",
+      "buildingCode": "033",
+      "address": "100 St George Street, Toronto, Ontario, M5S 3G3",
+      "desc": "Over 30,000 exhibition catalogues and 91,200 photographs available for reference only - nothing circulates.",
+      "phone": "416-978-5006",
+      "access": "The south side ramp is steep and long; the best accessible access is via the covered ramp on the west side of the building. Powered doors allow full a",
+      "url": "http:\/\/www.art.utoronto.ca\/resources\/art-library",
+      "email": "margaret.english@utoronto.ca ",
+      "sublayers": [
+        "41"
+      ]
+    },
+    {
+      "id": "362",
+      "title": "Dr. Chun Resource Library (Centre for Women and Trans People & OPIRG) ",
+      "lat": "43.6604",
+      "lng": "-79.4000",
+      "buildingCode": "061A",
+      "address": "563 Spadina Ave, Toronto, Ontario, M5S 1J7",
+      "desc": "This unique collection includes over 1500 books, magazines, and reports on the subject of social and environmental justice.",
+      "phone": "416-978-8201",
+      "access": "Accessible Entrance facing Bancroft Avenue; access to upper floors by elevator is through non-powered fire doors.",
+      "url": "http:\/\/discover.library.utoronto.ca\/general-information\/libraries\/DCRL\/",
+      "email": "womens.centre@utoronto.ca",
+      "sublayers": [
+        "41"
+      ]
+    },
+    {
+      "id": "365",
+      "title": "Earth Sciences Library",
+      "aka": "Noranda",
+      "lat": "43.6605",
+      "lng": "-79.3996",
+      "buildingCode": "062",
+      "address": "5 Bancroft Avenue, 2nd Floor, Toronto, Ontario, M5S 1A5",
+      "desc": "The University of Toronto's Library for Forestry, Geology, Botany and Ecology and Evolutionary Biology ",
+      "phone": "416-978-3024",
+      "access": "Ramp access at east end of 5 Bancroft.Elevator access to library - by appointment only. 416-978-3024.",
+      "url": "http:\/\/www.library.utoronto.ca\/earth\/",
+      "sublayers": [
+        "41",
+        "48"
+      ]
+    },
+    {
+      "id": "368",
+      "title": "East Asian Library (Cheng Yu Tung)",
+      "lat": "43.6645",
+      "lng": "-79.3991",
+      "buildingCode": "006",
+      "address": "130 St George St, 8th Floor, Toronto, Ontario, M5S 1A5",
+      "desc": "The library now has over 400,000 volumes. It is a major research collection on East Asian studies in North America.",
+      "phone": "416-978-3300",
+      "access": "Main Accessible Entrance facing St. George Street",
+      "image": "\/_assets\/_m_b\/eastasianlibrary.jpg",
+      "alt": "hallway of East Asian Studies Library",
+      "url": "http:\/\/www.library.utoronto.ca\/east\/",
+      "email": "ref.eal@utoronto.ca",
+      "sublayers": [
+        "41"
+      ]
+    },
+    {
+      "id": "371",
+      "title": "Engineering & Computer Science Library",
+      "lat": "43.6602",
+      "lng": "-79.3950",
+      "buildingCode": "009",
+      "address": "10 King's College Road, Rm 2402, Toronto, Ontario M5S 1A5",
+      "desc": "The major collection on campus for Engineering, Applied Science and Computer Science.",
+      "phone": "416-978-6494",
+      "access": "Accessible Entrance facing Galbraith Road.",
+      "url": "http:\/\/www.library.utoronto.ca\/engineering\/",
+      "email": "neil.allen@utoronto.ca",
+      "sublayers": [
+        "41"
+      ]
+    },
+    {
+      "id": "373",
+      "title": "Family & Community Medicine Library",
+      "lat": "43.6554",
+      "lng": "-79.3891",
+      "buildingCode": "0000",
+      "address": "500 University Avenue, Room 312",
+      "desc": "The Department of Family & Community Medicine (DFCM) library is a specialized collection of books in family medicine education and research with a focus on teaching and learning, faculty development, evaluation, and research methodology.",
+      "phone": "416-978-5606",
+      "url": "http:\/\/www.dfcm.utoronto.ca\/library.htm",
+      "email": "r.shaughnessy@utoronto.ca ",
+      "sublayers": [
+        "41"
+      ]
+    },
+    {
+      "id": "398",
+      "title": "First Nations House Library",
+      "lat": "43.6604",
+      "lng": "-79.3999",
+      "buildingCode": "061A",
+      "address": "563 Spadina Avenue, 3rd Floor, Toronto, Ontario, M5S 1A5",
+      "desc": "All material - books, videos, cassettes, musical CDs, childrens books, periodicals, government documents - pertain to Native Issues.",
+      "phone": "416-978-0413",
+      "access": "Accessible Entrance facing Bancroft Avenue; access to upper floors by elevator is through non-powered fire doors.",
+      "image": "\/_assets\/_m_b\/fnhlibrary.jpg",
+      "alt": "resource centre at First Nations House",
+      "url": "http:\/\/discover.library.utoronto.ca\/general-information\/libraries\/FNHLIBRARY\/",
+      "kw": "Aboriginal Resource Centre",
+      "sublayers": [
+        "41"
+      ]
+    },
+    {
+      "id": "399",
+      "title": "Gail Brooker Ceramic Research Library at the Gardiner Museum",
+      "lat": "43.6681",
+      "lng": "-79.3931",
+      "buildingCode": "0000",
+      "address": "111 Queen's Park Toronto, Ontario, M5S 2C7",
+      "desc": "The Gail Brooker Ceramic Research Library is a comprehensive reference centre for research in the field of ceramics.",
+      "phone": "416-586-8080",
+      "image": "\/_assets\/_m_b\/ceramicslibrary.jpg",
+      "alt": "ceramics on display at the Gardiner Museum",
+      "url": "http:\/\/www.gardinermuseum.on.ca\/collection\/library",
+      "email": "library@gardinermuseum.on.ca",
+      "sublayers": [
+        "41"
+      ]
+    },
+    {
+      "id": "435",
+      "title": "Jean and Dorothy Newman Industrial Relations Library",
+      "aka": "Industrial Relations and Human Resources Library",
+      "lat": "43.6669",
+      "lng": "-79.3992",
+      "buildingCode": "110",
+      "address": "121 St George Street, Toronto, Ontario, M5S 2E8",
+      "desc": "Focuses on labour relations and collective bargaining, personnel administration, labour law, labour economics; industrial psychology and sociology, and human relations; women & minorities in the workforce; and includes  Labour Union Archives.",
+      "phone": "416-978-2928",
+      "access": "This building is not accessible.",
+      "image": "\/_assets\/_m_b\/industrialrelations.jpg",
+      "alt": "studying at the Industrial relations library",
+      "url": "http:\/\/www.library.utoronto.ca\/cirhr\/",
+      "email": "cirhr.library@utoronto.ca",
+      "sublayers": [
+        "41"
+      ]
+    },
+    {
+      "id": "436",
+      "title": "Information Studies Inforum",
+      "lat": "43.6651",
+      "lng": "-79.3992",
+      "buildingCode": "0000",
+      "address": "140 St George Street, Toronto, Ontario, M5S 3G6",
+      "desc": "The collection focuses on resources in library and information science, archives and archival science, museum studies, records management, information systems and technology, the Internet, printing and publishing, book history, and related areas.",
+      "phone": "416-978-7060",
+      "access": "A long ramp leads from the Sussex Avenue courtyard up to the main entrance on the second floor. This entrance can also be reached by coming up the lon",
+      "image": "\/_assets\/_m_b\/inforum.jpg",
+      "alt": "studying at the inforum",
+      "url": "http:\/\/www.ischool.utoronto.ca\/services\/inforum-is",
+      "email": "help.ischool@utoronto.ca",
+      "twitter": "http:\/\/twitter.com\/ischool_infosrv",
+      "facebook": "https:\/\/www.facebook.com\/pages\/iSchoolToronto-Information-Services\/114442931469",
+      "sublayers": [
+        "41"
+      ]
+    },
+    {
+      "id": "437",
+      "title": "Innis College Library ",
+      "lat": "43.6656",
+      "lng": "-79.3995",
+      "buildingCode": "132",
+      "address": "2 Sussex Avenue, 2nd Floor, Toronto, Ontario, M5S IJ5",
+      "desc": "Specialization in cinema studies, environmental and urban studies.",
+      "phone": "416-978-4497",
+      "access": "Accessible via ramp off St. George Street.",
+      "url": "http:\/\/www.utoronto.ca\/innis\/library\/index.html",
+      "email": "l.ferstman@utoronto.ca",
+      "sublayers": [
+        "41"
+      ]
+    },
+    {
+      "id": "438",
+      "title": "Caven Library",
+      "aka": "Knox College Library",
+      "lat": "43.6614",
+      "lng": "-79.3969",
+      "buildingCode": "575",
+      "address": "59 St George Street, Toronto, Ontario, M5S 2E6",
+      "desc": "Special collections of the Caven Library include the McKay Educational Resources collection, the Walter Allum Preaching Library and Rare Books Collection.",
+      "phone": "416-978-6719",
+      "url": "http:\/\/www.knox.utoronto.ca\/life-at-knox\/caven-library\/",
+      "email": "knox.readerservices@utoronto.ca",
+      "sublayers": [
+        "41"
+      ]
+    },
+    {
+      "id": "439",
+      "title": "Bora Laskin Law Library",
+      "lat": "43.6660",
+      "lng": "-79.3940",
+      "buildingCode": "040",
+      "address": "78 Queen's Park Cres, Toronto, Ontario, M5S 2C5",
+      "desc": "230,000 volumes of law and law-related materials.",
+      "phone": "416-978-1073",
+      "access": "The Library is wheelchair accessible. The elevator across from the Circulation Desk is available for access to the classroom wing on the lower level. ",
+      "url": "http:\/\/www.law-lib.utoronto.ca\/index.htm",
+      "sublayers": [
+        "41"
+      ]
+    },
+    {
+      "id": "440",
+      "title": "Map & Data Library",
+      "lat": "43.6643",
+      "lng": "-79.3994",
+      "buildingCode": "006",
+      "address": "130 St George St, 5th Floor, Toronto, Ontario, M5S 1A5",
+      "desc": "Circa 5000 files of statistical, and research data, text files. 235,000 maps, thousands of aerial shots, 15,000 volumes, 22,351 microforms. Collection includes maps, atlases and GIS data providing world wide coverage on a large range of subjects. ",
+      "phone": "416-978-3931",
+      "access": "Access via the public elevator serving floors 1-5 (no library card required). Otherwise take the escalators to the 4th floor and then take the stairs ",
+      "url": "http:\/\/mdl.library.utoronto.ca\/",
+      "email": "gis.maps@utoronto.ca",
+      "twitter": "http:\/\/twitter.com\/mapsgis",
+      "sublayers": [
+        "41"
+      ]
+    },
+    {
+      "id": "441",
+      "title": "Robertson Davies Library",
+      "aka": "Massey College Library",
+      "lat": "43.6646",
+      "lng": "-79.3975",
+      "buildingCode": "034",
+      "address": "4 Devonshire Place, Toronto, Ontario, M5S 2E1",
+      "desc": "Approximately 46,000 volumes. The Library's research collections focus on the history of the book with particular strength in nineteenth century book design and printing.",
+      "phone": "416-978-2893",
+      "image": "\/_assets\/_m_b\/robertsondavies.jpg",
+      "alt": "Iron hand presses located in the library.",
+      "url": "http:\/\/www.masseycollege.ca\/library",
+      "email": "pmacdougall@masseycollege.ca ",
+      "sublayers": [
+        "41"
+      ]
+    },
+    {
+      "id": "442",
+      "title": "Mathematical Sciences Library",
+      "lat": "43.6598",
+      "lng": "-79.3970",
+      "buildingCode": "080",
+      "address": "40 St George Street, Rm 6141, Toronto, Ontario, M5S 1A1",
+      "desc": "The University of Toronto's Library for Mathematics and Statistics",
+      "phone": "416-978-8624",
+      "url": "http:\/\/www.library.utoronto.ca\/math\/",
+      "email": "bruce.garrod@utoronto.ca",
+      "sublayers": [
+        "41"
+      ]
+    },
+    {
+      "id": "443",
+      "title": "Media Commons (Audiovisual, Media Archives and Microform)",
+      "lat": "43.6642",
+      "lng": "-79.3996",
+      "buildingCode": "006",
+      "address": "130 St George St, 3rd Floor, Toronto, Ontario, M5S 1A5",
+      "desc": "To support in-depth research by the University community, the Media Commons Archives holds numerous important collections that focus on Canadian film\/video production, broadcasting, non-print journalism, media studies, and the music industry.",
+      "phone": "416-978-6520",
+      "image": "\/_assets\/_m_b\/mediacommons.jpg",
+      "alt": "carrel at Media Commons",
+      "url": "http:\/\/www.library.utoronto.ca\/mediacommons\/",
+      "email": "mike.hamilton@utoronto.ca",
+      "sublayers": [
+        "41"
+      ]
+    },
+    {
+      "id": "444",
+      "title": "Music Library",
+      "lat": "43.6666",
+      "lng": "-79.3946",
+      "buildingCode": "051",
+      "address": "80 Queen's Park Crescent, Toronto, Ontario M5S 2C5",
+      "desc": "The general collections total over 300,000 books, scores, periodicals and microforms.  The Sniderman Recordings Archive holds 180,000 sound recordings, from cylinders to blu-ray.",
+      "phone": "416-978-3734",
+      "access": "Accessible entrance at front of building. Library accesible from main lobby.",
+      "url": "http:\/\/www.music.utoronto.ca\/library.htm",
+      "sublayers": [
+        "41"
+      ]
+    },
+    {
+      "id": "445",
+      "title": "Donald G. Ivey Library",
+      "aka": "New College Library",
+      "lat": "43.6616",
+      "lng": "-79.4010",
+      "buildingCode": "131",
+      "address": "20 Willcocks Street, Toronto, Ontario M5S 1A1",
+      "desc": "Contains over 25,000 volumes in circulating and reference collections in the social sciences. Special collections focus on  African Studies, Caribbean Studies, Disability Studies, Equity Studies, South Asian Studies and Women's Studies.",
+      "phone": "416-978-2493",
+      "alt": "Wilson Hall has one entrance with stairs leading from the inner courtyard, and two accessible entrances on the south side of the building.",
+      "url": "http:\/\/www.newcollege.utoronto.ca\/students\/services\/library.htm",
+      "email": "jeff.newman@utoronto.ca",
+      "sublayers": [
+        "41"
+      ]
+    },
+    {
+      "id": "453",
+      "title": "OISE Library (Ontario Institute for Studies in Education)",
+      "lat": "43.6682",
+      "lng": "-79.3984",
+      "buildingCode": "123",
+      "address": "252 Bloor Street W, Toronto, Ontario, M5S 1V6",
+      "desc": "The University of Toronto's education library.",
+      "phone": "416-978-1850",
+      "access": "The library is wheelchair accessible.  The entrance to the OISE building is accessible by ramp, and there is a wheelchair accessible washroom on the g",
+      "image": "\/_assets\/_m_b\/oiselibrary.jpg",
+      "alt": "studying at the OISE Library",
+      "url": "http:\/\/www.library.utoronto.ca\/oise\/",
+      "email": "askeloise@oise.utoronto.ca",
+      "sublayers": [
+        "41"
+      ]
+    },
+    {
+      "id": "458",
+      "title": " Petro Jacyk Central & East European Resource Centre",
+      "lat": "43.6644",
+      "lng": "-79.3991",
+      "buildingCode": "006",
+      "address": "130 St George St, Room 3008 (3rd floor), Toronto, Ontario, M5S 1A5",
+      "desc": "The PJRC collection consists of more than 2000 reference volumes, in 20 different languages on Central and Eastern Europe.",
+      "phone": "416-978-0588",
+      "url": "http:\/\/pjrc.library.utoronto.ca\/",
+      "email": "ksenya.kiebuzinski@utoronto.ca",
+      "sublayers": [
+        "41"
+      ]
+    },
+    {
+      "id": "473",
+      "title": "Physics Library",
+      "lat": "43.6605",
+      "lng": "-79.3985",
+      "buildingCode": "078",
+      "address": "60 St George St, Room 211C, Toronto, Ontario, M5S 1A7",
+      "desc": "38,256 volumes (April 2005). Covers physics, meteorology and geophysics. Good collection of journals in these subject areas. Books for advanced undergraduate and graduate courses.",
+      "phone": "416-978-5188",
+      "access": "Acccessible Entrances facing East Courtyard and off Huron Street.",
+      "url": "http:\/\/www.physics.utoronto.ca\/physics-at-uoft\/library",
+      "email": "bchu@physics.utoronto.ca",
+      "sublayers": []
+    },
+    {
+      "id": "476",
+      "title": "Pontifical Institute of Mediaeval Studies Library",
+      "lat": "43.6649",
+      "lng": "-79.3895",
+      "buildingCode": "429",
+      "address": "113 St Joseph St, 4th Floor, Toronto, Ontario, M5S 1J4",
+      "desc": "The Institute Library  has holdings of about 120,000 volumes whose lustre is enhanced and complemented by specialized collections of 9,000 reels of microfilm and 50,000 slides. Major collection in Mediaeval studies.",
+      "phone": "416-926-7146",
+      "access": "There is a curb ramp on the west side of the St. Jopseph Street podium leading to the automated front doors. The push button alerts reception to open ",
+      "image": "\/_assets\/_m_b\/pontificalinst.jpg",
+      "alt": "Textual canons: books at the centre, and the periphery An illustration for the chapter \u201cDe auctoribus eorundem librorum\" in Rabanus Maurus, De rerum naturis.",
+      "url": "http:\/\/www.pims.ca\/library\/access.html",
+      "sublayers": [
+        "41"
+      ]
+    },
+    {
+      "id": "479",
+      "title": "Regis College Library",
+      "lat": "43.6640",
+      "lng": "-79.3902",
+      "buildingCode": "478",
+      "address": "100 Wellesley Street West, Toronto, Ontario, M5S 2Z5",
+      "desc": "83,000 volumes, over 225 periodical subscriptions. Collection is mainly theology and theology related material with particular strength in Roman Catholic systematic and historical theology, Christian ethics, Christian spirituality and Jesuitica.",
+      "phone": "416-922-5474 ext. 234",
+      "url": "http:\/\/www.regiscollege.ca\/library",
+      "email": "teresa.helik@utoronto.ca",
+      "sublayers": [
+        "41"
+      ]
+    },
+    {
+      "id": "481",
+      "title": "Richard Charles Lee Canada-Hong Kong Library",
+      "lat": "43.6642",
+      "lng": "-79.3995",
+      "buildingCode": "006",
+      "address": "8th Floor, 130 St. George St., Toronto, Ontario M5S 1A5",
+      "desc": "50,000 volumes. Major Canada Hong Kong resources centre in Canada. Includes resources on Hong Kong studies, Hong Kong statistics, government information and Chinese Canadian studies.",
+      "phone": "416-946-8978",
+      "image": "\/_assets\/_m_b\/hongkonglibrary.jpg",
+      "alt": "Study Tables at Hong Kong Library",
+      "url": "http:\/\/www.library.utoronto.ca\/hongkong\/",
+      "email": "jack.leong@utoronto.ca",
+      "sublayers": [
+        "41"
+      ]
+    },
+    {
+      "id": "485",
+      "title": "Royal Ontario Museum Libraries (Main Library & Archives, H.H. Mu Far Eastern Library)",
+      "lat": "43.6678",
+      "lng": "-79.3946",
+      "buildingCode": "0000",
+      "address": "100 Queen's Park, Toronto, Ontario, M5S 2C6",
+      "desc": "Anthropology, archaeology, botany, costume, Canadiana, entomology, Egyptoloy, geology, herpetology, ichthyology, invertebrate zoology, Islamic art & culture, mammalogy, mineralogy, museology, paleontology, textiles, and the decorative arts.",
+      "phone": "416-586-5595",
+      "image": "\/_assets\/_m_b\/ROMlibrary.jpg",
+      "alt": "Sackler Reading Room, Main Library & Archives, ROM",
+      "url": "http:\/\/www.rom.on.ca\/collections\/library\/index.php",
+      "sublayers": [
+        "41"
+      ]
+    },
+    {
+      "id": "487",
+      "title": "John M Kelly Library",
+      "aka": "St. Michael's College Library",
+      "lat": "43.6648",
+      "lng": "-79.3895",
+      "buildingCode": "429",
+      "address": "113 St Joseph Street, Toronto, Ontario M5S 1J4",
+      "desc": "Emphasis on the teaching and research needs of St. Michael's College, the Faculty of Theology, and the Division of Continuing Education. The Library provides access to a book collection of over 275,000 volumes.",
+      "phone": "416-926-7114",
+      "access": "There is a curb ramp on the west side of the St. Jopseph Street podium leading to the automated front doors. The push button alerts reception to open ",
+      "url": "http:\/\/stmikes.utoronto.ca\/kelly\/default.asp",
+      "twitter": "http:\/\/twitter.com\/KellyLibrarySMC",
+      "sublayers": [
+        "41"
+      ]
+    },
+    {
+      "id": "490",
+      "title": "Thomas Fisher Rare Book Library",
+      "lat": "43.6639",
+      "lng": "-79.3990",
+      "buildingCode": "0000",
+      "address": "120 St George Street, Toronto, Ontario, M5S 1A5",
+      "desc": "Houses the Department of Rare Books and Special Collections including books, manuscripts and other materials; and the University of Toronto Archives and Records Management Services (UTARMS), which holds the official records of the University.",
+      "phone": "416-978-6107",
+      "access": "The entrance and exit to the library is from the second floor of the John P. Robart's Researh Library.",
+      "image": "\/_assets\/_m_b\/thomasfisher.jpg",
+      "alt": "Stacks at Thomas Fisher Rare Book Library",
+      "url": "http:\/\/www.library.utoronto.ca\/fisher\/",
+      "email": "fisher.library@utoronto.ca",
+      "hours": [
+        {
+          "closed": "1"
+        },
+        {
+          "opens": "9:00",
+          "closes": "17:00"
+        },
+        {
+          "opens": "9:00",
+          "closes": "17:00"
+        },
+        {
+          "opens": "9:00",
+          "closes": "17:00"
+        },
+        {
+          "opens": "9:00",
+          "closes": "17:00"
+        },
+        {
+          "opens": "9:00",
+          "closes": "17:00"
+        },
+        {
+          "closed": "1"
+        }
+      ],
+      "kw": "rare book book library",
+      "sublayers": [
+        "41"
+      ]
+    },
+    {
+      "id": "495",
+      "title": "John W Graham Library",
+      "aka": "Trinity College Library",
+      "lat": "43.6651",
+      "lng": "-79.3964",
+      "buildingCode": "012A",
+      "address": "6 Hoskin Avenue, Toronto, Ontario, M5S 1H8",
+      "desc": "150,000 volumes. Includes the joint theological collection of Wycliffe and Trinity Colleges. Collection emphasizes undergraduate humanities, international relations and Anglican theology.",
+      "phone": "416-978-5851",
+      "access": "The east side entrance has a ramp and is the main entrance for the library",
+      "image": "\/_assets\/_m_b\/trinitylibrary.jpg",
+      "alt": "East side building entrance to library.",
+      "url": "http:\/\/www.trinity.utoronto.ca\/Library_Archives\/About_the_Library\/",
+      "email": "ask.grahamlibrary@utoronto.ca",
+      "twitter": "twitter.com\/grahamlibrary",
+      "sublayers": [
+        "41"
+      ]
+    },
+    {
+      "id": "508",
+      "title": "Laidlaw Library",
+      "aka": "University College Library",
+      "lat": "43.6633",
+      "lng": "-79.3958",
+      "buildingCode": "001",
+      "address": "15 Kings College Circle, Laidlaw Wing, 2nd floor, Toronto, Ontario, M5S 3H7",
+      "desc": "The main collection consists of over 26,000 circulating items and supports five of the programs unique to University College; some Aboriginal Studies, Canadian Studies, Drama, Health Studies and Peace and Conflict Studies.",
+      "phone": "416-978-8107",
+      "access": "There is ramp access via the driveway facing the soccer field at the west side of the Laidlaw Wing. The ramp is in the quadrangle. As there have been ",
+      "url": "http:\/\/www.uc.utoronto.ca\/content\/blogcategory\/79\/2595\/",
+      "email": "margaret.fulford@utoronto.ca",
+      "sublayers": [
+        "41"
+      ]
+    },
+    {
+      "id": "509",
+      "title": "U of T Archives & Records Management Services (UTARMS)",
+      "lat": "43.6640",
+      "lng": "-79.3989",
+      "buildingCode": "006B",
+      "address": "120 St George Street, 4th Floor, Toronto, Ontario, M5S 1A5",
+      "desc": "Corporate records of the U of T and non-corporate records of faculty and organizations associated with the university. Includes some publications produced by or about the U of T and U of T Masters theses from 1890's to 1989, PhD theses to 1971.",
+      "phone": "416-978-5344",
+      "access": "The main entrance is on the second floor outdoor crossover from Robart's library. There is an indoor accessible crossover on the first floor, availabl",
+      "url": "http:\/\/www.library.utoronto.ca\/utarms\/",
+      "email": "utarms@list.library.utoronto.ca",
+      "sublayers": [
+        "41"
+      ]
+    },
+    {
+      "id": "510",
+      "title": "University of Toronto Schools Library Information Centre (UTS)",
+      "lat": "43.6667",
+      "lng": "-79.4022",
+      "buildingCode": "014",
+      "address": "371 Bloor Street West Toronto, Ontario, M5S 2R7",
+      "desc": "Access to UTS library materials is restricted to staff and students of UTS.",
+      "phone": "416-978-6246",
+      "url": "http:\/\/www.utschools.ca\/utseducation\/libraryandresources.aspx",
+      "email": "info@utschools.ca",
+      "sublayers": [
+        "41"
+      ]
+    },
+    {
+      "id": "511",
+      "title": "Centre for Reformation and Renaissance Studies",
+      "lat": "43.6663",
+      "lng": "-79.3914",
+      "buildingCode": "514",
+      "address": "71 Queen's Park Cres E, Rm 301 - Pratt Library, Toronto, Ontario, M5S 1K7",
+      "desc": "25,000 volumes, including 4,000 pre-1700 volumes. Holdings cover the period 1350 to 1650 in European civilisation. Large collections on Erasmus of Rotterdam and Humanism, the Reformation, history, religion, theology, language and literature.",
+      "phone": "416-585-4468",
+      "access": "The entrance ramps starts to the left of the main doors. Various ramps lead from either Charles Street or Queen's Park Crescent.",
+      "image": "\/_assets\/_m_b\/centrerefren.jpg",
+      "alt": "View from desk at the Centre for Reformation and Renaissance Studies.",
+      "url": "http:\/\/crrs.ca\/",
+      "sublayers": [
+        "41"
+      ]
+    },
+    {
+      "id": "512",
+      "title": "E J Pratt Library ",
+      "aka": "Victoria University Library",
+      "lat": "43.6663",
+      "lng": "-79.3912",
+      "buildingCode": "514",
+      "address": "71 Queen's Park Cres E, Toronto, Ontario, M5S 1K7",
+      "desc": "Collection numbers approximately 250,000 items and contains books, periodicals, documents, pamphlets and specialized material, excluding theology, which support undergraduate studies at Victoria University. ",
+      "phone": "416-585-4470",
+      "access": "The entrance ramps starts to the left of the main doors. Various ramps lead from either Charles Street or Queen's Park Crescent.",
+      "image": "\/_assets\/_m_b\/pratt.jpg",
+      "alt": "Reference desk at E J Pratt Library",
+      "url": "http:\/\/library.vicu.utoronto.ca\/",
+      "email": "robert.brandeis@utoronto.ca",
+      "sublayers": [
+        "41"
+      ]
+    },
+    {
+      "id": "513",
+      "title": "Emmanuel College Library",
+      "lat": "43.6668",
+      "lng": "-79.3928",
+      "buildingCode": "502",
+      "address": "75 Queen's Park Cres E, 3rd Floor, Toronto, Ontario, M5S 1K7",
+      "desc": "The collection includes resources on the Bible, History of Christianity, Worship, Pastoral Studies, Preaching, Christian Education, Hymnology, Methodism, Wesleyana, the United Church of Canada, and the World Council of Churches.",
+      "phone": "416-585-4550",
+      "access": "Main Entrance Ramp on West Side",
+      "url": "http:\/\/library.vicu.utoronto.ca\/emmanuel\/",
+      "email": "karen.wishart@utoronto.ca",
+      "sublayers": [
+        "41"
+      ]
+    },
+    {
+      "id": "569",
+      "title": "Athletic Centre",
+      "lat": "43.6628",
+      "lng": "-79.4010",
+      "buildingCode": "0000",
+      "address": "55 Harbord Street",
+      "desc": "Houses two swimming pools, seven gymnasiums, a strength-and-conditioning centre, a 200m indoor track, squash courts, a dance studio, a fencing salle, a sports medicine clinic and more.",
+      "phone": "416-978-3436",
+      "access": "The Athletic Complex has accessible entrance on both the north and south sides, and provides an interior link to the Clara Benson Building.",
+      "image": "\/_assets\/_m_b\/athleticcentre.jpg",
+      "alt": "Weight-lifting at the Athletic Centre",
+      "url": "http:\/\/www.physical.utoronto.ca\/FacilitiesAndMemberships\/Athletic_Centre.aspx",
+      "twitter": "http:\/\/twitter.com\/#!\/Fit4EverybodyUT",
+      "facebook": "https:\/\/www.facebook.com\/Fit4EverybodyUT",
+      "kw": "fitness, recreation, physical, activity, sports",
+      "sublayers": [
+        "45"
+      ]
+    },
+    {
+      "id": "570",
+      "title": "Hart House",
+      "lat": "43.6641",
+      "lng": "-79.3941",
+      "buildingCode": "002",
+      "address": "7 Hart House Circle, Toronto, Ontario",
+      "desc": "U of T's living laboratory of arts, culture and recreation.",
+      "phone": "416-978-2452",
+      "access": "The heavy main doors are power assisted, but only the west side door is button-operated for full accessibility, with ramp. Current accommodations incl",
+      "image": "\/_assets\/_m_b\/harthouse.jpg",
+      "alt": "The hub at Hart House.",
+      "url": "http:\/\/harthouse.ca\/",
+      "email": "inquiries@harthouse.ca",
+      "twitter": "http:\/\/twitter.com\/harthouse",
+      "facebook": "https:\/\/www.facebook.com\/HartHouseUofT",
+      "rss": "http:\/\/harthouse.ca\/blog\/feed",
+      "kw": "fitness, recreation, physical, activity, sport",
+      "sublayers": [
+        "45",
+        "46"
+      ]
+    },
+    {
+      "id": "571",
+      "title": "Hart House",
+      "aka": "Hart House Gym",
+      "lat": "43.6640",
+      "lng": "-79.3950",
+      "buildingCode": "002",
+      "address": "7 Hart House Circle, Toronto, Ontario, M5S 3H3",
+      "desc": "The fitness wing of Hart House features a pool, an indoor track, squash courts, a dance studio, a gymnasium and a full range of cardio and weight equipment.",
+      "phone": "416-978-2452",
+      "access": "West entrance ramp (Tower Road).",
+      "image": "\/_assets\/_m_b\/harthousegym.jpg",
+      "alt": "Weight-lifting facilitiesat hart house gym",
+      "url": "http:\/\/harthouse.ca",
+      "email": "inquiries@harthouse.ca",
+      "twitter": "http:\/\/twitter.com\/harthouse",
+      "facebook": "https:\/\/www.facebook.com\/HartHouseUofT",
+      "rss": "http:\/\/harthouse.ca\/blog\/feed",
+      "sublayers": [
+        "45"
+      ]
+    },
+    {
+      "id": "574",
+      "title": "Varsity Centre",
+      "lat": "43.6670",
+      "lng": "-79.3973",
+      "buildingCode": "0000",
+      "address": "299 Bloor St. West Toronto, Ontario, Canada M5S 1W2    ",
+      "desc": "A state-of-the-art athletic facility with a 5,000-seat stadium, 400m outdoor track, world-class artificial turf playing field and an air-supported winter dome dedicated to open recreation and intramurals. The entrance is on Devonshire Place.",
+      "phone": "416-978-6428",
+      "image": "\/_assets\/_m_b\/varsitycentre.jpg",
+      "alt": "students running on the track at Varsity Centre",
+      "url": "http:\/\/varsitycentre.ca",
+      "twitter": "http:\/\/twitter.com\/#!\/Fit4EverybodyUT",
+      "facebook": "https:\/\/www.facebook.com\/Fit4EverybodyUT",
+      "sublayers": [
+        "45"
+      ]
+    },
+    {
+      "id": "796",
+      "title": "Astronomy & Astrophysics Library",
+      "lat": "43.6605",
+      "lng": "-79.3981",
+      "buildingCode": "078",
+      "address": "60 St George Street, Room 1306, Toronto, Ontario M5S 3H8",
+      "desc": "25,000 volumes. The collection is primarily devoted to astronomy material and astrophysics material. It does include physics, mathematics and computer science materials of interest to astronomers.",
+      "phone": "416-978-4268",
+      "access": "Accessible entrance facing Huron Street and East courtyard.",
+      "url": "http:\/\/www.astro.utoronto.ca\/AALibrary\/",
+      "email": "robbins@astro.utoronto.ca",
+      "sublayers": [
+        "41"
+      ]
+    },
+    {
+      "id": "995",
+      "title": "Commuter Student Centre, University College",
+      "lat": "43.6634",
+      "lng": "-79.3974",
+      "buildingCode": "023",
+      "address": "79 St. George St., ",
+      "desc": "The Centre was designed with input from commuter students and features lounge and study spaces, a kitchenette and lockers. It is also home to the UC Off-Campus Commission (UCOC) and two Commuter Dons who organize student programming and events.",
+      "url": " http:\/\/www.uc.utoronto.ca\/content\/view\/199\/1055\/",
+      "hours": [
+        {
+          "closed": "1"
+        },
+        {
+          "opens": "9:00",
+          "closes": "21:00"
+        },
+        {
+          "opens": "9:00",
+          "closes": "21:00"
+        },
+        {
+          "opens": "9:00",
+          "closes": "21:00"
+        },
+        {
+          "opens": "9:00",
+          "closes": "21:00"
+        },
+        {
+          "opens": "09:00",
+          "closes": "21:00"
+        },
+        {
+          "closed": "1"
+        }
+      ],
+      "sublayers": [
+        "47"
+      ]
+    },
+    {
+      "id": "996",
+      "title": "Junior Common Room",
+      "aka": "JCR",
+      "lat": "43.6631",
+      "lng": "-79.3962",
+      "buildingCode": "001",
+      "address": "15 King's College Circle Toronto, ON M5S 3H7",
+      "desc": "Home to the University College Literary & Athletic Society (UC Lit), Diablos Coffee bar and plenty of comfy couches!",
+      "image": "\/_assets\/_m_b\/jcr.jpg",
+      "alt": "Sleeping on a couch in the Junior Common Room",
+      "url": "http:\/\/uclit.ca\/jcr\/",
+      "email": "cr@uclit.ca",
+      "sublayers": [
+        "47"
+      ]
+    },
+    {
+      "id": "1826",
+      "title": "Willcocks Common",
+      "aka": "Willcocks Common",
+      "lat": "43.6619",
+      "lng": "-79.3985",
+      "buildingCode": "0000",
+      "desc": "An informal car-free pedestrian zone designed for the university community.",
+      "image": "\/_assets\/_m_b\/willcocks-common.png",
+      "alt": "a view of the willcocks common in summer",
+      "url": "https:\/\/blogs.studentlife.utoronto.ca\/lifeatuoft\/2010\/10\/04\/willcocks-commons\/",
+      "sublayers": [
+        "47",
+        "46"
+      ]
+    }
+  ]
+}

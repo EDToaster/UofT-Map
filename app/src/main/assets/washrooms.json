@@ -1,0 +1,2228 @@
+{
+  "name": "Washrooms",
+  "slug": "washrooms",
+  "icon": "http:\/\/map.utoronto.ca\/_assets\/_icons\/marker_washrooms.png",
+  "sublayers": [
+    {
+      "id": "186",
+      "name": "Baby Change Station",
+      "slug": "baby-change-station"
+    },
+    {
+      "id": "246",
+      "name": "Footbath",
+      "slug": "footbath"
+    },
+    {
+      "id": "185",
+      "name": "Men's Accessible",
+      "slug": "mens-accessible"
+    },
+    {
+      "id": "183",
+      "name": "Single User",
+      "slug": "single-user"
+    },
+    {
+      "id": "56",
+      "name": "Single-User Accessible",
+      "slug": "single-user-accessible"
+    },
+    {
+      "id": "184",
+      "name": "Women's Accessible",
+      "slug": "womens-accessible"
+    }
+  ],
+  "markers": [
+    {
+      "id": "184",
+      "title": "AP Single-user Accessible Washroom",
+      "aka": "Anthro, Anthropology",
+      "lat": "43.6599",
+      "lng": "-79.3984",
+      "buildingCode": "079",
+      "address": "19 Russell Street",
+      "desc": "Floor 1, Room 116<br \/>\nFloor 3, Room 319",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "image": "\/_assets\/_m_b\/SUA_Washroom.gif",
+      "alt": "Single User Accessible Washroom image",
+      "url": "https:\/\/blogs.studentlife.utoronto.ca\/washroom\/",
+      "kw": "washroom, bathroom, toilet, w\/c, accessible, accessibility, wheelchair, gender neutral, all gender, single stall",
+      "sublayers": [
+        "183",
+        "56"
+      ]
+    },
+    {
+      "id": "280",
+      "title": "AB Women's and Men's Single-User Washroom ",
+      "lat": "43.6606",
+      "lng": "-79.3973",
+      "buildingCode": "036",
+      "address": "50 St. George Street",
+      "desc": "Floor 1, Room 100 (Male)<br \/>\nFloor 1, Room 100a (Female)",
+      "image": "\/_assets\/_m_b\/SU_Washroom.gif",
+      "alt": "Single User Washroom image",
+      "kw": "Washroom, bathroom, toilet, w\/c, men, male, masculine, single stall, women, female, feminine",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "286",
+      "title": "Brennan Hall",
+      "lat": "43.6664",
+      "lng": "-79.3898",
+      "buildingCode": "411",
+      "address": "81 St. Mary Street",
+      "desc": "single user accessible washroom across from front entrance",
+      "image": "\/_assets\/_m_b\/SUA_Washroom1.gif",
+      "alt": "Single User Accessible Washroom image",
+      "sublayers": [
+        "56"
+      ]
+    },
+    {
+      "id": "403",
+      "title": "Simcoe Hall Single-User Washrom",
+      "lat": "43.6608",
+      "lng": "-79.3958",
+      "buildingCode": "010",
+      "address": "27 King's College Circle",
+      "desc": "First Floor: Room 140",
+      "image": "\/_assets\/_m_b\/SUA_Washroom3.gif",
+      "alt": "Single User Accessible Washroom image",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "404",
+      "title": "Cumberland House",
+      "lat": "43.6595",
+      "lng": "-79.3959",
+      "buildingCode": "026",
+      "address": "33 St. George Street",
+      "desc": "single user washroom on the first floor",
+      "image": "\/_assets\/_m_b\/SU_Washroom3.gif",
+      "alt": "Single User Washroom image",
+      "sublayers": [
+        "24"
+      ]
+    },
+    {
+      "id": "405",
+      "title": "CS Single-User Washroom ",
+      "aka": "SCS",
+      "lat": "43.6667",
+      "lng": "-79.3998",
+      "buildingCode": "103",
+      "address": "158 St. George Street",
+      "desc": "Floor 1, Room 115",
+      "image": "\/_assets\/_m_b\/SU_Washroom4.gif",
+      "alt": "Single User Washroom image",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "406",
+      "title": "ES Single-User Washroom ",
+      "lat": "43.6606",
+      "lng": "-79.3994",
+      "buildingCode": "062",
+      "address": "33 Willcocks Street",
+      "desc": "Floor 1, Room 1006, 1034, 1069<br \/>\nFloor 2, Room 2092, <br \/>\nFloor 3, Room 3012, 3023, 3116<br \/>\nFloor 4, Room 4049<br \/>\nBasement, Room B100, B172",
+      "image": "\/_assets\/_m_b\/SUA_Washroom4.gif",
+      "alt": "Single User Accessible Washroom image",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "407",
+      "title": "EM Single-User Accessible Washroom with Baby Change Station",
+      "lat": "43.6667",
+      "lng": "-79.3928",
+      "buildingCode": "502",
+      "address": "75 Queen's Park",
+      "desc": "Floor 1, Room 115 ",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "image": "\/_assets\/_m_b\/SUA_Washroom5.gif",
+      "alt": "Single User Accessible Washroom image",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall, accessible, accessibility, wheelchair, baby, change station, change table, infant",
+      "sublayers": [
+        "186",
+        "56"
+      ]
+    },
+    {
+      "id": "408",
+      "title": "EX Single-User Accessible Washroom ",
+      "lat": "43.6584",
+      "lng": "-79.3928",
+      "buildingCode": "155",
+      "address": "255 McCaul Street",
+      "desc": "Floor 1<br \/>\nFloor 3, Room 347 & 349",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "image": "\/_assets\/_m_b\/SUA_Washroom6.gif",
+      "alt": "Single User Accessible Washroom image",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall, accessible, accessibility, wheelchair",
+      "sublayers": [
+        "56"
+      ]
+    },
+    {
+      "id": "409",
+      "title": "Fasken Martineau Building",
+      "lat": "43.6641",
+      "lng": "-79.4020",
+      "buildingCode": "151",
+      "address": "655 Spadina Avenue",
+      "desc": "single user washroom across from front desk",
+      "image": "\/_assets\/_m_b\/SU_Washroom5.gif",
+      "alt": "Single User Washroom image",
+      "sublayers": [
+        "24"
+      ]
+    },
+    {
+      "id": "410",
+      "title": "Galbraith Building",
+      "lat": "43.6600",
+      "lng": "-79.3962",
+      "buildingCode": "070",
+      "address": "35 St. George Street",
+      "desc": "single user washrooms in rooms 111A and 114",
+      "image": "\/_assets\/_m_b\/SU_Washroom6.gif",
+      "alt": "Single User Washroom image",
+      "sublayers": [
+        "24"
+      ]
+    },
+    {
+      "id": "411",
+      "title": "SM Single-User Accessible Washroom with Baby Change Station",
+      "aka": "Gerstein Library",
+      "lat": "43.6623",
+      "lng": "-79.3939",
+      "buildingCode": "003",
+      "address": "7-9 King's College Circle",
+      "desc": "Floor 1, Room 1210<br \/>\nFloor 2, Room 2365 *Baby Change Station",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "image": "\/_assets\/_m_b\/SUA_Washroom7.gif",
+      "alt": "Single User Accessible Washroom image",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall, accessible, accessibility, wheelchair, baby, change station, change table, infant",
+      "sublayers": [
+        "186",
+        "56"
+      ]
+    },
+    {
+      "id": "412",
+      "title": "HA Single-User Washroom ",
+      "lat": "43.6600",
+      "lng": "-79.3936",
+      "buildingCode": "024",
+      "address": "170 College Street (rear of)",
+      "desc": "Floor 3, Room 303",
+      "image": "\/_assets\/_m_b\/SU_Washroom7.gif",
+      "alt": "Single User Washroom image",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "413",
+      "title": "HH Single-User Washroom with Baby-Change Station",
+      "lat": "43.6640",
+      "lng": "-79.3940",
+      "buildingCode": "002",
+      "address": "7 Hart House Circle",
+      "desc": "Floor 1, Room 1030",
+      "image": "\/_assets\/_m_b\/SUA_Washroom8.gif",
+      "alt": "Single User Accessible Washroom image",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall, Baby, change station, change table",
+      "sublayers": [
+        "186",
+        "183",
+        "56"
+      ]
+    },
+    {
+      "id": "414",
+      "title": "HS Single-User Washroom ",
+      "lat": "43.6590",
+      "lng": "-79.3927",
+      "buildingCode": "154",
+      "address": "155 College Street",
+      "desc": "Floor 1, Room 185<br \/>\nFloor 2, Room 268<br \/>\nFloor 3, Room 379<br \/>\n",
+      "image": "\/_assets\/_m_b\/SUA_Washroom9.gif",
+      "alt": "Single User Accessible Washroom image",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "415",
+      "title": "HS Single-User Accessible Washroom ",
+      "lat": "43.6591",
+      "lng": "-79.3925",
+      "buildingCode": "154",
+      "address": "155 College Street",
+      "desc": "Floor 4, Room 488",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "image": "\/_assets\/_m_b\/SU_Washroom8.gif",
+      "alt": "Single User Washroom image",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall, accessible, accessibility, wheelchair",
+      "sublayers": [
+        "56"
+      ]
+    },
+    {
+      "id": "416",
+      "title": "IN Single-User Accessible Washroom ",
+      "aka": "Innis",
+      "lat": "43.6656",
+      "lng": "-79.3996",
+      "buildingCode": "132",
+      "address": "2 Sussex Avenue",
+      "desc": "Floor 1, Room 103",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "image": "\/_assets\/_m_b\/SU_Washroom9.gif",
+      "alt": "Single User Washroom image",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall, accessible, accessibility, wheelchair",
+      "sublayers": [
+        "56"
+      ]
+    },
+    {
+      "id": "417",
+      "title": "DR Single-User Accessible Washroom ",
+      "lat": "43.6621",
+      "lng": "-79.3967",
+      "buildingCode": "019",
+      "address": "21 King's College Circle",
+      "desc": "Floor 1, Room 106",
+      "image": "\/_assets\/_m_b\/SUA_Washroom10.gif",
+      "alt": "Single User Accessible Washroom image",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall, accessible, accessibility, wheelchair",
+      "sublayers": [
+        "56"
+      ]
+    },
+    {
+      "id": "418",
+      "title": "J. M. Kelly Library",
+      "lat": "43.6648",
+      "lng": "-79.3895",
+      "buildingCode": "429",
+      "address": "113 St. Joseph Street",
+      "desc": "single user accessible washrooms in room 103, 104 and 108",
+      "image": "\/_assets\/_m_b\/SUA_Washroom11.gif",
+      "alt": "Single User Accessible Washroom image",
+      "sublayers": [
+        "56"
+      ]
+    },
+    {
+      "id": "419",
+      "title": "KS Single-User Washroom ",
+      "aka": "Career Centre, Bookstore, CAPS Health Services, Health & Wellness, Student Housing ",
+      "lat": "43.6592",
+      "lng": "-79.3968",
+      "buildingCode": "143",
+      "address": "214 College Street",
+      "desc": "Floor 2, Room 236 & 238 & 257<br \/>\nFloor 3, Room 338 <br \/>\n<br \/>\n",
+      "image": "\/_assets\/_m_b\/SU_Washroom10.gif",
+      "alt": "Single User Washroom image",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "420",
+      "title": "Nona MacDonald Visitor's Centre",
+      "lat": "43.6614",
+      "lng": "-79.3964",
+      "buildingCode": "575A",
+      "address": "25 King's College Circle",
+      "desc": "single user accessible washrooms in rooms B15 and B20",
+      "image": "\/_assets\/_m_b\/SUA_Washroom12.gif",
+      "alt": "Single User Accessible Washroom image",
+      "sublayers": [
+        "56"
+      ]
+    },
+    {
+      "id": "421",
+      "title": "LM Single-User Washroom ",
+      "lat": "43.6618",
+      "lng": "-79.3981",
+      "buildingCode": "073",
+      "address": "80 St. George Street",
+      "desc": "Floor 4, Room 453",
+      "image": "\/_assets\/_m_b\/SUA_Washroom13.gif",
+      "alt": "Single User Accessible Washroom image",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "422",
+      "title": "PB Single-User Accessible Washroom with Baby Change Station",
+      "aka": "Pharmacy Building",
+      "lat": "43.6599",
+      "lng": "-79.3917",
+      "buildingCode": "161",
+      "address": "144 College Street",
+      "desc": "Single user accessible washroom with baby change station across from first floor elevators",
+      "image": "\/_assets\/_m_b\/SUA_Washroom14.gif",
+      "alt": "Single User Accessible Washroom image",
+      "sublayers": [
+        "186",
+        "56"
+      ]
+    },
+    {
+      "id": "423",
+      "title": "Margaret Addison Residence",
+      "lat": "43.6682",
+      "lng": "-79.3924",
+      "buildingCode": "508",
+      "address": "140 Charles Street West",
+      "desc": "single user washrooms on all floors",
+      "image": "\/_assets\/_m_b\/SU_Washroom11.gif",
+      "alt": "Single User Washroom image",
+      "sublayers": [
+        "24"
+      ]
+    },
+    {
+      "id": "424",
+      "title": "GE Single-User Accessible Washroom ",
+      "lat": "43.6662",
+      "lng": "-79.3996",
+      "buildingCode": "104",
+      "address": "150 St. George Street",
+      "desc": "Floor 1, Room 163<br \/>\nFloor 2, Room 220 & 251<br \/>\nFloor 3, Room 357<br \/>\nBasement, Room 61 & 63<br \/>\n",
+      "image": "\/_assets\/_m_b\/SU_Washroom12.gif",
+      "alt": "Single User Washroom image",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "425",
+      "title": "GE Single-User Accessible Washroom ",
+      "lat": "43.6661",
+      "lng": "-79.3996",
+      "buildingCode": "104",
+      "address": "150 St. George Street",
+      "desc": "Floor 1, Room 161<br \/>\nFloor 2, Room 216, 261 & 263<br \/>\nFloor 3, Room 318<br \/>\n",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "image": "\/_assets\/_m_b\/SUA_Washroom15.gif",
+      "alt": "Single User Accessible Washroom image",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall, accessible, accessibility, wheelchair",
+      "sublayers": [
+        "56"
+      ]
+    },
+    {
+      "id": "427",
+      "title": "MR Men's Multi-Stall Accessible Washroom ",
+      "lat": "43.6611",
+      "lng": "-79.3929",
+      "buildingCode": "004",
+      "address": "12 Queen's Park Crescent West",
+      "desc": "Basement, Room 10<br \/>\nFloor 2, Room 221",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "image": "\/_assets\/_m_b\/SUA_Washroom17.gif",
+      "alt": "Single User Accessible Washroom image",
+      "kw": "Washroom, bathroom, toilet, w\/c, men, male, masculine, accessible, accessibility, wheelchair",
+      "sublayers": [
+        "185"
+      ]
+    },
+    {
+      "id": "428",
+      "title": "Mechanical Engineering Building",
+      "lat": "43.6599",
+      "lng": "-79.3940",
+      "buildingCode": "022",
+      "address": "5 King's College Road",
+      "desc": "single user accessible washroom in room 128B",
+      "image": "\/_assets\/_m_b\/SUA_Washroom18.gif",
+      "alt": "Single User Accessible Washroom image",
+      "sublayers": [
+        "56"
+      ]
+    },
+    {
+      "id": "429",
+      "title": "MS Single-User Washroom ",
+      "aka": "Med Sci",
+      "lat": "43.6608",
+      "lng": "-79.3936",
+      "buildingCode": "005",
+      "address": "1 King's College Circle",
+      "desc": "Floor 1, Room 2157A",
+      "image": "\/_assets\/_m_b\/SUA_Washroom19.gif",
+      "alt": "Single User Accessible Washroom image",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "430",
+      "title": "MB Single-User Washroom ",
+      "aka": "Mining",
+      "lat": "43.6595",
+      "lng": "-79.3935",
+      "buildingCode": "007",
+      "address": "170 College Street",
+      "desc": "Floor 2, Room 204",
+      "image": "\/_assets\/_m_b\/SUA_Washroom20.gif",
+      "alt": "Single User Accessible Washroom image",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "432",
+      "title": "KP Single-User Accessible Washroom ",
+      "aka": "Multifaith Centre",
+      "lat": "43.6606",
+      "lng": "-79.4007",
+      "buildingCode": "143",
+      "address": "569 Spadina Crescent",
+      "desc": "Floor 2, Room 204",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "image": "\/_assets\/_m_b\/SUA_Washroom22.gif",
+      "alt": "Single User Accessible Washroom image",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall, accessible, accessibility, wheelchair",
+      "sublayers": [
+        "56"
+      ]
+    },
+    {
+      "id": "433",
+      "title": "MU Men's Multi-Stall Accessible Washroom ",
+      "lat": "43.6647",
+      "lng": "-79.3966",
+      "buildingCode": "012A",
+      "address": "1 Devonshire Place",
+      "desc": "Basement, Room 005",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "image": "\/_assets\/_m_b\/SU_Washroom13.gif",
+      "alt": "Single User Washroom image",
+      "kw": "Washroom, bathroom, toilet, w\/c, men, male, masculine, accessible, accessibility, wheelchair",
+      "sublayers": [
+        "185"
+      ]
+    },
+    {
+      "id": "434",
+      "title": "NR Single-User Washroom ",
+      "aka": "New College Residence",
+      "lat": "43.6611",
+      "lng": "-79.4009",
+      "buildingCode": "131",
+      "address": "45 Willcocks Street",
+      "desc": "Floor 1, Room 101 & 104",
+      "image": "\/_assets\/_m_b\/SUA_Washroom23.gif",
+      "alt": "Single User Accessible Washroom image",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "449",
+      "title": "NB Single-User Washroom ",
+      "aka": "North Borden",
+      "lat": "43.6604",
+      "lng": "-79.4001",
+      "buildingCode": "061A",
+      "address": "563 Spadina Crescent",
+      "desc": "Floor 1, Room 104a<br \/>\nFloor 3, Room 319<br \/>\n",
+      "image": "\/_assets\/_m_b\/SUA_Washroom24.gif",
+      "alt": "Single User Accessible Washroom image",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "450",
+      "title": "NF Single-User Accessible Washroom ",
+      "lat": "43.6664",
+      "lng": "-79.3923",
+      "buildingCode": "515",
+      "address": "73 Queen's Park Crescent East",
+      "desc": "Floor 2, Room 216",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "image": "\/_assets\/_m_b\/SUA_Washroom25.gif",
+      "alt": "Single User Accessible Washroom image",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall, accessible, accessibility, wheelchair",
+      "sublayers": [
+        "56"
+      ]
+    },
+    {
+      "id": "452",
+      "title": "OI Single-User Washroom ",
+      "aka": "OISE",
+      "lat": "43.6682",
+      "lng": "-79.3984",
+      "buildingCode": "123",
+      "address": "252 Bloor Street West",
+      "desc": "Floor 12, Room 12297B",
+      "image": "\/_assets\/_m_b\/SUA_Washroom26.gif",
+      "alt": "Single User Accessible Washroom image",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "455",
+      "title": "VC Single-User Washroom ",
+      "aka": "Old Vic",
+      "lat": "43.6669",
+      "lng": "-79.3920",
+      "buildingCode": "501",
+      "address": "91 Charles Street West",
+      "desc": "Floor 2, Room 201B & 201C<br \/>\nFloor 3, Room 302",
+      "image": "\/_assets\/_m_b\/SUA_Washroom27.gif",
+      "alt": "Single User Accessible Washroom image",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "456",
+      "title": "RW Women's & Men's Single-User Washroom ",
+      "lat": "43.6632",
+      "lng": "-79.3989",
+      "buildingCode": "072",
+      "address": "25 Harbord Street",
+      "desc": "Floor 1, Room 145A (Women's)<br \/>\nFloor 3, Room 334A (Men's)<br \/>\n",
+      "image": "\/_assets\/_m_b\/SUA_Washroom28.gif",
+      "alt": "Single User Accessible Washroom image",
+      "kw": "Washroom, bathroom, toilet, w\/c, single stall, women, female, feminine, men, male, masculine",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "459",
+      "title": "Regis College",
+      "lat": "43.6639",
+      "lng": "-79.3902",
+      "buildingCode": "478",
+      "address": "100 Wellesley Street West",
+      "desc": "single user accessible washroom across from room 123",
+      "image": "\/_assets\/_m_b\/SUA_Washroom29.gif",
+      "alt": "Single User Accessible Washroom image",
+      "sublayers": [
+        "56"
+      ]
+    },
+    {
+      "id": "461",
+      "title": "RL Women's & Men's Multi-Stall Accessible Washroom with Baby Change Station",
+      "aka": "Robarts",
+      "lat": "43.6645",
+      "lng": "-79.3994",
+      "buildingCode": "006",
+      "address": "130 St. George Street",
+      "desc": "F3, Room 3005 (M) & 3053 (W) *baby<br \/>\nF5, R5001 (M) & 5022 (W)<br \/>\nF6, R6005 (W) <br \/>\nF7, R7005 (W)<br \/>\nF8, R8035 (M) & 8037 (W)<br \/>\nF9, R9006 (M) & 9004 (W)<br \/>\nF10, R10004 (M) & 10002 (W)<br \/>\nF11, R11004 (M) & 11006 (W)<br \/>\nF12, R12004 (M) & 12002 (W)<br \/>\nF13, R13006 (M) & 13004 (W",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "image": "\/_assets\/_m_b\/SUA_Washroom30.gif",
+      "alt": "Single User Accessible Washroom image",
+      "kw": "Washroom, bathroom, toilet, w\/c, men, male, masculine, women, female, feminine, baby, accessible, accessibility, wheelchair",
+      "sublayers": [
+        "186",
+        "185",
+        "184"
+      ]
+    },
+    {
+      "id": "463",
+      "title": "RS Women's Accessible Washroom ",
+      "lat": "43.6600",
+      "lng": "-79.3933",
+      "buildingCode": "020",
+      "address": "164 College Street",
+      "desc": "Floor 3, Room 302",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "image": "\/_assets\/_m_b\/SUA_Washroom31.gif",
+      "alt": "Single User Accessible Washroom image",
+      "kw": "Washroom, bathroom, toilet, w\/c, female, women, feminine, accessible, accessibility, wheelchair",
+      "sublayers": [
+        "184"
+      ]
+    },
+    {
+      "id": "467",
+      "title": "Macdonald-Mowat House",
+      "lat": "43.6618",
+      "lng": "-79.3971",
+      "buildingCode": "172",
+      "address": "63 St. George Street",
+      "desc": "single user accessible washroom in room 110",
+      "image": "\/_assets\/_m_b\/SUA_Washroom33.gif",
+      "alt": "Single User Accessible Washroom image",
+      "sublayers": [
+        "56"
+      ]
+    },
+    {
+      "id": "469",
+      "title": "GS Single-User Washroom ",
+      "lat": "43.6620",
+      "lng": "-79.3971",
+      "buildingCode": "043",
+      "address": "65 St. George Street",
+      "desc": "Floor 1, Room 108<br \/>\nFloor 3, Room 303",
+      "image": "\/_assets\/_m_b\/SUA_Washroom34.gif",
+      "alt": "Single User Accessible Washroom image",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "470",
+      "title": "SS Single-User Washroom ",
+      "aka": "SId Smith",
+      "lat": "43.6624",
+      "lng": "-79.3986",
+      "buildingCode": "033",
+      "address": "100 St. George Street",
+      "desc": "Floor 1, Room 1060<br \/>\nFloor 2, Room 2015 & 2031<br \/>\n",
+      "image": "\/_assets\/_m_b\/SUA_Washroom35.gif",
+      "alt": "Single User Accessible Washroom image",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "475",
+      "title": "Sir Daniel Wilson Residence",
+      "lat": "43.6626",
+      "lng": "-79.3975",
+      "buildingCode": "029",
+      "address": "73 St. George Street",
+      "desc": "single user group washrooms in each wing",
+      "image": "\/_assets\/_m_b\/SU_Washroom14.gif",
+      "alt": "Single User Washroom image",
+      "sublayers": [
+        "24"
+      ]
+    },
+    {
+      "id": "477",
+      "title": "SB Women's Single-User Washroom ",
+      "aka": "South Borden",
+      "lat": "43.6601",
+      "lng": "-79.3997",
+      "buildingCode": "061",
+      "address": "487 Spadina Crescent",
+      "desc": "Floor 2, Room 201b<br \/>\nFloor 3, Room 313<br \/>\nFloor 3, Room 314",
+      "image": "\/_assets\/_m_b\/SU_Washroom15.gif",
+      "alt": "Single User Washroom image",
+      "kw": "Washroom, bathroom, toilet, w\/c, single stall, women, female, feminine",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "478",
+      "title": "TZ Single-User Washroom ",
+      "aka": "C. David Naylor Building",
+      "lat": "43.6604",
+      "lng": "-79.3917",
+      "buildingCode": "011",
+      "address": "6 Queen's Park Crescent West",
+      "desc": "Floor 1, Room 116",
+      "image": "\/_assets\/_m_b\/SUA_Washroom36.gif",
+      "alt": "Single User Accessible Washroom image",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "480",
+      "title": "FG Women's Single-User Washroom ",
+      "lat": "43.6599",
+      "lng": "-79.3924",
+      "buildingCode": "025",
+      "address": "150 College Street",
+      "desc": "Basement, Room 58",
+      "image": "\/_assets\/_m_b\/SUA_Washroom37.gif",
+      "alt": "Single User Accessible Washroom image",
+      "kw": "Washroom, bathroom, toilet, w\/c, single stall, women, female, feminine",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "483",
+      "title": "UC Single-User Accessible Washroom ",
+      "lat": "43.6627",
+      "lng": "-79.3951",
+      "buildingCode": "001",
+      "address": "15 King's College Circle",
+      "desc": "Floor 1, Room 122B<br \/>\nBasement, Room H007",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "image": "\/_assets\/_m_b\/SU_Washroom16.gif",
+      "alt": "Single User Washroom image",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall, accessible, accessibility, wheelchair",
+      "sublayers": [
+        "56"
+      ]
+    },
+    {
+      "id": "484",
+      "title": "UC Single-User Washroom ",
+      "lat": "43.6627",
+      "lng": "-79.3960",
+      "buildingCode": "001",
+      "address": "15 King's College Circle",
+      "desc": "Floor 1, Room 181C & 181E<br \/>\nBasement, Room H006",
+      "image": "\/_assets\/_m_b\/SU_Washroom17.gif",
+      "alt": "Single User Washroom image",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "486",
+      "title": "UP Single-User Washroom ",
+      "aka": "UC Union",
+      "lat": "43.6634",
+      "lng": "-79.3974",
+      "buildingCode": "023",
+      "address": "79 St. George Street",
+      "desc": "Floor 1, Room 105",
+      "image": "\/_assets\/_m_b\/SUA_Washroom39.gif",
+      "alt": "Single User Accessible Washroom image",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "488",
+      "title": "SO Single-User Washroom ",
+      "aka": "UTSU Building",
+      "lat": "43.6632",
+      "lng": "-79.3947",
+      "buildingCode": "120",
+      "address": "12 Hart House Circle",
+      "desc": "Floor 1, Room 104",
+      "image": "\/_assets\/_m_b\/SU_Washroom18.gif",
+      "alt": "Single User Washroom image",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "489",
+      "title": "Wetmore Hall",
+      "lat": "43.6621",
+      "lng": "-79.3997",
+      "buildingCode": "032",
+      "address": "300 Huron Street",
+      "desc": "single user washroom in room 103",
+      "image": "\/_assets\/_m_b\/SU_Washroom19.gif",
+      "alt": "Single User Washroom image",
+      "sublayers": [
+        "24"
+      ]
+    },
+    {
+      "id": "491",
+      "title": "Whitney Hall",
+      "lat": "43.6639",
+      "lng": "-79.3980",
+      "buildingCode": "013",
+      "address": "85 St. George Street",
+      "desc": "single user group washrooms on all floors",
+      "image": "\/_assets\/_m_b\/SU_Washroom20.gif",
+      "alt": "Single User Washroom image",
+      "sublayers": [
+        "24"
+      ]
+    },
+    {
+      "id": "492",
+      "title": "WI Single-User Accessible Washroom ",
+      "lat": "43.6618",
+      "lng": "-79.4010",
+      "buildingCode": "032A",
+      "address": "40 Willcocks Street",
+      "desc": "Floor 1, Room 1024 & 30",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "image": "\/_assets\/_m_b\/SU_Washroom21.gif",
+      "alt": "Single User Washroom image",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall, accessible, accessibility, wheelchair",
+      "sublayers": [
+        "56"
+      ]
+    },
+    {
+      "id": "493",
+      "title": "Wycliffe College",
+      "lat": "43.6645",
+      "lng": "-79.3950",
+      "buildingCode": "675",
+      "address": "5 Hoskin Avenue",
+      "desc": "single user washroom next to the conference room",
+      "image": "\/_assets\/_m_b\/SU_Washroom22.gif",
+      "alt": "Single User Washroom image",
+      "sublayers": [
+        "24"
+      ]
+    },
+    {
+      "id": "494",
+      "title": "Wymilwood",
+      "lat": "43.6676",
+      "lng": "-79.3927",
+      "buildingCode": "507",
+      "address": "150 Charles Street West",
+      "desc": "single user washroom on the second floor",
+      "image": "\/_assets\/_m_b\/SU_Washroom23.gif",
+      "alt": "Single User Washroom image",
+      "sublayers": [
+        "24"
+      ]
+    },
+    {
+      "id": "1089",
+      "title": "SC Single-User Washroom ",
+      "lat": "43.6649",
+      "lng": "-79.4008",
+      "buildingCode": "077",
+      "address": "21 Sussex Avenue",
+      "desc": "Floor 1, Room 112<br \/>\nFloor 2, Room 210<br \/>\nFloor 3, Room 302, 308, 319 & 322a<br \/>\nFloor 4, Room 408<br \/>\nFloor 5, Room 504, 510a & 530<br \/>\nFloor 6, Room 612a",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1530",
+      "title": "AH Men's Single-User Washroom",
+      "lat": "43.6648",
+      "lng": "-79.3901",
+      "buildingCode": "407",
+      "address": "121 St. Joseph Street",
+      "desc": "Floor 3, Room 327",
+      "kw": "Washroom, bathroom, toilet, w\/c, men, male, masculine, gender neutral, all gender, single stall",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1531",
+      "title": "AH Single-User Washroom",
+      "lat": "43.6646",
+      "lng": "-79.3900",
+      "buildingCode": "407",
+      "address": "121 St. Joseph Street",
+      "desc": "Basement",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1532",
+      "title": "BA Single-User Accessible Washroom",
+      "lat": "43.6599",
+      "lng": "-79.3970",
+      "buildingCode": "080",
+      "address": "40 St. George Street",
+      "desc": "Floor 1, Room 1108 & 1110<br \/>\nFloor 4, Room 4153 & 4155<br \/>\nFloor 5, Room 5153 & 5155<br \/>\nFloor 6, Room 6131<br \/>\nFloor 7, Room 7125 & 7127<br \/>\nFloor 8, Room 8127",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall, accessible, accessibility, wheelchair",
+      "sublayers": [
+        "183",
+        "56"
+      ]
+    },
+    {
+      "id": "1533",
+      "title": "BA Women's & Men's Multi-Stall Washroom with Baby-Change Station",
+      "lat": "43.6598",
+      "lng": "-79.3971",
+      "buildingCode": "080",
+      "address": "40 St. George Street",
+      "desc": "Floor 1, Room 1284 (Women's) with Baby Change Station<br \/>\nFloor 1, Room 1286 (Men's) with Baby Change Station",
+      "kw": "Washroom, bathroom, toilet, w\/c, men, male, masculine, women, female, feminine, baby, change station, change table",
+      "sublayers": [
+        "186"
+      ]
+    },
+    {
+      "id": "1534",
+      "title": "BF Women's Single-User Washroom ",
+      "lat": "43.6610",
+      "lng": "-79.3998",
+      "buildingCode": "057",
+      "address": "4 Bancroft Avenue",
+      "desc": "Floor 1, Room 112",
+      "kw": "Washroom, bathroom, toilet, w\/c, single stall, women, female, feminine",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1535",
+      "title": "BI Women's Single-User Washroom",
+      "lat": "43.6606",
+      "lng": "-79.3888",
+      "buildingCode": "016",
+      "address": "100 College Street",
+      "desc": "Floor 2, Room 225<br \/>\nFloor 4, Room 423<br \/>\nFloor 5, Room 535",
+      "kw": "Washroom, bathroom, toilet, w\/c, single stall, women, female, feminine",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1536",
+      "title": "NB Single-User Accessible Washroom ",
+      "aka": "North Borden",
+      "lat": "43.6604",
+      "lng": "-79.3999",
+      "buildingCode": "061A",
+      "address": "563 Spadina Crescent",
+      "desc": "Floor 2, Room 216",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "kw": "Washroom, bathroom, toilet, w\/c, single stall, gender neutral, all gender, accessible, accessibility, wheelchair",
+      "sublayers": [
+        "56"
+      ]
+    },
+    {
+      "id": "1537",
+      "title": "CG Single-User Accessible Washroom ",
+      "lat": "43.6618",
+      "lng": "-79.3930",
+      "buildingCode": "047",
+      "address": "14 Queen's Park Crescent West",
+      "desc": "Floor 1, Room 146<br \/>\n",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall, accessible, accessibility, wheelchair",
+      "sublayers": [
+        "183",
+        "56"
+      ]
+    },
+    {
+      "id": "1538",
+      "title": "CG Men's Single-User Washroom ",
+      "lat": "43.6618",
+      "lng": "-79.3929",
+      "buildingCode": "047",
+      "address": "14 Queen's Park Crescent West",
+      "desc": "Floor 2, Room 225",
+      "kw": "Washroom, bathroom, toilet, w\/c, men, male, masculine, single stall",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1539",
+      "title": "CG Single-User Washroom ",
+      "lat": "43.6618",
+      "lng": "-79.3931",
+      "buildingCode": "047",
+      "address": "14 Queen's Park Crescent West",
+      "desc": "Floor 3, Room 318",
+      "kw": "Washroom, bathroom, toilet, w\/c, single stall, gender neutral, all gender",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1540",
+      "title": "CR Single-User Accessible Washroom ",
+      "lat": "43.6652",
+      "lng": "-79.3906",
+      "buildingCode": "426",
+      "address": "100 St. Joseph Street",
+      "desc": "Floor 1, Room 113",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall, accessible, accessibility, wheelchair",
+      "sublayers": [
+        "183",
+        "56"
+      ]
+    },
+    {
+      "id": "1541",
+      "title": "WS Women's & Men's Multi-Stall Washroom with Baby-Change Station",
+      "aka": "Athletic Centre",
+      "lat": "43.6630",
+      "lng": "-79.4002",
+      "buildingCode": "068A",
+      "address": "55 Harbord",
+      "desc": "Room B29 - Family Changeroom<br \/>\nRoom B59 (w) - w\/baby change station<br \/>\nRoom 2054 (m) w\/baby change station<br \/>\nRoom 2053 (w) w\/baby change station<br \/>\nRoom 1058 (m) w\/baby change station<br \/>\nRoom 1057 (w) w\/baby change station",
+      "kw": "Washroom, bathroom, toilet, w\/c, men, male, masculine, women, female, feminine, baby, change station, change table",
+      "sublayers": [
+        "186"
+      ]
+    },
+    {
+      "id": "1543",
+      "title": "PT Women's Single-User Washroom ",
+      "lat": "43.6596",
+      "lng": "-79.3946",
+      "buildingCode": "008A",
+      "address": "6 King's College Road",
+      "desc": "Floor 2, Room 270<br \/>\nFloor 4, Room 474",
+      "kw": "Washroom, bathroom, toilet, w\/c, single stall, women, female, feminine",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1544",
+      "title": "PT Single-User Washroom ",
+      "lat": "43.6596",
+      "lng": "-79.3947",
+      "buildingCode": "008A",
+      "address": "6 King's College Road",
+      "desc": "Floor 3, Room 379",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1546",
+      "title": "DN Single-User Accessible Washroom ",
+      "lat": "43.6562",
+      "lng": "-79.3872",
+      "buildingCode": "065",
+      "address": "124 Edward Street",
+      "desc": "Floor 1, Room 120",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall, accessible, accessibility, wheelchair",
+      "sublayers": [
+        "183",
+        "56"
+      ]
+    },
+    {
+      "id": "1547",
+      "title": "DN Single-User Washroom with Baby-Change Station",
+      "lat": "43.6561",
+      "lng": "-79.3873",
+      "buildingCode": "065",
+      "address": "124 Edward Street",
+      "desc": "Floor 1, Room 119 with Baby Change Station<br \/>\nFloor 2, Room 220 with Baby Change Station",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall, Baby, change station, change table",
+      "sublayers": [
+        "186",
+        "183"
+      ]
+    },
+    {
+      "id": "1548",
+      "title": "DN Single-User Washroom ",
+      "lat": "43.6561",
+      "lng": "-79.3870",
+      "buildingCode": "065",
+      "address": "124 Edward Street",
+      "desc": "Floor 2, Room 220",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1549",
+      "title": "PR Single-User Washroom ",
+      "lat": "43.6663",
+      "lng": "-79.3914",
+      "buildingCode": "514",
+      "address": "71 Queen's Park Crescent East",
+      "desc": "Floor 2, Room 208<br \/>\nFloor 2, Room 210<br \/>\nFloor 3, Room 311",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1550",
+      "title": "ER Single-User Washroom with Baby Change Station",
+      "aka": "ELC",
+      "lat": "43.6639",
+      "lng": "-79.4012",
+      "buildingCode": "129",
+      "address": "7 Glen Morris Street",
+      "desc": "Located in the Family Resource Centre (basement)",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall, Baby, change station, change table",
+      "sublayers": [
+        "186",
+        "183"
+      ]
+    },
+    {
+      "id": "1552",
+      "title": "EJ Single-User Accessible Washroom ",
+      "aka": "Music",
+      "lat": "43.6666",
+      "lng": "-79.3946",
+      "buildingCode": "051",
+      "address": "80 Queen's Park ",
+      "desc": "Floor 1, Room 125<br \/>\n",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall, accessible, accessibility, wheelchair",
+      "sublayers": [
+        "183",
+        "56"
+      ]
+    },
+    {
+      "id": "1553",
+      "title": "EJ Men's Multi-Stall Accessible Washroom ",
+      "aka": "Music",
+      "lat": "43.6664",
+      "lng": "-79.3946",
+      "buildingCode": "051",
+      "address": "80 Queen's Park ",
+      "desc": "Second Basement, Room E014A",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "kw": "Washroom, bathroom, toilet, w\/c, men, male, masculine, accessible, accessibility, wheelchair",
+      "sublayers": [
+        "185"
+      ]
+    },
+    {
+      "id": "1554",
+      "title": "EX Women's & Men's Multi-Stall Accessible Washroom ",
+      "lat": "43.6583",
+      "lng": "-79.3928",
+      "buildingCode": "155",
+      "address": "255 McCaul Street",
+      "desc": "Floor 3, Room 332 (Men's) & 334 (Women's)",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "kw": "Washroom, bathroom, toilet, w\/c, men, male, masculine, women, female, feminine, accessible, accessibility, wheelchair",
+      "sublayers": [
+        "185",
+        "184"
+      ]
+    },
+    {
+      "id": "1555",
+      "title": "SK Single-User Washroom ",
+      "aka": "Social Work",
+      "lat": "43.6683",
+      "lng": "-79.3977",
+      "buildingCode": "111",
+      "address": "246 Bloor Street West",
+      "desc": "Floor 3, Room 313",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1556",
+      "title": "SK Single-User Accessible Washroom ",
+      "aka": "Social Work",
+      "lat": "43.6682",
+      "lng": "-79.3977",
+      "buildingCode": "111",
+      "address": "246 Bloor Street West",
+      "desc": "Floor 7, Room 721",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall, accessible, accessibility, wheelchair",
+      "sublayers": [
+        "56"
+      ]
+    },
+    {
+      "id": "1557",
+      "title": "FC Single-User Accessible Washroom with Baby-Change Station",
+      "lat": "43.6612",
+      "lng": "-79.4005",
+      "buildingCode": "075",
+      "address": "41 Willcocks Street",
+      "desc": "Floor 1, Room 105",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall, accessible, accessibility, wheelchair, Baby, change station, change table",
+      "sublayers": [
+        "186",
+        "56"
+      ]
+    },
+    {
+      "id": "1558",
+      "title": "FC Single-User Washroom ",
+      "lat": "43.6611",
+      "lng": "-79.4005",
+      "buildingCode": "075",
+      "address": "41 Willcocks Street",
+      "desc": "Top Floor, Room 202<br \/>\nBasement, Room 14",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1559",
+      "title": "FH Single-User Washroom ",
+      "lat": "43.6667",
+      "lng": "-79.3940",
+      "buildingCode": "050",
+      "address": "84 Queen's Park ",
+      "desc": "Floor 1, Room 107",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1560",
+      "title": "FH Women's Single-User Washroom ",
+      "lat": "43.6667",
+      "lng": "-79.3940",
+      "buildingCode": "050",
+      "address": "84 Queen's Park ",
+      "desc": "Floor 3, Room 307",
+      "kw": "Washroom, bathroom, toilet, w\/c, single stall, women, female, feminine",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1561",
+      "title": "LW Single-User Accessible Washroom",
+      "aka": "Law",
+      "lat": "43.6658",
+      "lng": "-79.3943",
+      "buildingCode": "040",
+      "address": "78 Queen's Park ",
+      "desc": "Floor 4, Room 423",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall, accessible, accessibility, wheelchair",
+      "sublayers": [
+        "183",
+        "56"
+      ]
+    },
+    {
+      "id": "1562",
+      "title": "LA Single-User Washroom ",
+      "lat": "43.6657",
+      "lng": "-79.3970",
+      "buildingCode": "602",
+      "address": "15 Devonshire Place",
+      "desc": "Floor 2, Room 251",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1563",
+      "title": "LA Single-User Accessible Washroom ",
+      "lat": "43.6657",
+      "lng": "-79.3969",
+      "buildingCode": "602",
+      "address": "15 Devonshire Place",
+      "desc": "Floor 2, Room 252",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall, accessible, accessibility, wheelchair",
+      "sublayers": [
+        "56"
+      ]
+    },
+    {
+      "id": "1565",
+      "title": "SM Single-User Washroom ",
+      "aka": "Gerstein Library",
+      "lat": "43.6620",
+      "lng": "-79.3937",
+      "buildingCode": "003",
+      "address": "7-9 King's College Circle",
+      "desc": "Basement, Room B188",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1566",
+      "title": "GD Single-User Accessible Washroom ",
+      "aka": "Grad House",
+      "lat": "43.6634",
+      "lng": "-79.4016",
+      "buildingCode": "064",
+      "address": "60 Harbord Street",
+      "desc": "Basement, Room 004b",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall, accessible, accessibility, wheelchair",
+      "sublayers": [
+        "183",
+        "56"
+      ]
+    },
+    {
+      "id": "1567",
+      "title": "GD Single-User Washroom ",
+      "aka": "Grad House",
+      "lat": "43.6638",
+      "lng": "-79.4019",
+      "buildingCode": "064",
+      "address": "60 Harbord Street",
+      "desc": "Basement, Room 009A",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1568",
+      "title": "GU Single-User Washroom ",
+      "aka": "GSU",
+      "lat": "43.6608",
+      "lng": "-79.4002",
+      "buildingCode": "056",
+      "address": "16 Bancroft Avenue",
+      "desc": "Floor 2, Room 201",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1569",
+      "title": "HH Women's & Men's Multi-Stall Washroom with Baby-Change Station",
+      "lat": "43.6640",
+      "lng": "-79.3940",
+      "buildingCode": "002",
+      "address": "7 Hart House Circle",
+      "desc": "Basement, Room 159 (Women's) & 160 (Men's)",
+      "kw": "Washroom, bathroom, toilet, w\/c, men, male, masculine, women, female, feminine, baby, change station, change table",
+      "sublayers": [
+        "186"
+      ]
+    },
+    {
+      "id": "1570",
+      "title": "HU Single-User Accessible Washroom ",
+      "lat": "43.6594",
+      "lng": "-79.3982",
+      "buildingCode": "067",
+      "address": "215 Huron Street",
+      "desc": "Floor 9, Room 934",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall, accessible, accessibility, wheelchair",
+      "sublayers": [
+        "56"
+      ]
+    },
+    {
+      "id": "1571",
+      "title": "IN Single-User Washroom ",
+      "aka": "Innis",
+      "lat": "43.6656",
+      "lng": "-79.3995",
+      "buildingCode": "132",
+      "address": "2 Sussex Avenue",
+      "desc": "Floor 1, Room 128<br \/>\nFloor 2, Room 203 & 228<br \/>\nFloor 3, Room 301B & 319",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1572",
+      "title": "BT Single-User Accessible Washroom ",
+      "lat": "43.6674",
+      "lng": "-79.3924",
+      "buildingCode": "509",
+      "address": "93 Charles St. West",
+      "desc": "Floor 1, Room 108",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall, accessible, accessibility, wheelchair",
+      "sublayers": [
+        "56"
+      ]
+    },
+    {
+      "id": "1573",
+      "title": "BT Women's & Men's Single-User Washroom ",
+      "lat": "43.6673",
+      "lng": "-79.3924",
+      "buildingCode": "509",
+      "address": "93 Charles St. West",
+      "desc": "Floor 3, Room 302 (Men's) & 303 (Women's)",
+      "kw": "Washroom, bathroom, toilet, w\/c, single stall, women, female, feminine, men, male, masculine",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1574",
+      "title": "DR Single-User Washroom ",
+      "lat": "43.6621",
+      "lng": "-79.3967",
+      "buildingCode": "019",
+      "address": "21 King's College Circle",
+      "desc": "Basement, Room 63a",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1575",
+      "title": "JH Women's Single-User Washroom ",
+      "aka": "Humanities",
+      "lat": "43.6677",
+      "lng": "-79.4003",
+      "buildingCode": "128",
+      "address": "170 St. George Street",
+      "desc": "Floor 10, Room 1045",
+      "kw": "Washroom, bathroom, toilet, w\/c, single stall, women, female, feminine",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1576",
+      "title": "JH Single-User Washroom ",
+      "aka": "Humanities",
+      "lat": "43.6676",
+      "lng": "-79.4004",
+      "buildingCode": "128",
+      "address": "170 St. George Street",
+      "desc": "Floor 10, Room 1046 & 1047",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1577",
+      "title": "JH Single-User Accessible Washroom with Baby-Change Station",
+      "aka": "Humanities",
+      "lat": "43.6676",
+      "lng": "-79.4004",
+      "buildingCode": "128",
+      "address": "170 St. George Street",
+      "desc": "Floor 10, Room 1048",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall, accessible, accessibility, wheelchair, Baby, change station, change table",
+      "sublayers": [
+        "186",
+        "56"
+      ]
+    },
+    {
+      "id": "1578",
+      "title": "JH Women's Multi-Stall Accessible Washroom ",
+      "aka": "Humanities",
+      "lat": "43.6677",
+      "lng": "-79.4003",
+      "buildingCode": "128",
+      "address": "170 St. George Street",
+      "desc": "Floor 3, Room 336<br \/>\nFloor 4, Room 400<br \/>\nFloor 5, Room 500<br \/>\nFloor 6, Room 600<br \/>\nFloor 7, Room 700<br \/>\nFloor 8, Room 800<br \/>\nFloor 9, Room 900<br \/>\n",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "kw": "Washroom, bathroom, toilet, w\/c, women, female, feminine, accessible, accessibility, wheelchair",
+      "sublayers": [
+        "184"
+      ]
+    },
+    {
+      "id": "1579",
+      "title": "RL Single-User Accessible Washroom with Baby Change Station",
+      "aka": "Robarts",
+      "lat": "43.6646",
+      "lng": "-79.3997",
+      "buildingCode": "006",
+      "address": "130 St. George Street",
+      "desc": "Floor 1, Room 1013 *baby change station<br \/>\nFloor 4, Room 4002",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall, accessible, accessibility, baby, change station, change table, infant, wheelchair",
+      "sublayers": [
+        "186",
+        "56"
+      ]
+    },
+    {
+      "id": "1580",
+      "title": "KS Women's & Men's Multi-Stall Accessible Washroom ",
+      "aka": "Career Centre, Bookstore, CAPS Health Services, Health & Wellness, Student Housing ",
+      "lat": "43.6590",
+      "lng": "-79.3968",
+      "buildingCode": "143",
+      "address": "214 College Street",
+      "desc": "Floor 3, Room 323 (Men's) & 339 (Women's)",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "kw": "Washroom, bathroom, toilet, w\/c, men, male, masculine, women, female, feminine, accessible, accessibility, wheelchair",
+      "sublayers": [
+        "185",
+        "184"
+      ]
+    },
+    {
+      "id": "1581",
+      "title": "LI  Single-User Washroom ",
+      "lat": "43.6685",
+      "lng": "-79.3936",
+      "buildingCode": "528",
+      "address": "125 Queen's Park ",
+      "desc": "Floor 1, Room 129<br \/>\nFloor 2, Room 228<br \/>\nFloor 3, Room 319<br \/>\nBasement, Room B13 & B14<br \/>\n",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1582",
+      "title": "GE Men's Single-User Washroom ",
+      "lat": "43.6662",
+      "lng": "-79.3999",
+      "buildingCode": "104",
+      "address": "150 St. George Street",
+      "desc": "Basement, Room 18<br \/>\nFloor 3, Room 319<br \/>\nFloor 5, Room 512<br \/>\nFloor 14, Room 1412<br \/>\n",
+      "kw": "Washroom, bathroom, toilet, w\/c, single stall, men, male, masculine",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1583",
+      "title": "GE Women's Single-User Washroom ",
+      "lat": "43.6662",
+      "lng": "-79.4000",
+      "buildingCode": "0000",
+      "address": "150 St. George Street",
+      "desc": "Floor 7, Room 709<br \/>\nFloor 9, Room 913<br \/>\nFloor 11, Room 1112<br \/>\nFloor 13, Room 1314",
+      "kw": "Washroom, bathroom, toilet, w\/c, single stall, women, female, feminine",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1584",
+      "title": "MR Women's Single-User Accessible Washroom ",
+      "lat": "43.6614",
+      "lng": "-79.3929",
+      "buildingCode": "004",
+      "address": "12 Queen's Park Crescent West",
+      "desc": "Basement, Room 10a",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "kw": "Washroom, bathroom, toilet, w\/c, single stall, women, female, feminine, accessible, accessibility, wheelchair",
+      "sublayers": [
+        "56",
+        "184"
+      ]
+    },
+    {
+      "id": "1585",
+      "title": "MR Women's Multi-Stall Accessible Washroom ",
+      "lat": "43.6613",
+      "lng": "-79.3929",
+      "buildingCode": "004",
+      "address": "12 Queen's Park Crescent West",
+      "desc": "Floor 1, Room 111",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "kw": "Washroom, bathroom, toilet, w\/c, women, female, feminine, accessible, accessibility, wheelchair",
+      "sublayers": [
+        "184"
+      ]
+    },
+    {
+      "id": "1586",
+      "title": "MR Women's Single-User Washroom ",
+      "lat": "43.6613",
+      "lng": "-79.3930",
+      "buildingCode": "0000",
+      "address": "12 Queen's Park Crescent West",
+      "desc": "Floor 4, Room 403A",
+      "kw": "Washroom, bathroom, toilet, w\/c, single stall, women, female, feminine",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1587",
+      "title": "MU Single-User Accessible Washroom ",
+      "lat": "43.6651",
+      "lng": "-79.3964",
+      "buildingCode": "012C",
+      "address": "5 Devonshire Place",
+      "desc": "Basement",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall, accessible, accessibility, wheelchair",
+      "sublayers": [
+        "56"
+      ]
+    },
+    {
+      "id": "1588",
+      "title": "MU Women's & Men's Single-User Accessible Washroom ",
+      "lat": "43.6648",
+      "lng": "-79.3964",
+      "buildingCode": "012A",
+      "address": "1 Devonshire Place",
+      "desc": "Floor 1, Room 104 (Women's) & 105 (Men's)<br \/>\nFloor 2, Room 204 (Women's) & 205 (Men's)",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "kw": "Washroom, bathroom, toilet, w\/c, men, male, masculine, women, female, feminine, accessible, accessibility, wheelchair",
+      "sublayers": [
+        "185",
+        "56",
+        "184"
+      ]
+    },
+    {
+      "id": "1589",
+      "title": "MU Women's Multi-Stall Accessible Washroom ",
+      "lat": "43.6653",
+      "lng": "-79.3968",
+      "buildingCode": "012A",
+      "address": "1 Devonshire Place",
+      "desc": "Basement, Room 004",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "kw": "Washroom, bathroom, toilet, w\/c, women, female, feminine, accessible, accessibility, wheelchair",
+      "sublayers": [
+        "184"
+      ]
+    },
+    {
+      "id": "1590",
+      "title": "NF Women's Single-User Washroom ",
+      "lat": "43.6664",
+      "lng": "-79.3921",
+      "buildingCode": "515",
+      "address": "73 Queen's Park Crescent East",
+      "desc": "Floor 2, Room 236",
+      "kw": "Washroom, bathroom, toilet, w\/c, single stall, women, female, feminine",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1591",
+      "title": "OH Women's & Men's Single-User Washroom ",
+      "lat": "43.6664",
+      "lng": "-79.3890",
+      "buildingCode": "415",
+      "address": "50 St. Joseph Street",
+      "desc": "Basement, Room 17 (Men's)<br \/>\nFloor 1, Room 121 (Men's) & 122 (Women's)<br \/>\nFloor 2, Room 215 (Men's) & 216 (Women's)<br \/>\nFloor 3, Room 314 (Men's) & 315 (Women's)",
+      "kw": "Washroom, bathroom, toilet, w\/c, single stall, women, female, feminine, men, male, masculine",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1592",
+      "title": "OI Single-User Accessible Washroom with Baby Change Station",
+      "aka": "OISE",
+      "lat": "43.6687",
+      "lng": "-79.3989",
+      "buildingCode": "123",
+      "address": "252 Bloor Street West",
+      "desc": "Floor 1, Room G149A<br \/>\nFloor 5, Room 5200A with Baby Change Station",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall, accessible, accessibility, wheelchair, baby, change station, change table,infant",
+      "sublayers": [
+        "186",
+        "56"
+      ]
+    },
+    {
+      "id": "1593",
+      "title": "OI Women's Single-User Washroom ",
+      "aka": "OISE",
+      "lat": "43.6686",
+      "lng": "-79.3987",
+      "buildingCode": "123",
+      "address": "252 Bloor Street West",
+      "desc": "Floor 1, Room G100",
+      "kw": "Washroom, bathroom, toilet, w\/c, single stall, women, female, feminine",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1594",
+      "title": "PI Women's Single-User Washroom ",
+      "lat": "43.6657",
+      "lng": "-79.3910",
+      "buildingCode": "418",
+      "address": "59 Queen's Park Crescent East",
+      "desc": "Basement, Room 6B<br \/>\nFloor 4, Room 46B",
+      "kw": "Washroom, bathroom, toilet, w\/c, single stall, women, female, feminine",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1595",
+      "title": "RW Single-User Washroom ",
+      "lat": "43.6631",
+      "lng": "-79.3992",
+      "buildingCode": "072",
+      "address": "25 Harbord Street",
+      "desc": "Floor 1, Room 146A",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1596",
+      "title": "RU Single-User Accessible Washroom ",
+      "lat": "43.6554",
+      "lng": "-79.3892",
+      "buildingCode": "152",
+      "address": "500 University Avenue",
+      "desc": "Floor 1, Room 180<br \/>\nFloor 4, Room 402",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall, accessible, accessibility, wheelchair",
+      "sublayers": [
+        "56"
+      ]
+    },
+    {
+      "id": "1597",
+      "title": "RT Women's & Men's Multi-Stall Accessible Washroom ",
+      "aka": "Rotman, Commerce",
+      "lat": "43.6652",
+      "lng": "-79.3983",
+      "buildingCode": "134",
+      "address": "105 St. George Street",
+      "desc": "Floor 1, Room 1003 (Men's)<br \/>\nFloor 2, Room 2091 (Women's)<br \/>\nFloor 3, Room 3061 (Women's)<br \/>\nFloor 4, Room 4061 (Women's)<br \/>\nFloor 5, Room 5061 (Women's)<br \/>\n",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "kw": "Washroom, bathroom, toilet, w\/c, men, male, masculine, women, female, feminine, accessible, accessibility, wheelchair",
+      "sublayers": [
+        "185",
+        "184"
+      ]
+    },
+    {
+      "id": "1599",
+      "title": "RT Single-User Accessible Washroom with Baby Change Station",
+      "aka": "Rotman",
+      "lat": "43.6649",
+      "lng": "-79.3981",
+      "buildingCode": "134",
+      "address": "105 St. George Street",
+      "desc": "South Building, Lower Level (across from the elevator), Room LL1001 with Baby Change Station<br \/>\nFloor 9, Room 9043<br \/>\n",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall, accessible, accessibility, wheelchair, baby, change station, change table, infant",
+      "sublayers": [
+        "186",
+        "56"
+      ]
+    },
+    {
+      "id": "1600",
+      "title": "RT Single-User Washroom ",
+      "aka": "Rotman",
+      "lat": "43.6648",
+      "lng": "-79.3981",
+      "buildingCode": "134",
+      "address": "105 St. George Street",
+      "desc": "Floor 9, Room 9045",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1601",
+      "title": "CS Single-User Accessible Washroom ",
+      "aka": "SCS",
+      "lat": "43.6667",
+      "lng": "-79.3999",
+      "buildingCode": "103",
+      "address": "158 St. George Street",
+      "desc": "Basement, Room 18",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall, accessible, accessibility, wheelchair",
+      "sublayers": [
+        "56"
+      ]
+    },
+    {
+      "id": "1602",
+      "title": "CH Women's & Men's Multi-Stall Washroom with Baby-Change Station",
+      "aka": "Con Hall",
+      "lat": "43.6608",
+      "lng": "-79.3955",
+      "buildingCode": "010A",
+      "address": "31 King's College Circle",
+      "desc": "FLoor 1, Room 124 (Men's) & 142 (Women's) both with Baby Change Station",
+      "kw": "Washroom, bathroom, toilet, w\/c, men, male, masculine, women, female, feminine, baby, change station, change table",
+      "sublayers": [
+        "186"
+      ]
+    },
+    {
+      "id": "1603",
+      "title": "EP Women's & Men's Multi-Stall Accessible Washroom ",
+      "lat": "43.6593",
+      "lng": "-79.3921",
+      "buildingCode": "192",
+      "address": "149 College Street",
+      "desc": "Basement, Room 003 (Men's) & 004 (Women's)<br \/>\nFloor 2, Room 206 (Men's) & 207 (Women's)<br \/>\nFloor 3, Room 307 (Men's) & 308 (Women's)<br \/>\nFloor 4, Room 406 (Men's) & 407 (Women's)",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "kw": "Washroom, bathroom, toilet, w\/c, men, male, masculine, women, female, feminine, accessible, accessibility, wheelchair",
+      "sublayers": [
+        "185",
+        "184"
+      ]
+    },
+    {
+      "id": "1604",
+      "title": "SC Women's Single-User Washroom ",
+      "aka": "21 Sussex",
+      "lat": "43.6648",
+      "lng": "-79.4009",
+      "buildingCode": "077",
+      "address": "21 Sussex Avenue",
+      "desc": "Floor 2, Room 202",
+      "kw": "Washroom, bathroom, toilet, w\/c, single stall, women, female, feminine",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1605",
+      "title": "SC Single-User Washroom with Baby-Change Station",
+      "aka": "21 Sussex",
+      "lat": "43.6649",
+      "lng": "-79.4008",
+      "buildingCode": "077",
+      "address": "21 Sussex Avenue",
+      "desc": "Floor 4, Room 402",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall, Baby, change station, change table",
+      "sublayers": [
+        "186"
+      ]
+    },
+    {
+      "id": "1606",
+      "title": "VA Women's Single-User Accessible Washroom with Baby-Change Station",
+      "lat": "43.6671",
+      "lng": "-79.3961",
+      "buildingCode": "030A",
+      "address": "275 Bloor Street West",
+      "desc": "Floor 1, Room 107",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "kw": "Washroom, bathroom, toilet, w\/c, single stall, women, female, feminine, accessible, accessibility, wheelchair, baby, change station, change table",
+      "sublayers": [
+        "186",
+        "183",
+        "56"
+      ]
+    },
+    {
+      "id": "1609",
+      "title": "VP Single-User Accessible Washroom with Baby Change Station",
+      "lat": "43.6664",
+      "lng": "-79.3964",
+      "buildingCode": "041",
+      "address": "299 Bloor Street West",
+      "desc": "Floor 2, Room 207",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall, accessible, accessibility, wheelchair",
+      "sublayers": [
+        "56"
+      ]
+    },
+    {
+      "id": "1610",
+      "title": "VC Single-User Accessible Washroom ",
+      "aka": "Old Vic",
+      "lat": "43.6669",
+      "lng": "-79.3919",
+      "buildingCode": "501",
+      "address": "91 Charles Street West",
+      "desc": "Basement, Room B07",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall, accessible, accessibility, wheelchair",
+      "sublayers": [
+        "56"
+      ]
+    },
+    {
+      "id": "1611",
+      "title": "WB Men's Single-User Accessible Washroom ",
+      "lat": "43.6592",
+      "lng": "-79.3953",
+      "buildingCode": "008",
+      "address": "184-200 College Street",
+      "desc": "Floor 1, Room 109",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "kw": "Washroom, bathroom, toilet, w\/c, single stall, men, male, masculine, accessible, accessibility, wheelchair",
+      "sublayers": [
+        "185",
+        "56"
+      ]
+    },
+    {
+      "id": "1612",
+      "title": "WB Men's Single-User Washroom ",
+      "lat": "43.6591",
+      "lng": "-79.3954",
+      "buildingCode": "008",
+      "address": "184-200 College Street",
+      "desc": "Floor 1, Room 151a<br \/>\nFloor 2, Room 209 & 252<br \/>\nFloor 3, Room 355<br \/>\nBasement, Room 25d",
+      "kw": "Washroom, bathroom, toilet, w\/c, single stall, men, male, masculine",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1613",
+      "title": "WB Single-User Washroom ",
+      "lat": "43.6592",
+      "lng": "-79.3949",
+      "buildingCode": "008",
+      "address": "184-200 College Street",
+      "desc": "Floor 4, Room 432",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1614",
+      "title": "JP Single-User Washroom ",
+      "lat": "43.6640",
+      "lng": "-79.3897",
+      "buildingCode": "098B",
+      "address": "90 Wellesley Street West",
+      "desc": "Basement, Room R024 & 16<br \/>\nFloor 1, Room 155 & 120 <br \/>\nFloor 2, Room 269<br \/>\nFloor 3, Room 369 & 351A",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1615",
+      "title": "WO Single-User Accessible Washroom",
+      "lat": "43.6673",
+      "lng": "-79.3993",
+      "buildingCode": "130",
+      "address": "321 Bloor Street West",
+      "desc": "Floor 1, Room 147",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall, accessible, accessibility, wheelchair",
+      "sublayers": [
+        "183",
+        "56"
+      ]
+    },
+    {
+      "id": "1616",
+      "title": "WO Women's Accessible Washroom ",
+      "lat": "43.6673",
+      "lng": "-79.3994",
+      "buildingCode": "130",
+      "address": "321 Bloor Street West",
+      "desc": "Basement, Room 7",
+      "access": "Entrance: Auto-door opener, Accessible stall with grab bar, Accessible sink and hand drying facilities",
+      "kw": "Washroom, bathroom, toilet, w\/c, female, women, feminine, accessible, accessibility, wheelchair",
+      "sublayers": [
+        "184"
+      ]
+    },
+    {
+      "id": "1617",
+      "title": "WW Single-User Washroom ",
+      "lat": "43.6664",
+      "lng": "-79.3989",
+      "buildingCode": "038",
+      "address": "119 St. George Street",
+      "desc": "Floor 2, Room A208A<br \/>\nFloor 2, Room c225 & c229<br \/>\nFloor 3, Room A307A",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1618",
+      "title": "WA Women's Washroom with Baby-Change Station",
+      "lat": "43.6669",
+      "lng": "-79.3992",
+      "buildingCode": "088",
+      "address": "123 St. George Street",
+      "desc": "Floor 2, Room 205",
+      "kw": "Washroom, bathroom, toilet, w\/c, female, women, feminine,baby, change station, change table",
+      "sublayers": [
+        "186"
+      ]
+    },
+    {
+      "id": "1619",
+      "title": "JP Women's & Men's Single-User Washroom ",
+      "lat": "43.6641",
+      "lng": "-79.3898",
+      "buildingCode": "098B",
+      "address": "90 Wellesley Street West",
+      "desc": "Basement, Room R023(Women's)<br \/>\nFloor 1, Room R121 (Women's)<br \/>\nFloor 1, Room R106 (Men's)<br \/>\nFloor 2, Room 286 (Men's)",
+      "kw": "Washroom, bathroom, toilet, w\/c, single stall, women, female, feminine, men, male, masculine",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1620",
+      "title": "CF Single-User Washroom ",
+      "lat": "43.6652",
+      "lng": "-79.3889",
+      "buildingCode": "430",
+      "address": "95 St Joseph Street",
+      "desc": "Basement, Room 122W",
+      "kw": "Washroom, bathroom, toilet, w\/c, gender neutral, all gender, single stall",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1621",
+      "title": "CF Men's Single-User Washroom ",
+      "lat": "43.6652",
+      "lng": "-79.3887",
+      "buildingCode": "430",
+      "address": "95 St Joseph Street",
+      "desc": "Basement, Room 124W",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1816",
+      "title": "MS Women's Multi-Stall Washroom with Baby Change Station",
+      "aka": "Med-Sci",
+      "lat": "43.6608",
+      "lng": "-79.3942",
+      "buildingCode": "0000",
+      "address": "1 King's College Cir.",
+      "desc": "3rd Floor - Baby change station available in designated breastfeeding\/pumping room. Available Mon- Fri only. A key is needed. Please call the Family Care Office: 416.978.0951",
+      "kw": "washroom, bathroom, toilet, w\/c, women, female, feminine, baby, change station, change table, infant",
+      "sublayers": [
+        "186"
+      ]
+    },
+    {
+      "id": "1817",
+      "title": "VA Men's and Women's Single-User Stall with Baby Change Station",
+      "aka": "Varsity Stadium",
+      "lat": "43.6672",
+      "lng": "-79.3962",
+      "buildingCode": "0000",
+      "address": "299 Bloor Street West",
+      "desc": "Room D1012-a & D1012-b",
+      "kw": "washroom, bathroom, toilet, w\/c, women, female, feminine, men, male, masculine, baby, change station, change table, infant",
+      "sublayers": [
+        "186",
+        "183"
+      ]
+    },
+    {
+      "id": "1823",
+      "title": "HS Men's & Women's Multi-Stall Washroom with Baby Change Station",
+      "aka": "Health Sciences",
+      "lat": "43.6590",
+      "lng": "-79.3929",
+      "buildingCode": "0000",
+      "desc": "6th floor",
+      "kw": "washroom, bathroom, toilet, w\/c, women, female, feminine, men, male, masculine, baby, change station, change table, infant",
+      "sublayers": [
+        "186"
+      ]
+    },
+    {
+      "id": "1825",
+      "title": "BV Women & Men's Multi-User Washroom with Baby Change Station",
+      "aka": "Bladen Wing",
+      "lat": "43.7839",
+      "lng": "-79.1865",
+      "buildingCode": "0000",
+      "desc": "B200 (M) w\/ baby change station<br \/>\nB220 (W) w\/ baby change station",
+      "kw": "Washroom, bathroom, toilet, w\/c, men, male, masculine, women, female, feminine, baby, change station, change table",
+      "sublayers": [
+        "186"
+      ]
+    },
+    {
+      "id": "1899",
+      "title": "BL Single-User Washroom",
+      "aka": "Faculty of Information, iSchool",
+      "lat": "43.6651",
+      "lng": "-79.3992",
+      "buildingCode": "006A",
+      "desc": "Floor 3, room 329 (next to elevators)<br \/>\nFloor 6, room 653 (next to elevators)",
+      "kw": "washroom,  bathroom, toilet, w\/c, gender neutral, all gender, single stall",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1956",
+      "title": "MP Single-User Washrooms",
+      "aka": "physics",
+      "lat": "43.6605",
+      "lng": "-79.3985",
+      "buildingCode": "078",
+      "desc": "room 319<br \/>\nroom 512<br \/>\nroom 709<br \/>\nroom 913<br \/>\nroom 1112",
+      "kw": "gender neutral, all gender, single stall",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1957",
+      "title": "MP Multi-User All-Gender Washrooms",
+      "aka": "physics",
+      "lat": "43.6605",
+      "lng": "-79.3984",
+      "buildingCode": "078",
+      "desc": "All-Gender Multi-User Washrooms, lockable for Single-User use<br \/>\nRoom 416<br \/>\nRoom 620",
+      "sublayers": [
+        "183"
+      ]
+    },
+    {
+      "id": "1958",
+      "title": "HU Single-User Accessible Washroom with Baby Change Station",
+      "lat": "43.6593",
+      "lng": "-79.3982",
+      "buildingCode": "067",
+      "desc": "Floor 6, room 633",
+      "sublayers": [
+        "186",
+        "56"
+      ]
+    }
+  ]
+}
