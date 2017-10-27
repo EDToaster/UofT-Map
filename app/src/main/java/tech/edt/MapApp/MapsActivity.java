@@ -3,11 +3,14 @@ package tech.edt.MapApp;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.content.res.AssetManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationManager;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -45,30 +48,33 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
 import java.io.InputStream;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 
-
+//TODO: Move to different threads
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
     private FloatingSearchView mSearchView;
     public final String CREATOR = "Howard Chen";
 
-    private ArrayList<Feature> features;
-    public static ArrayList<Feature> values;
+    private ArrayList<Feature> UTSG;
+    private ArrayList<Feature> UTM;
+    private ArrayList<Feature> UTSC;
+    private ArrayList<Feature> current_selected;
 
     private static LatLng CAMPUSLATLNG;
 
     private static final int MY_PERMISSIONS_FINE_LOCATION = 101;
     private static final float FOCUSED_ZOOM = 18f;
     private static final float DEFAULT_ZOOM = 15f;
-
-    private ArrayList<Feature> suggestions;
 
     //feature visibilities
     private boolean buildingVisible = true;
@@ -78,6 +84,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private boolean isHybrid = true;
 
     private Feature persistent;
+
+    private GetResultsTask current_task;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,39 +100,31 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mapFragment.getMapAsync(this);
 
         setUpFeatures();
+        current_selected = UTSG;
 
-        values = (ArrayList<Feature>) features.clone();
-
-        Collections.sort(values, new Comparator<Feature>() {
+        Comparator cmp = new Comparator<Feature>() {
             public int compare(Feature f1, Feature f2) {
                 return f1.toString().compareTo(f2.toString());
             }
-        });
+        };
+
+        Collections.sort(UTSG, cmp);
+        Collections.sort(UTM, cmp);
+        Collections.sort(UTSC, cmp);
 
         mSearchView = (FloatingSearchView) findViewById(R.id.floating_search_view);
-        suggestions = new ArrayList<>();
         CAMPUSLATLNG = new LatLng(43.6644, -79.3923);
 
         mSearchView.setOnQueryChangeListener(new FloatingSearchView.OnQueryChangeListener() {
             @Override
             public void onSearchTextChanged(String oldQuery, final String newQuery) {
-                suggestions.clear();
-                if (!newQuery.equals(""))
-                    for (Feature i : values) {
-                        String[] toks = newQuery.toLowerCase().trim().split("(\\s+)");
-                        boolean put = true;
-                        for (String tok : toks) {
-                            if (!i.getStrippedMatchString().contains(tok)) {
-                                put = false;
-                                break;
-                            }
-                        }
-                        if (put)
-                            suggestions.add(i);
-                    }
+                if (current_task != null)
+                    current_task.cancel(true);
 
+                current_task = new GetResultsTask();
+                current_task.execute(newQuery);
                 //pass them on to the search view
-                mSearchView.swapSuggestions(suggestions);
+
 
             }
 
@@ -134,8 +134,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             public void onSuggestionClicked(SearchSuggestion searchSuggestion) {
                 if (searchSuggestion instanceof Feature) {
                     Feature suggestion = (Feature) searchSuggestion;
-                    mSearchView.setSearchText(suggestion.toShortString());
                     mSearchView.setSearchFocused(false);
+                    mSearchView.setSearchText(suggestion.toShortString());
                     LatLng ll = suggestion.getLatLng();
 
                     suggestion.getMarker(mMap).setVisible(true);
@@ -146,8 +146,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
             @Override
             public void onSearchAction(String currentQuery) {
-                if (suggestions.size() == 1) // if only one suggestion left, choose that
-                    this.onSuggestionClicked(suggestions.get(0));
+//                if (suggestions.size() == 1) // if only one suggestion left, choose that
+//                    this.onSuggestionClicked(suggestions.get(0));
 
             }
         });
@@ -198,7 +198,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .withName("Feedback").withSelectable(false);
 
 
-
         //create the drawer and remember the `Drawer` result object
         final Drawer result = new DrawerBuilder()
                 .withActivity(this)
@@ -230,8 +229,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         if (tag.startsWith("f_")) {
                             drawerItem.withSetSelected(true);
                             toggleFeatureVisibilty(tag.substring(2));
-
-
                         }
                         return true;
                     }
@@ -243,18 +240,56 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     @Override
                     public void onMenuOpened() {
                         result.openDrawer();
-
                     }
 
                     @Override
                     public void onMenuClosed() {
                         result.openDrawer();
-
-
                     }
                 });
 
 
+    }
+
+    private class GetResultsTask extends AsyncTask<String, Void, ArrayList<Feature>> {
+
+        private Exception exception;
+        private ArrayList<Feature> suggestions;
+
+        protected ArrayList<Feature> doInBackground(String... args) {
+            String newQuery = args[0];
+
+            suggestions = new ArrayList<>();
+
+            if (!newQuery.equals(""))
+                for (Feature i : current_selected) {
+                    String[] toks = newQuery.toLowerCase().trim().split("(\\s+)");
+                    boolean put = true;
+                    for (String tok : toks) {
+                        if (!i.getStrippedMatchString().contains(tok)) {
+                            put = false;
+                            break;
+                        }
+                    }
+                    if (put)
+                        suggestions.add(i);
+                }
+
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    if (mSearchView.hasFocusable())
+                        mSearchView.swapSuggestions(suggestions);
+                    else
+                        mSearchView.clearSuggestions();
+                }
+            });
+            return suggestions;
+        }
+
+        public ArrayList<Feature> getSuggestions() {
+            return suggestions;
+        }
     }
 
     private void toggleHybrid() {
@@ -276,18 +311,19 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private void toggleFeatureVisibilty(String type) {
         if (type.equals("building")) {
             buildingVisible = !buildingVisible;
-            for (Feature place : features) {
+            for (Feature place : current_selected) {
                 if (place instanceof Building) {
                     place.getMarker(mMap).setVisible(!buildingVisible);
                 }
             }
         } else if (type.equals("food")) {
             foodVisible = !foodVisible;
-            for (Feature place : features) {
+            for (Feature place : current_selected) {
                 if (place instanceof Food) {
                     place.getMarker(mMap).setVisible(!foodVisible);
                 }
             }
+
         } else if (type.equals("carpark")) {
             //requires car park implementation
             carparkVisible = !carparkVisible;
@@ -322,7 +358,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         goToNinja(CAMPUSLATLNG, DEFAULT_ZOOM);
 
-        for (Feature i : this.features)
+        for (Feature i : this.UTSG)
+            i.getMarker(mMap); //create the marker for each feature
+        for (Feature i : this.UTM)
+            i.getMarker(mMap); //create the marker for each feature
+        for (Feature i : this.UTSC)
             i.getMarker(mMap); //create the marker for each feature
 
 
@@ -438,7 +478,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
     private void setUpFeatures() {
-        this.features = new ArrayList<>();
+        this.UTSG = new ArrayList<>();
+        this.UTM = new ArrayList<>();
+        this.UTSC = new ArrayList<>();
 
         AssetManager assetManager = getAssets();
         try {
@@ -459,8 +501,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         for (int i = 0; i < arr.length(); i++) {
             JSONObject ij = arr.getJSONObject(i);
-            if (!ij.getString("campus").equals("UTSG"))
-                continue;
+
             double lat = ij.getDouble("lat");
             double lng = ij.getDouble("lng");
             String name = ij.getString("name");
@@ -475,7 +516,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     address.getString("country") + "\n" +
                     address.getString("postal");
 
-            this.features.add(new Building(lat, lng, name, code, street, s, short_name));
+            if (ij.getString("campus").equals("UTSG"))
+                this.UTSG.add(new Building(lat, lng, name, code, street, s, short_name));
+            else if (ij.getString("campus").equals("UTM"))
+                this.UTM.add(new Building(lat, lng, name, code, street, s, short_name));
+            else if (ij.getString("campus").equals("UTSC"))
+                this.UTSC.add(new Building(lat, lng, name, code, street, s, short_name));
 
         }
     }
@@ -491,8 +537,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // lat,  lng,  name, address,  short_name,  url,  imageURL,  desc,  hours,  tags
         for (int i = 0; i < arr.length(); i++) {
             JSONObject ij = arr.getJSONObject(i);
-            if (!ij.getString("campus").equals("UTSG"))
-                continue;
             double lat = ij.getDouble("lat");
             double lng = ij.getDouble("lng");
             String name = ij.getString("name");
@@ -510,8 +554,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             Hours hours = new Hours(h);
             String[] tags = Util.toStringArray(ij.getJSONArray("tags"));
 
-            this.features.add(new Food(lat, lng, name, address, short_name, url, imageURL, desc, hours, tags));
-
+            if (ij.getString("campus").equals("UTSG"))
+                this.UTSG.add(new Food(lat, lng, name, address, short_name, url, imageURL, desc, hours, tags));
+            else if (ij.getString("campus").equals("UTM"))
+                this.UTM.add(new Food(lat, lng, name, address, short_name, url, imageURL, desc, hours, tags));
+            else if (ij.getString("campus").equals("UTSC"))
+                this.UTSC.add(new Food(lat, lng, name, address, short_name, url, imageURL, desc, hours, tags));
         }
     }
 
