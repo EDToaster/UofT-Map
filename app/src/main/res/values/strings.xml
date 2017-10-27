@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">MapAppRepo</string>
+    <string name="app_name">U of T Map</string>
     <string name="search_hint">Search here</string>
-    <string name="title_activity_maps">UofT Map</string>
+    <string name="title_activity_maps">U of T Map</string>
     <string name="title_activity_search_results">Search Results</string>
     <string name="drop_down">▼</string>
     <string name="toggle_food">Show/Hide Food</string>
@@ -13,8 +13,8 @@
 
 
     <string name="layout_margin">24dp</string>
-    <string name="drawer_item_home" >Home</string>
-    <string name="drawer_item_settings" >Settings</string>
+    <string name="drawer_item_home">Home</string>
+    <string name="drawer_item_settings">Settings</string>
     <string name="drawer_item_UTSG">St. Geroge</string>
     <string name="drawer_item_campus">Campus</string>
     <string name="drawer_item_UTSC">Missisauga</string>
