@@ -68,15 +68,16 @@ abstract class Feature implements SearchSuggestion {
     }
 
     public Marker getMarker(GoogleMap mMap) {
-        if (this.marker == null) {
-            this.marker = mMap.addMarker(getMarkerOptions());
+        if (marker == null) {
+            marker = mMap.addMarker(getMarkerOptions());
             marker.setVisible(false);
+            marker.setTag(this);
         }
         return marker;
     }
 
     private MarkerOptions getMarkerOptions() {
-        return new MarkerOptions().position(latlng).icon(getIcon()).title(this.toString()).snippet(getSnippet());
+        return new MarkerOptions().position(latlng).icon(getIcon()).title(this.toString()).snippet(getSnippet() + "\nClick for more info");
     }
 
 }

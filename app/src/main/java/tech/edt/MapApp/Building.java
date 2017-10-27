@@ -31,7 +31,7 @@ public class Building extends Feature implements SearchSuggestion {
         return code;
     }
 
-    public String getAddress(String code) {
+    public String getAddress() {
         return address;
     }
 
@@ -58,7 +58,6 @@ public class Building extends Feature implements SearchSuggestion {
 
     @Override
     public void writeToParcel(Parcel parcel, int i) {
-
     }
 
     @Override

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/building_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@string/layout_margin"
+        android:layout_marginRight="@string/layout_margin"
+        android:layout_marginTop="@string/layout_margin"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:id="@+id/building_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@string/layout_margin"
+        android:layout_marginRight="@string/layout_margin"
+        android:layout_marginTop="@string/layout_margin"
+        android:text=""
+        android:textAlignment="center"
+        android:textStyle="normal" />
+
+    <Button
+        android:id="@+id/building_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@string/layout_margin"
+        android:layout_marginLeft="@string/layout_margin"
+        android:layout_marginRight="@string/layout_margin"
+        android:layout_marginTop="@string/layout_margin"
+        android:gravity="center"
+        android:text="@string/exit" />
+
+</LinearLayout>
