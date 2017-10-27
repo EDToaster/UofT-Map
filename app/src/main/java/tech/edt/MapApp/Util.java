@@ -55,6 +55,7 @@ public class Util {
         }
         return arr;
     }
+
 //    public static String getStringFromFile(String filePath) throws Exception {
 //        File fl = new File(filePath);
 //        FileInputStream fin = new FileInputStream(fl);

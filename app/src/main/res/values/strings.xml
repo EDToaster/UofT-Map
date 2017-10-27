@@ -6,7 +6,9 @@
     <string name="drop_down">▼</string>
     <string name="toggle_food">Show/Hide Food</string>
     <string name="toggle_buildings">Show/Hide Buildings</string>
+    <string name="toggle_hybrid">Toggle Hybrid Map</string>
     <string name="exit">Exit Info</string>
+    <string name="exit_image">Exit Image</string>
 
 
     <string name="layout_margin">24dp</string>

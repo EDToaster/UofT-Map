@@ -1,14 +1,16 @@
 package tech.edt.MapApp;
 
-import android.media.Image;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.AsyncTask;
 import android.os.Parcel;
 
 import com.arlib.floatingsearchview.suggestions.model.SearchSuggestion;
 import com.google.android.gms.maps.model.BitmapDescriptor;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 
+import java.io.IOException;
+import java.net.MalformedURLException;
 import java.net.URL;
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
@@ -28,18 +30,39 @@ public class Food extends Feature implements SearchSuggestion {
     private String desc;
     private String[] tags;
     private Hours hours;
-    private BitmapDescriptor image;
+    private Bitmap image;
 
 
     public Food(double lat, double lng, String name, String address, String short_name, String url, String imageURL, String desc, Hours hours, String[] tags) {
         super(lat, lng, name);
+        new GetImageTask().execute(imageURL);
         this.address = address;
         this.short_name = short_name;
         this.hours = hours;
         this.tags = tags;
         this.url = url;
         this.desc = desc;
-        this.image = BitmapDescriptorFactory.fromPath(imageURL);
+    }
+
+
+    private class GetImageTask extends AsyncTask<String, Void, Bitmap> {
+
+        private Exception exception;
+
+        protected Bitmap doInBackground(String... urls) {
+            try {
+                URL im = new URL(urls[0]);
+                image = BitmapFactory.decodeStream(im.openStream());
+            } catch (MalformedURLException e) {
+            } catch (IOException e) {
+            }
+            return image;
+        }
+
+        protected void onPostExecute(Bitmap bitmap) {
+            // TODO: check this.exception
+            // TODO: do something with the feed
+        }
     }
 
     public BitmapDescriptor getIcon() {
@@ -71,7 +94,8 @@ public class Food extends Feature implements SearchSuggestion {
         return hours;
     }
 
-    public BitmapDescriptor getImage() {
+
+    public Bitmap getImage() {
         return image;
     }
 

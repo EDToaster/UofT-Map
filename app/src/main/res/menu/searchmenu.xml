@@ -24,5 +24,12 @@
         android:titleCondensed="hello"
         app:showAsAction="never" />
 
+    <item
+        android:id="@+id/action_hybrid"
+        android:orderInCategory="5"
+        android:title="@string/toggle_hybrid"
+        android:titleCondensed="hello"
+        app:showAsAction="never" />
+
 
 </menu>

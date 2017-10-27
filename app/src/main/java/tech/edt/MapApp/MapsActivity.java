@@ -17,6 +17,7 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -62,12 +63,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private ArrayList<Feature> suggestions;
 
-
     //feature visibilities
-    boolean buildingVisible = true;
-    boolean foodVisible = true;
-    boolean carparkVisible = true;
-    boolean bikeparkVisible = true;
+    private boolean buildingVisible = true;
+    private boolean foodVisible = true;
+    private boolean carparkVisible = true;
+    private boolean bikeparkVisible = true;
+    private boolean isHybrid = true;
+
+    private Feature persistent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -129,15 +132,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     LatLng ll = suggestion.getLatLng();
 
                     suggestion.getMarker(mMap).setVisible(true);
-
+                    persistent = suggestion;
                     goToNinja(ll, FOCUSED_ZOOM);
                 }
             }
 
             @Override
             public void onSearchAction(String currentQuery) {
-                if (!suggestions.isEmpty())
-                    this.onSuggestionClicked(suggestions.get(suggestions.size() - 1));
+                if (suggestions.size() == 1) // if only one suggestion left, choose that
+                    this.onSuggestionClicked(suggestions.get(0));
+
             }
         });
 
@@ -148,50 +152,60 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 if (item.getItemId() == R.id.action_location) {
                     centerOnMe();
 
-                } else if(item.getItemId() == R.id.action_food) {
+                } else if (item.getItemId() == R.id.action_food) {
                     toggleFeatureVisibilty("food");
 
-                } else if(item.getItemId() == R.id.action_building) {
+                } else if (item.getItemId() == R.id.action_building) {
                     toggleFeatureVisibilty("building");
+                } else if (item.getItemId() == R.id.action_hybrid) {
+                    toggleHybrid();
                 }
             }
         });
     }
-    /*Toggles visibility of all markers of a specific type
-        @param: String type
-            type of the feature
-               typecodes:"building", "food", "carpark", "bikepark"
 
-        */
-    private void toggleFeatureVisibilty(String type){
-        if(type.equals("building")){
-            buildingVisible = !buildingVisible;
-            for (Feature place: features){
-                if(place instanceof Building){
-                    place.getMarker(mMap).setVisible(!buildingVisible);
-                }
-            }
-        }
-        else if(type.equals("food")){
-            foodVisible = !foodVisible;
-            for (Feature place: features){
-                if(place instanceof Food){
-                    place.getMarker(mMap).setVisible(!foodVisible);
-                }
-            }
-        }
-        else if(type.equals("carpark")){
-            //requires car park implementation
-            carparkVisible = !carparkVisible;
-
-        }
-        else if(type.equals("bikepark")){
-            //requires bikepark implementation
-            bikeparkVisible = !bikeparkVisible;
-        }
+    private void toggleHybrid() {
+        isHybrid = !isHybrid;
+        if (isHybrid)
+            mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+        else
+            mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
     }
 
 
+    /**
+     * Toggles visibility of all markers of a specific type
+     *
+     * @param: String type
+     * type of the feature
+     * typecodes:"building", "food", "carpark", "bikepark"
+     **/
+    private void toggleFeatureVisibilty(String type) {
+        if (type.equals("building")) {
+            buildingVisible = !buildingVisible;
+            for (Feature place : features) {
+                if (place instanceof Building) {
+                    place.getMarker(mMap).setVisible(!buildingVisible);
+                }
+            }
+        } else if (type.equals("food")) {
+            foodVisible = !foodVisible;
+            for (Feature place : features) {
+                if (place instanceof Food) {
+                    place.getMarker(mMap).setVisible(!foodVisible);
+                }
+            }
+        } else if (type.equals("carpark")) {
+            //requires car park implementation
+            carparkVisible = !carparkVisible;
+
+        } else if (type.equals("bikepark")) {
+            //requires bikepark implementation
+            bikeparkVisible = !bikeparkVisible;
+        }
+        if (persistent != null)
+            persistent.getMarker(mMap).setVisible(true);
+    }
 
     /**
      * Manipulates the map once available.
@@ -205,6 +219,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        toggleHybrid();
 //        mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
 //            @Override
 //            public boolean onMarkerClick(Marker marker) {
@@ -238,6 +253,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 if (f instanceof Building) {
                     BuildingInfoDialog bid = new BuildingInfoDialog(MapsActivity.this, (Building) f);
                     bid.show();
+                } else if (f instanceof Food) {
+                    FoodInfoDialog fid = new FoodInfoDialog(MapsActivity.this, (Food) f);
+                    fid.show();
                 }
             }
         });

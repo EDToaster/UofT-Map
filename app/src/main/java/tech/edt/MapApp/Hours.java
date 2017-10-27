@@ -76,5 +76,17 @@ public class Hours {
         return null;
     }
 
+    public String toString() {
+        String s = "Sunday: " + sunday.toString() +
+                "\nMonday: " + monday.toString() +
+                "\nTuesday: " + tuesday.toString() +
+                "\nWednesday: " + wednesday.toString() +
+                "\nThursday: " + thursday.toString() +
+                "\nFriday: " + friday.toString() +
+                "\nSaturday: " + saturday.toString();
+
+        return s;
+    }
+
 
 }
