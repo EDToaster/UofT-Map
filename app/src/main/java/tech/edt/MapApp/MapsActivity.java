@@ -38,6 +38,7 @@ import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.model.DividerDrawerItem;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
+import com.mikepenz.materialdrawer.model.SectionDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 
 import org.json.JSONArray;
@@ -169,41 +170,69 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
 
 
-
         });
-
-
-
 
 
         //TODO: Implement the Navbar
         //nav drawer
         new DrawerBuilder().withActivity(this).build();
-        PrimaryDrawerItem item1 = new PrimaryDrawerItem().withIdentifier(1).withName(R.string.drawer_item_home);
-        PrimaryDrawerItem item3 = new PrimaryDrawerItem().withIdentifier(3).withName(R.string.drawer_item_home);
+        PrimaryDrawerItem itemSG = new PrimaryDrawerItem().withIdentifier(1)
+                .withName(R.string.drawer_item_UTSG);
+        PrimaryDrawerItem itemSC = new PrimaryDrawerItem().withIdentifier(5)
+                .withName(R.string.drawer_item_UTSC);
+        PrimaryDrawerItem itemM = new PrimaryDrawerItem().withIdentifier(6)
+                .withName(R.string.drawer_item_UTM);
 
-        SecondaryDrawerItem item2 = new SecondaryDrawerItem().withIdentifier(2).withName(R.string.drawer_item_campus);
+        SecondaryDrawerItem food = new SecondaryDrawerItem().withIdentifier(21)
+                .withName("Food").withSelectable(false);
+        SecondaryDrawerItem building = new SecondaryDrawerItem().withIdentifier(22)
+                .withName("Buildings").withSelectable(false);
+        SecondaryDrawerItem car = new SecondaryDrawerItem().withIdentifier(23)
+                .withName("Parking").withSelectable(false);
+        SecondaryDrawerItem bike = new SecondaryDrawerItem().withIdentifier(24)
+                .withName("Bike Racks").withSelectable(false);
+
+        SecondaryDrawerItem settings = new SecondaryDrawerItem().withIdentifier(12)
+                .withName("Settings").withSelectable(false);
+        SecondaryDrawerItem feedback = new SecondaryDrawerItem().withIdentifier(13)
+                .withName("Feedback").withSelectable(false);
+
 
 
         //create the drawer and remember the `Drawer` result object
         final Drawer result = new DrawerBuilder()
                 .withActivity(this)
                 .addDrawerItems(
-                        item1,
-                        new DividerDrawerItem(),
-                        item3,
-                        new DividerDrawerItem(),
-                        item2,
-                        new SecondaryDrawerItem().withName(R.string.drawer_item_UTSG),
-                        new SecondaryDrawerItem().withName(R.string.drawer_item_UTSC),
-                        new SecondaryDrawerItem().withName(R.string.drawer_item_UTM)
+                        new SectionDrawerItem().withName("Campus").withTextColor(Color.BLUE),
+                        itemSG.withTag("c_SG"),
+                        itemM.withTag("c_M"),
+                        itemSC.withTag("c_SC"),
+                        new SectionDrawerItem().withName("Layers").withTextColor(Color.BLUE),
+                        building.withTag("f_building"),
+                        food.withTag("f_food"),
+                        bike.withTag("f_bikepark"),
+                        car.withTag("f_carpark"),
 
 
+                        new DividerDrawerItem()
                 )
+                .addStickyDrawerItems(
+                        settings.withTag("s_settings"),
+                        feedback.withTag("s_feedback")
+                )
+
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
+
                         // do something with the clicked item :D
+                        String tag = (String) drawerItem.getTag();
+                        if (tag.startsWith("f_")) {
+                            drawerItem.withSetSelected(true);
+                            toggleFeatureVisibilty(tag.substring(2));
+
+
+                        }
                         return true;
                     }
                 })
@@ -214,12 +243,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     @Override
                     public void onMenuOpened() {
                         result.openDrawer();
+
                     }
 
                     @Override
                     public void onMenuClosed() {
+                        result.openDrawer();
 
-                    }} );
+
+                    }
+                });
 
 
     }
