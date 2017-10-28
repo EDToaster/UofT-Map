@@ -180,6 +180,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         //nav drawer
         new DrawerBuilder().withActivity(this).build();
 
+        //all the items
         final PrimaryDrawerItem itemSG = new PrimaryDrawerItem().withIdentifier(1)
                 .withName(R.string.drawer_item_UTSG).withSelectable(false);
         final PrimaryDrawerItem itemSC = new PrimaryDrawerItem().withIdentifier(5)
