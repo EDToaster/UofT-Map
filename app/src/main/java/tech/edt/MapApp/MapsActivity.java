@@ -38,9 +38,7 @@ import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.model.DividerDrawerItem;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
-import com.mikepenz.materialdrawer.model.SecondaryToggleDrawerItem;
 import com.mikepenz.materialdrawer.model.SectionDrawerItem;
-import com.mikepenz.materialdrawer.model.ToggleDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 
 import org.json.JSONArray;
@@ -170,7 +168,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 //                } else if (item.getItemId() == R.id.action_building) {
 //                    setVisibilityAndUpdateMarkers("building");
 //                } else if (item.getItemId() == R.id.action_hybrid) {
-//                    toggleHybrid();
+//                    setHybrid();
 //                }
 //            }
 //
@@ -220,7 +218,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .withName("Normal").withSelectable(false);
 
 
-
         result = new DrawerBuilder() //result is a global navbar
                 .withActivity(this)
                 .addDrawerItems(
@@ -258,18 +255,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                             drawerItem.withSetSelected(!drawerItem.isSelected());
                             setVisibilityAndUpdateMarkers(tag.substring(2).trim(), drawerItem.isSelected());
                             updateResult(drawerItem);
-                        }
-                        else if (tag.startsWith("s_")) {
-                            if(tag.substring(2).equals("feedback")){
+                        } else if (tag.startsWith("s_")) {
+                            if (tag.substring(2).equals("feedback")) {
                                 Uri uri = Uri.parse("http://www.example.com");
                                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                                 startActivity(intent);
-                            }
-                            else if(tag.substring(2).equals("settings")){
+                            } else if (tag.substring(2).equals("settings")) {
                                 Toast.makeText(getApplicationContext(), "coming soon",
                                         Toast.LENGTH_LONG).show();
-                            }
-                            else if(tag.substring(2).equals("about")){
+                            } else if (tag.substring(2).equals("about")) {
                                 Toast.makeText(getApplicationContext(), "Unofficial University"
                                                 + " of Toronto Map app." +
                                                 "\n\nDesigned and Developed by Howard Chen and " +
@@ -278,8 +272,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                             }
 
 
-                        }
-                         else if (tag.startsWith("c_")) {
+                        } else if (tag.startsWith("c_")) {
                             if (tag.substring(2).trim().equals("UTSG")) {
                                 current_selected = UTSG;
                                 goToNinja(UTSGLL, DEFAULT_ZOOM);
@@ -294,24 +287,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                             //reset current marker
                             persistent = null;
-                            setVisibilityAndUpdateMarkers("all", false);
-                        }
-                        else if (tag.startsWith("m_")) {
-                            if(tag.substring(2).equals("map")){
+                            setVisibilityAndUpdateMarkers("layers", false);
+                        } else if (tag.startsWith("m_")) {
+                            if (tag.substring(2).equals("map")) {
+                                mapview.withSetSelected(!mapview.isSelected());
+                                hybrid.withSetSelected(!mapview.isSelected());
+                            } else if (tag.substring(2).equals("hybrid")) {
                                 mapview.withSetSelected(!mapview.isSelected());
                                 hybrid.withSetSelected(!hybrid.isSelected());
-                                updateResult(mapview);
-                                updateResult(hybrid);
-                                toggleHybrid();
-
                             }
-                            else if(tag.substring(2).equals("hybrid")){
-                                mapview.withSetSelected(!mapview.isSelected());
-                                hybrid.withSetSelected(!hybrid.isSelected());
-                                updateResult(mapview);
-                                updateResult(hybrid);
-                                toggleHybrid();
-                            }
+                            setHybrid(hybrid.isSelected());
+                            updateResult(mapview);
+                            updateResult(hybrid);
                         }
                         return true;
                     }
@@ -330,7 +317,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         result.openDrawer();
                     }
 
-                    //TODO: Remove the arrow icon. Hamburger only.
+                    //FIXME: Hamburger icon only!
                     @Override
                     public void onMenuClosed() {
                         result.openDrawer();
@@ -382,8 +369,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
-    private void toggleHybrid() {
-        isHybrid = !isHybrid;
+    private void setHybrid(boolean flag) {
+        isHybrid = flag;
         if (isHybrid)
             mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
         else
@@ -400,13 +387,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      **/
     //NOTE: I changed this because the feature visibility was getting messed up when changing campuses
     private void setVisibilityAndUpdateMarkers(String type, boolean isSelected) {
-        if (type.equals("building") || type.equals("all"))
+        if (type.equals("building") || type.equals("layers"))
             buildingVisible = isSelected;
-        if (type.equals("food") || type.equals("all"))
+        if (type.equals("food") || type.equals("layers"))
             foodVisible = isSelected;
-        if (type.equals("carpark") || type.equals("all"))
+        if (type.equals("carpark") || type.equals("layers"))
             carparkVisible = isSelected;
-        if (type.equals("bikepark") || type.equals("all"))
+        if (type.equals("bikepark") || type.equals("layers"))
             bikeparkVisible = isSelected;
         refreshMarkers();
 
@@ -439,7 +426,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-        toggleHybrid();
+        setHybrid(false);
 
         goToNinja(UTSGLL, DEFAULT_ZOOM);
 
@@ -553,11 +540,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         }
     }
-
-    public static boolean implementsInterface(Object object, Class interf) {
-        return interf.isInstance(object);
-    }
-
 
     private void setUpFeatures() {
         this.UTSG = new ArrayList<>();
