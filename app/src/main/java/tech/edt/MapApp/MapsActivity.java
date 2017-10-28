@@ -43,7 +43,9 @@ import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.model.DividerDrawerItem;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
+import com.mikepenz.materialdrawer.model.SecondaryToggleDrawerItem;
 import com.mikepenz.materialdrawer.model.SectionDrawerItem;
+import com.mikepenz.materialdrawer.model.ToggleDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 
 import org.json.JSONArray;
@@ -184,6 +186,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         //TODO: Implement the Navbar
         //nav drawer
         new DrawerBuilder().withActivity(this).build();
+
         PrimaryDrawerItem itemSG = new PrimaryDrawerItem().withIdentifier(1)
                 .withName(R.string.drawer_item_UTSG);
         PrimaryDrawerItem itemSC = new PrimaryDrawerItem().withIdentifier(5)
@@ -199,18 +202,34 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .withName("Parking").withSelectable(false);
         SecondaryDrawerItem bike = new SecondaryDrawerItem().withIdentifier(24)
                 .withName("Bike Racks").withSelectable(false);
+        SecondaryDrawerItem accessibility = new SecondaryDrawerItem().withIdentifier(25)
+                .withName("Accessibility").withSelectable(false);
+        SecondaryDrawerItem safety = new SecondaryDrawerItem().withIdentifier(26)
+                .withName("Safety").withSelectable(false);
+        SecondaryDrawerItem green = new SecondaryDrawerItem().withIdentifier(27)
+                .withName("Green Spaces").withSelectable(false);
+        SecondaryDrawerItem community = new SecondaryDrawerItem().withIdentifier(28)
+                .withName("Community Features").withSelectable(false);
+
 
         SecondaryDrawerItem settings = new SecondaryDrawerItem().withIdentifier(12)
                 .withName("Settings").withSelectable(false);
         SecondaryDrawerItem feedback = new SecondaryDrawerItem().withIdentifier(13)
                 .withName("Feedback").withSelectable(false);
+        SecondaryDrawerItem about = new SecondaryDrawerItem().withIdentifier(14)
+                .withName("About").withSelectable(false);
+
+        final SecondaryDrawerItem hybrid = new SecondaryDrawerItem().withIdentifier(71)
+                .withName("Hybrid").withSelectable(false);
+        final SecondaryDrawerItem mapview = new SecondaryDrawerItem().withIdentifier(72)
+                .withName("Normal").withSelectable(false);
 
 
-        //create the drawer and remember the `Drawer` result object
-        result = new DrawerBuilder()
+
+        result = new DrawerBuilder() //result is a global navbar
                 .withActivity(this)
                 .addDrawerItems(
-                        new SectionDrawerItem().withName("Campus").withTextColor(Color.BLUE),
+                        //removed campus header.
                         itemSG.withTag("c_UTSG").withSetSelected(true),
                         itemM.withTag("c_UTM"),
                         itemSC.withTag("c_UTSC"),
@@ -219,20 +238,25 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         food.withTag("f_food"),
                         bike.withTag("f_bikepark"),
                         car.withTag("f_carpark"),
+                        accessibility.withTag("f_accessibility"),
+                        safety.withTag("f_safety"),
+                        green.withTag("f_green"),
+                        community.withTag("f_community"),
+                        new SectionDrawerItem().withName("Map").withTextColor(Color.BLUE),
+                        hybrid.withTag("m_hybrid"),
+                        mapview.withTag("m_map"),
 
+                        new DividerDrawerItem(),
 
-                        new DividerDrawerItem()
-                )
-                .addStickyDrawerItems(
                         settings.withTag("s_settings"),
+                        about.withTag("s_about"),
                         feedback.withTag("s_feedback")
                 )
-
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
 
-                        // do something with the clicked item :D
+
                         String tag = (String) drawerItem.getTag();
                         if (tag.startsWith("f_")) {
                             drawerItem.withSetSelected(!drawerItem.isSelected());
@@ -248,24 +272,44 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         else if (tag.startsWith("c_")) {
                             //mMap.clear();
                             if(tag.substring(2).equals("UTSG")){
-                                current_selected = UTSG;
+                                //current_selected = UTSG;
                                 //setUpFeatures();
                             }
                             else if(tag.substring(2).equals("UTM")){
-                                current_selected = UTM;
+                                //current_selected = UTM;
                                 //setUpFeatures();
                             }
                             else if(tag.substring(2).equals("UTSC")){
-                                current_selected = UTSC;
+                                //current_selected = UTSC;
                                 //setUpFeatures();
+                            }
+
+                        }
+                        else if (tag.startsWith("m_")) {
+                            if(tag.substring(2).equals("map")){
+                                mapview.withSetSelected(!mapview.isSelected());
+                                hybrid.withSetSelected(!hybrid.isSelected());
+                                updateResult(mapview);
+                                updateResult(hybrid);
+                                toggleHybrid();
+
+                            }
+                            else if(tag.substring(2).equals("hybrid")){
+                                mapview.withSetSelected(!mapview.isSelected());
+                                hybrid.withSetSelected(!hybrid.isSelected());
+                                updateResult(mapview);
+                                updateResult(hybrid);
+                                toggleHybrid();
                             }
                         }
                         return true;
                     }
                 })
                 .build();
-        itemSG.withSetSelected(true);
+        itemSG.withSetSelected(true); //SG selected first
+        mapview.withSetSelected(true);
         result.updateItem(itemSG);
+        result.updateItem(mapview);
 
 
 
@@ -276,6 +320,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         result.openDrawer();
                     }
 
+                    //TODO: Remove the arrow icon. Hamburger only.
                     @Override
                     public void onMenuClosed() {
                         result.openDrawer();
