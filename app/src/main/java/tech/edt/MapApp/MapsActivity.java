@@ -141,7 +141,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     mSearchView.setSearchText(suggestion.toShortString());
                     LatLng ll = suggestion.getLatLng();
 
-                    suggestion.getMarker(mMap).setVisible(true);
+                    Marker tempMarker = suggestion.getMarker(mMap);
+                    tempMarker.setVisible(true);
+                    tempMarker.showInfoWindow();
                     persistent = suggestion;
                     goToNinja(ll, FOCUSED_ZOOM);
                 }
