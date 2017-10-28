@@ -188,11 +188,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         new DrawerBuilder().withActivity(this).build();
 
         PrimaryDrawerItem itemSG = new PrimaryDrawerItem().withIdentifier(1)
-                .withName(R.string.drawer_item_UTSG);
+                .withName(R.string.drawer_item_UTSG).withSelectable(false);
         PrimaryDrawerItem itemSC = new PrimaryDrawerItem().withIdentifier(5)
-                .withName(R.string.drawer_item_UTSC);
+                .withName(R.string.drawer_item_UTSC).withSelectable(false);
         PrimaryDrawerItem itemM = new PrimaryDrawerItem().withIdentifier(6)
-                .withName(R.string.drawer_item_UTM);
+                .withName(R.string.drawer_item_UTM).withSelectable(false);
 
         SecondaryDrawerItem food = new SecondaryDrawerItem().withIdentifier(21)
                 .withName("Food").withSelectable(false).withIcon(R.drawable.food_marker);
@@ -265,9 +265,24 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                         }
                         else if (tag.startsWith("s_")) {
-                            Uri uri = Uri.parse("http://www.example.com");
-                            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                            startActivity(intent);
+                            if(tag.substring(2).equals("feedback")){
+                                Uri uri = Uri.parse("http://www.example.com");
+                                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                                startActivity(intent);
+                            }
+                            else if(tag.substring(2).equals("settings")){
+                                Toast.makeText(getApplicationContext(), "coming soon",
+                                        Toast.LENGTH_LONG).show();
+                            }
+                            else if(tag.substring(2).equals("about")){
+                                Toast.makeText(getApplicationContext(), "Unofficial University"
+                                                + " of Toronto Map app." +
+                                                "\n\nDesigned and Developed by Howard Chen and " +
+                                                "Murad Akhundov in 2017.",
+                                        Toast.LENGTH_LONG).show();
+                            }
+
+
                         }
                         else if (tag.startsWith("c_")) {
                             //mMap.clear();
