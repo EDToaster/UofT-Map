@@ -4,8 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.AssetManager;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.location.Criteria;
@@ -20,9 +18,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.Gravity;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -37,7 +33,6 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
-import com.google.android.gms.maps.model.MarkerOptions;
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.model.DividerDrawerItem;
@@ -52,15 +47,10 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.IOException;
 import java.io.InputStream;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.HashMap;
 
 //TODO: Move to different threads
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
@@ -73,18 +63,21 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private ArrayList<Feature> UTM;
     private ArrayList<Feature> UTSC;
     private ArrayList<Feature> current_selected;
+    private ArrayList<Feature> all_markers;
 
-    private static LatLng CAMPUSLATLNG;
+    private static LatLng UTSGLL;
+    private static LatLng UTMLL;
+    private static LatLng UTSCLL;
 
     private static final int MY_PERMISSIONS_FINE_LOCATION = 101;
     private static final float FOCUSED_ZOOM = 18f;
     private static final float DEFAULT_ZOOM = 15f;
 
     //feature visibilities
-    private boolean buildingVisible = true;
-    private boolean foodVisible = true;
-    private boolean carparkVisible = true;
-    private boolean bikeparkVisible = true;
+    private boolean buildingVisible = false;
+    private boolean foodVisible = false;
+    private boolean carparkVisible = false;
+    private boolean bikeparkVisible = false;
     private boolean isHybrid = true;
 
     private Feature persistent;
@@ -100,7 +93,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         //Data Crunching
         setUpFeatures();
-        current_selected = UTSG;
 
         Comparator cmp = new Comparator<Feature>() {
             public int compare(Feature f1, Feature f2) {
@@ -111,7 +103,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         Collections.sort(UTSG, cmp);
         Collections.sort(UTM, cmp);
         Collections.sort(UTSC, cmp);
+        current_selected = UTSG;
         //End Data Crunching
+
+        //Default
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         setContentView(R.layout.activity_maps);
@@ -121,7 +116,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
         mSearchView = (FloatingSearchView) findViewById(R.id.floating_search_view);
-        CAMPUSLATLNG = new LatLng(43.6644, -79.3923);
+        UTSGLL = new LatLng(43.6644, -79.3923);
+        UTMLL = new LatLng(43.5479, -79.6609);
+        UTSCLL = new LatLng(43.7841, -79.1868);
 
         mSearchView.setOnQueryChangeListener(new FloatingSearchView.OnQueryChangeListener() {
             @Override
@@ -162,25 +159,23 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
         });
 
-        mSearchView.setOnMenuItemClickListener(new FloatingSearchView.OnMenuItemClickListener() {
-
-            @Override
-            public void onActionMenuItemSelected(MenuItem item) {
-                if (item.getItemId() == R.id.action_location) {
-                    centerOnMe();
-
-                } else if (item.getItemId() == R.id.action_food) {
-                    toggleFeatureVisibilty("food");
-
-                } else if (item.getItemId() == R.id.action_building) {
-                    toggleFeatureVisibilty("building");
-                } else if (item.getItemId() == R.id.action_hybrid) {
-                    toggleHybrid();
-                }
-            }
-
-
-        });
+//        mSearchView.setOnMenuItemClickListener(new FloatingSearchView.OnMenuItemClickListener() {
+//
+//            @Override
+//            public void onActionMenuItemSelected(MenuItem item) {
+//                if (item.getItemId() == R.id.action_location) {
+//                    centerOnMe();
+//                } else if (item.getItemId() == R.id.action_food) {
+//                    setVisibilityAndUpdateMarkers("food");
+//                } else if (item.getItemId() == R.id.action_building) {
+//                    setVisibilityAndUpdateMarkers("building");
+//                } else if (item.getItemId() == R.id.action_hybrid) {
+//                    toggleHybrid();
+//                }
+//            }
+//
+//
+//        });
 
 
         //TODO: Implement the Navbar
@@ -233,6 +228,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         itemSG.withTag("c_UTSG").withSetSelected(true),
                         itemM.withTag("c_UTM"),
                         itemSC.withTag("c_UTSC"),
+
                         new SectionDrawerItem().withName("Layers").withTextColor(Color.BLUE),
                         building.withTag("f_building"),
                         food.withTag("f_food"),
@@ -260,9 +256,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         String tag = (String) drawerItem.getTag();
                         if (tag.startsWith("f_")) {
                             drawerItem.withSetSelected(!drawerItem.isSelected());
+                            setVisibilityAndUpdateMarkers(tag.substring(2).trim(), drawerItem.isSelected());
                             updateResult(drawerItem);
-                            toggleFeatureVisibilty(tag.substring(2));
-
                         }
                         else if (tag.startsWith("s_")) {
                             if(tag.substring(2).equals("feedback")){
@@ -284,21 +279,22 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
                         }
-                        else if (tag.startsWith("c_")) {
-                            //mMap.clear();
-                            if(tag.substring(2).equals("UTSG")){
-                                //current_selected = UTSG;
-                                //setUpFeatures();
+                         else if (tag.startsWith("c_")) {
+                            if (tag.substring(2).trim().equals("UTSG")) {
+                                current_selected = UTSG;
+                                goToNinja(UTSGLL, DEFAULT_ZOOM);
+                            } else if (tag.substring(2).trim().equals("UTM")) {
+                                current_selected = UTM;
+                                goToNinja(UTMLL, DEFAULT_ZOOM);
+                            } else if (tag.substring(2).trim().equals("UTSC")) {
+                                current_selected = UTSC;
+                                goToNinja(UTSCLL, DEFAULT_ZOOM);
                             }
-                            else if(tag.substring(2).equals("UTM")){
-                                //current_selected = UTM;
-                                //setUpFeatures();
-                            }
-                            else if(tag.substring(2).equals("UTSC")){
-                                //current_selected = UTSC;
-                                //setUpFeatures();
-                            }
+                            result.closeDrawer();
 
+                            //reset current marker
+                            persistent = null;
+                            setVisibilityAndUpdateMarkers("all", false);
                         }
                         else if (tag.startsWith("m_")) {
                             if(tag.substring(2).equals("map")){
@@ -327,7 +323,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         result.updateItem(mapview);
 
 
-
         mSearchView.setOnLeftMenuClickListener(
                 new FloatingSearchView.OnLeftMenuClickListener() {
                     @Override
@@ -343,11 +338,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 });
 
 
-
-
     }
 
-    private void updateResult(IDrawerItem item){
+    private void updateResult(IDrawerItem item) {
         result.updateItem(item);
     }
 
@@ -387,9 +380,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             return suggestions;
         }
 
-        public ArrayList<Feature> getSuggestions() {
-            return suggestions;
-        }
     }
 
     private void toggleHybrid() {
@@ -408,30 +398,31 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      * type of the feature
      * typecodes:"building", "food", "carpark", "bikepark"
      **/
-    private void toggleFeatureVisibilty(String type) {
-        if (type.equals("building")) {
-            buildingVisible = !buildingVisible;
-            for (Feature place : current_selected) {
-                if (place instanceof Building) {
-                    place.getMarker(mMap).setVisible(!buildingVisible);
-                }
-            }
-        } else if (type.equals("food")) {
-            foodVisible = !foodVisible;
-            for (Feature place : current_selected) {
-                if (place instanceof Food) {
-                    place.getMarker(mMap).setVisible(!foodVisible);
-                }
-            }
+    //NOTE: I changed this because the feature visibility was getting messed up when changing campuses
+    private void setVisibilityAndUpdateMarkers(String type, boolean isSelected) {
+        if (type.equals("building") || type.equals("all"))
+            buildingVisible = isSelected;
+        if (type.equals("food") || type.equals("all"))
+            foodVisible = isSelected;
+        if (type.equals("carpark") || type.equals("all"))
+            carparkVisible = isSelected;
+        if (type.equals("bikepark") || type.equals("all"))
+            bikeparkVisible = isSelected;
+        refreshMarkers();
 
-        } else if (type.equals("carpark")) {
-            //requires car park implementation
-            carparkVisible = !carparkVisible;
+    }
 
-        } else if (type.equals("bikepark")) {
-            //requires bikepark implementation
-            bikeparkVisible = !bikeparkVisible;
+    private void refreshMarkers() {
+        for (Feature place : all_markers)
+            place.getMarker(mMap).setVisible(false);
+
+        for (Feature place : current_selected) {
+            if (place instanceof Building)
+                place.getMarker(mMap).setVisible(buildingVisible);
+            else if (place instanceof Food)
+                place.getMarker(mMap).setVisible(foodVisible);
         }
+
         if (persistent != null)
             persistent.getMarker(mMap).setVisible(true);
     }
@@ -449,20 +440,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         toggleHybrid();
-//        mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
-//            @Override
-//            public boolean onMarkerClick(Marker marker) {
-//
-//            }
-//        });
 
-        goToNinja(CAMPUSLATLNG, DEFAULT_ZOOM);
+        goToNinja(UTSGLL, DEFAULT_ZOOM);
 
-        for (Feature i : this.UTSG)
-            i.getMarker(mMap); //create the marker for each feature
-        for (Feature i : this.UTM)
-            i.getMarker(mMap); //create the marker for each feature
-        for (Feature i : this.UTSC)
+        refreshMarkers();
+        for (Feature i : this.all_markers)
             i.getMarker(mMap); //create the marker for each feature
 
 
@@ -581,6 +563,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         this.UTSG = new ArrayList<>();
         this.UTM = new ArrayList<>();
         this.UTSC = new ArrayList<>();
+        this.all_markers = new ArrayList<>();
 
         AssetManager assetManager = getAssets();
         try {
@@ -589,6 +572,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         } catch (Exception e) {
             Log.e("setUpFeatures", "Exception", e);
         }
+
+        this.all_markers.addAll(UTSG);
+        this.all_markers.addAll(UTM);
+        this.all_markers.addAll(UTSC);
     }
 
     private void setUpBuildings(AssetManager assetManager) throws Exception {
@@ -600,29 +587,34 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
         for (int i = 0; i < arr.length(); i++) {
-            JSONObject ij = arr.getJSONObject(i);
+            try {
+                JSONObject ij = arr.getJSONObject(i);
 
-            double lat = ij.getDouble("lat");
-            double lng = ij.getDouble("lng");
-            String name = ij.getString("name");
-            String code = ij.getString("code");
-            String short_name = ij.getString("short_name");
+                double lat = ij.getDouble("lat");
+                double lng = ij.getDouble("lng");
+                String name = ij.getString("name");
+                String code = ij.getString("code");
+                String short_name = ij.getString("short_name");
 
-            JSONObject address = ij.getJSONObject("address");
-            String street = address.getString("street");
-            String s = street + "\n" +
-                    address.getString("city") + " " +
-                    address.getString("province") + " " +
-                    address.getString("country") + "\n" +
-                    address.getString("postal");
+                JSONObject address = ij.getJSONObject("address");
+                String street = address.getString("street");
+                String s = street + "\n" +
+                        address.getString("city") + " " +
+                        address.getString("province") + " " +
+                        address.getString("country") + "\n" +
+                        address.getString("postal");
 
-            if (ij.getString("campus").equals("UTSG"))
-                this.UTSG.add(new Building(lat, lng, name, code, street, s, short_name));
-            else if (ij.getString("campus").equals("UTM"))
-                this.UTM.add(new Building(lat, lng, name, code, street, s, short_name));
-            else if (ij.getString("campus").equals("UTSC"))
-                this.UTSC.add(new Building(lat, lng, name, code, street, s, short_name));
+                Building b = new Building(lat, lng, name, code, street, s, short_name);
 
+                if (ij.getString("campus").equals("UTSG"))
+                    this.UTSG.add(b);
+                else if (ij.getString("campus").equals("UTM"))
+                    this.UTM.add(b);
+                else if (ij.getString("campus").equals("UTSC"))
+                    this.UTSC.add(b);
+            } catch (JSONException e) {
+
+            }
         }
     }
 
@@ -636,30 +628,32 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         // lat,  lng,  name, address,  short_name,  url,  imageURL,  desc,  hours,  tags
         for (int i = 0; i < arr.length(); i++) {
-            JSONObject ij = arr.getJSONObject(i);
-            double lat = ij.getDouble("lat");
-            double lng = ij.getDouble("lng");
-            String name = ij.getString("name");
-            String short_name = ij.getString("short_name");
-            String address = ij.getString("address");
-            String url = ij.getString("url");
-            String imageURL = ij.getString("image");
-            String desc = ij.getString("description");
-            JSONObject h = null;
             try {
-                h = ij.getJSONObject("hours");
-            } catch (JSONException e) {
-                Log.e("Tag", name, e);
-            }
-            Hours hours = new Hours(h);
-            String[] tags = Util.toStringArray(ij.getJSONArray("tags"));
+                JSONObject ij = arr.getJSONObject(i);
+                double lat = ij.getDouble("lat");
+                double lng = ij.getDouble("lng");
+                String name = ij.getString("name");
+                String short_name = ij.getString("short_name");
+                String address = ij.getString("address");
+                String url = ij.getString("url");
+                String imageURL = ij.getString("image");
+                String desc = ij.getString("description");
+                JSONObject h = ij.getJSONObject("hours");
 
-            if (ij.getString("campus").equals("UTSG"))
-                this.UTSG.add(new Food(lat, lng, name, address, short_name, url, imageURL, desc, hours, tags));
-            else if (ij.getString("campus").equals("UTM"))
-                this.UTM.add(new Food(lat, lng, name, address, short_name, url, imageURL, desc, hours, tags));
-            else if (ij.getString("campus").equals("UTSC"))
-                this.UTSC.add(new Food(lat, lng, name, address, short_name, url, imageURL, desc, hours, tags));
+                Hours hours = new Hours(h);
+                String[] tags = Util.toStringArray(ij.getJSONArray("tags"));
+
+                Food f = new Food(lat, lng, name, address, short_name, url, imageURL, desc, hours, tags);
+
+                if (ij.getString("campus").equals("UTSG"))
+                    this.UTSG.add(f);
+                else if (ij.getString("campus").equals("UTM"))
+                    this.UTM.add(f);
+                else if (ij.getString("campus").equals("UTSC"))
+                    this.UTSC.add(f);
+            } catch (JSONException e) {
+                Log.e("setUpFood", "FOOD EXCEPTION", e);
+            }
         }
     }
 
@@ -669,6 +663,5 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         else up = CameraUpdateFactory.newLatLngZoom(ll, zoom);
         mMap.animateCamera(up, 2000, null);
     }
-
 
 }
