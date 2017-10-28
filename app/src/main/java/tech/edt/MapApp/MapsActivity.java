@@ -180,28 +180,28 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         //nav drawer
         new DrawerBuilder().withActivity(this).build();
 
-        PrimaryDrawerItem itemSG = new PrimaryDrawerItem().withIdentifier(1)
+        final PrimaryDrawerItem itemSG = new PrimaryDrawerItem().withIdentifier(1)
                 .withName(R.string.drawer_item_UTSG).withSelectable(false);
-        PrimaryDrawerItem itemSC = new PrimaryDrawerItem().withIdentifier(5)
+        final PrimaryDrawerItem itemSC = new PrimaryDrawerItem().withIdentifier(5)
                 .withName(R.string.drawer_item_UTSC).withSelectable(false);
-        PrimaryDrawerItem itemM = new PrimaryDrawerItem().withIdentifier(6)
+        final PrimaryDrawerItem itemM = new PrimaryDrawerItem().withIdentifier(6)
                 .withName(R.string.drawer_item_UTM).withSelectable(false);
 
-        SecondaryDrawerItem food = new SecondaryDrawerItem().withIdentifier(21)
+        final SecondaryDrawerItem food = new SecondaryDrawerItem().withIdentifier(21)
                 .withName("Food").withSelectable(false).withIcon(R.drawable.food_marker);
-        SecondaryDrawerItem building = new SecondaryDrawerItem().withIdentifier(22)
+        final SecondaryDrawerItem building = new SecondaryDrawerItem().withIdentifier(22)
                 .withName("Buildings").withSelectable(false).withIcon(R.drawable.building_marker);
-        SecondaryDrawerItem car = new SecondaryDrawerItem().withIdentifier(23)
+        final SecondaryDrawerItem car = new SecondaryDrawerItem().withIdentifier(23)
                 .withName("Parking").withSelectable(false);
-        SecondaryDrawerItem bike = new SecondaryDrawerItem().withIdentifier(24)
+        final SecondaryDrawerItem bike = new SecondaryDrawerItem().withIdentifier(24)
                 .withName("Bike Racks").withSelectable(false);
-        SecondaryDrawerItem accessibility = new SecondaryDrawerItem().withIdentifier(25)
+        final SecondaryDrawerItem accessibility = new SecondaryDrawerItem().withIdentifier(25)
                 .withName("Accessibility").withSelectable(false);
-        SecondaryDrawerItem safety = new SecondaryDrawerItem().withIdentifier(26)
+        final SecondaryDrawerItem safety = new SecondaryDrawerItem().withIdentifier(26)
                 .withName("Safety").withSelectable(false);
-        SecondaryDrawerItem green = new SecondaryDrawerItem().withIdentifier(27)
+        final SecondaryDrawerItem green = new SecondaryDrawerItem().withIdentifier(27)
                 .withName("Green Spaces").withSelectable(false);
-        SecondaryDrawerItem community = new SecondaryDrawerItem().withIdentifier(28)
+        final SecondaryDrawerItem community = new SecondaryDrawerItem().withIdentifier(28)
                 .withName("Community Features").withSelectable(false);
 
 
@@ -255,6 +255,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                             drawerItem.withSetSelected(!drawerItem.isSelected());
                             setVisibilityAndUpdateMarkers(tag.substring(2).trim(), drawerItem.isSelected());
                             updateResult(drawerItem);
+
                         } else if (tag.startsWith("s_")) {
                             if (tag.substring(2).equals("feedback")) {
                                 Uri uri = Uri.parse("http://www.example.com");
@@ -276,17 +277,49 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                             if (tag.substring(2).trim().equals("UTSG")) {
                                 current_selected = UTSG;
                                 goToNinja(UTSGLL, DEFAULT_ZOOM);
+                                itemM.withSetSelected(false);
+                                itemSC.withSetSelected(false);
+                                itemSG.withSetSelected(true);
+
                             } else if (tag.substring(2).trim().equals("UTM")) {
                                 current_selected = UTM;
                                 goToNinja(UTMLL, DEFAULT_ZOOM);
+                                itemM.withSetSelected(true);
+                                itemSC.withSetSelected(false);
+                                itemSG.withSetSelected(false);
                             } else if (tag.substring(2).trim().equals("UTSC")) {
                                 current_selected = UTSC;
                                 goToNinja(UTSCLL, DEFAULT_ZOOM);
+                                itemM.withSetSelected(false);
+                                itemSC.withSetSelected(true);
+                                itemSG.withSetSelected(false);
                             }
+                            updateResult(itemM);
+                            updateResult(itemSC);
+                            updateResult(itemSG);
                             result.closeDrawer();
                             //reset current marker
                             persistent = null;
                             setVisibilityAndUpdateMarkers("layers", false);
+
+                            //enable all selected layers
+                            setVisibilityAndUpdateMarkers("building",
+                                    building.isSelected());
+                            setVisibilityAndUpdateMarkers("food",
+                                    food.isSelected());
+                            setVisibilityAndUpdateMarkers("accessibility",
+                                    accessibility.isSelected());
+                            setVisibilityAndUpdateMarkers("green",
+                                    green.isSelected());
+                            setVisibilityAndUpdateMarkers("carpark",
+                                    car.isSelected());
+                            setVisibilityAndUpdateMarkers("bikepark",
+                                    bike.isSelected());
+                            setVisibilityAndUpdateMarkers("safety",
+                                    safety.isSelected());
+                            setVisibilityAndUpdateMarkers("community",
+                                    community.isSelected());
+
                         } else if (tag.startsWith("m_")) {
                             if (tag.substring(2).equals("map")) {
                                 mapview.withSetSelected(!mapview.isSelected());

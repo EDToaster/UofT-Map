@@ -12,22 +12,12 @@
         android:title="action_location"
         app:showAsAction="ifRoom" />
 
-    <item
-        android:id="@+id/action_food"
-        android:orderInCategory="3"
-        android:title="@string/toggle_food"
-        app:showAsAction="never" />
-    <item
-        android:id="@+id/action_building"
-        android:orderInCategory="4"
-        android:title="@string/toggle_buildings"
-        android:titleCondensed="hello"
-        app:showAsAction="never" />
+
 
     <item
-        android:id="@+id/action_hybrid"
+        android:id="@+id/action_submit"
         android:orderInCategory="5"
-        android:title="@string/toggle_hybrid"
+        android:title="@string/submit_a_feature"
         android:titleCondensed="hello"
         app:showAsAction="never" />
 

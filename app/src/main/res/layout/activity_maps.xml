@@ -23,6 +23,7 @@
         app:floatingSearch_searchHint="@string/search_hint"
         app:floatingSearch_showSearchKey="true"
         app:floatingSearch_showVoiceInput="true"
+        app:floatingSearch_menu="@menu/searchmenu"
         app:floatingSearch_suggestionsListAnimDuration="250" />
 
 </RelativeLayout>
