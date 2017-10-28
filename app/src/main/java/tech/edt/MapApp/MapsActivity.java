@@ -284,7 +284,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                 goToNinja(UTSCLL, DEFAULT_ZOOM);
                             }
                             result.closeDrawer();
-
                             //reset current marker
                             persistent = null;
                             setVisibilityAndUpdateMarkers("layers", false);
