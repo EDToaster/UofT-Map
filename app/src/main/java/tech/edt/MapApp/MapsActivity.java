@@ -211,7 +211,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .withActivity(this)
                 .addDrawerItems(
                         new SectionDrawerItem().withName("Campus").withTextColor(Color.BLUE),
-                        itemSG.withTag("c_UTSG"),
+                        itemSG.withTag("c_UTSG").withSetSelected(true),
                         itemM.withTag("c_UTM"),
                         itemSC.withTag("c_UTSC"),
                         new SectionDrawerItem().withName("Layers").withTextColor(Color.BLUE),
@@ -264,6 +264,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     }
                 })
                 .build();
+        itemSG.withSetSelected(true);
+        result.updateItem(itemSG);
 
 
 
