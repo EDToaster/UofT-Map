@@ -42,7 +42,7 @@ public class Hours {
         }
 
         public String toString() {
-            return localDateFormat.format(open) + " -> " + localDateFormat.format(close);
+            return closed ? "Closed" : localDateFormat.format(open) + " -> " + localDateFormat.format(close);
         }
 
         public boolean isClosed() {
@@ -77,13 +77,13 @@ public class Hours {
     }
 
     public String toString() {
-        String s = "Sunday: " + sunday.toString() +
-                "\nMonday: " + monday.toString() +
-                "\nTuesday: " + tuesday.toString() +
-                "\nWednesday: " + wednesday.toString() +
-                "\nThursday: " + thursday.toString() +
-                "\nFriday: " + friday.toString() +
-                "\nSaturday: " + saturday.toString();
+        String s = "Sun: " + sunday.toString() +
+                "\nMon: " + monday.toString() +
+                "\nTue: " + tuesday.toString() +
+                "\nWed: " + wednesday.toString() +
+                "\nThu: " + thursday.toString() +
+                "\nFri: " + friday.toString() +
+                "\nSat: " + saturday.toString();
 
         return s;
     }
