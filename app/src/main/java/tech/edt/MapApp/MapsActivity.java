@@ -1,6 +1,7 @@
 package tech.edt.MapApp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
@@ -10,6 +11,7 @@ import android.graphics.Typeface;
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationManager;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
@@ -86,6 +88,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private Feature persistent;
 
     private GetResultsTask current_task;
+    private Drawer result;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -141,7 +144,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     mSearchView.setSearchText(suggestion.toShortString());
                     LatLng ll = suggestion.getLatLng();
 
-                    suggestion.getMarker(mMap).setVisible(true);
+                    Marker tempMarker = suggestion.getMarker(mMap);
+                    tempMarker.setVisible(true);
+                    tempMarker.showInfoWindow();
                     persistent = suggestion;
                     goToNinja(ll, FOCUSED_ZOOM);
                 }
@@ -187,9 +192,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .withName(R.string.drawer_item_UTM);
 
         SecondaryDrawerItem food = new SecondaryDrawerItem().withIdentifier(21)
-                .withName("Food").withSelectable(false);
+                .withName("Food").withSelectable(false).withIcon(R.drawable.food_marker);
         SecondaryDrawerItem building = new SecondaryDrawerItem().withIdentifier(22)
-                .withName("Buildings").withSelectable(false);
+                .withName("Buildings").withSelectable(false).withIcon(R.drawable.building_marker);
         SecondaryDrawerItem car = new SecondaryDrawerItem().withIdentifier(23)
                 .withName("Parking").withSelectable(false);
         SecondaryDrawerItem bike = new SecondaryDrawerItem().withIdentifier(24)
@@ -202,13 +207,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
         //create the drawer and remember the `Drawer` result object
-        final Drawer result = new DrawerBuilder()
+        result = new DrawerBuilder()
                 .withActivity(this)
                 .addDrawerItems(
                         new SectionDrawerItem().withName("Campus").withTextColor(Color.BLUE),
-                        itemSG.withTag("c_SG"),
-                        itemM.withTag("c_M"),
-                        itemSC.withTag("c_SC"),
+                        itemSG.withTag("c_UTSG").withSetSelected(true),
+                        itemM.withTag("c_UTM"),
+                        itemSC.withTag("c_UTSC"),
                         new SectionDrawerItem().withName("Layers").withTextColor(Color.BLUE),
                         building.withTag("f_building"),
                         food.withTag("f_food"),
@@ -230,13 +235,39 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         // do something with the clicked item :D
                         String tag = (String) drawerItem.getTag();
                         if (tag.startsWith("f_")) {
-                            drawerItem.withSetSelected(true);
+                            drawerItem.withSetSelected(!drawerItem.isSelected());
+                            updateResult(drawerItem);
                             toggleFeatureVisibilty(tag.substring(2));
+
+                        }
+                        else if (tag.startsWith("s_")) {
+                            Uri uri = Uri.parse("http://www.example.com");
+                            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                            startActivity(intent);
+                        }
+                        else if (tag.startsWith("c_")) {
+                            //mMap.clear();
+                            if(tag.substring(2).equals("UTSG")){
+                                current_selected = UTSG;
+                                //setUpFeatures();
+                            }
+                            else if(tag.substring(2).equals("UTM")){
+                                current_selected = UTM;
+                                //setUpFeatures();
+                            }
+                            else if(tag.substring(2).equals("UTSC")){
+                                current_selected = UTSC;
+                                //setUpFeatures();
+                            }
                         }
                         return true;
                     }
                 })
                 .build();
+        itemSG.withSetSelected(true);
+        result.updateItem(itemSG);
+
+
 
         mSearchView.setOnLeftMenuClickListener(
                 new FloatingSearchView.OnLeftMenuClickListener() {
@@ -252,6 +283,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 });
 
 
+
+
+    }
+
+    private void updateResult(IDrawerItem item){
+        result.updateItem(item);
     }
 
     private class GetResultsTask extends AsyncTask<String, Void, ArrayList<Feature>> {
