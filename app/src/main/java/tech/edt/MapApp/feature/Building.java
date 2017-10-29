@@ -17,7 +17,8 @@ public class Building extends Feature implements SearchSuggestion {
     private String code, address, short_name, short_address;
 
 
-    public Building(double lat, double lng, String name, String code, String short_address, String address, String short_name) {
+    public Building(double lat, double lng, String name, String code,
+                    String short_address, String address, String short_name) {
         super(lat, lng, name, true);
         this.code = code;
         this.address = address;

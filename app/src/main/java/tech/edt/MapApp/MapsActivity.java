@@ -175,13 +175,19 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 if (item.getItemId() == R.id.action_location) {
                     centerOnMe();
                 }
+                if (item.getItemId() == R.id.action_submit) {
+                    //TODO: google froms for item submission
+                    Uri uri = Uri.parse("http://www.example.com");
+                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                    startActivity(intent);
+                }
+
             }
 
 
         });
 
 
-        //TODO: Implement the Navbar
         //nav drawer
         new DrawerBuilder().withActivity(this).build();
 
@@ -259,11 +265,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         String tag = (String) drawerItem.getTag();
                         if (tag.startsWith("f_")) {
                             drawerItem.withSetSelected(!drawerItem.isSelected());
-                            setVisibilityAndUpdateMarkers(tag.substring(2).trim(), drawerItem.isSelected());
+                            setVisibilityAndUpdateMarkers(tag.substring(2).trim(),
+                                    drawerItem.isSelected());
                             updateResult(drawerItem);
 
                         } else if (tag.startsWith("s_")) {
                             if (tag.substring(2).equals("feedback")) {
+                                //TODO: google forms for feedback
                                 Uri uri = Uri.parse("http://www.example.com");
                                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                                 startActivity(intent);
@@ -353,20 +361,21 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     @Override
                     public void onMenuOpened() {
                         result.openDrawer();
+                        mSearchView.closeMenu(true);
                     }
 
-                    //FIXME: Hamburger icon only!
                     @Override
                     public void onMenuClosed() {
                         result.openDrawer();
+
                     }
                 });
 
 
-
-
     }
 
+    /*  Updates  the drawer with the new settings of a drawer item
+     */
     private void updateResult(IDrawerItem item) {
         result.updateItem(item);
     }
@@ -429,7 +438,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      * type of the feature
      * typecodes:"building", "food", "carpark", "bikepark"
      **/
-    //NOTE: I changed this because the feature visibility was getting messed up when changing campuses
     private void setVisibilityAndUpdateMarkers(String type, boolean isSelected) {
         if (type.equals("building") || type.equals("layers"))
             buildingVisible = isSelected;
@@ -476,7 +484,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.getUiSettings().setCompassEnabled(true);
         mMap.getUiSettings().setMyLocationButtonEnabled(false);
 
-        mMap.setPadding(900, 170,0,0);
+        mMap.setPadding(900, 170, 0, 0);
 
         setHybrid(false);
 
@@ -495,7 +503,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         } else {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 requestPermissions(
-                        new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, MY_PERMISSIONS_FINE_LOCATION);
+                        new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION},
+                        MY_PERMISSIONS_FINE_LOCATION);
             }
         }
 
@@ -506,7 +515,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 //TODO: add bike support
                 Feature f = (Feature) marker.getTag();
                 if (f instanceof Building) {
-                    BuildingInfoDialog bid = new BuildingInfoDialog(MapsActivity.this, (Building) f);
+                    BuildingInfoDialog bid = new BuildingInfoDialog(MapsActivity.this,
+                            (Building) f);
                     bid.show();
                 } else if (f instanceof Food) {
                     FoodInfoDialog fid = new FoodInfoDialog(MapsActivity.this, (Food) f);
@@ -555,7 +565,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
             if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.
                     ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.
-                    checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION)
+                    checkSelfPermission(this, android.Manifest.
+                            permission.ACCESS_COARSE_LOCATION)
                     != PackageManager.PERMISSION_GRANTED) {
                 return;
             }
@@ -677,7 +688,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 Hours hours = new Hours(h);
                 String[] tags = Util.toStringArray(ij.getJSONArray("tags"));
 
-                Food f = new Food(lat, lng, name, address, short_name, url, imageURL, desc, hours, tags);
+                Food f = new Food(lat, lng, name, address, short_name, url, imageURL, desc, hours,
+                        tags);
 
                 if (ij.getString("campus").equals("UTSG"))
                     this.UTSG.add(f);
@@ -707,8 +719,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                 Bike f = new Bike(lat, lng, name, buildingCode, desc);
 
-                //Assuming all bike info is UTSG
-                this.UTSG.add(f);
+                if (!name.contains("BIXI")) { //get rid of bikeshare, at least for now.
+                    this.UTSG.add(f);                 //Assuming all bike info is UTSG
+
+                }
             } catch (JSONException e) {
                 Log.e("setUpBikes", "BIKE EXCEPTION", e);
             }
