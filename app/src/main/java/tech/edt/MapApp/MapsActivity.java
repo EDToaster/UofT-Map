@@ -175,6 +175,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 if (item.getItemId() == R.id.action_location) {
                     centerOnMe();
                 }
+                if (item.getItemId() == R.id.action_submit) {
+                    //TODO: google froms for item submission
+                    Uri uri = Uri.parse("http://www.example.com");
+                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                    startActivity(intent);
+                }
+
             }
 
 
@@ -264,6 +271,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                         } else if (tag.startsWith("s_")) {
                             if (tag.substring(2).equals("feedback")) {
+                                //TODO: google forms for feedback
                                 Uri uri = Uri.parse("http://www.example.com");
                                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                                 startActivity(intent);
@@ -353,12 +361,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     @Override
                     public void onMenuOpened() {
                         result.openDrawer();
+                        mSearchView.closeMenu(true);
                     }
 
-                    //FIXME: Hamburger icon only!
                     @Override
                     public void onMenuClosed() {
                         result.openDrawer();
+
                     }
                 });
 
