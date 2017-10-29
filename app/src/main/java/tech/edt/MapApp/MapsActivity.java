@@ -363,6 +363,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 });
 
 
+
+
     }
 
     private void updateResult(IDrawerItem item) {
@@ -471,6 +473,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         mMap.getUiSettings().setZoomControlsEnabled(true);
+        mMap.getUiSettings().setCompassEnabled(true);
+        mMap.getUiSettings().setMyLocationButtonEnabled(false);
+
+        mMap.setPadding(900, 170,0,0);
 
         setHybrid(false);
 
