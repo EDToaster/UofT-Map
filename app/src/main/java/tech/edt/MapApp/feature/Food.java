@@ -1,4 +1,4 @@
-package tech.edt.MapApp;
+package tech.edt.MapApp.feature;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -14,6 +14,9 @@ import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
+
+import tech.edt.MapApp.Hours;
+import tech.edt.MapApp.Util;
 
 /**
  * Created by class on 2017-10-24.
@@ -34,7 +37,7 @@ public class Food extends Feature implements SearchSuggestion {
 
 
     public Food(double lat, double lng, String name, String address, String short_name, String url, String imageURL, String desc, Hours hours, String[] tags) {
-        super(lat, lng, name);
+        super(lat, lng, name, true);
         new GetImageTask().execute(imageURL);
         this.address = address;
         this.short_name = short_name;

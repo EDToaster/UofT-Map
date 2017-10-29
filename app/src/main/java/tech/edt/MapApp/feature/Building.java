@@ -1,9 +1,11 @@
-package tech.edt.MapApp;
+package tech.edt.MapApp.feature;
 
 import android.os.Parcel;
 
 import com.arlib.floatingsearchview.suggestions.model.SearchSuggestion;
 import com.google.android.gms.maps.model.BitmapDescriptor;
+
+import tech.edt.MapApp.Util;
 
 /**
  * Created by class on 2017-10-24.
@@ -16,7 +18,7 @@ public class Building extends Feature implements SearchSuggestion {
 
 
     public Building(double lat, double lng, String name, String code, String short_address, String address, String short_name) {
-        super(lat, lng, name);
+        super(lat, lng, name, true);
         this.code = code;
         this.address = address;
         this.short_name = short_name;
@@ -57,8 +59,7 @@ public class Building extends Feature implements SearchSuggestion {
     }
 
     @Override
-    public void writeToParcel(Parcel parcel, int i) {
-    }
+    public void writeToParcel(Parcel parcel, int i) {    }
 
     @Override
     public String getSnippet() {

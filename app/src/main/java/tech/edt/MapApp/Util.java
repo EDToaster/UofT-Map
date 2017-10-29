@@ -1,9 +1,13 @@
 package tech.edt.MapApp;
 
+import android.content.res.AssetManager;
+
 import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 
 import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -19,10 +23,12 @@ import java.io.InputStreamReader;
 public class Util {
     private static BitmapDescriptor BUILDINGBMP;
     private static BitmapDescriptor FOODBMP;
+    private static BitmapDescriptor BIKEBMP;
 
     public static void init() {
         BUILDINGBMP = BitmapDescriptorFactory.fromResource(R.drawable.building_marker);
         FOODBMP = BitmapDescriptorFactory.fromResource(R.drawable.food_marker);
+        BIKEBMP = BitmapDescriptorFactory.fromResource(R.drawable.bike_marker);
     }
 
 
@@ -34,6 +40,10 @@ public class Util {
         return FOODBMP;
     }
 
+    public static BitmapDescriptor getBikeBMP() {
+        return BIKEBMP;
+    }
+
     public static String convertStreamToString(InputStream is) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(is));
         StringBuilder sb = new StringBuilder();
@@ -43,6 +53,13 @@ public class Util {
         }
         reader.close();
         return sb.toString();
+    }
+
+    public static JSONObject getBaseObj(AssetManager assetManager, String file) throws Exception {
+        InputStream input = assetManager.open(file);
+        String food = Util.convertStreamToString(input);
+        JSONObject obj = new JSONObject(food);
+        return obj;
     }
 
     public static String[] toStringArray(JSONArray array) {

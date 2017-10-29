@@ -1,4 +1,4 @@
-package tech.edt.MapApp;
+package tech.edt.MapApp.feature;
 
 import android.os.Parcel;
 
@@ -14,14 +14,20 @@ import com.google.android.gms.maps.model.MarkerOptions;
  * A abstract "Feature" class that needs implementation
  */
 
-abstract class Feature implements SearchSuggestion {
+public abstract class Feature implements SearchSuggestion {
     private LatLng latlng;
     private String name;
     private Marker marker;
+    private boolean isSearchable;
 
-    Feature(double lat, double lng, String name) {
+    Feature(double lat, double lng, String name, boolean isSearchable) {
         this.latlng = new LatLng(lat, lng);
         this.name = name;
+        this.isSearchable = isSearchable;
+    }
+
+    public boolean isSearchable() {
+        return isSearchable;
     }
 
     public LatLng getLatLng() {
@@ -59,6 +65,7 @@ abstract class Feature implements SearchSuggestion {
         return name;
     }
 
+    //Searchable method (the string that replaces the searchView)
     public String toShortString() {
         return toString();
     }
@@ -79,5 +86,6 @@ abstract class Feature implements SearchSuggestion {
     private MarkerOptions getMarkerOptions() {
         return new MarkerOptions().position(latlng).icon(getIcon()).title(this.toString()).snippet(getSnippet() + "\nClick for more info");
     }
+
 
 }

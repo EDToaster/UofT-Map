@@ -29,7 +29,7 @@ public class Hours {
         this.saturday = new Interval(hours.getJSONObject("saturday"));
     }
 
-    protected class Interval {
+    public class Interval {
         private SimpleDateFormat localDateFormat = new SimpleDateFormat("hh:mm a");
         private boolean closed;
         private long open, close;
@@ -77,13 +77,13 @@ public class Hours {
     }
 
     public String toString() {
-        String s = "Sun: " + sunday.toString() +
-                "\nMon: " + monday.toString() +
-                "\nTue: " + tuesday.toString() +
-                "\nWed: " + wednesday.toString() +
-                "\nThu: " + thursday.toString() +
-                "\nFri: " + friday.toString() +
-                "\nSat: " + saturday.toString();
+        String s = "Sun:\t" + sunday.toString() +
+                "\nMon:\t" + monday.toString() +
+                "\nTue:\t" + tuesday.toString() +
+                "\nWed:\t" + wednesday.toString() +
+                "\nThu:\t" + thursday.toString() +
+                "\nFri:\t" + friday.toString() +
+                "\nSat:\t" + saturday.toString();
 
         return s;
     }

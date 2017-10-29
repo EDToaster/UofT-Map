@@ -1,4 +1,4 @@
-package tech.edt.MapApp;
+package tech.edt.MapApp.dialog;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -7,6 +7,9 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
+
+import tech.edt.MapApp.R;
+import tech.edt.MapApp.feature.Building;
 
 /**
  * Created by class on 2017-10-26.

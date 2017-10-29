@@ -1,19 +1,4 @@
 {
-  "name": "Bicycle Racks",
-  "slug": "bicycle-racks",
-  "icon": "http:\/\/map.utoronto.ca\/_assets\/_icons\/marker_bike_racks.png",
-  "sublayers": [
-    {
-      "id": "65",
-      "name": "Bike Rack",
-      "slug": "bike-rack"
-    },
-    {
-      "id": "64",
-      "name": "Bike Share Toronto",
-      "slug": "bike-share-toronto"
-    }
-  ],
   "markers": [
     {
       "id": "127",

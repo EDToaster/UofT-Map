@@ -16,8 +16,11 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
+import android.text.method.LinkMovementMethod;
+import android.text.util.Linkify;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -49,6 +52,13 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+
+import tech.edt.MapApp.dialog.BuildingInfoDialog;
+import tech.edt.MapApp.dialog.FoodInfoDialog;
+import tech.edt.MapApp.feature.Bike;
+import tech.edt.MapApp.feature.Building;
+import tech.edt.MapApp.feature.Feature;
+import tech.edt.MapApp.feature.Food;
 
 //TODO: Move to different threads
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
@@ -145,6 +155,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     tempMarker.setVisible(true);
                     tempMarker.showInfoWindow();
                     persistent = suggestion;
+                    refreshMarkers();
                     goToNinja(ll, FOCUSED_ZOOM);
                 }
             }
@@ -157,23 +168,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
         });
 
-//        mSearchView.setOnMenuItemClickListener(new FloatingSearchView.OnMenuItemClickListener() {
-//
-//            @Override
-//            public void onActionMenuItemSelected(MenuItem item) {
-//                if (item.getItemId() == R.id.action_location) {
-//                    centerOnMe();
-//                } else if (item.getItemId() == R.id.action_food) {
-//                    setVisibilityAndUpdateMarkers("food");
-//                } else if (item.getItemId() == R.id.action_building) {
-//                    setVisibilityAndUpdateMarkers("building");
-//                } else if (item.getItemId() == R.id.action_hybrid) {
-//                    setHybrid();
-//                }
-//            }
-//
-//
-//        });
+        mSearchView.setOnMenuItemClickListener(new FloatingSearchView.OnMenuItemClickListener() {
+
+            @Override
+            public void onActionMenuItemSelected(MenuItem item) {
+                if (item.getItemId() == R.id.action_location) {
+                    centerOnMe();
+                }
+            }
+
+
+        });
 
 
         //TODO: Implement the Navbar
@@ -195,7 +200,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         final SecondaryDrawerItem car = new SecondaryDrawerItem().withIdentifier(23)
                 .withName("Parking").withSelectable(false);
         final SecondaryDrawerItem bike = new SecondaryDrawerItem().withIdentifier(24)
-                .withName("Bike Racks").withSelectable(false);
+                .withName("Bike Racks").withSelectable(false).withIcon(R.drawable.bike_marker);
         final SecondaryDrawerItem accessibility = new SecondaryDrawerItem().withIdentifier(25)
                 .withName("Accessibility").withSelectable(false);
         final SecondaryDrawerItem safety = new SecondaryDrawerItem().withIdentifier(26)
@@ -376,6 +381,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
             if (!newQuery.equals(""))
                 for (Feature i : current_selected) {
+                    //skip if feature is non-searchable
+                    if (!i.isSearchable())
+                        continue;
+
                     String[] toks = newQuery.toLowerCase().trim().split("(\\s+)");
                     boolean put = true;
                     for (String tok : toks) {
@@ -441,6 +450,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 place.getMarker(mMap).setVisible(buildingVisible);
             else if (place instanceof Food)
                 place.getMarker(mMap).setVisible(foodVisible);
+            else if (place instanceof Bike)
+                place.getMarker(mMap).setVisible(bikeparkVisible);
         }
 
         if (persistent != null)
@@ -459,6 +470,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        mMap.getUiSettings().setZoomControlsEnabled(true);
+
         setHybrid(false);
 
         goToNinja(UTSGLL, DEFAULT_ZOOM);
@@ -484,6 +497,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
             @Override
             public void onInfoWindowClick(Marker marker) {
+                //TODO: add bike support
                 Feature f = (Feature) marker.getTag();
                 if (f instanceof Building) {
                     BuildingInfoDialog bid = new BuildingInfoDialog(MapsActivity.this, (Building) f);
@@ -503,7 +517,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
             @Override
             public View getInfoContents(Marker marker) {
-
+                //TODO: add link support
                 LinearLayout info = new LinearLayout(getBaseContext());
                 info.setOrientation(LinearLayout.VERTICAL);
 
@@ -516,6 +530,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 TextView snippet = new TextView(getBaseContext());
                 snippet.setTextColor(Color.GRAY);
                 snippet.setText(marker.getSnippet());
+                snippet.setAutoLinkMask(Linkify.WEB_URLS);
+//                snippet.setMovementMethod(LinkMovementMethod.getInstance());
 
                 info.addView(title);
                 info.addView(snippet);
@@ -584,8 +600,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         try {
             setUpBuildings(assetManager);
             setUpFood(assetManager);
+            setUpBikes(assetManager);
         } catch (Exception e) {
             Log.e("setUpFeatures", "Exception", e);
+            System.exit(1);
         }
 
         this.all_markers.addAll(UTSG);
@@ -594,12 +612,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     private void setUpBuildings(AssetManager assetManager) throws Exception {
-        //Buildings
-        InputStream input = assetManager.open("buildings.json");
-        String buildings = Util.convertStreamToString(input);
-        JSONObject obj = new JSONObject(buildings);
-        JSONArray arr = obj.getJSONArray("buildings");
 
+        JSONArray arr = Util.getBaseObj(assetManager, "buildings.json")
+                .getJSONArray("buildings");
 
         for (int i = 0; i < arr.length(); i++) {
             try {
@@ -628,18 +643,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 else if (ij.getString("campus").equals("UTSC"))
                     this.UTSC.add(b);
             } catch (JSONException e) {
-
+                Log.e("setUpBuildings", "BUILDING EXCEPTION", e);
             }
         }
     }
 
     private void setUpFood(AssetManager assetManager) throws Exception {
 
-        //Food
-        InputStream input = assetManager.open("food.json");
-        String food = Util.convertStreamToString(input);
-        JSONObject obj = new JSONObject(food);
-        JSONArray arr = obj.getJSONArray("food");
+
+        JSONArray arr = Util.getBaseObj(assetManager, "food.json")
+                .getJSONArray("food");
 
         // lat,  lng,  name, address,  short_name,  url,  imageURL,  desc,  hours,  tags
         for (int i = 0; i < arr.length(); i++) {
@@ -668,6 +681,30 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     this.UTSC.add(f);
             } catch (JSONException e) {
                 Log.e("setUpFood", "FOOD EXCEPTION", e);
+            }
+        }
+    }
+
+    private void setUpBikes(AssetManager assetManager) throws Exception {
+        JSONArray arr = Util.getBaseObj(assetManager, "bicycle-racks.json")
+                .getJSONArray("markers");
+
+        for (int i = 0; i < arr.length(); i++) {
+            try {
+                JSONObject ij = arr.getJSONObject(i);
+                double lat = ij.getDouble("lat");
+                double lng = ij.getDouble("lng");
+                String name = ij.getString("title");
+                String buildingCode = ij.getString("buildingCode");
+
+                String desc = ij.getString("desc");
+
+                Bike f = new Bike(lat, lng, name, buildingCode, desc);
+
+                //Assuming all bike info is UTSG
+                this.UTSG.add(f);
+            } catch (JSONException e) {
+                Log.e("setUpBikes", "BIKE EXCEPTION", e);
             }
         }
     }
