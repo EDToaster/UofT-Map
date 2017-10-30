@@ -4,6 +4,7 @@ import android.os.Parcel;
 
 import com.arlib.floatingsearchview.suggestions.model.SearchSuggestion;
 import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.LatLng;
 
 import java.util.ArrayList;
 
@@ -17,7 +18,7 @@ import tech.edt.MapApp.Util;
 public class Building extends Feature implements SearchSuggestion {
 
     private String code, address, short_name, short_address;
-    private ArrayList<double[]> polygon;
+    private ArrayList<LatLng> polygon;
 
 
     public Building(double lat, double lng, String name, String code,

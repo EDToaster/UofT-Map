@@ -470,6 +470,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             persistent.getMarker(mMap).setVisible(true);
     }
 
+    private void removePolygon(){
+        try {
+            buildingPolygon.remove();
+        }catch(Exception e){}
+    }
+
     /**
      * Manipulates the map once available.
      * This callback is triggered when the map is ready to be used.
@@ -661,13 +667,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 String name = ij.getString("name");
                 String code = ij.getString("code");
                 String short_name = ij.getString("short_name");
-                ArrayList polygon = null;
+                ArrayList polygon = new ArrayList();
                 JSONArray json_polygon = ij.getJSONArray("polygon");
                 if (json_polygon != null) {
                     int len = json_polygon.length();
                     for (int j = 0; j < len; j++) {
                         JSONArray temp = json_polygon.getJSONArray(j);
-                        polygon.add(new Double[]{temp.getDouble(0), temp.getDouble(1)});
+                        try {
+                            LatLng cords = new LatLng(temp.getDouble(0), temp.getDouble(1));
+                            polygon.add(cords);
+                        }catch (Exception e){
+                        }
                     }
                 }
 
