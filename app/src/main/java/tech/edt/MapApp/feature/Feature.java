@@ -84,7 +84,8 @@ public abstract class Feature implements SearchSuggestion {
     }
 
     private MarkerOptions getMarkerOptions() {
-        return new MarkerOptions().position(latlng).icon(getIcon()).title(this.toString()).snippet(getSnippet() + "\nClick for more info");
+        return new MarkerOptions().position(latlng).icon(getIcon())
+                .title(this.toString()).snippet(getSnippet() + "\nClick for more info");
     }
 
 

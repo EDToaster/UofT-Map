@@ -36,7 +36,8 @@ public class Food extends Feature implements SearchSuggestion {
     private Bitmap image;
 
 
-    public Food(double lat, double lng, String name, String address, String short_name, String url, String imageURL, String desc, Hours hours, String[] tags) {
+    public Food(double lat, double lng, String name, String address, String short_name, String url,
+                String imageURL, String desc, Hours hours, String[] tags) {
         super(lat, lng, name, true);
         new GetImageTask().execute(imageURL);
         this.address = address;
