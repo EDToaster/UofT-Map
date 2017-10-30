@@ -165,7 +165,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     centerOnMe();
                 }
                 if (item.getItemId() == R.id.action_submit) {
-                    feedback();
+                    openLink("https://goo.gl/forms/tTxBcOQAOGpY8Ci33");
                 }
             }
         });
@@ -254,7 +254,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                         } else if (tag.startsWith("s_")) {
                             if (tag.substring(2).equals("feedback")) {
-                                feedback();
+                                openLink("https://docs.google.com/forms/d/11kMs5L2VtIeVsLFnllGzx" +
+                                        "uR6jch28Pe76UF7nmDnYXU\"");
                             } else if (tag.substring(2).equals("settings")) {
                                 Toast.makeText(getApplicationContext(), "coming soon",
                                         Toast.LENGTH_LONG).show();
@@ -355,7 +356,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         PolygonOptions rectOptions = new PolygonOptions();
         rectOptions.addAll(building.getPolygon());
-        rectOptions.strokeColor(Color.BLUE);
+        rectOptions.strokeColor(Color.CYAN);
         rectOptions.strokeWidth(5);
         buildingPolygon = mMap.addPolygon(rectOptions);
     }
@@ -408,8 +409,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
-    private void feedback() {
-        Uri uri = Uri.parse("https://docs.google.com/forms/d/11kMs5L2VtIeVsLFnllGzxuR6jch28Pe76UF7nmDnYXU");
+    /**Opens a link in the default browser
+     *
+     * @param link link to the webpage
+     */
+    private void openLink(String link) {
+        Uri uri = Uri.parse(link);
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
     }
