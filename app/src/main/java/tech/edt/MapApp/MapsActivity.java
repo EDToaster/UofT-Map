@@ -16,7 +16,6 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
-import android.text.method.LinkMovementMethod;
 import android.text.util.Linkify;
 import android.util.Log;
 import android.view.Gravity;
@@ -50,16 +49,13 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.regex.Pattern;
 
 import tech.edt.MapApp.dialog.BuildingInfoDialog;
 import tech.edt.MapApp.dialog.FoodInfoDialog;
 import tech.edt.MapApp.feature.Bike;
 import tech.edt.MapApp.feature.Building;
-import tech.edt.MapApp.feature.Campus;
 import tech.edt.MapApp.feature.Feature;
 import tech.edt.MapApp.feature.Food;
 import tech.edt.MapApp.feature.University;
@@ -87,7 +83,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private Feature persistent;
 
-    private GetResultsTask current_task;
+    private GetSearchResultsTask current_task;
     private Drawer result;
 
     @Override
@@ -124,7 +120,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 if (current_task != null)
                     current_task.cancel(true);
 
-                current_task = new GetResultsTask();
+                current_task = new GetSearchResultsTask();
                 current_task.execute(newQuery);
                 //pass them on to the search view
 
@@ -381,7 +377,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         result.updateItem(item);
     }
 
-    private class GetResultsTask extends AsyncTask<String, Void, ArrayList<Feature>> {
+    private class GetSearchResultsTask extends AsyncTask<String, Void, ArrayList<Feature>> {
 
         private Exception exception;
         private ArrayList<Feature> suggestions;
@@ -391,24 +387,24 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
             suggestions = new ArrayList<>();
 
-            if (!newQuery.equals(""))
+            if (!newQuery.equals("")) {
+                String[] toks = newQuery.toLowerCase().trim().split("(\\s+)");
+                ArrayList<Pattern> pats = new ArrayList<>();
+                for (String tok : toks) {
+                    pats.add(Pattern.compile("(\\b" + tok + ")"));
+                }
                 for (Feature i : uni.getCurrentSelected().getFeatures()) {
                     //skip if feature is non-searchable
                     if (!i.isSearchable())
                         continue;
+                    String get = i.getStrippedMatchString();
 
-                    String[] toks = newQuery.toLowerCase().trim().split("(\\s+)");
-                    boolean put = true;
-                    for (String tok : toks) {
-                        if (!i.getStrippedMatchString().contains(tok)) {
-                            put = false;
-                            break;
-                        }
+                    for (Pattern p : pats) {
+                        if (p.matcher(get).find())
+                            suggestions.add(i);
                     }
-                    if (put)
-                        suggestions.add(i);
                 }
-
+            }
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
@@ -469,14 +465,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             persistent.getMarker(mMap).setVisible(true);
     }
 
-    /**Removes the recent polygon
-     *
+    /**
+     * Removes the recent polygon
      */
-    private void removePolygon(){
-        try{
+    private void removePolygon() {
+        try {
             buildingPolygon.remove();
-        }catch(Exception e){
-            Log.e("remove polygon", "" +  e);
+        } catch (Exception e) {
+            Log.e("remove polygon", "" + e);
 
         }
     }
@@ -550,7 +546,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
         });
 
-        mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener(){
+        mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
             @Override
             public boolean onMarkerClick(Marker marker) {
                 removePolygon();
@@ -680,7 +676,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         try {
                             LatLng cords = new LatLng(temp.getDouble(0), temp.getDouble(1));
                             polygon.add(cords);
-                        }catch (Exception e){
+                        } catch (Exception e) {
                         }
                     }
                 }
