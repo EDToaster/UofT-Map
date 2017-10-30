@@ -36,6 +36,8 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.Polygon;
+import com.google.android.gms.maps.model.PolygonOptions;
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.model.DividerDrawerItem;
@@ -79,6 +81,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private boolean carparkVisible = false;
     private boolean bikeparkVisible = false;
     private boolean isHybrid = true;
+    private Polygon buildingPolygon;
 
     private University uni;
 
@@ -142,6 +145,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     persistent = suggestion;
                     refreshMarkers();
                     tempMarker.showInfoWindow();
+                    if (tempMarker.getTag() instanceof Building) {
+                        addPolygon((Building) tempMarker.getTag());
+                    }
+
+
                     goToNinja(ll, FOCUSED_ZOOM);
                 }
             }
@@ -163,9 +171,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 }
                 if (item.getItemId() == R.id.action_submit) {
                     //TODO: google froms for item submission
-                    Uri uri = Uri.parse("http://www.example.com");
-                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                    startActivity(intent);
+//                    Uri uri = Uri.parse("http://www.example.com");
+//                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+//                    startActivity(intent);
                 }
 
             }
@@ -356,6 +364,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
+    private void addPolygon(Building building) {
+        try {
+            buildingPolygon.remove();
+        }catch(Exception e){}
+
+        PolygonOptions rectOptions = new PolygonOptions();
+        rectOptions.addAll(building.getPolygon());
+        rectOptions.strokeColor(Color.BLUE);
+        buildingPolygon = mMap.addPolygon(rectOptions);
+
+    }
+
     /*  Updates  the drawer with the new settings of a drawer item
      */
     private void updateResult(IDrawerItem item) {
@@ -466,10 +486,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.getUiSettings().setCompassEnabled(true);
         mMap.getUiSettings().setMyLocationButtonEnabled(false);
 
+
         //TODO: it is breaking our movement when we click on a marker
         mMap.setPadding(0, 170, 0, 0);
 
         setHybrid(false);
+
 
         goToNinja(uni.getCurrentSelected().getLatLng(), DEFAULT_ZOOM);
 
@@ -496,6 +518,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             @Override
             public void onInfoWindowClick(Marker marker) {
                 //TODO: do we need an info dialog for bikes?
+                //TODO: I don't think so -M
                 Feature f = (Feature) marker.getTag();
                 if (f instanceof Building) {
                     BuildingInfoDialog bid = new BuildingInfoDialog(MapsActivity.this,
@@ -505,6 +528,26 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     FoodInfoDialog fid = new FoodInfoDialog(MapsActivity.this, (Food) f);
                     fid.show();
                 }
+            }
+        });
+
+        mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
+
+            @Override
+            public void onMapClick(LatLng arg0) {
+                try {
+                    buildingPolygon.remove();
+                }catch(Exception e){}
+            }
+        });
+
+        mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener(){
+            @Override
+            public boolean onMarkerClick(Marker marker) {
+                if (marker.getTag() instanceof Building) {
+                    addPolygon((Building) marker.getTag());
+                }
+                return false;
             }
         });
         mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
@@ -538,6 +581,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 return info;
             }
         });
+
+
     }
 
     private void centerOnMe() {
@@ -616,6 +661,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 String name = ij.getString("name");
                 String code = ij.getString("code");
                 String short_name = ij.getString("short_name");
+                ArrayList polygon = null;
+                JSONArray json_polygon = ij.getJSONArray("polygon");
+                if (json_polygon != null) {
+                    int len = json_polygon.length();
+                    for (int j = 0; j < len; j++) {
+                        JSONArray temp = json_polygon.getJSONArray(j);
+                        polygon.add(new Double[]{temp.getDouble(0), temp.getDouble(1)});
+                    }
+                }
 
                 JSONObject address = ij.getJSONObject("address");
                 String street = address.getString("street");
@@ -625,7 +679,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         address.getString("country") + "\n" +
                         address.getString("postal");
 
-                Building b = new Building(lat, lng, name, code, street, s, short_name);
+                Building b = new Building(lat, lng, name, code, street, s, short_name, polygon);
 
                 uni.getCampuses().get(ij.getString("campus")).addFeature(b);
             } catch (JSONException e) {
