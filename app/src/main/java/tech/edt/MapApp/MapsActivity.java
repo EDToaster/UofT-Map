@@ -77,7 +77,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private University uni;
 
-    private ArrayList<Feature> persistent;
+    private ArrayList<Feature> persistent = new ArrayList<>();
+    ;
 
     private GetSearchResultsTask current_task;
     private Drawer result;
@@ -88,7 +89,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MapsInitializer.initialize(this);
         Util.init();
 
-        persistent = new ArrayList<>();
 
         String sg = getString(R.string.drawer_item_UTSG);
         String m = getString(R.string.drawer_item_UTM);
@@ -187,7 +187,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         final SecondaryDrawerItem building = new SecondaryDrawerItem().withIdentifier(22)
                 .withName("Buildings").withSelectable(false).withIcon(R.drawable.building_marker);
         final SecondaryDrawerItem car = new SecondaryDrawerItem().withIdentifier(23)
-                .withName("Parking").withSelectable(false).withIcon(R.drawable.bike_marker);;
+                .withName("Parking").withSelectable(false).withIcon(R.drawable.bike_marker);
+        ;
         final SecondaryDrawerItem bike = new SecondaryDrawerItem().withIdentifier(24)
                 .withName("Bike Racks").withSelectable(false).withIcon(R.drawable.bike_marker);
         final SecondaryDrawerItem accessibility = new SecondaryDrawerItem().withIdentifier(25)
@@ -290,7 +291,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                             updateResult(itemSG);
                             result.closeDrawer();
                             //reset current marker
-                            persistent = null;
+                            persistent.clear();
                             setVisibilityAndUpdateMarkers("layers", false);
 
                             //enable all selected layers
@@ -464,8 +465,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
 
         for (Feature p : persistent)
-            if (p != null)
-                p.getMarker(mMap).setVisible(true);
+            p.getMarker(mMap).setVisible(true);
     }
 
     /**
