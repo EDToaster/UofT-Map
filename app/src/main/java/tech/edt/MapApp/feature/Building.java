@@ -31,7 +31,7 @@ public class Building extends Feature implements SearchSuggestion {
         this.polygon = polygon;
     }
 
-    public ArrayList getPolygon(){
+    public ArrayList<LatLng> getPolygon() {
         return polygon;
     }
 

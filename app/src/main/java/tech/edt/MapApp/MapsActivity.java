@@ -3,7 +3,6 @@ package tech.edt.MapApp;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.content.res.AssetManager;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.location.Criteria;
@@ -45,17 +44,14 @@ import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.SectionDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.util.ArrayList;
 import java.util.regex.Pattern;
 
 import tech.edt.MapApp.dialog.BuildingInfoDialog;
 import tech.edt.MapApp.dialog.FoodInfoDialog;
-import tech.edt.MapApp.feature.Bike;
+import tech.edt.MapApp.feature.BikePark;
 import tech.edt.MapApp.feature.Building;
+import tech.edt.MapApp.feature.CarPark;
 import tech.edt.MapApp.feature.Feature;
 import tech.edt.MapApp.feature.Food;
 import tech.edt.MapApp.feature.University;
@@ -81,7 +77,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private University uni;
 
-    private Feature persistent;
+    private ArrayList<Feature> persistent;
 
     private GetSearchResultsTask current_task;
     private Drawer result;
@@ -92,12 +88,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MapsInitializer.initialize(this);
         Util.init();
 
+        persistent = new ArrayList<>();
+
         String sg = getString(R.string.drawer_item_UTSG);
         String m = getString(R.string.drawer_item_UTM);
         String sc = getString(R.string.drawer_item_UTSC);
-        uni = new University(sg, m, sc);
+        uni = new University(sg, m, sc).setUpFeatures(getAssets());
         //Data Crunching
-        setUpFeatures();
 
 
         uni.setCurrentSelected("UTSG");
@@ -138,11 +135,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     LatLng ll = suggestion.getLatLng();
 
                     Marker tempMarker = suggestion.getMarker(mMap);
-                    persistent = suggestion;
+                    persistent.clear();
+                    persistent.add(suggestion);
                     refreshMarkers();
                     tempMarker.showInfoWindow();
-                    if (tempMarker.getTag() instanceof Building) {
-                        addPolygon((Building) tempMarker.getTag());
+
+                    if (searchSuggestion instanceof Building) {
+                        setPolygon((Building) searchSuggestion);
                     }
 
 
@@ -166,15 +165,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     centerOnMe();
                 }
                 if (item.getItemId() == R.id.action_submit) {
-                    //TODO: google froms for item submission
-//                    Uri uri = Uri.parse("http://www.example.com");
-//                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-//                    startActivity(intent);
+                    feedback();
                 }
-
             }
-
-
         });
 
 
@@ -194,7 +187,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         final SecondaryDrawerItem building = new SecondaryDrawerItem().withIdentifier(22)
                 .withName("Buildings").withSelectable(false).withIcon(R.drawable.building_marker);
         final SecondaryDrawerItem car = new SecondaryDrawerItem().withIdentifier(23)
-                .withName("Parking").withSelectable(false);
+                .withName("Parking").withSelectable(false).withIcon(R.drawable.bike_marker);;
         final SecondaryDrawerItem bike = new SecondaryDrawerItem().withIdentifier(24)
                 .withName("Bike Racks").withSelectable(false).withIcon(R.drawable.bike_marker);
         final SecondaryDrawerItem accessibility = new SecondaryDrawerItem().withIdentifier(25)
@@ -209,7 +202,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         SecondaryDrawerItem settings = new SecondaryDrawerItem().withIdentifier(12)
                 .withName("Settings").withSelectable(false);
-        SecondaryDrawerItem feedback = new SecondaryDrawerItem().withIdentifier(13)
+        final SecondaryDrawerItem feedback = new SecondaryDrawerItem().withIdentifier(13)
                 .withName("Feedback").withSelectable(false);
         SecondaryDrawerItem about = new SecondaryDrawerItem().withIdentifier(14)
                 .withName("About").withSelectable(false);
@@ -261,10 +254,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                         } else if (tag.startsWith("s_")) {
                             if (tag.substring(2).equals("feedback")) {
-                                //TODO: google forms for feedback
-                                Uri uri = Uri.parse("http://www.example.com");
-                                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                                startActivity(intent);
+                                feedback();
                             } else if (tag.substring(2).equals("settings")) {
                                 Toast.makeText(getApplicationContext(), "coming soon",
                                         Toast.LENGTH_LONG).show();
@@ -360,7 +350,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
-    private void addPolygon(Building building) {
+    private void setPolygon(Building building) {
         removePolygon();
 
         PolygonOptions rectOptions = new PolygonOptions();
@@ -368,7 +358,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         rectOptions.strokeColor(Color.BLUE);
         rectOptions.strokeWidth(5);
         buildingPolygon = mMap.addPolygon(rectOptions);
-
     }
 
     /*  Updates  the drawer with the new settings of a drawer item
@@ -419,6 +408,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
+    private void feedback() {
+        Uri uri = Uri.parse("https://docs.google.com/forms/d/11kMs5L2VtIeVsLFnllGzxuR6jch28Pe76UF7nmDnYXU");
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+    }
+
     private void setHybrid(boolean flag) {
         isHybrid = flag;
         if (isHybrid)
@@ -431,9 +426,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     /**
      * Toggles visibility of all markers of a specific type
      *
-     * @param: String type
-     * type of the feature
-     * typecodes:"building", "food", "carpark", "bikepark"
+     * @param type       type of the feature
+     *                   types:"building", "food", "carpark", "bikepark"
+     * @param isSelected the value to set the tag to
      **/
     private void setVisibilityAndUpdateMarkers(String type, boolean isSelected) {
         if (type.equals("building") || type.equals("layers"))
@@ -457,12 +452,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 place.getMarker(mMap).setVisible(buildingVisible);
             else if (place instanceof Food)
                 place.getMarker(mMap).setVisible(foodVisible);
-            else if (place instanceof Bike)
+            else if (place instanceof BikePark)
                 place.getMarker(mMap).setVisible(bikeparkVisible);
+            else if (place instanceof CarPark)
+                place.getMarker(mMap).setVisible(carparkVisible);
         }
 
-        if (persistent != null)
-            persistent.getMarker(mMap).setVisible(true);
+        for (Feature p : persistent)
+            if (p != null)
+                p.getMarker(mMap).setVisible(true);
     }
 
     /**
@@ -524,8 +522,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
             @Override
             public void onInfoWindowClick(Marker marker) {
-                //TODO: do we need an info dialog for bikes?
-                //TODO: I don't think so -M
                 Feature f = (Feature) marker.getTag();
                 if (f instanceof Building) {
                     BuildingInfoDialog bid = new BuildingInfoDialog(MapsActivity.this,
@@ -551,7 +547,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             public boolean onMarkerClick(Marker marker) {
                 removePolygon();
                 if (marker.getTag() instanceof Building) {
-                    addPolygon((Building) marker.getTag());
+                    setPolygon((Building) marker.getTag());
                 }
                 return false;
             }
@@ -641,120 +637,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
     }
 
-    private void setUpFeatures() {
-        AssetManager assetManager = getAssets();
-        try {
-            setUpBuildings(assetManager);
-            setUpFood(assetManager);
-            setUpBikes(assetManager);
-        } catch (Exception e) {
-            Log.e("setUpFeatures", "Exception", e);
-            System.exit(1);
-        }
-    }
-
-    private void setUpBuildings(AssetManager assetManager) throws Exception {
-
-        JSONArray arr = Util.getBaseObj(assetManager, "buildings.json")
-                .getJSONArray("buildings");
-
-        for (int i = 0; i < arr.length(); i++) {
-            try {
-                JSONObject ij = arr.getJSONObject(i);
-
-                double lat = ij.getDouble("lat");
-                double lng = ij.getDouble("lng");
-                String name = ij.getString("name");
-                String code = ij.getString("code");
-                String short_name = ij.getString("short_name");
-                ArrayList polygon = new ArrayList();
-                JSONArray json_polygon = ij.getJSONArray("polygon");
-                if (json_polygon != null) {
-                    int len = json_polygon.length();
-                    for (int j = 0; j < len; j++) {
-                        JSONArray temp = json_polygon.getJSONArray(j);
-                        try {
-                            LatLng cords = new LatLng(temp.getDouble(0), temp.getDouble(1));
-                            polygon.add(cords);
-                        } catch (Exception e) {
-                        }
-                    }
-                }
-
-                JSONObject address = ij.getJSONObject("address");
-                String street = address.getString("street");
-                String s = street + "\n" +
-                        address.getString("city") + " " +
-                        address.getString("province") + " " +
-                        address.getString("country") + "\n" +
-                        address.getString("postal");
-
-                Building b = new Building(lat, lng, name, code, street, s, short_name, polygon);
-
-                uni.getCampuses().get(ij.getString("campus")).addFeature(b);
-            } catch (JSONException e) {
-                Log.e("setUpBuildings", "BUILDING EXCEPTION", e);
-            }
-        }
-    }
-
-    private void setUpFood(AssetManager assetManager) throws Exception {
-
-
-        JSONArray arr = Util.getBaseObj(assetManager, "food.json")
-                .getJSONArray("food");
-
-        // lat,  lng,  name, address,  short_name,  url,  imageURL,  desc,  hours,  tags
-        for (int i = 0; i < arr.length(); i++) {
-            try {
-                JSONObject ij = arr.getJSONObject(i);
-                double lat = ij.getDouble("lat");
-                double lng = ij.getDouble("lng");
-                String name = ij.getString("name");
-                String short_name = ij.getString("short_name");
-                String address = ij.getString("address");
-                String url = ij.getString("url");
-                String imageURL = ij.getString("image");
-                String desc = ij.getString("description");
-                JSONObject h = ij.getJSONObject("hours");
-
-                Hours hours = new Hours(h);
-                String[] tags = Util.toStringArray(ij.getJSONArray("tags"));
-
-                Food f = new Food(lat, lng, name, address, short_name, url, imageURL, desc, hours,
-                        tags);
-                uni.getCampuses().get(ij.getString("campus")).addFeature(f);
-            } catch (JSONException e) {
-                Log.e("setUpFood", "FOOD EXCEPTION", e);
-            }
-        }
-    }
-
-    private void setUpBikes(AssetManager assetManager) throws Exception {
-        JSONArray arr = Util.getBaseObj(assetManager, "bicycle-racks.json")
-                .getJSONArray("markers");
-
-        for (int i = 0; i < arr.length(); i++) {
-            try {
-                JSONObject ij = arr.getJSONObject(i);
-                double lat = ij.getDouble("lat");
-                double lng = ij.getDouble("lng");
-                String name = ij.getString("title");
-                String buildingCode = ij.getString("buildingCode");
-
-                String desc = ij.getString("desc");
-
-                Bike b = new Bike(lat, lng, name, buildingCode, desc);
-
-                //TODO: Change check to look for <64> in <sublayer> json array
-                if (!name.contains("BIXI"))  //get rid of bikeshare, at least for now.
-                    uni.getCampuses().get("UTSG").addFeature(b);
-
-            } catch (JSONException e) {
-                Log.e("setUpBikes", "BIKE EXCEPTION", e);
-            }
-        }
-    }
 
     public void goToNinja(LatLng ll, float zoom) {
         CameraUpdate up;

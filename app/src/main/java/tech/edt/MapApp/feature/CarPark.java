@@ -8,7 +8,7 @@ import tech.edt.MapApp.Util;
  * Created by class on 2017-10-28.
  */
 
-public class Bike extends Feature {
+public class CarPark extends Feature {
     /**
      * Search suggestion stuff
      * (Bikes are not searchable
@@ -17,20 +17,26 @@ public class Bike extends Feature {
 
     private String desc;
     private String buildingCode;
+    private String access;
+    private String address;
+    private String aka;
 
-    public Bike(double lat, double lng, String name, String buildingCode, String desc) {
+    public CarPark(double lat, double lng, String name, String aka, String buildingCode, String address, String access, String desc) {
         super(lat, lng, name, false, false);
         this.desc = desc;
         this.buildingCode = buildingCode;
+        this.address = address;
+        this.access = access;
+        this.aka = aka;
     }
 
     public BitmapDescriptor getIcon() {
         return Util.getBikeBMP();
     }
 
-    //How many bikes and racks
+    //How many spots
     public String getSnippet() {
-        return getDesc();
+        return access;
     }
 
     public String getDesc() {
