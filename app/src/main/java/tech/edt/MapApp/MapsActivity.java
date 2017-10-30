@@ -139,10 +139,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     LatLng ll = suggestion.getLatLng();
 
                     Marker tempMarker = suggestion.getMarker(mMap);
-                    tempMarker.setVisible(true);
-                    tempMarker.showInfoWindow();
                     persistent = suggestion;
                     refreshMarkers();
+                    tempMarker.showInfoWindow();
                     goToNinja(ll, FOCUSED_ZOOM);
                 }
             }
@@ -468,7 +467,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.getUiSettings().setMyLocationButtonEnabled(false);
 
         //TODO: it is breaking our movement when we click on a marker
-        //mMap.setPadding(900, 170, 0, 0);
+        mMap.setPadding(0, 170, 0, 0);
 
         setHybrid(false);
 
