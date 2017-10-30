@@ -365,13 +365,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     private void addPolygon(Building building) {
-        try {
-            buildingPolygon.remove();
-        }catch(Exception e){}
+        removePolygon();
 
         PolygonOptions rectOptions = new PolygonOptions();
         rectOptions.addAll(building.getPolygon());
         rectOptions.strokeColor(Color.BLUE);
+        rectOptions.strokeWidth(5);
         buildingPolygon = mMap.addPolygon(rectOptions);
 
     }
@@ -470,10 +469,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             persistent.getMarker(mMap).setVisible(true);
     }
 
+    /**Removes the recent polygon
+     *
+     */
     private void removePolygon(){
-        try {
+        try{
             buildingPolygon.remove();
-        }catch(Exception e){}
+        }catch(Exception e){
+            Log.e("remove polygon", "" +  e);
+
+        }
     }
 
     /**
@@ -541,15 +546,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
             @Override
             public void onMapClick(LatLng arg0) {
-                try {
-                    buildingPolygon.remove();
-                }catch(Exception e){}
+                removePolygon();
             }
         });
 
         mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener(){
             @Override
             public boolean onMarkerClick(Marker marker) {
+                removePolygon();
                 if (marker.getTag() instanceof Building) {
                     addPolygon((Building) marker.getTag());
                 }
