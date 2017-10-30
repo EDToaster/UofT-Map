@@ -19,7 +19,7 @@ public class Bike extends Feature {
     private String buildingCode;
 
     public Bike(double lat, double lng, String name, String buildingCode, String desc) {
-        super(lat, lng, name, false);
+        super(lat, lng, name, false, false);
         this.desc = desc;
         this.buildingCode = buildingCode;
     }

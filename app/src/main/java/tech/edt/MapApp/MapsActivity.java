@@ -57,8 +57,10 @@ import tech.edt.MapApp.dialog.BuildingInfoDialog;
 import tech.edt.MapApp.dialog.FoodInfoDialog;
 import tech.edt.MapApp.feature.Bike;
 import tech.edt.MapApp.feature.Building;
+import tech.edt.MapApp.feature.Campus;
 import tech.edt.MapApp.feature.Feature;
 import tech.edt.MapApp.feature.Food;
+import tech.edt.MapApp.feature.University;
 
 //TODO: Move to different threads
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
@@ -66,16 +68,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private GoogleMap mMap;
     private FloatingSearchView mSearchView;
     public final String CREATOR = "Howard Chen";
-
-    private ArrayList<Feature> UTSG;
-    private ArrayList<Feature> UTM;
-    private ArrayList<Feature> UTSC;
-    private ArrayList<Feature> current_selected;
-    private ArrayList<Feature> all_markers;
-
-    private static LatLng UTSGLL;
-    private static LatLng UTMLL;
-    private static LatLng UTSCLL;
 
     private static final int MY_PERMISSIONS_FINE_LOCATION = 101;
     private static final float FOCUSED_ZOOM = 18f;
@@ -88,6 +80,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private boolean bikeparkVisible = false;
     private boolean isHybrid = true;
 
+    private University uni;
+
     private Feature persistent;
 
     private GetResultsTask current_task;
@@ -99,19 +93,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MapsInitializer.initialize(this);
         Util.init();
 
+        String sg = getString(R.string.drawer_item_UTSG);
+        String m = getString(R.string.drawer_item_UTM);
+        String sc = getString(R.string.drawer_item_UTSC);
+        uni = new University(sg, m, sc);
         //Data Crunching
         setUpFeatures();
 
-        Comparator cmp = new Comparator<Feature>() {
-            public int compare(Feature f1, Feature f2) {
-                return f1.toString().compareTo(f2.toString());
-            }
-        };
 
-        Collections.sort(UTSG, cmp);
-        Collections.sort(UTM, cmp);
-        Collections.sort(UTSC, cmp);
-        current_selected = UTSG;
+        uni.setCurrentSelected("UTSG");
         //End Data Crunching
 
         //Default
@@ -124,9 +114,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
         mSearchView = (FloatingSearchView) findViewById(R.id.floating_search_view);
-        UTSGLL = new LatLng(43.6644, -79.3923);
-        UTMLL = new LatLng(43.5479, -79.6609);
-        UTSCLL = new LatLng(43.7841, -79.1868);
 
         mSearchView.setOnQueryChangeListener(new FloatingSearchView.OnQueryChangeListener() {
             @Override
@@ -289,25 +276,21 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                         } else if (tag.startsWith("c_")) {
                             if (tag.substring(2).trim().equals("UTSG")) {
-                                current_selected = UTSG;
-                                goToNinja(UTSGLL, DEFAULT_ZOOM);
                                 itemM.withSetSelected(false);
                                 itemSC.withSetSelected(false);
                                 itemSG.withSetSelected(true);
-
                             } else if (tag.substring(2).trim().equals("UTM")) {
-                                current_selected = UTM;
-                                goToNinja(UTMLL, DEFAULT_ZOOM);
                                 itemM.withSetSelected(true);
                                 itemSC.withSetSelected(false);
                                 itemSG.withSetSelected(false);
                             } else if (tag.substring(2).trim().equals("UTSC")) {
-                                current_selected = UTSC;
-                                goToNinja(UTSCLL, DEFAULT_ZOOM);
                                 itemM.withSetSelected(false);
                                 itemSC.withSetSelected(true);
                                 itemSG.withSetSelected(false);
                             }
+                            uni.setCurrentSelected(tag.substring(2).trim());
+                            goToNinja(uni.getCurrentSelected().getLatLng(), DEFAULT_ZOOM);
+
                             updateResult(itemM);
                             updateResult(itemSC);
                             updateResult(itemSG);
@@ -391,7 +374,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             suggestions = new ArrayList<>();
 
             if (!newQuery.equals(""))
-                for (Feature i : current_selected) {
+                for (Feature i : uni.getCurrentSelected().getFeatures()) {
                     //skip if feature is non-searchable
                     if (!i.isSearchable())
                         continue;
@@ -452,10 +435,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     private void refreshMarkers() {
-        for (Feature place : all_markers)
+        for (Feature place : uni.getAllFeatures())
             place.getMarker(mMap).setVisible(false);
 
-        for (Feature place : current_selected) {
+        for (Feature place : uni.getCurrentSelected().getFeatures()) {
             if (place instanceof Building)
                 place.getMarker(mMap).setVisible(buildingVisible);
             else if (place instanceof Food)
@@ -484,14 +467,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.getUiSettings().setCompassEnabled(true);
         mMap.getUiSettings().setMyLocationButtonEnabled(false);
 
-        mMap.setPadding(900, 170, 0, 0);
+        //TODO: it is breaking our movement when we click on a marker
+        //mMap.setPadding(900, 170, 0, 0);
 
         setHybrid(false);
 
-        goToNinja(UTSGLL, DEFAULT_ZOOM);
+        goToNinja(uni.getCurrentSelected().getLatLng(), DEFAULT_ZOOM);
 
         refreshMarkers();
-        for (Feature i : this.all_markers)
+        for (Feature i : uni.getAllFeatures())
             i.getMarker(mMap); //create the marker for each feature
 
 
@@ -512,7 +496,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
             @Override
             public void onInfoWindowClick(Marker marker) {
-                //TODO: add bike support
+                //TODO: do we need an info dialog for bikes?
                 Feature f = (Feature) marker.getTag();
                 if (f instanceof Building) {
                     BuildingInfoDialog bid = new BuildingInfoDialog(MapsActivity.this,
@@ -608,11 +592,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     private void setUpFeatures() {
-        this.UTSG = new ArrayList<>();
-        this.UTM = new ArrayList<>();
-        this.UTSC = new ArrayList<>();
-        this.all_markers = new ArrayList<>();
-
         AssetManager assetManager = getAssets();
         try {
             setUpBuildings(assetManager);
@@ -622,10 +601,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             Log.e("setUpFeatures", "Exception", e);
             System.exit(1);
         }
-
-        this.all_markers.addAll(UTSG);
-        this.all_markers.addAll(UTM);
-        this.all_markers.addAll(UTSC);
     }
 
     private void setUpBuildings(AssetManager assetManager) throws Exception {
@@ -653,12 +628,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                 Building b = new Building(lat, lng, name, code, street, s, short_name);
 
-                if (ij.getString("campus").equals("UTSG"))
-                    this.UTSG.add(b);
-                else if (ij.getString("campus").equals("UTM"))
-                    this.UTM.add(b);
-                else if (ij.getString("campus").equals("UTSC"))
-                    this.UTSC.add(b);
+                uni.getCampuses().get(ij.getString("campus")).addFeature(b);
             } catch (JSONException e) {
                 Log.e("setUpBuildings", "BUILDING EXCEPTION", e);
             }
@@ -690,13 +660,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                 Food f = new Food(lat, lng, name, address, short_name, url, imageURL, desc, hours,
                         tags);
-
-                if (ij.getString("campus").equals("UTSG"))
-                    this.UTSG.add(f);
-                else if (ij.getString("campus").equals("UTM"))
-                    this.UTM.add(f);
-                else if (ij.getString("campus").equals("UTSC"))
-                    this.UTSC.add(f);
+                uni.getCampuses().get(ij.getString("campus")).addFeature(f);
             } catch (JSONException e) {
                 Log.e("setUpFood", "FOOD EXCEPTION", e);
             }
@@ -717,12 +681,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                 String desc = ij.getString("desc");
 
-                Bike f = new Bike(lat, lng, name, buildingCode, desc);
+                Bike b = new Bike(lat, lng, name, buildingCode, desc);
 
-                if (!name.contains("BIXI")) { //get rid of bikeshare, at least for now.
-                    this.UTSG.add(f);                 //Assuming all bike info is UTSG
+                //TODO: Change check to look for <64> in <sublayer> json array
+                if (!name.contains("BIXI"))  //get rid of bikeshare, at least for now.
+                    uni.getCampuses().get("UTSG").addFeature(b);
 
-                }
             } catch (JSONException e) {
                 Log.e("setUpBikes", "BIKE EXCEPTION", e);
             }

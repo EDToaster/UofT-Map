@@ -38,7 +38,7 @@ public class Food extends Feature implements SearchSuggestion {
 
     public Food(double lat, double lng, String name, String address, String short_name, String url,
                 String imageURL, String desc, Hours hours, String[] tags) {
-        super(lat, lng, name, true);
+        super(lat, lng, name, true, true);
         new GetImageTask().execute(imageURL);
         this.address = address;
         this.short_name = short_name;

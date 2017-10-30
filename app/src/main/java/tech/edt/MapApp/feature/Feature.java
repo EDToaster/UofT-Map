@@ -19,11 +19,18 @@ public abstract class Feature implements SearchSuggestion {
     private String name;
     private Marker marker;
     private boolean isSearchable;
+    private boolean isClickable;
 
-    Feature(double lat, double lng, String name, boolean isSearchable) {
-        this.latlng = new LatLng(lat, lng);
+    Feature(double lat, double lng, String name, boolean isSearchable, boolean isClickable) {
+        this(new LatLng(lat, lng), name, isSearchable, isClickable);
+    }
+
+    Feature(LatLng ll, String name, boolean isSearchable, boolean isClickable) {
+
+        this.latlng = ll;
         this.name = name;
         this.isSearchable = isSearchable;
+        this.isClickable = isClickable;
     }
 
     public boolean isSearchable() {
@@ -85,7 +92,7 @@ public abstract class Feature implements SearchSuggestion {
 
     private MarkerOptions getMarkerOptions() {
         return new MarkerOptions().position(latlng).icon(getIcon())
-                .title(this.toString()).snippet(getSnippet() + "\nClick for more info");
+                .title(this.toString()).snippet(getSnippet() + (isClickable ? "\nClick for more info" : ""));
     }
 
 
