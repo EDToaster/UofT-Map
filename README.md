@@ -1,2 +1,2 @@
 # MapAppRepo
-An Android Map app for Students
+University of Toronto Unoffical student-made Android map app
