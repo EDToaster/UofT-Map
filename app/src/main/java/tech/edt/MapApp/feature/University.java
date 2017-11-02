@@ -100,7 +100,7 @@ public class University {
                 String name = ij.getString("name");
                 String code = ij.getString("code");
                 String short_name = ij.getString("short_name");
-                ArrayList polygon = new ArrayList();
+                ArrayList<LatLng> polygon = new ArrayList();
                 JSONArray json_polygon = ij.getJSONArray("polygon");
                 if (json_polygon != null) {
                     int len = json_polygon.length();
@@ -199,14 +199,15 @@ public class University {
                 double lat = ij.getDouble("lat");
                 double lng = ij.getDouble("lng");
                 String name = ij.getString("title");
-                String aka = ij.getString("aka");
+//                String aka = ij.getString("aka");
                 String address = ij.getString("address");
-                String access = ij.getString("access");
+//                String access = ij.getString("access");
                 String buildingCode = ij.getString("buildingCode");
+                String phone = ij.getString("phone");
 
                 String desc = ij.getString("desc");
 
-                CarPark c = new CarPark(lat, lng, name, aka, buildingCode, address, access, desc);
+                CarPark c = new CarPark(lat, lng, name, buildingCode, address, desc, phone);
 
                 getCampuses().get("UTSG").addFeature(c);
 

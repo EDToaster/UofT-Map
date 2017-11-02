@@ -22,7 +22,7 @@ public class Building extends Feature implements SearchSuggestion {
 
 
     public Building(double lat, double lng, String name, String code,
-                    String short_address, String address, String short_name, ArrayList polygon) {
+                    String short_address, String address, String short_name, ArrayList<LatLng> polygon) {
         super(lat, lng, name, true, true);
         this.code = code;
         this.address = address;

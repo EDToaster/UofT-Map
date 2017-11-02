@@ -6,18 +6,17 @@ import com.arlib.floatingsearchview.suggestions.model.SearchSuggestion;
 import com.google.android.gms.maps.model.LatLng;
 
 /**
- * Created by murad on 11/1/17.
+ * Created by Murad on 11/1/17.
  */
 
 public class GreenSpace extends Feature implements SearchSuggestion {
     private String address;
     private String description;
-    private final String CREATOR = "";
+    private final String CREATOR = "Murad";
 
 
-    GreenSpace(LatLng ll, String name, boolean isSearchable, boolean isClickable,
-               String address, String description) {
-        super(ll, name, isSearchable, isClickable);
+    GreenSpace(LatLng ll, String name, String address, String description) {
+        super(ll, name, false, true);
         this.address = address;
         this.description = description;
 
@@ -41,8 +40,6 @@ public class GreenSpace extends Feature implements SearchSuggestion {
     @Override
     public void writeToParcel(Parcel parcel, int i) {
     }
-
-
 
 
 }

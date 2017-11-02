@@ -7,19 +7,19 @@ import com.arlib.floatingsearchview.suggestions.model.SearchSuggestion;
 import com.google.android.gms.maps.model.LatLng;
 
 /**
- * Created by murad on 11/1/17.
+ * Created by Murad on 11/1/17.
  */
 
-public class StudentService extends Feature implements SearchSuggestion{
+public class StudentService extends Feature implements SearchSuggestion {
     private String address;
     private String phone;
     private String url;
     private String description;
-    private  final String CREATOR = "";
+    private final String CREATOR = "Murad";
 
-    StudentService(LatLng ll, String name, boolean isSearchable, boolean isClickable,
+    StudentService(LatLng ll, String name,
                    String address, String phone, String url, String description) {
-        super(ll, name, isSearchable, isClickable);
+        super(ll, name, true, true);
         this.address = address;
         this.url = url;
         this.description = description;
@@ -57,8 +57,6 @@ public class StudentService extends Feature implements SearchSuggestion{
     public String getUrl() {
         return url;
     }
-
-
 
 
 }

@@ -17,17 +17,21 @@ public class CarPark extends Feature {
 
     private String desc;
     private String buildingCode;
-    private String access;
+    //    private String access;
     private String address;
-    private String aka;
+    private String phone;
+//    private String aka;
 
-    public CarPark(double lat, double lng, String name, String aka, String buildingCode, String address, String access, String desc) {
+    //TODO: fix parking json
+    // public CarPark(double lat, double lng, String name, String aka, String buildingCode, String address, String access, String desc) {
+    public CarPark(double lat, double lng, String name, String buildingCode, String address, String desc, String phone) {
         super(lat, lng, name, false, false);
         this.desc = desc;
         this.buildingCode = buildingCode;
         this.address = address;
-        this.access = access;
-        this.aka = aka;
+        this.phone = phone;
+//        this.access = access;
+//        this.aka = aka;
     }
 
     public BitmapDescriptor getIcon() {
@@ -36,7 +40,7 @@ public class CarPark extends Feature {
 
     //How many spots
     public String getSnippet() {
-        return access;
+        return phone;
     }
 
     public String getDesc() {
