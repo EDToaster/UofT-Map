@@ -352,6 +352,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
+    /**replaces the polygon on the map with a new selected building polygon
+     *
+     * @param building the building to draw the outline of
+     */
     private void setPolygon(Building building) {
         removePolygon();
 
@@ -421,6 +425,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         startActivity(intent);
     }
 
+    /**Toggles hybrid/normal map appearance
+     *
+     * @param flag
+     */
     private void setHybrid(boolean flag) {
         isHybrid = flag;
         if (isHybrid)
@@ -450,6 +458,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
+    /**Updates the marker visibility based on featureVisible attributes
+     */
     private void refreshMarkers() {
         for (Feature place : uni.getAllFeatures())
             place.getMarker(mMap).setVisible(false);
@@ -496,12 +506,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.getUiSettings().setZoomControlsEnabled(true);
         mMap.getUiSettings().setCompassEnabled(true);
         mMap.getUiSettings().setMyLocationButtonEnabled(false);
-
-
-        //TODO: it is breaking our movement when we click on a marker
         mMap.setPadding(0, 170, 0, 0);
 
-        setHybrid(false);
+        setHybrid(false); //starts with a normal map
 
 
         goToNinja(uni.getCurrentSelected().getLatLng(), DEFAULT_ZOOM);
@@ -593,6 +600,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
+    /**Centres view on the current location of the user
+     *
+     */
     private void centerOnMe() {
         try {
             LocationManager locationManager = (LocationManager)
