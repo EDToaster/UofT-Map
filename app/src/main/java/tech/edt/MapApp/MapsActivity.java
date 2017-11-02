@@ -352,7 +352,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
-    /**replaces the polygon on the map with a new selected building polygon
+    /**
+     * replaces the polygon on the map with a new selected building polygon
      *
      * @param building the building to draw the outline of
      */
@@ -425,7 +426,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         startActivity(intent);
     }
 
-    /**Toggles hybrid/normal map appearance
+    /**
+     * Toggles hybrid/normal map appearance
      *
      * @param flag
      */
@@ -458,7 +460,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
-    /**Updates the marker visibility based on featureVisible attributes
+    /**
+     * Updates the marker visibility based on featureVisible attributes
      */
     private void refreshMarkers() {
         for (Feature place : uni.getAllFeatures())
@@ -486,7 +489,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         try {
             buildingPolygon.remove();
         } catch (Exception e) {
-            Log.e("remove polygon", "" + e);
+            Log.e(this.getClass().getSimpleName(), "removePolygon", e);
 
         }
     }
@@ -600,8 +603,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
-    /**Centres view on the current location of the user
-     *
+    /**
+     * Centres view on the current location of the user
      */
     private void centerOnMe() {
         try {
