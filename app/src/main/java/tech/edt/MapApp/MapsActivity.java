@@ -410,7 +410,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
-    /**Opens a link in the default browser
+    /**
+     * Opens a link in the default browser
      *
      * @param link link to the webpage
      */
