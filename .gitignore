@@ -1,37 +1,39 @@
-*.iml
-.gradle
-/local.properties
-/.idea/workspace.xml
-/.idea/libraries
-.DS_Store
-/build
-/captures
-.externalNativeBuild
+# Built application files
+/*/build/
 
-#built application files
-*.apk
-*.ap_
-
-# files for the dex VM
-*.dex
-
-# Java class files
-*.class
-
-# generated files
-bin/
-gen/
+# Crashlytics configuations
+com_crashlytics_export_strings.xml
 
 # Local configuration file (sdk path, etc)
 local.properties
 
-# Windows thumbnail db
+# Gradle generated files
+.gradle/
+
+# Signing files
+.signing/
+
+# User-specific configurations
+.idea/libraries/
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/.name
+.idea/compiler.xml
+.idea/copyright/profiles_settings.xml
+.idea/encodings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/scopes/scope_settings.xml
+.idea/vcs.xml
+*.iml
+
+# OS-specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
-
-# Android Studio
-.idea
-#.idea/workspace.xml - remove # and delete .idea if it better suit your needs.
-build/
-
-/app/src/debug/res/values/google_maps_api.xml
 /app/src/release/res/values/google_maps_api.xml
+/app/src/debug/res/values/google_maps_api.xml
