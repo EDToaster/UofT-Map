@@ -10,15 +10,15 @@ import com.google.android.gms.maps.model.LatLng;
  * Created by murad on 11/1/17.
  */
 
-public class StudentServices extends Feature implements SearchSuggestion{
+public class StudentService extends Feature implements SearchSuggestion{
     private String address;
     private String phone;
     private String url;
     private String description;
     private  final String CREATOR = "";
 
-    StudentServices(LatLng ll, String name, boolean isSearchable, boolean isClickable,
-                    String address, String phone, String url,String description) {
+    StudentService(LatLng ll, String name, boolean isSearchable, boolean isClickable,
+                   String address, String phone, String url, String description) {
         super(ll, name, isSearchable, isClickable);
         this.address = address;
         this.url = url;
@@ -26,8 +26,8 @@ public class StudentServices extends Feature implements SearchSuggestion{
         this.phone = phone;
     }
 
-    StudentServices(LatLng ll, String name, boolean isSearchable, boolean isClickable,
-                    String address, String url,String description) {
+    StudentService(LatLng ll, String name, boolean isSearchable, boolean isClickable,
+                   String address, String url, String description) {
         super(ll, name, isSearchable, isClickable);
         this.address = address;
         this.url = url;
