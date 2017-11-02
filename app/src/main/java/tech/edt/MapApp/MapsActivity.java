@@ -18,6 +18,7 @@ import android.support.v4.app.FragmentActivity;
 import android.text.util.Linkify;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -78,7 +79,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private University uni;
 
     private ArrayList<Feature> persistent = new ArrayList<>();
-    ;
 
     private GetSearchResultsTask current_task;
     private Drawer result;
@@ -87,20 +87,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         MapsInitializer.initialize(this);
-        Util.init();
-
 
         String sg = getString(R.string.drawer_item_UTSG);
         String m = getString(R.string.drawer_item_UTM);
         String sc = getString(R.string.drawer_item_UTSC);
-        uni = new University(sg, m, sc).setUpFeatures(getAssets());
+
         //Data Crunching
-
-
+        uni = new University(sg, m, sc).setUpFeatures(getAssets());
+        //Default Campus
+        //TODO: save favourite campus
         uni.setCurrentSelected("UTSG");
-        //End Data Crunching
-
-        //Default
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         setContentView(R.layout.activity_maps);
@@ -108,23 +104,21 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
+        setUpSearchBar();
+        setUpDrawers();
+    }
 
+    private void setUpSearchBar() {
         mSearchView = (FloatingSearchView) findViewById(R.id.floating_search_view);
 
         mSearchView.setOnQueryChangeListener(new FloatingSearchView.OnQueryChangeListener() {
             @Override
             public void onSearchTextChanged(String oldQuery, final String newQuery) {
-                if (current_task != null)
-                    current_task.cancel(true);
-
-                current_task = new GetSearchResultsTask();
-                current_task.execute(newQuery);
-                //pass them on to the search view
-
-
+                new GetSearchResultsTask().execute(newQuery);
             }
 
         });
+
         mSearchView.setOnSearchListener(new FloatingSearchView.OnSearchListener() {
             @Override
             public void onSuggestionClicked(SearchSuggestion searchSuggestion) {
@@ -151,14 +145,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
             @Override
             public void onSearchAction(String currentQuery) {
-//                if (suggestions.size() == 1) // if only one suggestion left, choose that
-//                    this.onSuggestionClicked(suggestions.get(0));
-
+                //if (suggestions.size() == 1) // if only one suggestion left, choose that
+                //this.onSuggestionClicked(suggestions.get(0));
+                //TODO: implement
             }
         });
 
-        mSearchView.setOnMenuItemClickListener(new FloatingSearchView.OnMenuItemClickListener() {
 
+        mSearchView.setOnMenuItemClickListener(new FloatingSearchView.OnMenuItemClickListener() {
             @Override
             public void onActionMenuItemSelected(MenuItem item) {
                 if (item.getItemId() == R.id.action_location) {
@@ -171,6 +165,24 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         });
 
 
+        mSearchView.setOnLeftMenuClickListener(
+                new FloatingSearchView.OnLeftMenuClickListener() {
+                    @Override
+                    public void onMenuOpened() {
+                        result.openDrawer();
+                        mSearchView.closeMenu(true);
+                    }
+
+                    @Override
+                    public void onMenuClosed() {
+                        result.openDrawer();
+
+                    }
+                });
+
+    }
+
+    private void setUpDrawers() {
         //nav drawer
         new DrawerBuilder().withActivity(this).build();
 
@@ -184,13 +196,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         final SecondaryDrawerItem food = new SecondaryDrawerItem().withIdentifier(21)
                 .withName("Food").withSelectable(false).withIcon(R.drawable.food_marker);
+
         final SecondaryDrawerItem building = new SecondaryDrawerItem().withIdentifier(22)
                 .withName("Buildings").withSelectable(false).withIcon(R.drawable.building_marker);
-        final SecondaryDrawerItem car = new SecondaryDrawerItem().withIdentifier(23)
-                .withName("Parking").withSelectable(false).withIcon(R.drawable.bike_marker);
-        ;
+
         final SecondaryDrawerItem bike = new SecondaryDrawerItem().withIdentifier(24)
                 .withName("Bike Racks").withSelectable(false).withIcon(R.drawable.bike_marker);
+
+        final SecondaryDrawerItem car = new SecondaryDrawerItem().withIdentifier(23)
+                .withName("Parking").withSelectable(false).withIcon(R.drawable.car_marker);
+
         final SecondaryDrawerItem accessibility = new SecondaryDrawerItem().withIdentifier(25)
                 .withName("Accessibility").withSelectable(false);
         final SecondaryDrawerItem safety = new SecondaryDrawerItem().withIdentifier(26)
@@ -210,7 +225,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         final SecondaryDrawerItem hybrid = new SecondaryDrawerItem().withIdentifier(71)
                 .withName("Hybrid").withSelectable(false);
-        final SecondaryDrawerItem mapview = new SecondaryDrawerItem().withIdentifier(72)
+        final SecondaryDrawerItem normal = new SecondaryDrawerItem().withIdentifier(72)
                 .withName("Normal").withSelectable(false);
 
 
@@ -233,7 +248,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         community.withTag("f_community"),
                         new SectionDrawerItem().withName("Map").withTextColor(Color.BLUE),
                         hybrid.withTag("m_hybrid"),
-                        mapview.withTag("m_map"),
+                        normal.withTag("m_map"),
 
                         new DividerDrawerItem(),
 
@@ -283,8 +298,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                 itemSC.withSetSelected(true);
                                 itemSG.withSetSelected(false);
                             }
-                            uni.setCurrentSelected(tag.substring(2).trim());
-                            goToNinja(uni.getCurrentSelected().getLatLng(), DEFAULT_ZOOM);
+                            if (uni.setCurrentSelected(tag.substring(2).trim()))
+                                goToNinja(uni.getCurrentSelected().getLatLng(), DEFAULT_ZOOM);
 
                             updateResult(itemM);
                             updateResult(itemSC);
@@ -314,14 +329,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                         } else if (tag.startsWith("m_")) {
                             if (tag.substring(2).equals("map")) {
-                                mapview.withSetSelected(!mapview.isSelected());
-                                hybrid.withSetSelected(!mapview.isSelected());
+                                normal.withSetSelected(!normal.isSelected());
+                                hybrid.withSetSelected(!normal.isSelected());
                             } else if (tag.substring(2).equals("hybrid")) {
-                                mapview.withSetSelected(!mapview.isSelected());
+                                normal.withSetSelected(!normal.isSelected());
                                 hybrid.withSetSelected(!hybrid.isSelected());
                             }
                             setHybrid(hybrid.isSelected());
-                            updateResult(mapview);
+                            updateResult(normal);
                             updateResult(hybrid);
                         }
                         return true;
@@ -329,27 +344,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 })
                 .build();
         itemSG.withSetSelected(true); //SG selected first
-        mapview.withSetSelected(true);
+        normal.withSetSelected(true);
         result.updateItem(itemSG);
-        result.updateItem(mapview);
-
-
-        mSearchView.setOnLeftMenuClickListener(
-                new FloatingSearchView.OnLeftMenuClickListener() {
-                    @Override
-                    public void onMenuOpened() {
-                        result.openDrawer();
-                        mSearchView.closeMenu(true);
-                    }
-
-                    @Override
-                    public void onMenuClosed() {
-                        result.openDrawer();
-
-                    }
-                });
-
-
+        result.updateItem(normal);
     }
 
     /**
@@ -367,16 +364,32 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         buildingPolygon = mMap.addPolygon(rectOptions);
     }
 
-    /*  Updates  the drawer with the new settings of a drawer item
+    /**
+     * Updates the drawer with the new settings of a drawer item
+     *
+     * @param item the item to update
      */
     private void updateResult(IDrawerItem item) {
         result.updateItem(item);
     }
 
+    /**
+     * An asynchronous task to update the results
+     * task.execute takes @param newQuery - the new search term
+     */
     private class GetSearchResultsTask extends AsyncTask<String, Void, ArrayList<Feature>> {
 
-        private Exception exception;
         private ArrayList<Feature> suggestions;
+
+        /**
+         * Cancels the previous task before running this one
+         */
+        @Override
+        protected void onPreExecute() {
+            if (current_task != null)
+                current_task.cancel(true);
+            current_task = this;
+        }
 
         protected ArrayList<Feature> doInBackground(String... args) {
             String newQuery = args[0];
@@ -549,7 +562,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 }
             }
         });
-
         mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
 
             @Override
@@ -591,7 +603,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 snippet.setTextColor(Color.GRAY);
                 snippet.setText(marker.getSnippet());
                 snippet.setAutoLinkMask(Linkify.WEB_URLS);
-//                snippet.setMovementMethod(LinkMovementMethod.getInstance());
 
                 info.addView(title);
                 info.addView(snippet);
@@ -656,7 +667,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
     }
 
-
+    /**
+     * Goes to the specified LatLng location at the zoom level.
+     * zoom = -1 for current level
+     *
+     * @param ll   location of the destination
+     * @param zoom zoom level for the movement
+     *             -1: for current level
+     */
     public void goToNinja(LatLng ll, float zoom) {
         CameraUpdate up;
         if (zoom == -1) up = CameraUpdateFactory.newLatLng(ll);

@@ -35,7 +35,7 @@ public class CarPark extends Feature {
     }
 
     public BitmapDescriptor getIcon() {
-        return Util.getBikeBMP();
+        return Util.getCarBMP();
     }
 
     //How many spots

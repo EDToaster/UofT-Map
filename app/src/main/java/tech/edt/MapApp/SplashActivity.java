@@ -19,6 +19,10 @@ public class SplashActivity extends Activity {
 
         Thread thread = new Thread() {
             public void run() {
+                try {
+                    Thread.sleep(5000);
+                } catch (Exception e) {
+                }
                 Intent intent = new Intent(getApplicationContext(), MapsActivity.class);
                 startActivity(intent);
                 finish();

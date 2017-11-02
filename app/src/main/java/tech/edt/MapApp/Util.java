@@ -24,11 +24,13 @@ public class Util {
     private static BitmapDescriptor BUILDINGBMP;
     private static BitmapDescriptor FOODBMP;
     private static BitmapDescriptor BIKEBMP;
+    private static BitmapDescriptor CARBMP;
 
-    public static void init() {
+    static {
         BUILDINGBMP = BitmapDescriptorFactory.fromResource(R.drawable.building_marker);
         FOODBMP = BitmapDescriptorFactory.fromResource(R.drawable.food_marker);
         BIKEBMP = BitmapDescriptorFactory.fromResource(R.drawable.bike_marker);
+        CARBMP = BitmapDescriptorFactory.fromResource(R.drawable.car_marker);
     }
 
 
@@ -42,6 +44,10 @@ public class Util {
 
     public static BitmapDescriptor getBikeBMP() {
         return BIKEBMP;
+    }
+
+    public static BitmapDescriptor getCarBMP() {
+        return CARBMP;
     }
 
     public static String convertStreamToString(InputStream is) throws Exception {
