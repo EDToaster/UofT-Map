@@ -9,19 +9,19 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import tech.edt.MapApp.R;
-import tech.edt.MapApp.feature.StudentService;
+import tech.edt.MapApp.feature.GreenSpace;
 
 /**
  * Created by Murad on 11/3/17.
  */
 
-public class ServiceInfoDialog extends Dialog implements android.view.View.OnClickListener {
+public class GreenSpaceDialog extends Dialog implements View.OnClickListener {
 
-    private StudentService f;
+    private GreenSpace f;
     private TextView title, main_box;
     private Button exit_button;
 
-    public ServiceInfoDialog(Activity a, StudentService f) {
+    public GreenSpaceDialog(Activity a, GreenSpace f) {
         super(a);
         this.f = f;
 

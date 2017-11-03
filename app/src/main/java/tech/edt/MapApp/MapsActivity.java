@@ -52,6 +52,7 @@ import java.util.regex.Pattern;
 
 import tech.edt.MapApp.dialog.BuildingInfoDialog;
 import tech.edt.MapApp.dialog.FoodInfoDialog;
+import tech.edt.MapApp.dialog.GreenSpaceDialog;
 import tech.edt.MapApp.dialog.ServiceInfoDialog;
 import tech.edt.MapApp.feature.BikePark;
 import tech.edt.MapApp.feature.Building;
@@ -604,7 +605,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         //goToNinja(uni.getCurrentSelected().getLatLng(), DEFAULT_ZOOM);
 
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(uni.getCurrentSelected().getLatLng(),
-                14.0f));
+                15));
 
 
         refreshMarkers();
@@ -640,6 +641,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 } else if (f instanceof StudentService) {
                     ServiceInfoDialog sid = new ServiceInfoDialog(MapsActivity.this,
                             (StudentService) f);
+                    sid.show();
+                } else if (f instanceof GreenSpace) {
+                    GreenSpaceDialog sid = new GreenSpaceDialog(MapsActivity.this,
+                            (GreenSpace) f);
                     sid.show();
                 }
             }

@@ -50,4 +50,7 @@ public class GreenSpace extends Feature implements SearchSuggestion {
     }
 
 
+    public String getDialogText() {
+        return description;
+    }
 }
