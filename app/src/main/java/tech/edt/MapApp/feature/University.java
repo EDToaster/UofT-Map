@@ -47,7 +47,7 @@ public class University {
             Collections.sort(i.getFeatures(), cmp);
     }
 
-    public HashMap<String, Campus> getCampuses() {
+    private HashMap<String, Campus> getCampuses() {
         return campuses;
     }
 
@@ -76,6 +76,8 @@ public class University {
             setUpFood(assetManager);
             setUpBikes(assetManager);
             setUpCars(assetManager);
+            setUpGreenSpaces(assetManager);
+            setUpStudentServices(assetManager);
         } catch (Exception e) {
             Log.e("setUpFeatures", "Exception", e);
             System.exit(1);
@@ -236,6 +238,9 @@ public class University {
                 StudentService b = new StudentService(new LatLng(lat, lng), name,
                         address, phone, url, desc);
 
+                getCampuses().get("UTSG").addFeature(b);
+
+
 
             } catch (JSONException e) {
                 Log.e("setUpStudentServices", "SS_EXCEPTION", e);
@@ -276,7 +281,7 @@ public class University {
 
     //TODO: IMPLEMENT ME!
     private void setUpGreenSpaces(AssetManager assetManager) throws Exception {
-        JSONArray arr = Util.getBaseObj(assetManager, "green-u-o-f-t.json")
+        JSONArray arr = Util.getBaseObj(assetManager, "green-u-of-t.json")
                 .getJSONArray("markers");
 
         for (int i = 0; i < arr.length(); i++) {
@@ -292,6 +297,9 @@ public class University {
 
                 GreenSpace b = new GreenSpace(new LatLng(lat, lng), name,
                         address, desc);
+
+                    getCampuses().get("UTSG").addFeature(b);
+
 
                 }
             } catch (JSONException e) {

@@ -54,8 +54,12 @@ import tech.edt.MapApp.dialog.FoodInfoDialog;
 import tech.edt.MapApp.feature.BikePark;
 import tech.edt.MapApp.feature.Building;
 import tech.edt.MapApp.feature.CarPark;
+import tech.edt.MapApp.feature.CommunityFeature;
 import tech.edt.MapApp.feature.Feature;
 import tech.edt.MapApp.feature.Food;
+import tech.edt.MapApp.feature.GreenSpace;
+import tech.edt.MapApp.feature.Safety;
+import tech.edt.MapApp.feature.StudentService;
 import tech.edt.MapApp.feature.University;
 
 //TODO: Move to different threads
@@ -74,6 +78,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private boolean foodVisible = false;
     private boolean carparkVisible = false;
     private boolean bikeparkVisible = false;
+    private boolean studentVisible = false;
+    private boolean greenVisible = false;
+    private boolean communityVisible = false;
+    private boolean safetyVisible = false;
     private boolean isHybrid = true;
     private Polygon buildingPolygon;
 
@@ -151,6 +159,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     mSearchView.setSearchFocused(false);
                     mSearchView.setSearchText(suggestion.toShortString());
                     LatLng ll = suggestion.getLatLng();
+
 
                     Marker tempMarker = suggestion.getMarker(mMap);
                     persistent.clear();
@@ -231,7 +240,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .withName("Parking").withSelectable(false).withIcon(R.drawable.car_marker);
 
         final SecondaryDrawerItem studentService = new SecondaryDrawerItem().withIdentifier(25)
-                .withName("Student Services").withSelectable(false);
+                .withName("Student Services").withSelectable(false).
+                        withIcon(R.drawable.student_marker);
         final SecondaryDrawerItem safety = new SecondaryDrawerItem().withIdentifier(26)
                 .withName("Safety").withSelectable(false);
         final SecondaryDrawerItem green = new SecondaryDrawerItem().withIdentifier(27)
@@ -310,18 +320,22 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                         } else if (tag.startsWith("c_")) {
                             String camp = tag.substring(2).trim();
-                            if (camp.equals("UTSG")) {
-                                itemM.withSetSelected(false);
-                                itemSC.withSetSelected(false);
-                                itemSG.withSetSelected(true);
-                            } else if (camp.equals("UTM")) {
-                                itemM.withSetSelected(true);
-                                itemSC.withSetSelected(false);
-                                itemSG.withSetSelected(false);
-                            } else if (camp.equals("UTSC")) {
-                                itemM.withSetSelected(false);
-                                itemSC.withSetSelected(true);
-                                itemSG.withSetSelected(false);
+                            switch (camp) {
+                                case "UTSG":
+                                    itemM.withSetSelected(false);
+                                    itemSC.withSetSelected(false);
+                                    itemSG.withSetSelected(true);
+                                    break;
+                                case "UTM":
+                                    itemM.withSetSelected(true);
+                                    itemSC.withSetSelected(false);
+                                    itemSG.withSetSelected(false);
+                                    break;
+                                case "UTSC":
+                                    itemM.withSetSelected(false);
+                                    itemSC.withSetSelected(true);
+                                    itemSG.withSetSelected(false);
+                                    break;
                             }
                             if (uni.setCurrentSelected(tag.substring(2).trim())) {
                                 goToNinja(uni.getCurrentSelected().getLatLng(), DEFAULT_ZOOM);
@@ -487,14 +501,37 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      * @param isSelected the value to set the tag to
      **/
     private void setVisibilityAndUpdateMarkers(String type, boolean isSelected) {
-        if (type.equals("building") || type.equals("layers"))
-            buildingVisible = isSelected;
-        if (type.equals("food") || type.equals("layers"))
-            foodVisible = isSelected;
-        if (type.equals("carpark") || type.equals("layers"))
-            carparkVisible = isSelected;
-        if (type.equals("bikepark") || type.equals("layers"))
-            bikeparkVisible = isSelected;
+        switch(type){
+            case "building":
+                buildingVisible = isSelected;
+                break;
+            case "food":
+                foodVisible = isSelected;
+                break;
+            case "carpark":
+                carparkVisible = isSelected;
+                break;
+            case "bikepark":
+                bikeparkVisible = isSelected;
+                break;
+            case "student-service":
+                studentVisible = isSelected;
+                break;
+            case "community":
+                communityVisible = isSelected;
+                break;
+            case "safety":
+                safetyVisible = isSelected;
+                break;
+            case "green":
+                greenVisible = isSelected;
+                break;
+            case "layers":
+                 bikeparkVisible = foodVisible = carparkVisible = bikeparkVisible = safetyVisible
+                         = communityVisible = safetyVisible = greenVisible = isSelected;
+                break;
+
+        }
         refreshMarkers();
 
     }
@@ -515,6 +552,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 place.getMarker(mMap).setVisible(bikeparkVisible);
             else if (place instanceof CarPark)
                 place.getMarker(mMap).setVisible(carparkVisible);
+            else if (place instanceof StudentService)
+                place.getMarker(mMap).setVisible(studentVisible);
+            else if (place instanceof CommunityFeature)
+                place.getMarker(mMap).setVisible(communityVisible);
+            else if (place instanceof GreenSpace)
+                place.getMarker(mMap).setVisible(greenVisible);
+            else if (place instanceof Safety)
+                place.getMarker(mMap).setVisible(safetyVisible);
         }
 
         for (Feature p : persistent)
