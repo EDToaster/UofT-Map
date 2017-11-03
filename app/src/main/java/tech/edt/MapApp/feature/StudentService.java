@@ -39,7 +39,7 @@ public class StudentService extends Feature implements SearchSuggestion {
     }
 
     public BitmapDescriptor getIcon() {
-        return Util.getBuildingBMP();
+        return Util.getStudentBMP();
     }
 
 

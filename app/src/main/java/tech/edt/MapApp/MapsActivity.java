@@ -54,8 +54,12 @@ import tech.edt.MapApp.dialog.FoodInfoDialog;
 import tech.edt.MapApp.feature.BikePark;
 import tech.edt.MapApp.feature.Building;
 import tech.edt.MapApp.feature.CarPark;
+import tech.edt.MapApp.feature.CommunityFeature;
 import tech.edt.MapApp.feature.Feature;
 import tech.edt.MapApp.feature.Food;
+import tech.edt.MapApp.feature.GreenSpace;
+import tech.edt.MapApp.feature.Safety;
+import tech.edt.MapApp.feature.StudentService;
 import tech.edt.MapApp.feature.University;
 
 //TODO: Move to different threads
@@ -236,7 +240,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .withName("Parking").withSelectable(false).withIcon(R.drawable.car_marker);
 
         final SecondaryDrawerItem studentService = new SecondaryDrawerItem().withIdentifier(25)
-                .withName("Student Services").withSelectable(false);
+                .withName("Student Services").withSelectable(false).
+                        withIcon(R.drawable.student_marker);
         final SecondaryDrawerItem safety = new SecondaryDrawerItem().withIdentifier(26)
                 .withName("Safety").withSelectable(false);
         final SecondaryDrawerItem green = new SecondaryDrawerItem().withIdentifier(27)
@@ -509,7 +514,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             case "bikepark":
                 bikeparkVisible = isSelected;
                 break;
-            case "student-services":
+            case "student-service":
                 studentVisible = isSelected;
                 break;
             case "community":
@@ -547,6 +552,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 place.getMarker(mMap).setVisible(bikeparkVisible);
             else if (place instanceof CarPark)
                 place.getMarker(mMap).setVisible(carparkVisible);
+            else if (place instanceof StudentService)
+                place.getMarker(mMap).setVisible(studentVisible);
+            else if (place instanceof CommunityFeature)
+                place.getMarker(mMap).setVisible(communityVisible);
+            else if (place instanceof GreenSpace)
+                place.getMarker(mMap).setVisible(greenVisible);
+            else if (place instanceof Safety)
+                place.getMarker(mMap).setVisible(safetyVisible);
         }
 
         for (Feature p : persistent)

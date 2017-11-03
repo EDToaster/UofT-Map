@@ -47,7 +47,7 @@ public class University {
             Collections.sort(i.getFeatures(), cmp);
     }
 
-    public HashMap<String, Campus> getCampuses() {
+    private HashMap<String, Campus> getCampuses() {
         return campuses;
     }
 
@@ -278,7 +278,7 @@ public class University {
 
     //TODO: IMPLEMENT ME!
     private void setUpGreenSpaces(AssetManager assetManager) throws Exception {
-        JSONArray arr = Util.getBaseObj(assetManager, "green-u-o-f-t.json")
+        JSONArray arr = Util.getBaseObj(assetManager, "green-u-of-t.json")
                 .getJSONArray("markers");
 
         for (int i = 0; i < arr.length(); i++) {
