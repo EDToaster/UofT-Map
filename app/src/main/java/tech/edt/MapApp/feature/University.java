@@ -238,6 +238,9 @@ public class University {
                 StudentService b = new StudentService(new LatLng(lat, lng), name,
                         address, phone, url, desc);
 
+                getCampuses().get("UTSG").addFeature(b);
+
+
 
             } catch (JSONException e) {
                 Log.e("setUpStudentServices", "SS_EXCEPTION", e);
@@ -294,6 +297,9 @@ public class University {
 
                 GreenSpace b = new GreenSpace(new LatLng(lat, lng), name,
                         address, desc);
+
+                    getCampuses().get("UTSG").addFeature(b);
+
 
                 }
             } catch (JSONException e) {
