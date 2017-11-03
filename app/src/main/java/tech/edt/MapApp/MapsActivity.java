@@ -2,6 +2,7 @@ package tech.edt.MapApp;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -83,20 +84,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private GetSearchResultsTask current_task;
     private Drawer result;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         MapsInitializer.initialize(this);
 
-        String sg = getString(R.string.drawer_item_UTSG);
-        String m = getString(R.string.drawer_item_UTM);
-        String sc = getString(R.string.drawer_item_UTSC);
-
-        //Data Crunching
-        uni = new University(sg, m, sc).setUpFeatures(getAssets());
-        //Default Campus
-        //TODO: save favourite campus
-        uni.setCurrentSelected("UTSG");
+        setUpPreferencesAndUniversity();
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         setContentView(R.layout.activity_maps);
@@ -106,6 +100,36 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         setUpSearchBar();
         setUpDrawers();
+    }
+
+    private void setUpPreferencesAndUniversity() {
+
+        String sg = getString(R.string.drawer_item_UTSG);
+        String m = getString(R.string.drawer_item_UTM);
+        String sc = getString(R.string.drawer_item_UTSC);
+
+        //Data Crunching
+        uni = new University(sg, m, sc).setUpFeatures(getAssets());
+        //Default Campus
+        uni.setCurrentSelected(getPreference("def_campus", "UTSG"));
+    }
+
+    private void writePreference(String key, String value) {
+
+        SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putString(key, value);
+        editor.apply();
+    }
+
+    private String getPreference(String key, String default_val) {
+        SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+        String pref = sharedPref.getString(key, null);
+        if (pref == null) {
+            writePreference(key, default_val);
+            return default_val;
+        }
+        return pref;
     }
 
     private void setUpSearchBar() {
@@ -285,22 +309,24 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
                         } else if (tag.startsWith("c_")) {
-                            if (tag.substring(2).trim().equals("UTSG")) {
+                            String camp = tag.substring(2).trim();
+                            if (camp.equals("UTSG")) {
                                 itemM.withSetSelected(false);
                                 itemSC.withSetSelected(false);
                                 itemSG.withSetSelected(true);
-                            } else if (tag.substring(2).trim().equals("UTM")) {
+                            } else if (camp.equals("UTM")) {
                                 itemM.withSetSelected(true);
                                 itemSC.withSetSelected(false);
                                 itemSG.withSetSelected(false);
-                            } else if (tag.substring(2).trim().equals("UTSC")) {
+                            } else if (camp.equals("UTSC")) {
                                 itemM.withSetSelected(false);
                                 itemSC.withSetSelected(true);
                                 itemSG.withSetSelected(false);
                             }
-                            if (uni.setCurrentSelected(tag.substring(2).trim()))
+                            if (uni.setCurrentSelected(tag.substring(2).trim())) {
                                 goToNinja(uni.getCurrentSelected().getLatLng(), DEFAULT_ZOOM);
-
+                                writePreference("def_campus", camp);
+                            }
                             updateResult(itemM);
                             updateResult(itemSC);
                             updateResult(itemSG);

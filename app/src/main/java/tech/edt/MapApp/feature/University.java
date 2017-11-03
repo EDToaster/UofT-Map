@@ -18,11 +18,8 @@ import tech.edt.MapApp.Hours;
 import tech.edt.MapApp.Util;
 
 /**
- * Created by class on 2017-10-29.
+ * A University object with 3 campus objects
  */
-
-
-//TODO: reimplement to fit hierarchy
 public class University {
     private HashMap<String, Campus> campuses;
     private Campus current_selected;

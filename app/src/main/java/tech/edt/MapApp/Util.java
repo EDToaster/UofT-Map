@@ -25,12 +25,14 @@ public class Util {
     private static BitmapDescriptor FOODBMP;
     private static BitmapDescriptor BIKEBMP;
     private static BitmapDescriptor CARBMP;
+    private static BitmapDescriptor STUDENTBMP;
 
     static {
         BUILDINGBMP = BitmapDescriptorFactory.fromResource(R.drawable.building_marker);
         FOODBMP = BitmapDescriptorFactory.fromResource(R.drawable.food_marker);
         BIKEBMP = BitmapDescriptorFactory.fromResource(R.drawable.bike_marker);
         CARBMP = BitmapDescriptorFactory.fromResource(R.drawable.car_marker);
+        STUDENTBMP = BitmapDescriptorFactory.fromResource(R.drawable.student_marker);
     }
 
 
@@ -50,10 +52,14 @@ public class Util {
         return CARBMP;
     }
 
+    public static BitmapDescriptor getStudentBMP() {
+        return STUDENTBMP;
+    }
+
     public static String convertStreamToString(InputStream is) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(is));
         StringBuilder sb = new StringBuilder();
-        String line = null;
+        String line;
         while ((line = reader.readLine()) != null) {
             sb.append(line).append("\n");
         }
@@ -64,8 +70,7 @@ public class Util {
     public static JSONObject getBaseObj(AssetManager assetManager, String file) throws Exception {
         InputStream input = assetManager.open(file);
         String food = Util.convertStreamToString(input);
-        JSONObject obj = new JSONObject(food);
-        return obj;
+        return new JSONObject(food);
     }
 
     public static String[] toStringArray(JSONArray array) {
@@ -79,12 +84,4 @@ public class Util {
         return arr;
     }
 
-//    public static String getStringFromFile(String filePath) throws Exception {
-//        File fl = new File(filePath);
-//        FileInputStream fin = new FileInputStream(fl);
-//        String ret = convertStreamToString(fin);
-//        //Make sure you close all streams.
-//        fin.close();
-//        return ret;
-//    }
 }
