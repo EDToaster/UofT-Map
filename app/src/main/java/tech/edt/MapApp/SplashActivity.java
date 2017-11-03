@@ -17,25 +17,9 @@ public class SplashActivity extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Thread thread = new Thread() {
-            public void run() {
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        setContentView(R.layout.splash_layout);
-                    }
-                });
-                try {
-                    Thread.sleep(500);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                Intent intent = new Intent(getApplicationContext(), MapsActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        };
-        thread.start();
-
+        Intent intent = new Intent(getApplicationContext(), MapsActivity.class);
+        startActivity(intent);
+        finish();
     }
+
 }
