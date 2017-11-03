@@ -263,6 +263,7 @@ public class University {
                 } catch (Exception e) {
                     phone = "";
                 }
+                //TODO: Figure out the plan for the safety thing first
 //                Safety b = new SafetyMisc(new LatLng(lat, lng), name,
 //                        address, phone, url, desc);
 
@@ -286,21 +287,15 @@ public class University {
                     double lat = ij.getDouble("lat");
                     double lng = ij.getDouble("lng");
                     String name = ij.getString("title");
-                    String url = ij.getString("url");
                     String address = ij.getString("address");
                     String desc = ij.getString("desc");
-                    String phone;
-                    try {
-                        phone = ij.getString("phone");
-                    } catch (Exception e) {
-                        phone = "";
-                    }
-//                Safety b = new SafetyMisc(new LatLng(lat, lng), name,
-//                        address, phone, url, desc);
+
+                GreenSpace b = new GreenSpace(new LatLng(lat, lng), name,
+                        address, desc);
 
                 }
             } catch (JSONException e) {
-                Log.e("setUpSafety", "SAFETY_EXCEPTION", e);
+                Log.e("setUpGreenSpaces", "GREEN_EXCEPTION", e);
             }
         }
     }
