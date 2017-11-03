@@ -28,14 +28,6 @@ public class StudentService extends Feature implements SearchSuggestion {
         this.phone = phone;
     }
 
-    StudentService(LatLng ll, String name, boolean isSearchable, boolean isClickable,
-                   String address, String url, String description) {
-        super(ll, name, isSearchable, isClickable);
-        this.address = address;
-        this.url = url;
-        this.description = description;
-
-    }
 
     public BitmapDescriptor getIcon() {
         return Util.getStudentBMP();

@@ -597,7 +597,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         setHybrid(false); //starts with a normal map
 
 
-        goToNinja(uni.getCurrentSelected().getLatLng(), DEFAULT_ZOOM);
+        //goToNinja(uni.getCurrentSelected().getLatLng(), DEFAULT_ZOOM);
+
+        mMap.moveCamera( CameraUpdateFactory.newLatLngZoom(uni.getCurrentSelected().getLatLng() ,
+                14.0f));
+
 
         refreshMarkers();
         for (Feature i : uni.getAllFeatures())
