@@ -74,6 +74,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private boolean foodVisible = false;
     private boolean carparkVisible = false;
     private boolean bikeparkVisible = false;
+    private boolean studentVisible = false;
+    private boolean greenVisible = false;
+    private boolean communityVisible = false;
+    private boolean safetyVisible = false;
     private boolean isHybrid = true;
     private Polygon buildingPolygon;
 
@@ -151,6 +155,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     mSearchView.setSearchFocused(false);
                     mSearchView.setSearchText(suggestion.toShortString());
                     LatLng ll = suggestion.getLatLng();
+
 
                     Marker tempMarker = suggestion.getMarker(mMap);
                     persistent.clear();
@@ -310,18 +315,22 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                         } else if (tag.startsWith("c_")) {
                             String camp = tag.substring(2).trim();
-                            if (camp.equals("UTSG")) {
-                                itemM.withSetSelected(false);
-                                itemSC.withSetSelected(false);
-                                itemSG.withSetSelected(true);
-                            } else if (camp.equals("UTM")) {
-                                itemM.withSetSelected(true);
-                                itemSC.withSetSelected(false);
-                                itemSG.withSetSelected(false);
-                            } else if (camp.equals("UTSC")) {
-                                itemM.withSetSelected(false);
-                                itemSC.withSetSelected(true);
-                                itemSG.withSetSelected(false);
+                            switch (camp) {
+                                case "UTSG":
+                                    itemM.withSetSelected(false);
+                                    itemSC.withSetSelected(false);
+                                    itemSG.withSetSelected(true);
+                                    break;
+                                case "UTM":
+                                    itemM.withSetSelected(true);
+                                    itemSC.withSetSelected(false);
+                                    itemSG.withSetSelected(false);
+                                    break;
+                                case "UTSC":
+                                    itemM.withSetSelected(false);
+                                    itemSC.withSetSelected(true);
+                                    itemSG.withSetSelected(false);
+                                    break;
                             }
                             if (uni.setCurrentSelected(tag.substring(2).trim())) {
                                 goToNinja(uni.getCurrentSelected().getLatLng(), DEFAULT_ZOOM);
@@ -487,14 +496,37 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      * @param isSelected the value to set the tag to
      **/
     private void setVisibilityAndUpdateMarkers(String type, boolean isSelected) {
-        if (type.equals("building") || type.equals("layers"))
-            buildingVisible = isSelected;
-        if (type.equals("food") || type.equals("layers"))
-            foodVisible = isSelected;
-        if (type.equals("carpark") || type.equals("layers"))
-            carparkVisible = isSelected;
-        if (type.equals("bikepark") || type.equals("layers"))
-            bikeparkVisible = isSelected;
+        switch(type){
+            case "building":
+                buildingVisible = isSelected;
+                break;
+            case "food":
+                foodVisible = isSelected;
+                break;
+            case "carpark":
+                carparkVisible = isSelected;
+                break;
+            case "bikepark":
+                bikeparkVisible = isSelected;
+                break;
+            case "student-services":
+                studentVisible = isSelected;
+                break;
+            case "community":
+                communityVisible = isSelected;
+                break;
+            case "safety":
+                safetyVisible = isSelected;
+                break;
+            case "green":
+                greenVisible = isSelected;
+                break;
+            case "layers":
+                 bikeparkVisible = foodVisible = carparkVisible = bikeparkVisible = safetyVisible
+                         = communityVisible = safetyVisible = greenVisible = isSelected;
+                break;
+
+        }
         refreshMarkers();
 
     }

@@ -76,6 +76,8 @@ public class University {
             setUpFood(assetManager);
             setUpBikes(assetManager);
             setUpCars(assetManager);
+            setUpGreenSpaces(assetManager);
+            setUpStudentServices(assetManager);
         } catch (Exception e) {
             Log.e("setUpFeatures", "Exception", e);
             System.exit(1);
