@@ -71,6 +71,10 @@ public class StudentService extends Feature implements SearchSuggestion {
         return description;
     }
 
+    public String getDialogText() {
+        return description + "\n" + phone + "\n" + url;
+    }
+
     public String getPhone() {
         return phone;
     }

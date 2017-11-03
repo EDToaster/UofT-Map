@@ -85,7 +85,8 @@ public class University {
         return this;
     }
 
-    /**Parses JSON asset files and creates Building objects in the appropriate campus
+    /**
+     * Parses JSON asset files and creates Building objects in the appropriate campus
      *
      * @param assetManager
      * @throws Exception
@@ -134,7 +135,9 @@ public class University {
             }
         }
     }
-    /**Parses JSON asset files and creates Food objects in the appropriate campus
+
+    /**
+     * Parses JSON asset files and creates Food objects in the appropriate campus
      *
      * @param assetManager
      * @throws Exception
@@ -171,7 +174,8 @@ public class University {
         }
     }
 
-    /**Parses JSON asset files and creates BikePark objects in the appropriate campus
+    /**
+     * Parses JSON asset files and creates BikePark objects in the appropriate campus
      *
      * @param assetManager
      * @throws Exception
@@ -202,7 +206,8 @@ public class University {
         }
     }
 
-    /**Parses JSON asset files and creates CarPark objects in the appropriate campus
+    /**
+     * Parses JSON asset files and creates CarPark objects in the appropriate campus
      *
      * @param assetManager
      * @throws Exception
@@ -235,7 +240,8 @@ public class University {
         }
     }
 
-    /**Parses JSON asset files and creates StudentService objects in the appropriate campus
+    /**
+     * Parses JSON asset files and creates StudentService objects in the appropriate campus
      *
      * @param assetManager
      * @throws Exception
@@ -263,9 +269,6 @@ public class University {
                         address, phone, url, desc);
 
                 getCampuses().get("UTSG").addFeature(b);
-
-
-
             } catch (JSONException e) {
                 Log.e("setUpStudentServices", "SS_EXCEPTION", e);
             }
@@ -273,8 +276,10 @@ public class University {
     }
 
     //TODO: IMPLEMENT ME!
-    /**Parses JSON asset files and creates MiscSafety and EmergencyPhone
-     *  objects in the appropriate campus
+
+    /**
+     * Parses JSON asset files and creates MiscSafety and EmergencyPhone
+     * objects in the appropriate campus
      *
      * @param assetManager
      * @throws Exception
@@ -309,7 +314,8 @@ public class University {
         }
     }
 
-    /**Parses JSON asset files and creates GreenSpace objects in the appropriate campus
+    /**
+     * Parses JSON asset files and creates GreenSpace objects in the appropriate campus
      *
      * @param assetManager
      * @throws Exception
@@ -329,8 +335,8 @@ public class University {
                     String address = ij.getString("address");
                     String desc = ij.getString("desc");
 
-                GreenSpace b = new GreenSpace(new LatLng(lat, lng), name,
-                        address, desc);
+                    GreenSpace b = new GreenSpace(new LatLng(lat, lng), name,
+                            address, desc);
 
                     getCampuses().get("UTSG").addFeature(b);
 
@@ -341,7 +347,6 @@ public class University {
             }
         }
     }
-
 
 
 }

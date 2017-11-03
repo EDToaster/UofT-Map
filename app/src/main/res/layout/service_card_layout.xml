@@ -28,19 +28,6 @@
         android:textAlignment="viewStart"
         android:textStyle="normal" />
 
-
-    <TextView
-        android:id="@+id/service_phone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
-
-    <TextView
-        android:id="@+id/service_url"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
-
     <Button
         android:id="@+id/service_exit"
         android:layout_width="wrap_content"

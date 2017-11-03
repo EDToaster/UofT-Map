@@ -18,7 +18,7 @@ import tech.edt.MapApp.feature.StudentService;
 public class ServiceInfoDialog extends Dialog implements android.view.View.OnClickListener {
 
     private StudentService f;
-    private TextView title, main_box, phone, url;
+    private TextView title, main_box;
     private Button exit_button;
 
     public ServiceInfoDialog(Activity a, StudentService f) {
@@ -37,15 +37,9 @@ public class ServiceInfoDialog extends Dialog implements android.view.View.OnCli
         title.setText(f.getName());
 
         main_box = (TextView) findViewById(R.id.service_main);
-        main_box.setText(f.getDescription());
+        main_box.setText(f.getDialogText());
 
-        phone = (TextView) findViewById(R.id.service_phone);
-        phone.setText(f.getPhone());
-
-        url = (TextView) findViewById(R.id.service_url);
-        url.setText(f.getUrl());
-
-        exit_button = (Button) findViewById(R.id.building_exit);
+        exit_button = (Button) findViewById(R.id.service_exit);
         exit_button.setOnClickListener(this);
     }
 

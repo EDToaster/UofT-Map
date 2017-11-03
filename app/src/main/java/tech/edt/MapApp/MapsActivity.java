@@ -64,7 +64,6 @@ import tech.edt.MapApp.feature.Safety;
 import tech.edt.MapApp.feature.StudentService;
 import tech.edt.MapApp.feature.University;
 
-//TODO: Move to different threads
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
@@ -450,10 +449,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         continue;
                     String get = i.getStrippedMatchString();
 
+                    boolean toPut = true;
                     for (Pattern p : pats) {
-                        if (p.matcher(get).find())
-                            suggestions.add(i);
+                        if (!p.matcher(get).find()) {
+                            toPut = false;
+                            break;
+                        }
                     }
+                    if (toPut)
+                        suggestions.add(i);
                 }
             }
             runOnUiThread(new Runnable() {
@@ -599,7 +603,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         //goToNinja(uni.getCurrentSelected().getLatLng(), DEFAULT_ZOOM);
 
-        mMap.moveCamera( CameraUpdateFactory.newLatLngZoom(uni.getCurrentSelected().getLatLng() ,
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(uni.getCurrentSelected().getLatLng(),
                 14.0f));
 
 
