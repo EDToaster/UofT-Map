@@ -32,15 +32,15 @@ public class BuildingInfoDialog extends Dialog implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.building_card_layout);
+        setContentView(R.layout.basic_card_layout);
 
-        title = (TextView) findViewById(R.id.building_title);
+        title = (TextView) findViewById(R.id.basic_title);
         title.setText(f.getName());
 
-        main_box = (TextView) findViewById(R.id.building_main);
+        main_box = (TextView) findViewById(R.id.basic_main);
         main_box.setText(f.getAddress());
 
-        exit_button = (Button) findViewById(R.id.building_exit);
+        exit_button = (Button) findViewById(R.id.basic_exit);
         exit_button.setOnClickListener(this);
     }
 
