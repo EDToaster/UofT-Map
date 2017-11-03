@@ -243,5 +243,68 @@ public class University {
         }
     }
 
+    //TODO: IMPLEMENT ME!
+    private void setUpStudentSafety(AssetManager assetManager) throws Exception {
+        JSONArray arr = Util.getBaseObj(assetManager, "safety.json")
+                .getJSONArray("markers");
+
+        for (int i = 0; i < arr.length(); i++) {
+            try {
+                JSONObject ij = arr.getJSONObject(i);
+                double lat = ij.getDouble("lat");
+                double lng = ij.getDouble("lng");
+                String name = ij.getString("title");
+                String url = ij.getString("url");
+                String address = ij.getString("address");
+                String desc = ij.getString("desc");
+                String phone;
+                try {
+                    phone = ij.getString("phone");
+                } catch (Exception e) {
+                    phone = "";
+                }
+//                Safety b = new SafetyMisc(new LatLng(lat, lng), name,
+//                        address, phone, url, desc);
+
+
+            } catch (JSONException e) {
+                Log.e("setUpSafety", "SAFETY_EXCEPTION", e);
+            }
+        }
+    }
+
+    //TODO: IMPLEMENT ME!
+    private void setUpGreenSpaces(AssetManager assetManager) throws Exception {
+        JSONArray arr = Util.getBaseObj(assetManager, "green-u-o-f-t.json")
+                .getJSONArray("markers");
+
+        for (int i = 0; i < arr.length(); i++) {
+            try {
+                JSONObject ij = arr.getJSONObject(i);
+                JSONArray type = ij.getJSONArray("sublayers");
+                if (type.getInt(0) == 23) {
+                    double lat = ij.getDouble("lat");
+                    double lng = ij.getDouble("lng");
+                    String name = ij.getString("title");
+                    String url = ij.getString("url");
+                    String address = ij.getString("address");
+                    String desc = ij.getString("desc");
+                    String phone;
+                    try {
+                        phone = ij.getString("phone");
+                    } catch (Exception e) {
+                        phone = "";
+                    }
+//                Safety b = new SafetyMisc(new LatLng(lat, lng), name,
+//                        address, phone, url, desc);
+
+                }
+            } catch (JSONException e) {
+                Log.e("setUpSafety", "SAFETY_EXCEPTION", e);
+            }
+        }
+    }
+
+
 
 }
