@@ -1,6 +1,5 @@
 package tech.edt.MapApp.feature;
 
-import android.annotation.SuppressLint;
 import android.os.Parcel;
 
 import com.arlib.floatingsearchview.suggestions.model.SearchSuggestion;
@@ -29,14 +28,6 @@ public class StudentService extends Feature implements SearchSuggestion {
         this.phone = phone;
     }
 
-    StudentService(LatLng ll, String name, boolean isSearchable, boolean isClickable,
-                   String address, String url, String description) {
-        super(ll, name, isSearchable, isClickable);
-        this.address = address;
-        this.url = url;
-        this.description = description;
-
-    }
 
     public BitmapDescriptor getIcon() {
         return Util.getStudentBMP();
@@ -66,5 +57,21 @@ public class StudentService extends Feature implements SearchSuggestion {
         return url;
     }
 
+    @Override
+    public String getSnippet() {
+        return address;
+    }
 
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
 }

@@ -85,6 +85,11 @@ public class University {
         return this;
     }
 
+    /**Parses JSON asset files and creates Building objects in the appropriate campus
+     *
+     * @param assetManager
+     * @throws Exception
+     */
     private void setUpBuildings(AssetManager assetManager) throws Exception {
 
         JSONArray arr = Util.getBaseObj(assetManager, "buildings.json")
@@ -129,7 +134,11 @@ public class University {
             }
         }
     }
-
+    /**Parses JSON asset files and creates Food objects in the appropriate campus
+     *
+     * @param assetManager
+     * @throws Exception
+     */
     private void setUpFood(AssetManager assetManager) throws Exception {
 
 
@@ -162,6 +171,11 @@ public class University {
         }
     }
 
+    /**Parses JSON asset files and creates BikePark objects in the appropriate campus
+     *
+     * @param assetManager
+     * @throws Exception
+     */
     private void setUpBikes(AssetManager assetManager) throws Exception {
         JSONArray arr = Util.getBaseObj(assetManager, "bicycle-racks.json")
                 .getJSONArray("markers");
@@ -188,6 +202,11 @@ public class University {
         }
     }
 
+    /**Parses JSON asset files and creates CarPark objects in the appropriate campus
+     *
+     * @param assetManager
+     * @throws Exception
+     */
     private void setUpCars(AssetManager assetManager) throws Exception {
         JSONArray arr = Util.getBaseObj(assetManager, "parking-lots.json")
                 .getJSONArray("markers");
@@ -216,6 +235,11 @@ public class University {
         }
     }
 
+    /**Parses JSON asset files and creates StudentService objects in the appropriate campus
+     *
+     * @param assetManager
+     * @throws Exception
+     */
     private void setUpStudentServices(AssetManager assetManager) throws Exception {
         JSONArray arr = Util.getBaseObj(assetManager, "student-services.json")
                 .getJSONArray("markers");
@@ -249,7 +273,13 @@ public class University {
     }
 
     //TODO: IMPLEMENT ME!
-    private void setUpStudentSafety(AssetManager assetManager) throws Exception {
+    /**Parses JSON asset files and creates MiscSafety and EmergencyPhone
+     *  objects in the appropriate campus
+     *
+     * @param assetManager
+     * @throws Exception
+     */
+    private void setUpSafety(AssetManager assetManager) throws Exception {
         JSONArray arr = Util.getBaseObj(assetManager, "safety.json")
                 .getJSONArray("markers");
 
@@ -279,7 +309,11 @@ public class University {
         }
     }
 
-    //TODO: IMPLEMENT ME!
+    /**Parses JSON asset files and creates GreenSpace objects in the appropriate campus
+     *
+     * @param assetManager
+     * @throws Exception
+     */
     private void setUpGreenSpaces(AssetManager assetManager) throws Exception {
         JSONArray arr = Util.getBaseObj(assetManager, "green-u-of-t.json")
                 .getJSONArray("markers");
