@@ -19,9 +19,16 @@ public class SplashActivity extends Activity {
 
         Thread thread = new Thread() {
             public void run() {
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        setContentView(R.layout.splash_layout);
+                    }
+                });
                 try {
-                    Thread.sleep(5000);
-                } catch (Exception e) {
+                    Thread.sleep(500);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
                 Intent intent = new Intent(getApplicationContext(), MapsActivity.class);
                 startActivity(intent);

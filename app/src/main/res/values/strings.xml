@@ -2,7 +2,6 @@
     <string name="app_name">U of T Map</string>
     <string name="search_hint">Search here</string>
     <string name="title_activity_maps">U of T Map</string>
-    <string name="title_activity_splash">Splash Screen</string>
     <string name="drop_down">▼</string>
     <string name="toggle_food">Show/Hide Food</string>
     <string name="toggle_buildings">Show/Hide Buildings</string>
