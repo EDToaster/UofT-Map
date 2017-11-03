@@ -501,6 +501,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      * @param isSelected the value to set the tag to
      **/
     private void setVisibilityAndUpdateMarkers(String type, boolean isSelected) {
+        //changed to switch-case for improved readability. considering switching to hashmap
         switch(type){
             case "building":
                 buildingVisible = isSelected;

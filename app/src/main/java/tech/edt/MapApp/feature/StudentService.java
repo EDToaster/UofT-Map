@@ -66,5 +66,10 @@ public class StudentService extends Feature implements SearchSuggestion {
         return url;
     }
 
+    @Override
+    public String getSnippet() {
+        return address;
+    }
+
 
 }
