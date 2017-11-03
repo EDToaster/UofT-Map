@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.content.pm.ServiceInfo;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.location.Criteria;
@@ -51,6 +52,7 @@ import java.util.regex.Pattern;
 
 import tech.edt.MapApp.dialog.BuildingInfoDialog;
 import tech.edt.MapApp.dialog.FoodInfoDialog;
+import tech.edt.MapApp.dialog.ServiceInfoDialog;
 import tech.edt.MapApp.feature.BikePark;
 import tech.edt.MapApp.feature.Building;
 import tech.edt.MapApp.feature.CarPark;
@@ -502,7 +504,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      **/
     private void setVisibilityAndUpdateMarkers(String type, boolean isSelected) {
         //changed to switch-case for improved readability. considering switching to hashmap
-        switch(type){
+        switch (type) {
             case "building":
                 buildingVisible = isSelected;
                 break;
@@ -528,8 +530,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 greenVisible = isSelected;
                 break;
             case "layers":
-                 bikeparkVisible = foodVisible = carparkVisible = bikeparkVisible = safetyVisible
-                         = communityVisible = safetyVisible = greenVisible = isSelected;
+                bikeparkVisible = foodVisible = carparkVisible = bikeparkVisible = safetyVisible
+                        = communityVisible = safetyVisible = greenVisible = isSelected;
                 break;
 
         }
@@ -627,6 +629,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 } else if (f instanceof Food) {
                     FoodInfoDialog fid = new FoodInfoDialog(MapsActivity.this, (Food) f);
                     fid.show();
+                } else if (f instanceof StudentService) {
+                    ServiceInfoDialog sid = new ServiceInfoDialog(MapsActivity.this,
+                            (StudentService) f);
+                    sid.show();
                 }
             }
         });

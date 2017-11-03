@@ -1,6 +1,5 @@
 package tech.edt.MapApp.feature;
 
-import android.annotation.SuppressLint;
 import android.os.Parcel;
 
 import com.arlib.floatingsearchview.suggestions.model.SearchSuggestion;
@@ -72,4 +71,15 @@ public class StudentService extends Feature implements SearchSuggestion {
     }
 
 
+    public String getAddress() {
+        return address;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
 }
