@@ -230,8 +230,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         final SecondaryDrawerItem car = new SecondaryDrawerItem().withIdentifier(23)
                 .withName("Parking").withSelectable(false).withIcon(R.drawable.car_marker);
 
-        final SecondaryDrawerItem accessibility = new SecondaryDrawerItem().withIdentifier(25)
-                .withName("Accessibility").withSelectable(false);
+        final SecondaryDrawerItem studentService = new SecondaryDrawerItem().withIdentifier(25)
+                .withName("Student Services").withSelectable(false);
         final SecondaryDrawerItem safety = new SecondaryDrawerItem().withIdentifier(26)
                 .withName("Safety").withSelectable(false);
         final SecondaryDrawerItem green = new SecondaryDrawerItem().withIdentifier(27)
@@ -266,7 +266,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         food.withTag("f_food"),
                         bike.withTag("f_bikepark"),
                         car.withTag("f_carpark"),
-                        accessibility.withTag("f_accessibility"),
+                        studentService.withTag("f_student-service"),
                         safety.withTag("f_safety"),
                         green.withTag("f_green"),
                         community.withTag("f_community"),
@@ -340,8 +340,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                     building.isSelected());
                             setVisibilityAndUpdateMarkers("food",
                                     food.isSelected());
-                            setVisibilityAndUpdateMarkers("accessibility",
-                                    accessibility.isSelected());
+                            setVisibilityAndUpdateMarkers("student-service",
+                                    studentService.isSelected());
                             setVisibilityAndUpdateMarkers("green",
                                     green.isSelected());
                             setVisibilityAndUpdateMarkers("carpark",
