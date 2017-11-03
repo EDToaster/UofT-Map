@@ -605,7 +605,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         //goToNinja(uni.getCurrentSelected().getLatLng(), DEFAULT_ZOOM);
 
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(uni.getCurrentSelected().getLatLng(),
-                14.0f));
+                15));
 
 
         refreshMarkers();
