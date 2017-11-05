@@ -3,16 +3,10 @@
 
     <android.support.v7.preference.SwitchPreferenceCompat
         android:defaultValue="true"
-        android:key="switch_preference_1"
+        android:key="polygon_setting"
         android:title="Building Polygons" />
     <android.support.v7.preference.SwitchPreferenceCompat
         android:defaultValue="false"
-        android:key="switch_preference_2"
+        android:key="24time_setting"
         android:title="24 Hour Time" />
-    <ListPreference
-        android:defaultValue="1"
-        android:entries="@array/campuses"
-        android:entryValues="@array/campuses"
-        android:key="list_preference_1"
-        android:title="Default Campus" />
 </PreferenceScreen>
