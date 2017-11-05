@@ -1,5 +1,6 @@
 package tech.edt.MapApp.feature;
 
+import android.content.Context;
 import android.content.res.AssetManager;
 import android.util.Log;
 
@@ -27,15 +28,17 @@ public class University {
     private static final LatLng UTSGLL = new LatLng(43.6644, -79.3923);
     private static final LatLng UTMLL = new LatLng(43.5479, -79.6609);
     private static final LatLng UTSCLL = new LatLng(43.7841, -79.1868);
+    private Context context;
 
     private Feature next;
 
-    public University(String... campusNames) {
+    public University(Context context, String... campusNames) {
         campuses = new HashMap<String, Campus>();
 
         campuses.put("UTSG", new Campus(UTSGLL, campusNames[0]));
         campuses.put("UTM", new Campus(UTMLL, campusNames[1]));
         campuses.put("UTSC", new Campus(UTSCLL, campusNames[2]));
+        this.context = context;
 
 
         Comparator cmp = new Comparator<Feature>() {
@@ -162,7 +165,7 @@ public class University {
                 String desc = ij.getString("description");
                 JSONObject h = ij.getJSONObject("hours");
 
-                Hours hours = new Hours(h);
+                Hours hours = new Hours(h, context);
                 String[] tags = Util.toStringArray(ij.getJSONArray("tags"));
 
                 Food f = new Food(lat, lng, name, address, short_name, url, imageURL, desc, hours,

@@ -1,5 +1,9 @@
 package tech.edt.MapApp;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.support.v7.preference.PreferenceManager;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -17,9 +21,22 @@ import java.util.TimeZone;
 public class Hours {
 
     public final Interval sunday, monday, tuesday, wednesday, thursday, friday, saturday;
+    private String weekformat;
+    private String hourformat;
 
 
-    public Hours(JSONObject hours) throws JSONException {
+    public Hours(JSONObject hours, Context context) throws JSONException {
+
+        final SharedPreferences mSharedPreference = PreferenceManager.
+                getDefaultSharedPreferences(context);
+        hourformat = mSharedPreference.getString("hour_format", "hh:mm a");
+        if (hourformat.contains("24")) {
+            hourformat = "HH:mm";
+        } else {
+            hourformat = "hh:mm a";
+        }
+        weekformat = mSharedPreference.getString("week_format", "MTWRFSS");
+
         this.sunday = new Interval(hours.getJSONObject("sunday"));
         this.monday = new Interval(hours.getJSONObject("monday"));
         this.tuesday = new Interval(hours.getJSONObject("tuesday"));
@@ -27,10 +44,12 @@ public class Hours {
         this.thursday = new Interval(hours.getJSONObject("thursday"));
         this.friday = new Interval(hours.getJSONObject("friday"));
         this.saturday = new Interval(hours.getJSONObject("saturday"));
+
+
     }
 
     public class Interval {
-        private SimpleDateFormat localDateFormat = new SimpleDateFormat("hh:mm a");
+        private SimpleDateFormat localDateFormat = new SimpleDateFormat(hourformat);
         private boolean closed;
         private long open, close;
 
@@ -42,7 +61,8 @@ public class Hours {
         }
 
         public String toString() {
-            return closed ? "Closed" : localDateFormat.format(open) + " -> " + localDateFormat.format(close);
+            return closed ? "Closed" : localDateFormat.format(open) + " -> "
+                    + localDateFormat.format(close);
         }
 
         public boolean isClosed() {
@@ -77,13 +97,25 @@ public class Hours {
     }
 
     public String toString() {
-        String s = "Sun:\t" + sunday.toString() +
-                "\nMon:\t" + monday.toString() +
-                "\nTue:\t" + tuesday.toString() +
-                "\nWed:\t" + wednesday.toString() +
-                "\nThu:\t" + thursday.toString() +
-                "\nFri:\t" + friday.toString() +
-                "\nSat:\t" + saturday.toString();
+        String s;
+        if(weekformat.startsWith("S")) {
+                     s = "Sun:\t" + sunday.toString() +
+                    "\nMon:\t" + monday.toString() +
+                    "\nTue:\t" + tuesday.toString() +
+                    "\nWed:\t" + wednesday.toString() +
+                    "\nThu:\t" + thursday.toString() +
+                    "\nFri:\t" + friday.toString() +
+                    "\nSat:\t" + saturday.toString();
+        }else{
+            s =     "\nMon:\t" + monday.toString() +
+                    "\nTue:\t" + tuesday.toString() +
+                    "\nWed:\t" + wednesday.toString() +
+                    "\nThu:\t" + thursday.toString() +
+                    "\nFri:\t" + friday.toString() +
+                    "\nSat:\t" + saturday.toString() +
+                            "\nSun:\t" + sunday.toString();
+
+        }
 
         return s;
     }
