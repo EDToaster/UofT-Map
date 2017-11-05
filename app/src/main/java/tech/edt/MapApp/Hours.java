@@ -113,7 +113,7 @@ public class Hours {
                     "\nThu:\t" + thursday.toString() +
                     "\nFri:\t" + friday.toString() +
                     "\nSat:\t" + saturday.toString() +
-                            "Sun:\t" + sunday.toString();
+                            "\nSun:\t" + sunday.toString();
 
         }
 

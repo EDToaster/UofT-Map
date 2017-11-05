@@ -17,7 +17,7 @@
         android:defaultValue="M"
         android:entries="@array/week_format"
         android:entryValues="@array/week_format"
-        android:key="list_preference_1"
+        android:key="week_format"
         android:summary="requires app restart"
         android:title="Week Format" />
 </PreferenceScreen>
