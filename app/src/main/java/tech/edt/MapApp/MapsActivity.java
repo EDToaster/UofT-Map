@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.content.pm.ServiceInfo;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.location.Criteria;
@@ -19,9 +18,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.preference.PreferenceManager;
 import android.text.util.Linkify;
-import android.util.Log;
 import android.view.Gravity;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -50,6 +47,7 @@ import com.mikepenz.materialdrawer.model.SectionDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.regex.Pattern;
 
 import tech.edt.MapApp.dialog.BuildingInfoDialog;
@@ -88,7 +86,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private boolean safetyVisible = false;
     private boolean isHybrid = true;
     private Polygon buildingPolygon;
-    private boolean polygonEnabled;
+
+
+    private HashMap<String, Boolean> appSettings;
 
     private University uni;
 
@@ -113,8 +113,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         setUpSearchBar();
         setUpDrawers();
+        appSettings = new HashMap<String, Boolean>();
         final SharedPreferences mSharedPreference= PreferenceManager.getDefaultSharedPreferences(getBaseContext());
-        polygonEnabled = mSharedPreference.getBoolean("polygon_visible", true);
+        appSettings.put("polygon_visible", mSharedPreference.getBoolean("polygon_visible", true));
+        appSettings.put("start_hybrid", mSharedPreference.getBoolean("start_hybrid", false));
+        appSettings.put("show_zoom", mSharedPreference.getBoolean("show_zoom", true));
+
+
     }
 
     private void setUpPreferencesAndUniversity() {
@@ -418,7 +423,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      */
     private void setPolygon(Building building) {
 
-        if (polygonEnabled) {
+        if (appSettings.get("polygon_visible")) {
 
             removePolygon();
 
@@ -431,7 +436,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     /**
-     * Updates the drawer with the new settings of a drawer item
+     * Updates the drawer with the new appSettings of a drawer item
      *
      * @param item the item to update
      */
@@ -618,12 +623,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-        mMap.getUiSettings().setZoomControlsEnabled(true);
+        mMap.getUiSettings().setZoomControlsEnabled(appSettings.get("show_zoom"));
         mMap.getUiSettings().setCompassEnabled(true);
         mMap.getUiSettings().setMyLocationButtonEnabled(false);
         mMap.setPadding(0, 170, 0, 0);
 
-        setHybrid(false); //starts with a normal map
+        setHybrid(appSettings.get("start_hybrid")); //starts with a normal map
 
 
         //goToNinja(uni.getCurrentSelected().getLatLng(), DEFAULT_ZOOM);
