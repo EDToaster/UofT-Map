@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="switch_preference_1"
+        android:title="Building Polygons" />
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="switch_preference_2"
+        android:title="24 Hour Time" />
+    <ListPreference
+        android:defaultValue="1"
+        android:entries="@array/campuses"
+        android:entryValues="@array/campuses"
+        android:key="list_preference_1"
+        android:title="Default Campus" />
+</PreferenceScreen>
