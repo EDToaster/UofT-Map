@@ -5,4 +5,13 @@
         <item name="UTM">Mississauga</item>
         <item name="UTSC">Scarborough</item>
     </string-array>
+    <string-array name="time_format">
+        <item name="HH:mm">24 Hour</item>
+        <item name="hh:mm a">12 Hour</item>
+
+    </string-array>
+    <string-array name="week_format">
+        <item name="M">MTWRFSS</item>
+        <item name="S">SMTWRFS</item>
+    </string-array>
 </resources>

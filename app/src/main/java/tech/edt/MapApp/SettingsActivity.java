@@ -7,8 +7,11 @@ import android.support.v7.preference.PreferenceManager;
 
 public class SettingsActivity extends AppCompatActivity {
 
-    public static final String
-            KEY_POLYGON_VISIBLE = "polygon_visible";
+    public static final String KEY_POLYGON_VISIBLE = "polygon_visible";
+    public static final String KEY_TIME_FORMAT = "time_format";
+    public static final String KEY_WEEK_FORMAT = "week_format";
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

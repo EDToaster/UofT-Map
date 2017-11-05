@@ -124,7 +124,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         String sc = getString(R.string.drawer_item_UTSC);
 
         //Data Crunching
-        uni = new University(sg, m, sc).setUpFeatures(getAssets());
+        uni = new University(getBaseContext(), sg, m, sc).setUpFeatures(getAssets());
         //Default Campus
         uni.setCurrentSelected(getPreference("def_campus", "UTSG"));
     }
