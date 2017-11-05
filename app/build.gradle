@@ -29,6 +29,7 @@ dependencies {
     compile 'com.android.support:multidex:1.0.0'
     compile 'com.google.android.gms:play-services:10.0.1'
     compile 'com.github.arimorty:floatingsearchview:2.1.1'
+    compile 'com.android.support:preference-v7:25.0.1'
 
 
     compile('com.mikepenz:materialdrawer:5.9.5@aar') {

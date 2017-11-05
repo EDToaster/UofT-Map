@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <SwitchPreference
+    <android.support.v7.preference.SwitchPreferenceCompat
         android:defaultValue="true"
         android:key="switch_preference_1"
         android:title="Building Polygons" />
-    <SwitchPreference
+    <android.support.v7.preference.SwitchPreferenceCompat
         android:defaultValue="false"
         android:key="switch_preference_2"
         android:title="24 Hour Time" />

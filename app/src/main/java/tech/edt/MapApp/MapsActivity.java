@@ -314,18 +314,25 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                             updateResult(drawerItem);
 
                         } else if (tag.startsWith("s_")) {
-                            if (tag.substring(2).equals("feedback")) {
-                                openLink("https://docs.google.com/forms/d/11kMs5L2VtIeVsLFnllGzx" +
-                                        "uR6jch28Pe76UF7nmDnYXU\"");
-                            } else if (tag.substring(2).equals("settings")) {
-                                Toast.makeText(getApplicationContext(), "coming soon",
-                                        Toast.LENGTH_LONG).show();
-                            } else if (tag.substring(2).equals("about")) {
-                                Toast.makeText(getApplicationContext(), "Unofficial University"
-                                                + " of Toronto Map app." +
-                                                "\n\nDesigned and Developed by Howard Chen and " +
-                                                "Murad Akhundov in 2017.",
-                                        Toast.LENGTH_LONG).show();
+                            String option = tag.substring(2).trim();
+                            switch (option) {
+                                case "feedback":
+                                    openLink("https://docs.google.com/forms/d/11kMs5L2V" +
+                                            "tIeVsLFnllGzxuR6jch28Pe76UF7nmDnYXU\"");
+                                    break;
+                                case "settings":
+                                    Intent intent = new Intent(getApplicationContext(),
+                                            SettingsActivity.class);
+                                    startActivity(intent);
+                                    //return true;
+                                    break;
+                                case "about":
+                                    Toast.makeText(getApplicationContext(), "Unofficial " +
+                                                    "University of Toronto Map app." +
+                                                    "\n\nDesigned and Developed by Howard Chen and "
+                                                    + "Murad Akhundov in 2017.",
+                                            Toast.LENGTH_LONG).show();
+                                    break;
                             }
 
 
