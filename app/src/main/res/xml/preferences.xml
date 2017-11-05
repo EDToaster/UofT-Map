@@ -6,6 +6,15 @@
         android:defaultValue="true"
         android:key="polygon_visible"
         android:title="Building Polygons" />
+    <android.support.v7.preference.SwitchPreferenceCompat
+        android:defaultValue="false"
+        android:key="start_hybrid"
+        android:title="Start map in satellite view"
+        android:summary="may consume more data"/>
+    <android.support.v7.preference.SwitchPreferenceCompat
+        android:defaultValue="true"
+        android:key="show_zoom"
+        android:title="Show +- zoom buttons"/>
     <ListPreference
         android:defaultValue="HH:mm"
         android:entries="@array/time_format"
