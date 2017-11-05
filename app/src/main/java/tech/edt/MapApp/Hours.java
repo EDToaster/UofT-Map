@@ -35,8 +35,8 @@ public class Hours {
         } else {
             hourformat = "hh:mm a";
         }
-        weekformat = mSharedPreference.getString("week_format", "hh:mm a");
-        //hourformat = mSharedPreference.getString("polygon_visible", "M");
+        weekformat = mSharedPreference.getString("week_format", "MTWRFSS");
+
         this.sunday = new Interval(hours.getJSONObject("sunday"));
         this.monday = new Interval(hours.getJSONObject("monday"));
         this.tuesday = new Interval(hours.getJSONObject("tuesday"));
@@ -97,13 +97,25 @@ public class Hours {
     }
 
     public String toString() {
-        String s = "Sun:\t" + sunday.toString() +
-                "\nMon:\t" + monday.toString() +
-                "\nTue:\t" + tuesday.toString() +
-                "\nWed:\t" + wednesday.toString() +
-                "\nThu:\t" + thursday.toString() +
-                "\nFri:\t" + friday.toString() +
-                "\nSat:\t" + saturday.toString();
+        String s;
+        if(weekformat.startsWith("S")) {
+                     s = "Sun:\t" + sunday.toString() +
+                    "\nMon:\t" + monday.toString() +
+                    "\nTue:\t" + tuesday.toString() +
+                    "\nWed:\t" + wednesday.toString() +
+                    "\nThu:\t" + thursday.toString() +
+                    "\nFri:\t" + friday.toString() +
+                    "\nSat:\t" + saturday.toString();
+        }else{
+            s =     "\nMon:\t" + monday.toString() +
+                    "\nTue:\t" + tuesday.toString() +
+                    "\nWed:\t" + wednesday.toString() +
+                    "\nThu:\t" + thursday.toString() +
+                    "\nFri:\t" + friday.toString() +
+                    "\nSat:\t" + saturday.toString() +
+                            "Sun:\t" + sunday.toString();
+
+        }
 
         return s;
     }
