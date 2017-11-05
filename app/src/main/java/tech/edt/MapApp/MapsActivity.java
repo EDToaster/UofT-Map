@@ -39,6 +39,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.Polygon;
 import com.google.android.gms.maps.model.PolygonOptions;
+import com.mikepenz.google_material_typeface_library.GoogleMaterial;
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.model.DividerDrawerItem;
@@ -245,24 +246,32 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .withName("Student Services").withSelectable(false).
                         withIcon(R.drawable.student_marker);
         final SecondaryDrawerItem safety = new SecondaryDrawerItem().withIdentifier(26)
-                .withName("Safety").withSelectable(false);
+                .withName("Safety").withSelectable(false).withIcon(GoogleMaterial.
+                        Icon.gmd_local_hospital);
         final SecondaryDrawerItem green = new SecondaryDrawerItem().withIdentifier(27)
-                .withName("Green Spaces").withSelectable(false);
+                .withName("Green Spaces").withSelectable(false).withIcon(GoogleMaterial.
+                        Icon.gmd_local_florist);
         final SecondaryDrawerItem community = new SecondaryDrawerItem().withIdentifier(28)
-                .withName("Community Features").withSelectable(false);
+                .withName("Community Features").withSelectable(false).withIcon(GoogleMaterial.
+                        Icon.gmd_star);
 
 
         SecondaryDrawerItem settings = new SecondaryDrawerItem().withIdentifier(12)
-                .withName("Settings").withSelectable(false);
+                .withName("Settings").withSelectable(false).withIcon(GoogleMaterial.
+                        Icon.gmd_settings);
         final SecondaryDrawerItem feedback = new SecondaryDrawerItem().withIdentifier(13)
-                .withName("Feedback").withSelectable(false);
+                .withName("Feedback").withSelectable(false).withIcon(GoogleMaterial.
+                        Icon.gmd_feedback);
         SecondaryDrawerItem about = new SecondaryDrawerItem().withIdentifier(14)
-                .withName("About").withSelectable(false);
+                .withName("About").withSelectable(false).withIcon(GoogleMaterial.
+                        Icon.gmd_info);;
 
         final SecondaryDrawerItem hybrid = new SecondaryDrawerItem().withIdentifier(71)
-                .withName("Hybrid").withSelectable(false);
+                .withName("Hybrid").withSelectable(false).withIcon(GoogleMaterial.
+                        Icon.gmd_satellite);
         final SecondaryDrawerItem normal = new SecondaryDrawerItem().withIdentifier(72)
-                .withName("Normal").withSelectable(false);
+                .withName("Normal").withSelectable(false).withIcon(GoogleMaterial.
+                        Icon.gmd_map);
 
 
         result = new DrawerBuilder() //result is a global navbar
@@ -305,18 +314,25 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                             updateResult(drawerItem);
 
                         } else if (tag.startsWith("s_")) {
-                            if (tag.substring(2).equals("feedback")) {
-                                openLink("https://docs.google.com/forms/d/11kMs5L2VtIeVsLFnllGzx" +
-                                        "uR6jch28Pe76UF7nmDnYXU\"");
-                            } else if (tag.substring(2).equals("settings")) {
-                                Toast.makeText(getApplicationContext(), "coming soon",
-                                        Toast.LENGTH_LONG).show();
-                            } else if (tag.substring(2).equals("about")) {
-                                Toast.makeText(getApplicationContext(), "Unofficial University"
-                                                + " of Toronto Map app." +
-                                                "\n\nDesigned and Developed by Howard Chen and " +
-                                                "Murad Akhundov in 2017.",
-                                        Toast.LENGTH_LONG).show();
+                            String option = tag.substring(2).trim();
+                            switch (option) {
+                                case "feedback":
+                                    openLink("https://docs.google.com/forms/d/11kMs5L2V" +
+                                            "tIeVsLFnllGzxuR6jch28Pe76UF7nmDnYXU\"");
+                                    break;
+                                case "settings":
+                                    Intent intent = new Intent(getApplicationContext(),
+                                            SettingsActivity.class);
+                                    startActivity(intent);
+                                    //return true;
+                                    break;
+                                case "about":
+                                    Toast.makeText(getApplicationContext(), "Unofficial " +
+                                                    "University of Toronto Map app." +
+                                                    "\n\nDesigned and Developed by Howard Chen and "
+                                                    + "Murad Akhundov in 2017.",
+                                            Toast.LENGTH_LONG).show();
+                                    break;
                             }
 
 
