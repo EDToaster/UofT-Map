@@ -17,6 +17,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
+import android.support.v7.preference.PreferenceManager;
 import android.text.util.Linkify;
 import android.util.Log;
 import android.view.Gravity;
@@ -87,6 +88,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private boolean safetyVisible = false;
     private boolean isHybrid = true;
     private Polygon buildingPolygon;
+    private boolean polygonEnabled;
 
     private University uni;
 
@@ -111,6 +113,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         setUpSearchBar();
         setUpDrawers();
+        final SharedPreferences mSharedPreference= PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        polygonEnabled = mSharedPreference.getBoolean("polygon_visible", true);
     }
 
     private void setUpPreferencesAndUniversity() {
@@ -264,7 +268,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         Icon.gmd_feedback);
         SecondaryDrawerItem about = new SecondaryDrawerItem().withIdentifier(14)
                 .withName("About").withSelectable(false).withIcon(GoogleMaterial.
-                        Icon.gmd_info);;
+                        Icon.gmd_info);
 
         final SecondaryDrawerItem hybrid = new SecondaryDrawerItem().withIdentifier(71)
                 .withName("Hybrid").withSelectable(false).withIcon(GoogleMaterial.
@@ -413,13 +417,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      * @param building the building to draw the outline of
      */
     private void setPolygon(Building building) {
-        removePolygon();
 
-        PolygonOptions rectOptions = new PolygonOptions();
-        rectOptions.addAll(building.getPolygon());
-        rectOptions.strokeColor(Color.CYAN);
-        rectOptions.strokeWidth(5);
-        buildingPolygon = mMap.addPolygon(rectOptions);
+        if (polygonEnabled) {
+
+            removePolygon();
+
+            PolygonOptions rectOptions = new PolygonOptions();
+            rectOptions.addAll(building.getPolygon());
+            rectOptions.strokeColor(Color.CYAN);
+            rectOptions.strokeWidth(5);
+            buildingPolygon = mMap.addPolygon(rectOptions);
+        }
     }
 
     /**
