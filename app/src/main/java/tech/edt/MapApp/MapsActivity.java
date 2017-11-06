@@ -163,6 +163,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.getUiSettings().setCompassEnabled(true);
         mMap.getUiSettings().setMyLocationButtonEnabled(false);
         mMap.setPadding(0, 170, 0, 0);
+
         refreshMapUI("all");
 
         goToNinja(uni.getCurrentSelected().getLatLng(), DEFAULT_ZOOM, false);
@@ -274,7 +275,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         refreshMapUI(key);
                     }
                 };
-        preferences.registerOnSharedPreferenceChangeListener(listener);
 
         appSettings = new HashMap<>();
 
@@ -287,7 +287,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         //Data Crunching
         uni = new University(getBaseContext(), sg, m, sc).setUpFeatures(getAssets());
         //Default Campus
-        uni.setCurrentSelected(getPreference("def_campus", "UTSG"));
+        uni.setCurrentSelected(getPreference(KEY_DEFAULT_CAMPUS, "UTSG"));
+
+        preferences.registerOnSharedPreferenceChangeListener(listener);
     }
 
     /**
