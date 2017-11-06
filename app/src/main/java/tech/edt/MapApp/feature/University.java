@@ -18,6 +18,8 @@ import java.util.HashMap;
 import tech.edt.MapApp.Hours;
 import tech.edt.MapApp.Util;
 
+import static tech.edt.MapApp.MapsActivity.*;
+
 /**
  * A University object with 3 campus objects
  */
@@ -35,9 +37,9 @@ public class University {
     public University(Context context, String... campusNames) {
         campuses = new HashMap<String, Campus>();
 
-        campuses.put("UTSG", new Campus(UTSGLL, campusNames[0]));
-        campuses.put("UTM", new Campus(UTMLL, campusNames[1]));
-        campuses.put("UTSC", new Campus(UTSCLL, campusNames[2]));
+        campuses.put("UTSG", new Campus(UTSGLL, campusNames[0], T_UTSG));
+        campuses.put("UTM", new Campus(UTMLL, campusNames[1], T_UTM));
+        campuses.put("UTSC", new Campus(UTSCLL, campusNames[2], T_UTSC));
         this.context = context;
 
 

@@ -64,7 +64,6 @@ public abstract class Feature implements SearchSuggestion {
 
     }
 
-    
 
     public String getStrippedMatchString() {
         return toString().replaceAll("[^a-zA-Z ]", "").toLowerCase();

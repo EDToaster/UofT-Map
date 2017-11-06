@@ -90,17 +90,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      * Non - persistent feature visibilities
      */
     private HashMap<String, Boolean> featureVisibilty = new HashMap<>();
-
     private boolean isHybrid = true;
 
     /**
      * Drawer global variables
      */
-    private SecondaryDrawerItem gHybrid;
-    private SecondaryDrawerItem gNormal;
-    private PrimaryDrawerItem gUTSG;
-    private PrimaryDrawerItem gUTM;
-    private PrimaryDrawerItem gUTSC;
+    private ArrayList<PrimaryDrawerItem> campusDrawerItems;
+    private ArrayList<SecondaryDrawerItem> hybridDrawerItems;
+
     private Drawer result;
 
     /**
@@ -129,7 +126,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         super.onCreate(savedInstanceState);
         MapsInitializer.initialize(this);
 
-        setUpPreferencesAndUniversity();
         setAllFeatureVisibility(false);
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
@@ -138,26 +134,27 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
+
         setUpSearchBar();
         setUpDrawers();
 
+        setUpPreferencesAndUniversity();
     }
 
-    /**Sets up the setting for visibility of all features
+    /**
+     * Sets up the setting for visibility of all features
      *
      * @param visible set visible/invisible
      */
     private void setAllFeatureVisibility(boolean visible) {
-        featureVisibilty.put("building", visible);
-        featureVisibilty.put("food", visible);
-        featureVisibilty.put("student-service", visible);
-        featureVisibilty.put("carpark", visible);
-        featureVisibilty.put("bikepark", visible);
-        featureVisibilty.put("green", visible);
-        featureVisibilty.put("community", visible);
-        featureVisibilty.put("safety", visible);
-
-
+        featureVisibilty.put(T_BUILDING, visible);
+        featureVisibilty.put(T_FOOD, visible);
+        featureVisibilty.put(T_SS, visible);
+        featureVisibilty.put(T_CAR, visible);
+        featureVisibilty.put(T_BIKE, visible);
+        featureVisibilty.put(T_GREEN, visible);
+        featureVisibilty.put(T_COM, visible);
+        featureVisibilty.put(T_SAFETY, visible);
     }
 
     /**
@@ -182,6 +179,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         toast("Select your campus\nfrom side bar");
 
         refreshMarkers();
+
         for (Feature i : uni.getAllFeatures())
             i.getMarker(mMap); //create the marker for each feature
 
@@ -292,15 +290,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         updateAppSettings();
 
-        String sg = getString(R.string.drawer_item_UTSG);
-        String m = getString(R.string.drawer_item_UTM);
-        String sc = getString(R.string.drawer_item_UTSC);
+        String sg = "UTSG";
+        String m = "UTM";
+        String sc = "UTSC";
 
         //Data Crunching
         uni = new University(getBaseContext(), sg, m, sc).setUpFeatures(getAssets());
         //Default Campus
         uni.setCurrentSelected(getPreference(KEY_DEFAULT_CAMPUS, "UTSG"));
-
+        setCampusUISelected(uni.getCurrentSelected().getDrawerTag());
         preferences.registerOnSharedPreferenceChangeListener(listener);
     }
 
@@ -308,9 +306,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      * Updates the appSettings from the preference file
      */
     private void updateAppSettings() {
-        appSettings.put("polygon_visible", preferences.getBoolean("polygon_visible", true));
-        appSettings.put("start_hybrid", preferences.getBoolean("start_hybrid", false));
-        appSettings.put("show_zoom", preferences.getBoolean("show_zoom", true));
+        appSettings.put(KEY_POLYGON_VISIBLE, preferences.getBoolean(KEY_POLYGON_VISIBLE, true));
+        appSettings.put(KEY_START_HYBRID, preferences.getBoolean(KEY_START_HYBRID, false));
+        appSettings.put(KEY_SHOW_ZOOM, preferences.getBoolean(KEY_SHOW_ZOOM, true));
     }
 
     /**
@@ -419,6 +417,26 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
+    public static final String T_UTSG = "c_UTSG";
+    public static final String T_UTSC = "c_UTSC";
+    public static final String T_UTM = "c_UTM";
+
+    private static final String T_FOOD = "f_food";
+    private static final String T_BUILDING = "f_building";
+    private static final String T_BIKE = "f_bikepark";
+    private static final String T_CAR = "f_carpark";
+    private static final String T_SS = "f_student-service";
+    private static final String T_SAFETY = "f_safety";
+    private static final String T_GREEN = "f_green";
+    private static final String T_COM = "f_community";
+
+    private static final String T_SETTINGS = "s_settings";
+    private static final String T_FEEDBACK = "s_feedback";
+    private static final String T_ABOUT = "s_about";
+
+    private static final String T_HYBRID = "m_hybrid";
+    private static final String T_NORMAL = "m_normal";
+
     /**
      * Sets up the navigation drawer
      */
@@ -428,87 +446,91 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         //all the items
         final PrimaryDrawerItem itemSG = new PrimaryDrawerItem().withIdentifier(1)
-                .withName(R.string.drawer_item_UTSG).withSelectable(false);
+                .withName(R.string.drawer_item_UTSG).withSelectable(false).withTag(T_UTSG);
         final PrimaryDrawerItem itemSC = new PrimaryDrawerItem().withIdentifier(5)
-                .withName(R.string.drawer_item_UTSC).withSelectable(false);
+                .withName(R.string.drawer_item_UTSC).withSelectable(false).withTag(T_UTSC);
         final PrimaryDrawerItem itemM = new PrimaryDrawerItem().withIdentifier(6)
-                .withName(R.string.drawer_item_UTM).withSelectable(false);
+                .withName(R.string.drawer_item_UTM).withSelectable(false).withTag(T_UTM);
 
         final SecondaryDrawerItem food = new SecondaryDrawerItem().withIdentifier(21)
-                .withName("Food").withSelectable(false).withIcon(R.drawable.food_marker);
+                .withName("Food").withSelectable(false).withIcon(R.drawable.food_marker).withTag(T_FOOD);
 
         final SecondaryDrawerItem building = new SecondaryDrawerItem().withIdentifier(22)
-                .withName("Buildings").withSelectable(false).withIcon(R.drawable.building_marker);
+                .withName("Buildings").withSelectable(false).withIcon(R.drawable.building_marker).withTag(T_BUILDING);
 
         final SecondaryDrawerItem bike = new SecondaryDrawerItem().withIdentifier(24)
-                .withName("Bike Racks").withSelectable(false).withIcon(R.drawable.bike_marker);
+                .withName("Bike Racks").withSelectable(false).withIcon(R.drawable.bike_marker).withTag(T_BIKE);
 
         final SecondaryDrawerItem car = new SecondaryDrawerItem().withIdentifier(23)
-                .withName("Parking").withSelectable(false).withIcon(R.drawable.car_marker);
+                .withName("Parking").withSelectable(false).withIcon(R.drawable.car_marker).withTag(T_CAR);
 
         final SecondaryDrawerItem studentService = new SecondaryDrawerItem().withIdentifier(25)
                 .withName("Student Services").withSelectable(false).
-                        withIcon(R.drawable.student_marker);
+                        withIcon(R.drawable.student_marker).withTag(T_SS);
         final SecondaryDrawerItem safety = new SecondaryDrawerItem().withIdentifier(26)
                 .withName("Safety").withSelectable(false).withIcon(GoogleMaterial.
-                        Icon.gmd_local_hospital);
+                        Icon.gmd_local_hospital).withTag(T_SAFETY);
         final SecondaryDrawerItem green = new SecondaryDrawerItem().withIdentifier(27)
                 .withName("Green Spaces").withSelectable(false).withIcon(GoogleMaterial.
-                        Icon.gmd_local_florist);
+                        Icon.gmd_local_florist).withTag(T_GREEN);
         final SecondaryDrawerItem community = new SecondaryDrawerItem().withIdentifier(28)
                 .withName("Community Features").withSelectable(false).withIcon(GoogleMaterial.
-                        Icon.gmd_star);
+                        Icon.gmd_star).withTag(T_COM);
 
 
         SecondaryDrawerItem settings = new SecondaryDrawerItem().withIdentifier(12)
                 .withName("Settings").withSelectable(false).withIcon(GoogleMaterial.
-                        Icon.gmd_settings);
+                        Icon.gmd_settings).withTag(T_SETTINGS);
         final SecondaryDrawerItem feedback = new SecondaryDrawerItem().withIdentifier(13)
                 .withName("Feedback").withSelectable(false).withIcon(GoogleMaterial.
-                        Icon.gmd_feedback);
+                        Icon.gmd_feedback).withTag(T_FEEDBACK);
         SecondaryDrawerItem about = new SecondaryDrawerItem().withIdentifier(14)
                 .withName("About").withSelectable(false).withIcon(GoogleMaterial.
-                        Icon.gmd_info);
+                        Icon.gmd_info).withTag(T_ABOUT);
 
         final SecondaryDrawerItem hybrid = new SecondaryDrawerItem().withIdentifier(71)
                 .withName("Hybrid").withSelectable(false).withIcon(GoogleMaterial.
-                        Icon.gmd_satellite);
+                        Icon.gmd_satellite).withTag(T_HYBRID);
         final SecondaryDrawerItem normal = new SecondaryDrawerItem().withIdentifier(72)
                 .withName("Normal").withSelectable(false).withIcon(GoogleMaterial.
-                        Icon.gmd_map);
-        gHybrid = hybrid;
-        gNormal = normal;
-        gUTSG = itemSG;
-        gUTM = itemM;
-        gUTSC = itemSC;
+                        Icon.gmd_map).withTag(T_NORMAL);
+
+        campusDrawerItems = new ArrayList<>();
+        campusDrawerItems.add(itemSG);
+        campusDrawerItems.add(itemM);
+        campusDrawerItems.add(itemSC);
+
+        hybridDrawerItems = new ArrayList<>();
+        hybridDrawerItems.add(hybrid);
+        hybridDrawerItems.add(normal);
 
 
         result = new DrawerBuilder() //result is a global navbar
                 .withActivity(this)
                 .addDrawerItems(
                         //removed campus header.
-                        itemSG.withTag("c_UTSG").withSetSelected(true),
-                        itemM.withTag("c_UTM"),
-                        itemSC.withTag("c_UTSC"),
+                        itemSG,
+                        itemM,
+                        itemSC,
 
                         new SectionDrawerItem().withName("Layers").withTextColor(Color.BLUE),
-                        building.withTag("f_building"),
-                        food.withTag("f_food"),
-                        bike.withTag("f_bikepark"),
-                        car.withTag("f_carpark"),
-                        studentService.withTag("f_student-service"),
-                        safety.withTag("f_safety"),
-                        green.withTag("f_green"),
-                        community.withTag("f_community"),
+                        building,
+                        food,
+                        bike,
+                        car,
+                        studentService,
+                        safety,
+                        green,
+                        community,
+
                         new SectionDrawerItem().withName("Map").withTextColor(Color.BLUE),
-                        hybrid.withTag("m_hybrid"),
-                        normal.withTag("m_map"),
+                        hybrid,
+                        normal,
 
                         new DividerDrawerItem(),
-
-                        settings.withTag("s_settings"),
-                        about.withTag("s_about"),
-                        feedback.withTag("s_feedback")
+                        settings,
+                        about,
+                        feedback
                 )
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
@@ -518,68 +540,43 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         String tag = (String) drawerItem.getTag();
                         if (tag.startsWith("f_")) {
                             drawerItem.withSetSelected(!drawerItem.isSelected());
-                            setVisibilityAndUpdateMarkers(tag.substring(2).trim(),
+                            setVisibilityAndUpdateMarkers(tag,
                                     drawerItem.isSelected());
-                            updateResult(drawerItem);
-
+                            updateDrawerItem(drawerItem);
                         } else if (tag.startsWith("s_")) {
-                            String option = tag.substring(2).trim();
-                            switch (option) {
-                                case "feedback":
+                            switch (tag) {
+                                case T_FEEDBACK:
                                     openLink("https://docs.google.com/forms/d/11kMs5L2V" +
                                             "tIeVsLFnllGzxuR6jch28Pe76UF7nmDnYXU\"");
                                     break;
-                                case "settings":
+                                case T_SETTINGS:
                                     Intent intent = new Intent(getApplicationContext(),
                                             SettingsActivity.class);
                                     startActivity(intent);
                                     //return true;
                                     break;
-                                case "about":
+                                case T_ABOUT:
                                     toast("Unofficial " +
                                             "University of Toronto Map app." +
                                             "\n\nDesigned and Developed by Howard Chen and "
                                             + "Murad Akhundov in 2017.");
                                     break;
                             }
-
-
                         } else if (tag.startsWith("c_")) {
                             String camp = tag.substring(2).trim();
-                            setCampusUISelected(camp);
                             if (uni.setCurrentSelected(camp)) {
                                 goToNinja(uni.getCurrentSelected().getLatLng(), DEFAULT_ZOOM, true);
                                 writePreference(KEY_DEFAULT_CAMPUS, camp);
+                                setCampusUISelected(tag);
                             }
                             result.closeDrawer();
 
                             //reset current marker
                             persistent.clear();
-                            setVisibilityAndUpdateMarkers("layers", false);
-
-                            //enable all selected layers
-                            setVisibilityAndUpdateMarkers("building",
-                                    building.isSelected());
-                            setVisibilityAndUpdateMarkers("food",
-                                    food.isSelected());
-                            setVisibilityAndUpdateMarkers("student-service",
-                                    studentService.isSelected());
-                            setVisibilityAndUpdateMarkers("green",
-                                    green.isSelected());
-                            setVisibilityAndUpdateMarkers("carpark",
-                                    car.isSelected());
-                            setVisibilityAndUpdateMarkers("bikepark",
-                                    bike.isSelected());
-                            setVisibilityAndUpdateMarkers("safety",
-                                    safety.isSelected());
-                            setVisibilityAndUpdateMarkers("community",
-                                    community.isSelected());
-
+                            refreshMarkers();
                         } else if (tag.startsWith("m_")) {
-                            setHybridUISelected(tag.substring(2).equals("hybrid"));
+                            setHybridUISelected(tag.equals(T_HYBRID));
                             setHybrid(hybrid.isSelected());
-                            updateResult(normal);
-                            updateResult(hybrid);
                         }
                         return true;
                     }
@@ -598,32 +595,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      *             "UTSG", "UTM", "UTSC"
      */
     private void setCampusUISelected(String camp) {
-        switch (camp) {
-            case "UTSG":
-                gUTM.withSetSelected(false);
-                gUTSC.withSetSelected(false);
-                gUTSG.withSetSelected(true);
-                break;
-            case "UTM":
-                gUTM.withSetSelected(true);
-                gUTSC.withSetSelected(false);
-                gUTSG.withSetSelected(false);
-                break;
-            case "UTSC":
-                gUTM.withSetSelected(false);
-                gUTSC.withSetSelected(true);
-                gUTSG.withSetSelected(false);
-                break;
-            default:
-                gUTM.withSetSelected(false);
-                gUTSC.withSetSelected(false);
-                gUTSG.withSetSelected(true);
-                break;
+        for (PrimaryDrawerItem item : campusDrawerItems) {
+            if (item.getTag().equals(camp))
+                item.withSetSelected(true);
+            else
+                item.withSetSelected(false);
+            updateDrawerItem(item);
         }
-        updateResult(gUTM);
-        updateResult(gUTSC);
-        updateResult(gUTSG);
-
     }
 
     /**
@@ -632,10 +610,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      * @param isHybrid is the map hybrid or normal
      */
     private void setHybridUISelected(boolean isHybrid) {
-        gNormal.withSetSelected(!isHybrid);
-        gHybrid.withSetSelected(isHybrid);
-        updateResult(gNormal);
-        updateResult(gHybrid);
+        for (SecondaryDrawerItem item : hybridDrawerItems) {
+            if (item.getTag().equals("m_hybrid"))
+                item.withSetSelected(isHybrid);
+            else
+                item.withSetSelected(!isHybrid);
+            updateDrawerItem(item);
+        }
     }
 
     /**
@@ -643,7 +624,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      *
      * @param item the item to update
      */
-    private void updateResult(IDrawerItem item) {
+    private void updateDrawerItem(IDrawerItem item) {
         result.updateItem(item);
     }
 
@@ -732,14 +713,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     /**
-     * Toggles visibility of all markers of a specific type
+     * Sets visibility of all markers of a specific type
      *
      * @param type       type of the feature
      *                   types:"building", "food", "carpark", "bikepark"
      * @param isSelected the value to set the tag to
      **/
     private void setVisibilityAndUpdateMarkers(String type, boolean isSelected) {
-        //changed to switch-case for improved readability. considering switching to hashmap
         switch (type) {
             case "layers":
                 setAllFeatureVisibility(isSelected);
@@ -749,7 +729,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         }
         refreshMarkers();
-
     }
 
     /**
@@ -761,21 +740,21 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         for (Feature place : uni.getCurrentSelected().getFeatures()) {
             if (place instanceof Building)
-                place.getMarker(mMap).setVisible(featureVisibilty.get("building"));
+                place.getMarker(mMap).setVisible(featureVisibilty.get(T_BUILDING));
             else if (place instanceof Food)
-                place.getMarker(mMap).setVisible(featureVisibilty.get("food"));
+                place.getMarker(mMap).setVisible(featureVisibilty.get(T_FOOD));
             else if (place instanceof BikePark)
-                place.getMarker(mMap).setVisible(featureVisibilty.get("bikepark"));
+                place.getMarker(mMap).setVisible(featureVisibilty.get(T_BIKE));
             else if (place instanceof CarPark)
-                place.getMarker(mMap).setVisible(featureVisibilty.get("carpark"));
+                place.getMarker(mMap).setVisible(featureVisibilty.get(T_CAR));
             else if (place instanceof StudentService)
-                place.getMarker(mMap).setVisible(featureVisibilty.get("student-service"));
+                place.getMarker(mMap).setVisible(featureVisibilty.get(T_SS));
             else if (place instanceof CommunityFeature)
-                place.getMarker(mMap).setVisible(featureVisibilty.get("community"));
+                place.getMarker(mMap).setVisible(featureVisibilty.get(T_COM));
             else if (place instanceof GreenSpace)
-                place.getMarker(mMap).setVisible(featureVisibilty.get("green"));
+                place.getMarker(mMap).setVisible(featureVisibilty.get(T_GREEN));
             else if (place instanceof Safety)
-                place.getMarker(mMap).setVisible(featureVisibilty.get("safety"));
+                place.getMarker(mMap).setVisible(featureVisibilty.get(T_SAFETY));
         }
 
         for (Feature p : persistent)
@@ -825,7 +804,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             mMap.getUiSettings().setZoomControlsEnabled(appSettings.get(KEY_SHOW_ZOOM));
 
         if (key.equals(KEY_DEFAULT_CAMPUS) || key.equals("all"))
-            setCampusUISelected(uni.getCurrentSelected().getName());
+            setCampusUISelected(uni.getCurrentSelected().getDrawerTag());
 
         if (key.equals(KEY_START_HYBRID) || key.equals("all")) {
             setHybrid(appSettings.get(KEY_START_HYBRID));

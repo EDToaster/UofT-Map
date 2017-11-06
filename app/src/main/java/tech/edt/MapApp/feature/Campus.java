@@ -14,9 +14,16 @@ public class Campus extends Feature {
 
     private ArrayList<Feature> features;
 
-    public Campus(LatLng ll, String name) {
+    private String tag;
+
+    public Campus(LatLng ll, String name, String tag) {
         super(ll, name, false, false);
         features = new ArrayList<>();
+        this.tag = tag;
+    }
+
+    public String getDrawerTag() {
+        return this.tag;
     }
 
     public ArrayList<Feature> getFeatures() {
