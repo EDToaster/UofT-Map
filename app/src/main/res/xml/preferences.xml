@@ -2,32 +2,45 @@
 <!--suppress ALL -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <android.support.v7.preference.SwitchPreferenceCompat
-        android:defaultValue="true"
-        android:key="polygon_visible"
-        android:title="Building Polygons" />
-    <android.support.v7.preference.SwitchPreferenceCompat
-        android:defaultValue="false"
-        android:key="start_hybrid"
-        android:title="Start map in satellite view"
-        android:summary="may consume more data"/>
-    <android.support.v7.preference.SwitchPreferenceCompat
-        android:defaultValue="true"
-        android:key="show_zoom"
-        android:title="Show +- zoom buttons"
-        android:summary="may consume more data"/>
-    <ListPreference
-        android:defaultValue="HH:mm"
-        android:entries="@array/time_format"
-        android:entryValues="@array/time_format"
-        android:key="hour_format"
-        android:summary="requires app restart"
-        android:title="Time Format" />
-    <ListPreference
-        android:defaultValue="M"
-        android:entries="@array/week_format"
-        android:entryValues="@array/week_format"
-        android:key="week_format"
-        android:summary="requires app restart"
-        android:title="Week Format" />
+    <PreferenceCategory
+        android:title="Map settings: applied instantly"
+        android:key="pref_key_map_settings">
+
+        <android.support.v7.preference.SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:key="polygon_visible"
+            android:title="Building Polygons" />
+        <android.support.v7.preference.SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:key="start_hybrid"
+            android:title="Start map in satellite view"
+            android:summary="may consume more data"/>
+        <android.support.v7.preference.SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:key="show_zoom"
+            android:title="Show +- zoom buttons"/>
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        android:title="Format settings: app restart required"
+        android:key="pref_key_format_settings">
+
+        <ListPreference
+            android:defaultValue="12 Hour"
+            android:entries="@array/time_format"
+            android:entryValues="@array/time_format"
+            android:key="hour_format"
+            android:summary="%s"
+            android:title="Time Format" />
+        <ListPreference
+            android:defaultValue="MTWTFSS"
+            android:entries="@array/week_format"
+            android:entryValues="@array/week_format"
+            android:key="week_format"
+            android:summary="%s"
+            android:title="Week Format" />
+
+    </PreferenceCategory>
 </PreferenceScreen>
