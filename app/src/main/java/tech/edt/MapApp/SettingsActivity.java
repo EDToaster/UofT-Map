@@ -7,10 +7,12 @@ import android.support.v7.preference.PreferenceManager;
 
 public class SettingsActivity extends AppCompatActivity {
 
+    public static final String KEY_DEFAULT_CAMPUS = "def_campus";
     public static final String KEY_POLYGON_VISIBLE = "polygon_visible";
+    public static final String KEY_START_HYBRID = "start_hybrid";
+    public static final String KEY_SHOW_ZOOM = "show_zoom";
     public static final String KEY_TIME_FORMAT = "time_format";
     public static final String KEY_WEEK_FORMAT = "week_format";
-
 
 
     @Override
@@ -21,8 +23,9 @@ public class SettingsActivity extends AppCompatActivity {
                 .commit();
 
         SharedPreferences sharedPref =
-                PreferenceManager.getDefaultSharedPreferences(this);
+                PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+
         Boolean switchPref = sharedPref.getBoolean
-                (SettingsActivity.KEY_POLYGON_VISIBLE, true);
+                (KEY_POLYGON_VISIBLE, true);
     }
 }

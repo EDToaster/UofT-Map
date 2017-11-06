@@ -91,7 +91,7 @@ public class University {
     /**
      * Parses JSON asset files and creates Building objects in the appropriate campus
      *
-     * @param assetManager
+     * @param assetManager the assetManager from the activity
      * @throws Exception
      */
     private void setUpBuildings(AssetManager assetManager) throws Exception {
