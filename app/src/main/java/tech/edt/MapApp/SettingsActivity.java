@@ -28,4 +28,6 @@ public class SettingsActivity extends AppCompatActivity {
         Boolean switchPref = sharedPref.getBoolean
                 (KEY_POLYGON_VISIBLE, true);
     }
+
+
 }

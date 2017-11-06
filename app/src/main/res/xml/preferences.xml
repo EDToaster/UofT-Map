@@ -14,7 +14,8 @@
     <android.support.v7.preference.SwitchPreferenceCompat
         android:defaultValue="true"
         android:key="show_zoom"
-        android:title="Show +- zoom buttons"/>
+        android:title="Show +- zoom buttons"
+        android:summary="may consume more data"/>
     <ListPreference
         android:defaultValue="HH:mm"
         android:entries="@array/time_format"
