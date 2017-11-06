@@ -89,21 +89,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     /**
      * Non - persistent feature visibilities
      */
-    private boolean buildingVisible = false;
-    private boolean foodVisible = false;
-    private boolean carparkVisible = false;
-    private boolean bikeparkVisible = false;
-    private boolean studentVisible = false;
-    private boolean greenVisible = false;
-    private boolean communityVisible = false;
-    private boolean safetyVisible = false;
+    private HashMap<String, Boolean> featureVisibilty = new HashMap<>();
+
     private boolean isHybrid = true;
 
     /**
      * Drawer global variables
      */
-    private SecondaryDrawerItem ghybrid;
-    private SecondaryDrawerItem gnormal;
+    private SecondaryDrawerItem gHybrid;
+    private SecondaryDrawerItem gNormal;
     private PrimaryDrawerItem gUTSG;
     private PrimaryDrawerItem gUTM;
     private PrimaryDrawerItem gUTSC;
@@ -136,6 +130,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MapsInitializer.initialize(this);
 
         setUpPreferencesAndUniversity();
+        setAllFeatureVisibility(false);
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         setContentView(R.layout.activity_maps);
@@ -145,6 +140,23 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         setUpSearchBar();
         setUpDrawers();
+
+    }
+
+    /**Sets up the setting for visibility of all features
+     *
+     * @param visible set visible/invisible
+     */
+    private void setAllFeatureVisibility(boolean visible) {
+        featureVisibilty.put("building", visible);
+        featureVisibilty.put("food", visible);
+        featureVisibilty.put("student-service", visible);
+        featureVisibilty.put("carpark", visible);
+        featureVisibilty.put("bikepark", visible);
+        featureVisibilty.put("green", visible);
+        featureVisibilty.put("community", visible);
+        featureVisibilty.put("safety", visible);
+
 
     }
 
@@ -464,8 +476,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         final SecondaryDrawerItem normal = new SecondaryDrawerItem().withIdentifier(72)
                 .withName("Normal").withSelectable(false).withIcon(GoogleMaterial.
                         Icon.gmd_map);
-        ghybrid = hybrid;
-        gnormal = normal;
+        gHybrid = hybrid;
+        gNormal = normal;
         gUTSG = itemSG;
         gUTM = itemM;
         gUTSC = itemSC;
@@ -620,10 +632,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      * @param isHybrid is the map hybrid or normal
      */
     private void setHybridUISelected(boolean isHybrid) {
-        gnormal.withSetSelected(!isHybrid);
-        ghybrid.withSetSelected(isHybrid);
-        updateResult(gnormal);
-        updateResult(ghybrid);
+        gNormal.withSetSelected(!isHybrid);
+        gHybrid.withSetSelected(isHybrid);
+        updateResult(gNormal);
+        updateResult(gHybrid);
     }
 
     /**
@@ -709,7 +721,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     /**
      * Toggles hybrid/normal map appearance
      *
-     * @param flag
+     * @param flag set hybrid to true/false
      */
     private void setHybrid(boolean flag) {
         isHybrid = flag;
@@ -729,34 +741,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private void setVisibilityAndUpdateMarkers(String type, boolean isSelected) {
         //changed to switch-case for improved readability. considering switching to hashmap
         switch (type) {
-            case "building":
-                buildingVisible = isSelected;
-                break;
-            case "food":
-                foodVisible = isSelected;
-                break;
-            case "carpark":
-                carparkVisible = isSelected;
-                break;
-            case "bikepark":
-                bikeparkVisible = isSelected;
-                break;
-            case "student-service":
-                studentVisible = isSelected;
-                break;
-            case "community":
-                communityVisible = isSelected;
-                break;
-            case "safety":
-                safetyVisible = isSelected;
-                break;
-            case "green":
-                greenVisible = isSelected;
-                break;
             case "layers":
-                bikeparkVisible = foodVisible = carparkVisible = bikeparkVisible = safetyVisible
-                        = communityVisible = safetyVisible = greenVisible = isSelected;
+                setAllFeatureVisibility(isSelected);
                 break;
+            default:
+                featureVisibilty.put(type, isSelected);
 
         }
         refreshMarkers();
@@ -772,21 +761,21 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         for (Feature place : uni.getCurrentSelected().getFeatures()) {
             if (place instanceof Building)
-                place.getMarker(mMap).setVisible(buildingVisible);
+                place.getMarker(mMap).setVisible(featureVisibilty.get("building"));
             else if (place instanceof Food)
-                place.getMarker(mMap).setVisible(foodVisible);
+                place.getMarker(mMap).setVisible(featureVisibilty.get("food"));
             else if (place instanceof BikePark)
-                place.getMarker(mMap).setVisible(bikeparkVisible);
+                place.getMarker(mMap).setVisible(featureVisibilty.get("bikepark"));
             else if (place instanceof CarPark)
-                place.getMarker(mMap).setVisible(carparkVisible);
+                place.getMarker(mMap).setVisible(featureVisibilty.get("carpark"));
             else if (place instanceof StudentService)
-                place.getMarker(mMap).setVisible(studentVisible);
+                place.getMarker(mMap).setVisible(featureVisibilty.get("student-service"));
             else if (place instanceof CommunityFeature)
-                place.getMarker(mMap).setVisible(communityVisible);
+                place.getMarker(mMap).setVisible(featureVisibilty.get("community"));
             else if (place instanceof GreenSpace)
-                place.getMarker(mMap).setVisible(greenVisible);
+                place.getMarker(mMap).setVisible(featureVisibilty.get("green"));
             else if (place instanceof Safety)
-                place.getMarker(mMap).setVisible(safetyVisible);
+                place.getMarker(mMap).setVisible(featureVisibilty.get("safety"));
         }
 
         for (Feature p : persistent)
