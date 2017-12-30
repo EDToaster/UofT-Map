@@ -785,7 +785,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     /**
-     * Removes the recent polygon
+     * Removes the last polygon
      */
     private void removePolygon() {
         if (buildingPolygon != null)
