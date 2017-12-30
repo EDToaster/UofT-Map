@@ -26,10 +26,11 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:multidex:1.0.0'
+    compile 'com.android.support:multidex:1.0.2'
     compile 'com.google.android.gms:play-services:10.0.1'
     compile 'com.github.arimorty:floatingsearchview:2.1.1'
-    compile 'com.android.support:preference-v7:25.0.1'
+    compile 'com.android.support:preference-v14:25.4.0'
+
 
 
     compile('com.mikepenz:materialdrawer:5.9.5@aar') {
