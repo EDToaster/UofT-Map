@@ -559,7 +559,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                     toast("Unofficial " +
                                             "University of Toronto Map app." +
                                             "\n\nDesigned and Developed by Howard Chen and "
-                                            + "Murad Akhundov in 2017.");
+                                            + "Murad Akhundov in 2018.");
                                     break;
                             }
                         } else if (tag.startsWith("c_")) {
