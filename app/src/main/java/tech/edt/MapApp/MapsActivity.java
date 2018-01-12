@@ -556,13 +556,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                     startActivity(intent);
                                     //return true;
                                     break;
-                                case T_ABOUT:
+                                case T_ABOUT
 
                                     //Starts about activity
                                     Intent about = new Intent(MapsActivity.this,
                                             AboutActivity.class);
                                     startActivity(about);
-
                                     break;
                             }
                         } else if (tag.startsWith("c_")) {
