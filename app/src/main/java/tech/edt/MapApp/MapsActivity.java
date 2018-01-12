@@ -54,6 +54,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.regex.Pattern;
 
+import mehdi.sakout.aboutpage.AboutPage;
+import mehdi.sakout.aboutpage.Element;
 import tech.edt.MapApp.dialog.BuildingInfoDialog;
 import tech.edt.MapApp.dialog.FoodInfoDialog;
 import tech.edt.MapApp.dialog.GreenSpaceDialog;
@@ -504,7 +506,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         hybridDrawerItems.add(hybrid);
         hybridDrawerItems.add(normal);
 
-
         result = new DrawerBuilder() //result is a global navbar
                 .withActivity(this)
                 .addDrawerItems(
@@ -556,10 +557,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                     //return true;
                                     break;
                                 case T_ABOUT:
-                                    toast("Unofficial " +
-                                            "University of Toronto Map app." +
-                                            "\n\nDesigned and Developed by Howard Chen and "
-                                            + "Murad Akhundov in 2017.");
+
+                                    //Starts about activity
+                                    Intent about = new Intent(MapsActivity.this,
+                                            AboutActivity.class);
+                                    startActivity(about);
+
                                     break;
                             }
                         } else if (tag.startsWith("c_")) {
