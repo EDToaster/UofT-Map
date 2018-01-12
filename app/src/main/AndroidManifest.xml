@@ -27,6 +27,12 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".AboutActivity"
+            android:label="About"
+            android:theme="@style/MaterialTheme.ActionBar">
+
+        </activity>
+        <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps"
             android:launchMode="singleTop"/>
