@@ -439,6 +439,33 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private static final String T_HYBRID = "m_hybrid";
     private static final String T_NORMAL = "m_normal";
 
+
+    //Drawer items
+    final SecondaryDrawerItem food = new SecondaryDrawerItem().withIdentifier(21)
+            .withName("Food").withSelectable(false).withIcon(R.drawable.food_marker).withTag(T_FOOD);
+
+    final SecondaryDrawerItem building = new SecondaryDrawerItem().withIdentifier(22)
+            .withName("Buildings").withSelectable(false).withIcon(R.drawable.building_marker).withTag(T_BUILDING);
+
+    final SecondaryDrawerItem bike = new SecondaryDrawerItem().withIdentifier(24)
+            .withName("Bike Racks").withSelectable(false).withIcon(R.drawable.bike_marker).withTag(T_BIKE);
+
+    final SecondaryDrawerItem car = new SecondaryDrawerItem().withIdentifier(23)
+            .withName("Parking").withSelectable(false).withIcon(R.drawable.car_marker).withTag(T_CAR);
+
+    final SecondaryDrawerItem studentService = new SecondaryDrawerItem().withIdentifier(25)
+            .withName("Student Services").withSelectable(false).
+                    withIcon(R.drawable.student_marker).withTag(T_SS);
+    final SecondaryDrawerItem safety = new SecondaryDrawerItem().withIdentifier(26)
+            .withName("Safety").withSelectable(false).withIcon(GoogleMaterial.
+                    Icon.gmd_local_hospital).withTag(T_SAFETY);
+    final SecondaryDrawerItem green = new SecondaryDrawerItem().withIdentifier(27)
+            .withName("Green Spaces").withSelectable(false).withIcon(GoogleMaterial.
+                    Icon.gmd_local_florist).withTag(T_GREEN);
+    final SecondaryDrawerItem community = new SecondaryDrawerItem().withIdentifier(28)
+            .withName("Community Features").withSelectable(false).withIcon(GoogleMaterial.
+                    Icon.gmd_star).withTag(T_COM);
+
     /**
      * Sets up the navigation drawer
      */
@@ -453,31 +480,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .withName(R.string.drawer_item_UTSC).withSelectable(false).withTag(T_UTSC);
         final PrimaryDrawerItem itemM = new PrimaryDrawerItem().withIdentifier(6)
                 .withName(R.string.drawer_item_UTM).withSelectable(false).withTag(T_UTM);
-
-        final SecondaryDrawerItem food = new SecondaryDrawerItem().withIdentifier(21)
-                .withName("Food").withSelectable(false).withIcon(R.drawable.food_marker).withTag(T_FOOD);
-
-        final SecondaryDrawerItem building = new SecondaryDrawerItem().withIdentifier(22)
-                .withName("Buildings").withSelectable(false).withIcon(R.drawable.building_marker).withTag(T_BUILDING);
-
-        final SecondaryDrawerItem bike = new SecondaryDrawerItem().withIdentifier(24)
-                .withName("Bike Racks").withSelectable(false).withIcon(R.drawable.bike_marker).withTag(T_BIKE);
-
-        final SecondaryDrawerItem car = new SecondaryDrawerItem().withIdentifier(23)
-                .withName("Parking").withSelectable(false).withIcon(R.drawable.car_marker).withTag(T_CAR);
-
-        final SecondaryDrawerItem studentService = new SecondaryDrawerItem().withIdentifier(25)
-                .withName("Student Services").withSelectable(false).
-                        withIcon(R.drawable.student_marker).withTag(T_SS);
-        final SecondaryDrawerItem safety = new SecondaryDrawerItem().withIdentifier(26)
-                .withName("Safety").withSelectable(false).withIcon(GoogleMaterial.
-                        Icon.gmd_local_hospital).withTag(T_SAFETY);
-        final SecondaryDrawerItem green = new SecondaryDrawerItem().withIdentifier(27)
-                .withName("Green Spaces").withSelectable(false).withIcon(GoogleMaterial.
-                        Icon.gmd_local_florist).withTag(T_GREEN);
-        final SecondaryDrawerItem community = new SecondaryDrawerItem().withIdentifier(28)
-                .withName("Community Features").withSelectable(false).withIcon(GoogleMaterial.
-                        Icon.gmd_star).withTag(T_COM);
 
 
         SecondaryDrawerItem settings = new SecondaryDrawerItem().withIdentifier(12)
@@ -505,6 +507,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         hybridDrawerItems = new ArrayList<>();
         hybridDrawerItems.add(hybrid);
         hybridDrawerItems.add(normal);
+        final SectionDrawerItem layers = new SectionDrawerItem().withName("Layers").withTextColor(Color.BLUE);
+
 
         result = new DrawerBuilder() //result is a global navbar
                 .withActivity(this)
@@ -513,21 +517,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         itemSG,
                         itemM,
                         itemSC,
-
-                        new SectionDrawerItem().withName("Layers").withTextColor(Color.BLUE),
-                        building,
-                        food,
-                        bike,
-                        car,
-                        studentService,
-                        safety,
-                        green,
-                        community,
-
+                        layers,
                         new SectionDrawerItem().withName("Map").withTextColor(Color.BLUE),
                         hybrid,
                         normal,
-
                         new DividerDrawerItem(),
                         settings,
                         about,
@@ -573,6 +566,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                             }
                             result.closeDrawer();
 
+
                             //reset current marker
                             persistent.clear();
                             refreshMarkers();
@@ -584,10 +578,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     }
                 })
                 .build();
-        itemSG.withSetSelected(true); //SG selected first
-        normal.withSetSelected(true);
-        result.updateItem(itemSG);
-        result.updateItem(normal);
     }
 
     /**
@@ -603,6 +593,33 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             else
                 item.withSetSelected(false);
             updateDrawerItem(item);
+        }
+
+        int pos = 4;
+
+        result.removeItems(21, 22, 23, 24, 25, 26, 27, 28);
+
+        switch (camp) {
+            case "c_UTSG":
+                result.addItemsAtPosition(pos, building,
+                        food,
+                        bike,
+                        car,
+                        studentService,
+                        safety,
+                        green,
+                        community);
+                break;
+            case "c_UTM":
+                result.addItemsAtPosition(pos, building,
+                        food
+                );
+                break;
+            case "c_UTSC":
+                result.addItemsAtPosition(pos, building,
+                        food
+                );
+                break;
         }
     }
 
