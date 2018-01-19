@@ -47,6 +47,8 @@ public class Building extends Feature implements SearchSuggestion {
         return address;
     }
 
+
+
     /**
      * Search suggestion stuff
      */
