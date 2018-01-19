@@ -16,16 +16,19 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.preference.PreferenceManager;
 import android.text.util.Linkify;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.arlib.floatingsearchview.FloatingSearchView;
+import com.arlib.floatingsearchview.suggestions.SearchSuggestionsAdapter;
 import com.arlib.floatingsearchview.suggestions.model.SearchSuggestion;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -386,6 +389,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 //this.onSuggestionClicked(suggestions.get(0));
                 //TODO: implement
             }
+
         });
 
 
@@ -398,6 +402,23 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 if (item.getItemId() == R.id.action_submit) {
                     openLink("https://goo.gl/forms/tTxBcOQAOGpY8Ci33");
                 }
+            }
+        });
+
+        //this sets icons to search suggestions based on feature type
+        mSearchView.setOnBindSuggestionCallback(new SearchSuggestionsAdapter.OnBindSuggestionCallback() {
+            @Override
+            public void onBindSuggestion(View suggestionView, ImageView leftIcon, TextView textView, SearchSuggestion item, int itemPosition) {
+                if (item instanceof StudentService){
+                    leftIcon.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.student_marker, null));
+                }
+                else if (item instanceof Building){
+                    leftIcon.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.building_marker, null));
+                }
+                else if (item instanceof Food){
+                    leftIcon.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.food_marker, null));
+                }
+
             }
         });
 
