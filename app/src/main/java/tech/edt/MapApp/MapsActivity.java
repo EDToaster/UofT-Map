@@ -18,6 +18,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.preference.PreferenceManager;
 import android.text.util.Linkify;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
@@ -93,7 +94,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      * Non - persistent feature visibilities
      */
     private HashMap<String, Boolean> featureVisibilty = new HashMap<>();
-    private boolean isHybrid = true;
 
     /**
      * Drawer global variables
@@ -179,13 +179,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         refreshMapUI("all");
 
         goToNinja(uni.getCurrentSelected().getLatLng(), DEFAULT_ZOOM, false);
-        toast("Select your campus\nfrom side bar");
-
         refreshMarkers();
 
         for (Feature i : uni.getAllFeatures())
             i.getMarker(mMap); //create the marker for each feature
-
 
         // enable my location
         if (ActivityCompat.checkSelfPermission(
@@ -402,21 +399,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         //this sets icons to search suggestions based on feature type
         //TODO: use inheritance
-        mSearchView.setOnBindSuggestionCallback(new SearchSuggestionsAdapter.OnBindSuggestionCallback() {
+        mSearchView.setOnBindSuggestionCallback(new SearchSuggestionsAdapter
+                .OnBindSuggestionCallback() {
             @Override
-            public void onBindSuggestion(View suggestionView, ImageView leftIcon, TextView textView, SearchSuggestion item, int itemPosition) {
+            public void onBindSuggestion(View suggestionView, ImageView leftIcon, TextView textView,
+                                         SearchSuggestion item, int itemPosition) {
 
                 Feature f = (Feature) item;
-
                 leftIcon.setImageResource(f.getBitmapDescriptor().getID());
-
-//                if (item instanceof StudentService) {
-//                    leftIcon.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.student_marker, null));
-//                } else if (item instanceof Building) {
-//                    leftIcon.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.building_marker, null));
-//                } else if (item instanceof Food) {
-//                    leftIcon.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.food_marker, null));
-//                }
 
             }
         });
@@ -488,16 +478,20 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
         food = new SecondaryDrawerItem().withIdentifier(21)
-                .withName("Food").withSelectable(false).withIcon(Util.getFoodBMP().getID()).withTag(T_FOOD);
+                .withName("Food").withSelectable(false).withIcon(Util.getFoodBMP().getID())
+                .withTag(T_FOOD);
 
         building = new SecondaryDrawerItem().withIdentifier(22)
-                .withName("Buildings").withSelectable(false).withIcon(Util.getBuildingBMP().getID()).withTag(T_BUILDING);
+                .withName("Buildings").withSelectable(false).withIcon(Util.getBuildingBMP()
+                        .getID()).withTag(T_BUILDING);
 
         bike = new SecondaryDrawerItem().withIdentifier(24)
-                .withName("Bike Racks").withSelectable(false).withIcon(Util.getBikeBMP().getID()).withTag(T_BIKE);
+                .withName("Bike Racks").withSelectable(false).withIcon(Util.getBikeBMP()
+                        .getID()).withTag(T_BIKE);
 
         car = new SecondaryDrawerItem().withIdentifier(23)
-                .withName("Parking").withSelectable(false).withIcon(Util.getCarBMP().getID()).withTag(T_CAR);
+                .withName("Parking").withSelectable(false).withIcon(Util.getCarBMP()
+                        .getID()).withTag(T_CAR);
 
         studentService = new SecondaryDrawerItem().withIdentifier(25)
                 .withName("Student Services").withSelectable(false).
@@ -753,8 +747,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      * @param flag set hybrid to true/false
      */
     private void setHybrid(boolean flag) {
-        isHybrid = flag;
-        if (isHybrid)
+        if (flag)
             mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
         else
             mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
@@ -826,11 +819,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     rectOptions.strokeWidth(5);
                     buildingPolygon = mMap.addPolygon(rectOptions);
                 } catch (Exception e) {
+                    Log.e("setPolygon", "Problem setting up polygon", e);
                 }
 
             }
         }
     }
+
 
     /**
      * Removes the last polygon
@@ -880,15 +875,23 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     != PackageManager.PERMISSION_GRANTED) {
                 return;
             }
-            Location location = locationManager.getLastKnownLocation(locationManager
-                    .getBestProvider(criteria, false));
-            double lat = location.getLatitude();
-            double lng = location.getLongitude();
+            Location location = null;
+            if (locationManager != null) {
+                location = locationManager.getLastKnownLocation(locationManager
+                        .getBestProvider(criteria, false));
+            }
+
+            double lng = 0;
+            double lat = 0;
+            if (location != null) {
+                lat = location.getLatitude();
+                lng = location.getLongitude();
+            }
+
             LatLng ll = new LatLng(lat, lng);
             goToNinja(ll, FOCUSED_ZOOM, true);
         } catch (Exception e) {//don't know the name whoops
-            Toast.makeText(getApplicationContext(), "Error fetching location",
-                    Toast.LENGTH_LONG).show();
+            toast("Error fetching location");
 
         }
     }
@@ -907,10 +910,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         mMap.setMyLocationEnabled(true);
                     }
                 } else {
-                    Toast.makeText(getApplicationContext(),
-                            "This app requires location permissions to be granted",
-                            Toast.LENGTH_LONG).show();
-                    finish();
+                    toast("This app requires location permissions to be granted");
                 }
                 break;
 
@@ -937,7 +937,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     /**
-     * Makes a toast widget appear
+     * Makes a toast widget appear     *
      *
      * @param text the text to display
      */

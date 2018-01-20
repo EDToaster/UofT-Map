@@ -32,10 +32,8 @@ public class University {
     private static final LatLng UTSCLL = new LatLng(43.7841, -79.1868);
     private Context context;
 
-    private Feature next;
-
     public University(Context context, String... campusNames) {
-        campuses = new HashMap<String, Campus>();
+        campuses = new HashMap<>();
 
         campuses.put("UTSG", new Campus(UTSGLL, campusNames[0], T_UTSG));
         campuses.put("UTM", new Campus(UTMLL, campusNames[1], T_UTM));
@@ -111,7 +109,7 @@ public class University {
                 String name = ij.getString("name");
                 String code = ij.getString("code");
                 String short_name = ij.getString("short_name");
-                ArrayList<LatLng> polygon = new ArrayList();
+                ArrayList<LatLng> polygon = new ArrayList<>();
                 JSONArray json_polygon = ij.getJSONArray("polygon");
                 if (json_polygon != null) {
                     int len = json_polygon.length();
@@ -121,6 +119,9 @@ public class University {
                             LatLng cords = new LatLng(temp.getDouble(0), temp.getDouble(1));
                             polygon.add(cords);
                         } catch (Exception e) {
+                            Log.e("setUpBuildings", "problem adding a polygon to a " +
+                                    "building", e);
+
                         }
                     }
                 }
@@ -145,7 +146,7 @@ public class University {
     /**
      * Parses JSON asset files and creates Food objects in the appropriate campus
      *
-     * @param assetManager
+     * @param assetManager the assetManager from the activity
      * @throws Exception
      */
     private void setUpFood(AssetManager assetManager) throws Exception {
@@ -154,7 +155,6 @@ public class University {
         JSONArray arr = Util.getBaseObj(assetManager, "food.json")
                 .getJSONArray("food");
 
-        // lat,  lng,  name, address,  short_name,  url,  imageURL,  desc,  hours,  tags
         for (int i = 0; i < arr.length(); i++) {
             try {
                 JSONObject ij = arr.getJSONObject(i);
@@ -183,7 +183,7 @@ public class University {
     /**
      * Parses JSON asset files and creates BikePark objects in the appropriate campus
      *
-     * @param assetManager
+     * @param assetManager the assetManager from the activity
      * @throws Exception
      */
     private void setUpBikes(AssetManager assetManager) throws Exception {
@@ -197,12 +197,8 @@ public class University {
                 double lng = ij.getDouble("lng");
                 String name = ij.getString("title");
                 String buildingCode = ij.getString("buildingCode");
-
                 String desc = ij.getString("desc");
-
                 BikePark b = new BikePark(lat, lng, name, buildingCode, desc);
-
-                //TODO: Change check to look for <64> in <sublayer> json array
                 if (!name.contains("BIXI"))  //get rid of bikeshare, at least for now.
                     getCampuses().get("UTSG").addFeature(b);
 
@@ -215,7 +211,7 @@ public class University {
     /**
      * Parses JSON asset files and creates CarPark objects in the appropriate campus
      *
-     * @param assetManager
+     * @param assetManager the assetManager from the activity
      * @throws Exception
      */
     private void setUpCars(AssetManager assetManager) throws Exception {
@@ -228,9 +224,7 @@ public class University {
                 double lat = ij.getDouble("lat");
                 double lng = ij.getDouble("lng");
                 String name = ij.getString("title");
-//                String aka = ij.getString("aka");
                 String address = ij.getString("address");
-//                String access = ij.getString("access");
                 String buildingCode = ij.getString("buildingCode");
                 String phone = ij.getString("phone");
 
@@ -249,7 +243,7 @@ public class University {
     /**
      * Parses JSON asset files and creates StudentService objects in the appropriate campus
      *
-     * @param assetManager
+     * @param assetManager the assetManager from the activity
      * @throws Exception
      */
     private void setUpStudentServices(AssetManager assetManager) throws Exception {
@@ -287,7 +281,7 @@ public class University {
      * Parses JSON asset files and creates MiscSafety and EmergencyPhone
      * objects in the appropriate campus
      *
-     * @param assetManager
+     * @param assetManager the assetManager from the activity
      * @throws Exception
      */
     private void setUpSafety(AssetManager assetManager) throws Exception {
@@ -323,7 +317,7 @@ public class University {
     /**
      * Parses JSON asset files and creates GreenSpace objects in the appropriate campus
      *
-     * @param assetManager
+     * @param assetManager  the assetManager from the activity
      * @throws Exception
      */
     private void setUpGreenSpaces(AssetManager assetManager) throws Exception {

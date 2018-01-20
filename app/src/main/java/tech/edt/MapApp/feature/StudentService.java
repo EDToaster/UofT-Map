@@ -11,6 +11,8 @@ import tech.edt.MapApp.util.Util;
 
 /**
  * Created by Murad on 11/1/17.
+ * Extension of the Feature class, represents student services. Searchable.
+ *
  */
 
 public class StudentService extends Feature implements SearchSuggestion {

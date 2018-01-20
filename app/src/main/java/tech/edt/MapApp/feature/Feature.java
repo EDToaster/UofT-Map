@@ -94,7 +94,8 @@ public abstract class Feature implements SearchSuggestion {
 
     private MarkerOptions getMarkerOptions() {
         return new MarkerOptions().position(latlng).icon(getBitmapDescriptor().getDesc())
-                .title(this.toString()).snippet(getSnippet() + (isClickable ? "\nClick for more info" : ""));
+                .title(this.toString()).snippet(getSnippet() +
+                        (isClickable ? "\nClick for more info" : ""));
     }
 
 
