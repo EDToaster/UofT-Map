@@ -16,7 +16,8 @@ import java.util.Calendar;
 import java.util.Locale;
 
 import tech.edt.MapApp.Hours;
-import tech.edt.MapApp.Util;
+import tech.edt.MapApp.util.BitmapDescriptorWithID;
+import tech.edt.MapApp.util.Util;
 
 /**
  * Created by class on 2017-10-24.
@@ -69,7 +70,7 @@ public class Food extends Feature implements SearchSuggestion {
         }
     }
 
-    public BitmapDescriptor getIcon() {
+    public BitmapDescriptorWithID getBitmapDescriptor() {
         return Util.getFoodBMP();
     }
 

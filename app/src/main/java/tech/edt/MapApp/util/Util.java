@@ -1,4 +1,4 @@
-package tech.edt.MapApp;
+package tech.edt.MapApp.util;
 
 import android.content.res.AssetManager;
 
@@ -6,14 +6,13 @@ import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+
+import tech.edt.MapApp.R;
 
 /**
  * Created by class on 2017-10-24.
@@ -21,38 +20,38 @@ import java.io.InputStreamReader;
  */
 
 public class Util {
-    private static BitmapDescriptor BUILDINGBMP;
-    private static BitmapDescriptor FOODBMP;
-    private static BitmapDescriptor BIKEBMP;
-    private static BitmapDescriptor CARBMP;
-    private static BitmapDescriptor STUDENTBMP;
+    private static BitmapDescriptorWithID BUILDINGBMP;
+    private static BitmapDescriptorWithID FOODBMP;
+    private static BitmapDescriptorWithID BIKEBMP;
+    private static BitmapDescriptorWithID CARBMP;
+    private static BitmapDescriptorWithID STUDENTBMP;
 
     static {
-        BUILDINGBMP = BitmapDescriptorFactory.fromResource(R.drawable.building_marker);
-        FOODBMP = BitmapDescriptorFactory.fromResource(R.drawable.food_marker);
-        BIKEBMP = BitmapDescriptorFactory.fromResource(R.drawable.bike_marker);
-        CARBMP = BitmapDescriptorFactory.fromResource(R.drawable.car_marker);
-        STUDENTBMP = BitmapDescriptorFactory.fromResource(R.drawable.student_marker);
+        BUILDINGBMP = BitmapDescriptorWithIDFactory.fromResource(R.drawable.building_marker);
+        FOODBMP = BitmapDescriptorWithIDFactory.fromResource(R.drawable.food_marker);
+        BIKEBMP = BitmapDescriptorWithIDFactory.fromResource(R.drawable.bike_marker);
+        CARBMP = BitmapDescriptorWithIDFactory.fromResource(R.drawable.car_marker);
+        STUDENTBMP = BitmapDescriptorWithIDFactory.fromResource(R.drawable.student_marker);
     }
 
 
-    public static BitmapDescriptor getBuildingBMP() {
+    public static BitmapDescriptorWithID getBuildingBMP() {
         return BUILDINGBMP;
     }
 
-    public static BitmapDescriptor getFoodBMP() {
+    public static BitmapDescriptorWithID getFoodBMP() {
         return FOODBMP;
     }
 
-    public static BitmapDescriptor getBikeBMP() {
+    public static BitmapDescriptorWithID getBikeBMP() {
         return BIKEBMP;
     }
 
-    public static BitmapDescriptor getCarBMP() {
+    public static BitmapDescriptorWithID getCarBMP() {
         return CARBMP;
     }
 
-    public static BitmapDescriptor getStudentBMP() {
+    public static BitmapDescriptorWithID getStudentBMP() {
         return STUDENTBMP;
     }
 

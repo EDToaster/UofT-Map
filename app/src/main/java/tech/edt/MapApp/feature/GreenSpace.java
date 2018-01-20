@@ -6,7 +6,8 @@ import com.arlib.floatingsearchview.suggestions.model.SearchSuggestion;
 import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.LatLng;
 
-import tech.edt.MapApp.Util;
+import tech.edt.MapApp.util.BitmapDescriptorWithID;
+import tech.edt.MapApp.util.Util;
 
 /**
  * Created by Murad on 11/1/17.
@@ -25,7 +26,7 @@ public class GreenSpace extends Feature implements SearchSuggestion {
 
     }
 
-    public BitmapDescriptor getIcon() {
+    public BitmapDescriptorWithID getBitmapDescriptor() {
         return Util.getBuildingBMP();
     }
 

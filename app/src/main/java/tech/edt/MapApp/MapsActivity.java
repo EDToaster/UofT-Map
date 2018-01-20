@@ -16,7 +16,6 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.preference.PreferenceManager;
 import android.text.util.Linkify;
 import android.view.Gravity;
@@ -57,8 +56,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.regex.Pattern;
 
-import mehdi.sakout.aboutpage.AboutPage;
-import mehdi.sakout.aboutpage.Element;
 import tech.edt.MapApp.dialog.BuildingInfoDialog;
 import tech.edt.MapApp.dialog.FoodInfoDialog;
 import tech.edt.MapApp.dialog.GreenSpaceDialog;
@@ -73,6 +70,7 @@ import tech.edt.MapApp.feature.GreenSpace;
 import tech.edt.MapApp.feature.Safety;
 import tech.edt.MapApp.feature.StudentService;
 import tech.edt.MapApp.feature.University;
+import tech.edt.MapApp.util.Util;
 
 import static tech.edt.MapApp.SettingsActivity.*;
 
@@ -81,8 +79,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private GoogleMap mMap;
     private FloatingSearchView mSearchView;
 
-    @FieldVariableDoc("The current university object")
     private University uni;
+
     /**
      * Constants
      */
@@ -124,7 +122,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     /**
      * Called when the map activity is created
      *
-     * @param savedInstanceState
+     * @param savedInstanceState previous instance
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -378,15 +376,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         setPolygon((Building) searchSuggestion);
                     }
 
-
                     goToNinja(ll, FOCUSED_ZOOM, true);
                 }
             }
 
             @Override
             public void onSearchAction(String currentQuery) {
-                //if (suggestions.size() == 1) // if only one suggestion left, choose that
-                //this.onSuggestionClicked(suggestions.get(0));
                 //TODO: implement
             }
 
@@ -406,18 +401,22 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         });
 
         //this sets icons to search suggestions based on feature type
+        //TODO: use inheritance
         mSearchView.setOnBindSuggestionCallback(new SearchSuggestionsAdapter.OnBindSuggestionCallback() {
             @Override
             public void onBindSuggestion(View suggestionView, ImageView leftIcon, TextView textView, SearchSuggestion item, int itemPosition) {
-                if (item instanceof StudentService){
-                    leftIcon.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.student_marker, null));
-                }
-                else if (item instanceof Building){
-                    leftIcon.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.building_marker, null));
-                }
-                else if (item instanceof Food){
-                    leftIcon.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.food_marker, null));
-                }
+
+                Feature f = (Feature) item;
+
+                leftIcon.setImageResource(f.getBitmapDescriptor().getID());
+
+//                if (item instanceof StudentService) {
+//                    leftIcon.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.student_marker, null));
+//                } else if (item instanceof Building) {
+//                    leftIcon.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.building_marker, null));
+//                } else if (item instanceof Food) {
+//                    leftIcon.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.food_marker, null));
+//                }
 
             }
         });
@@ -462,30 +461,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
     //Drawer items
-    final SecondaryDrawerItem food = new SecondaryDrawerItem().withIdentifier(21)
-            .withName("Food").withSelectable(false).withIcon(R.drawable.food_marker).withTag(T_FOOD);
+    private SecondaryDrawerItem food;
+    private SecondaryDrawerItem building;
+    private SecondaryDrawerItem bike;
+    private SecondaryDrawerItem car;
+    private SecondaryDrawerItem studentService;
+    private SecondaryDrawerItem safety;
+    private SecondaryDrawerItem green;
+    private SecondaryDrawerItem community;
 
-    final SecondaryDrawerItem building = new SecondaryDrawerItem().withIdentifier(22)
-            .withName("Buildings").withSelectable(false).withIcon(R.drawable.building_marker).withTag(T_BUILDING);
-
-    final SecondaryDrawerItem bike = new SecondaryDrawerItem().withIdentifier(24)
-            .withName("Bike Racks").withSelectable(false).withIcon(R.drawable.bike_marker).withTag(T_BIKE);
-
-    final SecondaryDrawerItem car = new SecondaryDrawerItem().withIdentifier(23)
-            .withName("Parking").withSelectable(false).withIcon(R.drawable.car_marker).withTag(T_CAR);
-
-    final SecondaryDrawerItem studentService = new SecondaryDrawerItem().withIdentifier(25)
-            .withName("Student Services").withSelectable(false).
-                    withIcon(R.drawable.student_marker).withTag(T_SS);
-    final SecondaryDrawerItem safety = new SecondaryDrawerItem().withIdentifier(26)
-            .withName("Safety").withSelectable(false).withIcon(GoogleMaterial.
-                    Icon.gmd_local_hospital).withTag(T_SAFETY);
-    final SecondaryDrawerItem green = new SecondaryDrawerItem().withIdentifier(27)
-            .withName("Green Spaces").withSelectable(false).withIcon(GoogleMaterial.
-                    Icon.gmd_local_florist).withTag(T_GREEN);
-    final SecondaryDrawerItem community = new SecondaryDrawerItem().withIdentifier(28)
-            .withName("Community Features").withSelectable(false).withIcon(GoogleMaterial.
-                    Icon.gmd_star).withTag(T_COM);
 
     /**
      * Sets up the navigation drawer
@@ -502,6 +486,31 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         final PrimaryDrawerItem itemM = new PrimaryDrawerItem().withIdentifier(6)
                 .withName(R.string.drawer_item_UTM).withSelectable(false).withTag(T_UTM);
 
+
+        food = new SecondaryDrawerItem().withIdentifier(21)
+                .withName("Food").withSelectable(false).withIcon(Util.getFoodBMP().getID()).withTag(T_FOOD);
+
+        building = new SecondaryDrawerItem().withIdentifier(22)
+                .withName("Buildings").withSelectable(false).withIcon(Util.getBuildingBMP().getID()).withTag(T_BUILDING);
+
+        bike = new SecondaryDrawerItem().withIdentifier(24)
+                .withName("Bike Racks").withSelectable(false).withIcon(Util.getBikeBMP().getID()).withTag(T_BIKE);
+
+        car = new SecondaryDrawerItem().withIdentifier(23)
+                .withName("Parking").withSelectable(false).withIcon(Util.getCarBMP().getID()).withTag(T_CAR);
+
+        studentService = new SecondaryDrawerItem().withIdentifier(25)
+                .withName("Student Services").withSelectable(false).
+                        withIcon(Util.getStudentBMP().getID()).withTag(T_SS);
+        safety = new SecondaryDrawerItem().withIdentifier(26)
+                .withName("Safety").withSelectable(false).withIcon(GoogleMaterial.
+                        Icon.gmd_local_hospital).withTag(T_SAFETY);
+        green = new SecondaryDrawerItem().withIdentifier(27)
+                .withName("Green Spaces").withSelectable(false).withIcon(GoogleMaterial.
+                        Icon.gmd_local_florist).withTag(T_GREEN);
+        community = new SecondaryDrawerItem().withIdentifier(28)
+                .withName("Community Features").withSelectable(false).withIcon(GoogleMaterial.
+                        Icon.gmd_star).withTag(T_COM);
 
         SecondaryDrawerItem settings = new SecondaryDrawerItem().withIdentifier(12)
                 .withName("Settings").withSelectable(false).withIcon(GoogleMaterial.
@@ -570,8 +579,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                     startActivity(intent);
                                     //return true;
                                     break;
-                                case T_ABOUT
-
+                                case T_ABOUT:
                                     //Starts about activity
                                     Intent about = new Intent(MapsActivity.this,
                                             AboutActivity.class);

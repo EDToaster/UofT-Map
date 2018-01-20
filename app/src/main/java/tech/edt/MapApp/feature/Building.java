@@ -8,7 +8,8 @@ import com.google.android.gms.maps.model.LatLng;
 
 import java.util.ArrayList;
 
-import tech.edt.MapApp.Util;
+import tech.edt.MapApp.util.BitmapDescriptorWithID;
+import tech.edt.MapApp.util.Util;
 
 /**
  * Created by class on 2017-10-24.
@@ -35,7 +36,7 @@ public class Building extends Feature implements SearchSuggestion {
         return polygon;
     }
 
-    public BitmapDescriptor getIcon() {
+    public BitmapDescriptorWithID getBitmapDescriptor() {
         return Util.getBuildingBMP();
     }
 

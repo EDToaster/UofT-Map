@@ -16,7 +16,7 @@ import java.util.Comparator;
 import java.util.HashMap;
 
 import tech.edt.MapApp.Hours;
-import tech.edt.MapApp.Util;
+import tech.edt.MapApp.util.Util;
 
 import static tech.edt.MapApp.MapsActivity.*;
 
@@ -48,6 +48,7 @@ public class University {
                 return f1.toString().compareTo(f2.toString());
             }
         };
+
         for (Campus i : campuses.values())
             Collections.sort(i.getFeatures(), cmp);
     }

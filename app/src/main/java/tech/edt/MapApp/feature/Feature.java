@@ -4,10 +4,11 @@ import android.os.Parcel;
 
 import com.arlib.floatingsearchview.suggestions.model.SearchSuggestion;
 import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import tech.edt.MapApp.util.BitmapDescriptorWithID;
 
 /**
  * Created by EDT on 2017-10-24.
@@ -45,7 +46,7 @@ public abstract class Feature implements SearchSuggestion {
         return this.name;
     }
 
-    public BitmapDescriptor getIcon() {
+    public BitmapDescriptorWithID getBitmapDescriptor() {
         return null;
     }
 
@@ -92,7 +93,7 @@ public abstract class Feature implements SearchSuggestion {
     }
 
     private MarkerOptions getMarkerOptions() {
-        return new MarkerOptions().position(latlng).icon(getIcon())
+        return new MarkerOptions().position(latlng).icon(getBitmapDescriptor().getDesc())
                 .title(this.toString()).snippet(getSnippet() + (isClickable ? "\nClick for more info" : ""));
     }
 

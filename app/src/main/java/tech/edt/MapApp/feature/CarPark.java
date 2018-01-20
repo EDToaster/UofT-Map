@@ -2,7 +2,8 @@ package tech.edt.MapApp.feature;
 
 import com.google.android.gms.maps.model.BitmapDescriptor;
 
-import tech.edt.MapApp.Util;
+import tech.edt.MapApp.util.BitmapDescriptorWithID;
+import tech.edt.MapApp.util.Util;
 
 /**
  * Created by class on 2017-10-28.
@@ -34,7 +35,7 @@ public class CarPark extends Feature {
 //        this.aka = aka;
     }
 
-    public BitmapDescriptor getIcon() {
+    public BitmapDescriptorWithID getBitmapDescriptor() {
         return Util.getCarBMP();
     }
 
