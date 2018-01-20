@@ -22,8 +22,8 @@ public class Building extends Feature implements SearchSuggestion {
     private ArrayList<LatLng> polygon;
 
 
-    public Building(double lat, double lng, String name, String code,
-                    String short_address, String address, String short_name, ArrayList<LatLng> polygon) {
+    public Building(double lat, double lng, String name, String code, String short_address,
+                    String address, String short_name, ArrayList<LatLng> polygon) {
         super(lat, lng, name, true, true);
         this.code = code;
         this.address = address;
@@ -40,7 +40,7 @@ public class Building extends Feature implements SearchSuggestion {
         return Util.getBuildingBMP();
     }
 
-    public String getCode() {
+    private String getCode() {
         return code;
     }
 

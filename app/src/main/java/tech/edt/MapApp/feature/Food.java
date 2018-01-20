@@ -4,6 +4,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Parcel;
+import android.util.Log;
 
 import com.arlib.floatingsearchview.suggestions.model.SearchSuggestion;
 import com.google.android.gms.maps.model.BitmapDescriptor;
@@ -27,9 +28,6 @@ import tech.edt.MapApp.util.Util;
 public class Food extends Feature implements SearchSuggestion {
 
     private String address;
-    private String short_name;
-
-
     private String url;
     private String desc;
     private String[] tags;
@@ -42,7 +40,6 @@ public class Food extends Feature implements SearchSuggestion {
         super(lat, lng, name, true, true);
         new GetImageTask().execute(imageURL);
         this.address = address;
-        this.short_name = short_name;
         this.hours = hours;
         this.tags = tags;
         this.url = url;
@@ -52,14 +49,16 @@ public class Food extends Feature implements SearchSuggestion {
 
     private class GetImageTask extends AsyncTask<String, Void, Bitmap> {
 
-        private Exception exception;
-
         protected Bitmap doInBackground(String... urls) {
             try {
                 URL im = new URL(urls[0]);
                 image = BitmapFactory.decodeStream(im.openStream());
             } catch (MalformedURLException e) {
+                Log.e("getImageTask", "MalformedURLException", e);
+
             } catch (IOException e) {
+                Log.e("getImageTask", "IOException", e);
+
             }
             return image;
         }
@@ -74,7 +73,7 @@ public class Food extends Feature implements SearchSuggestion {
         return Util.getFoodBMP();
     }
 
-    public String getAddress(String code) {
+    public String getAddress() {
         return address;
     }
 
