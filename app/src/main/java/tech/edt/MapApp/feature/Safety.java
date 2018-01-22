@@ -11,7 +11,6 @@ import tech.edt.MapApp.util.Util;
  */
 
 public abstract class Safety extends Feature {
-    String CREATOR = "Murad";
 
     Safety(double lat, double lng, String name, boolean isSearchable) { //last param intentional
         super(lat, lng, name, isSearchable, true);
