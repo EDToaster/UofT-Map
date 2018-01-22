@@ -34,7 +34,7 @@ public class AboutActivity extends AppCompatActivity {
                         "Developed by Howard Chen and Murad Akhundov in 2018")
                 .setImage(R.drawable.uoft)
                 .addItem(new Element().setTitle("Version " + BuildConfig.VERSION_NAME))
-                .addGitHub("https://github.com/EDToaster/MapAppRepo", "Github")
+                .addGitHub("EDToaster/MapAppRepo/", "Github")
                 .create();
 
         setContentView(aboutPage);
