@@ -7,6 +7,4 @@ public class BitmapDescriptorWithIDFactory {
     public static BitmapDescriptorWithID fromResource(int resource) {
         return new BitmapDescriptorWithID(BitmapDescriptorFactory.fromResource(resource), resource);
     }
-
-
 }

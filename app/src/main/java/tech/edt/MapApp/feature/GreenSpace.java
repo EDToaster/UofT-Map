@@ -20,16 +20,15 @@ public class GreenSpace extends Feature implements SearchSuggestion {
 
 
     GreenSpace(LatLng ll, String name, String address, String description) {
-        super(ll, name, false, true);
+        super(ll, name, true, true);
         this.address = address;
         this.description = description;
 
     }
 
     public BitmapDescriptorWithID getBitmapDescriptor() {
-        return Util.getBuildingBMP();
+        return Util.getGreenBMP();
     }
-
 
     @Override
     public int describeContents() {

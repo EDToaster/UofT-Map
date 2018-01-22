@@ -25,6 +25,8 @@ public class Util {
     private static BitmapDescriptorWithID BIKEBMP;
     private static BitmapDescriptorWithID CARBMP;
     private static BitmapDescriptorWithID STUDENTBMP;
+    private static BitmapDescriptorWithID GREENBMP;
+    private static BitmapDescriptorWithID SAFETYBMP;
 
     static {
         BUILDINGBMP = BitmapDescriptorWithIDFactory.fromResource(R.drawable.building_marker);
@@ -32,6 +34,8 @@ public class Util {
         BIKEBMP = BitmapDescriptorWithIDFactory.fromResource(R.drawable.bike_marker);
         CARBMP = BitmapDescriptorWithIDFactory.fromResource(R.drawable.car_marker);
         STUDENTBMP = BitmapDescriptorWithIDFactory.fromResource(R.drawable.student_marker);
+        GREENBMP = BitmapDescriptorWithIDFactory.fromResource(R.drawable.green_marker);
+        SAFETYBMP = BitmapDescriptorWithIDFactory.fromResource(R.drawable.safety_marker);
     }
 
 
@@ -53,6 +57,14 @@ public class Util {
 
     public static BitmapDescriptorWithID getStudentBMP() {
         return STUDENTBMP;
+    }
+
+    public static BitmapDescriptorWithID getGreenBMP() {
+        return GREENBMP;
+    }
+
+    public static BitmapDescriptorWithID getSafetyBMP() {
+        return SAFETYBMP;
     }
 
     public static String convertStreamToString(InputStream is) throws Exception {

@@ -492,16 +492,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         car = new SecondaryDrawerItem().withIdentifier(23)
                 .withName("Parking").withSelectable(false).withIcon(Util.getCarBMP()
                         .getID()).withTag(T_CAR);
-
         studentService = new SecondaryDrawerItem().withIdentifier(25)
-                .withName("Student Services").withSelectable(false).
-                        withIcon(Util.getStudentBMP().getID()).withTag(T_SS);
+                .withName("Student Services").withSelectable(false).withIcon(Util.getStudentBMP()
+                        .getID()).withTag(T_SS);
+
         safety = new SecondaryDrawerItem().withIdentifier(26)
-                .withName("Safety").withSelectable(false).withIcon(GoogleMaterial.
-                        Icon.gmd_local_hospital).withTag(T_SAFETY);
+                .withName("Safety").withSelectable(false).withIcon(Util.getSafetyBMP()
+                        .getID()).withTag(T_SAFETY);
+
         green = new SecondaryDrawerItem().withIdentifier(27)
-                .withName("Green Spaces").withSelectable(false).withIcon(GoogleMaterial.
-                        Icon.gmd_local_florist).withTag(T_GREEN);
+                .withName("Green Spaces").withSelectable(false).withIcon(Util.getGreenBMP()
+                        .getID()).withTag(T_GREEN);
+
         community = new SecondaryDrawerItem().withIdentifier(28)
                 .withName("Community Features").withSelectable(false).withIcon(GoogleMaterial.
                         Icon.gmd_star).withTag(T_COM);
@@ -945,13 +947,4 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         Toast.makeText(getApplicationContext(), text,
                 Toast.LENGTH_LONG).show();
     }
-}
-
-/**
- * Ignore this
- */
-@Retention(RetentionPolicy.SOURCE)
-@Target(ElementType.FIELD)
-@interface FieldVariableDoc {
-    String value();
 }
