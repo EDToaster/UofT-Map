@@ -49,10 +49,6 @@ import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.SectionDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.regex.Pattern;
@@ -93,7 +89,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     /**
      * Non - persistent feature visibilities
      */
-    private HashMap<String, Boolean> featureVisibilty = new HashMap<>();
+    private HashMap<String, Boolean> featureVisibility = new HashMap<>();
 
     /**
      * Drawer global variables
@@ -150,14 +146,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      * @param visible set visible/invisible
      */
     private void setAllFeatureVisibility(boolean visible) {
-        featureVisibilty.put(T_BUILDING, visible);
-        featureVisibilty.put(T_FOOD, visible);
-        featureVisibilty.put(T_SS, visible);
-        featureVisibilty.put(T_CAR, visible);
-        featureVisibilty.put(T_BIKE, visible);
-        featureVisibilty.put(T_GREEN, visible);
-        featureVisibilty.put(T_COM, visible);
-        featureVisibilty.put(T_SAFETY, visible);
+        featureVisibility.put(T_BUILDING, visible);
+        featureVisibility.put(T_FOOD, visible);
+        featureVisibility.put(T_SS, visible);
+        featureVisibility.put(T_CAR, visible);
+        featureVisibility.put(T_BIKE, visible);
+        featureVisibility.put(T_GREEN, visible);
+        featureVisibility.put(T_COM, visible);
+        featureVisibility.put(T_SAFETY, visible);
     }
 
     /**
@@ -392,7 +388,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     centerOnMe();
                 }
                 if (item.getItemId() == R.id.action_submit) {
-                    openLink("https://goo.gl/forms/tTxBcOQAOGpY8Ci33");
+                    openLink(getString(R.string.feature_url));
                 }
             }
         });
@@ -566,14 +562,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         } else if (tag.startsWith("s_")) {
                             switch (tag) {
                                 case T_FEEDBACK:
-                                    openLink("https://docs.google.com/forms/d/11kMs5L2V" +
-                                            "tIeVsLFnllGzxuR6jch28Pe76UF7nmDnYXU\"");
+                                    openLink(getString(R.string.feedback_url));
                                     break;
                                 case T_SETTINGS:
                                     Intent intent = new Intent(getApplicationContext(),
                                             SettingsActivity.class);
                                     startActivity(intent);
-                                    //return true;
                                     break;
                                 case T_ABOUT:
                                     //Starts about activity
@@ -768,7 +762,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 setAllFeatureVisibility(isSelected);
                 break;
             default:
-                featureVisibilty.put(type, isSelected);
+                featureVisibility.put(type, isSelected);
 
         }
         refreshMarkers();
@@ -783,21 +777,21 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         for (Feature place : uni.getCurrentSelected().getFeatures()) {
             if (place instanceof Building)
-                place.getMarker(mMap).setVisible(featureVisibilty.get(T_BUILDING));
+                place.getMarker(mMap).setVisible(featureVisibility.get(T_BUILDING));
             else if (place instanceof Food)
-                place.getMarker(mMap).setVisible(featureVisibilty.get(T_FOOD));
+                place.getMarker(mMap).setVisible(featureVisibility.get(T_FOOD));
             else if (place instanceof BikePark)
-                place.getMarker(mMap).setVisible(featureVisibilty.get(T_BIKE));
+                place.getMarker(mMap).setVisible(featureVisibility.get(T_BIKE));
             else if (place instanceof CarPark)
-                place.getMarker(mMap).setVisible(featureVisibilty.get(T_CAR));
+                place.getMarker(mMap).setVisible(featureVisibility.get(T_CAR));
             else if (place instanceof StudentService)
-                place.getMarker(mMap).setVisible(featureVisibilty.get(T_SS));
+                place.getMarker(mMap).setVisible(featureVisibility.get(T_SS));
             else if (place instanceof CommunityFeature)
-                place.getMarker(mMap).setVisible(featureVisibilty.get(T_COM));
+                place.getMarker(mMap).setVisible(featureVisibility.get(T_COM));
             else if (place instanceof GreenSpace)
-                place.getMarker(mMap).setVisible(featureVisibilty.get(T_GREEN));
+                place.getMarker(mMap).setVisible(featureVisibility.get(T_GREEN));
             else if (place instanceof Safety)
-                place.getMarker(mMap).setVisible(featureVisibilty.get(T_SAFETY));
+                place.getMarker(mMap).setVisible(featureVisibility.get(T_SAFETY));
         }
 
         for (Feature p : persistent)
