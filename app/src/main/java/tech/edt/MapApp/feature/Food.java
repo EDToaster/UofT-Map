@@ -7,7 +7,6 @@ import android.os.Parcel;
 import android.util.Log;
 
 import com.arlib.floatingsearchview.suggestions.model.SearchSuggestion;
-import com.google.android.gms.maps.model.BitmapDescriptor;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -80,8 +79,6 @@ public class Food extends Feature implements SearchSuggestion {
     /**
      * Search suggestion stuff
      */
-    public static final String CREATOR = "EDT";
-
     public String getUrl() {
         return url;
     }

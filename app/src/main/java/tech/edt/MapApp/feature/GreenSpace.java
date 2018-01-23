@@ -16,8 +16,6 @@ import tech.edt.MapApp.util.Util;
 public class GreenSpace extends Feature implements SearchSuggestion {
     private String address;
     private String description;
-    private final String CREATOR = "Murad";
-
 
     GreenSpace(LatLng ll, String name, String address, String description) {
         super(ll, name, true, true);

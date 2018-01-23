@@ -1,6 +1,7 @@
 package tech.edt.MapApp.feature;
 
 import android.os.Parcel;
+import android.os.Parcelable;
 
 import com.arlib.floatingsearchview.suggestions.model.SearchSuggestion;
 import com.google.android.gms.maps.GoogleMap;
@@ -98,5 +99,21 @@ public abstract class Feature implements SearchSuggestion {
                         (isClickable ? "\nClick for more info" : ""));
     }
 
+    public Feature(Parcel in){}
+
+    public static final Parcelable.Creator<Feature> CREATOR =
+            new Parcelable.Creator<Feature>(){
+
+                @Override
+                public Feature createFromParcel(Parcel source) {
+                    return new Feature(source) {
+                    };
+                }
+
+                @Override
+                public Feature[] newArray(int size) {
+                    return new Feature[size];
+                }
+            };
 
 }

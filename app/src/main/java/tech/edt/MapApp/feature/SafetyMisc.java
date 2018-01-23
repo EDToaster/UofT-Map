@@ -7,6 +7,8 @@ import com.arlib.floatingsearchview.suggestions.model.SearchSuggestion;
  */
 
 public class SafetyMisc extends  Safety implements SearchSuggestion {
+
+
     SafetyMisc(double lat, double lng, String name) {
         super(lat, lng, name, true);
     }
