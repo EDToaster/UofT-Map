@@ -1,7 +1,5 @@
 package tech.edt.MapApp.feature;
 
-import com.google.android.gms.maps.model.BitmapDescriptor;
-
 import tech.edt.MapApp.util.BitmapDescriptorWithID;
 import tech.edt.MapApp.util.Util;
 
@@ -14,7 +12,6 @@ public class BikePark extends Feature {
      * Search suggestion stuff
      * (Bikes are not searchable
      */
-    public static final String CREATOR = "EDT";
 
     private String desc;
     private String buildingCode;

@@ -10,8 +10,6 @@ import java.util.ArrayList;
 
 public class Campus extends Feature {
 
-    public static final String CREATOR = "EDT";
-
     private ArrayList<Feature> features;
 
     private String tag;

@@ -9,7 +9,7 @@ import com.arlib.floatingsearchview.suggestions.model.SearchSuggestion;
  */
 
 public class CommunityFeature extends Feature implements SearchSuggestion{
-    String CREATOR = "Murad";
+
     String address;
     String type;
     String description;

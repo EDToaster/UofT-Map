@@ -35,7 +35,7 @@ public class Util {
         CARBMP = BitmapDescriptorWithIDFactory.fromResource(R.drawable.car_marker);
         STUDENTBMP = BitmapDescriptorWithIDFactory.fromResource(R.drawable.student_marker);
         GREENBMP = BitmapDescriptorWithIDFactory.fromResource(R.drawable.green_marker);
-        SAFETYBMP = BitmapDescriptorWithIDFactory.fromResource(R.drawable.safety_marker);
+        SAFETYBMP = BitmapDescriptorWithIDFactory.fromResource(R.drawable.green_marker);
     }
 
 

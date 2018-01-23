@@ -75,13 +75,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private GoogleMap mMap;
     private FloatingSearchView mSearchView;
-
     private University uni;
 
     /**
      * Constants
      */
-    public final String CREATOR = "Howard Chen";
     private static final int MY_PERMISSIONS_FINE_LOCATION = 101;
     private static final float FOCUSED_ZOOM = 18f;
     private static final float DEFAULT_ZOOM = 15f;
@@ -97,7 +95,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private ArrayList<PrimaryDrawerItem> campusDrawerItems;
     private ArrayList<SecondaryDrawerItem> hybridDrawerItems;
 
-    private Drawer result;
+    private Drawer drawer;
 
     /**
      * Settings / Preferences
@@ -412,13 +410,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 new FloatingSearchView.OnLeftMenuClickListener() {
                     @Override
                     public void onMenuOpened() {
-                        result.openDrawer();
+                        drawer.openDrawer();
                         mSearchView.closeMenu(true);
                     }
 
                     @Override
                     public void onMenuClosed() {
-                        result.openDrawer();
+                        drawer.openDrawer();
 
                     }
                 });
@@ -532,7 +530,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         final SectionDrawerItem layers = new SectionDrawerItem().withName("Layers").withTextColor(Color.BLUE);
 
 
-        result = new DrawerBuilder() //result is a global navbar
+        drawer = new DrawerBuilder() //drawer is a global navbar
                 .withActivity(this)
                 .addDrawerItems(
                         //removed campus header.
@@ -583,7 +581,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                 writePreference(KEY_DEFAULT_CAMPUS, camp);
                                 setCampusUISelected(tag);
                             }
-                            result.closeDrawer();
+                            drawer.closeDrawer();
 
 
                             //reset current marker
@@ -616,11 +614,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         int pos = 4;
 
-        result.removeItems(21, 22, 23, 24, 25, 26, 27, 28);
+        drawer.removeItems(21, 22, 23, 24, 25, 26, 27, 28);
 
         switch (camp) {
             case "c_UTSG":
-                result.addItemsAtPosition(pos, building,
+                drawer.addItemsAtPosition(pos, building,
                         food,
                         bike,
                         car,
@@ -630,12 +628,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         community);
                 break;
             case "c_UTM":
-                result.addItemsAtPosition(pos, building,
+                drawer.addItemsAtPosition(pos, building,
                         food
                 );
                 break;
             case "c_UTSC":
-                result.addItemsAtPosition(pos, building,
+                drawer.addItemsAtPosition(pos, building,
                         food
                 );
                 break;
@@ -663,7 +661,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      * @param item the item to update
      */
     private void updateDrawerItem(IDrawerItem item) {
-        result.updateItem(item);
+        drawer.updateItem(item);
     }
 
     /**

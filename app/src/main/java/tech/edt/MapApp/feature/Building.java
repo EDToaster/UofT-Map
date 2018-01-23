@@ -1,9 +1,7 @@
 package tech.edt.MapApp.feature;
 
 import android.os.Parcel;
-
 import com.arlib.floatingsearchview.suggestions.model.SearchSuggestion;
-import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.LatLng;
 
 import java.util.ArrayList;
@@ -48,14 +46,9 @@ public class Building extends Feature implements SearchSuggestion {
         return address;
     }
 
-
-
     /**
      * Search suggestion stuff
      */
-    public static final String CREATOR = "EDT";
-
-
     @Override
     public int describeContents() {
         return 0;
@@ -79,4 +72,6 @@ public class Building extends Feature implements SearchSuggestion {
     public String getSnippet() {
         return short_address;
     }
+
+
 }

@@ -20,7 +20,6 @@ public class StudentService extends Feature implements SearchSuggestion {
     private String phone;
     private String url;
     private String description;
-    private final String CREATOR = "Murad";
 
     StudentService(LatLng ll, String name,
                    String address, String phone, String url, String description) {
