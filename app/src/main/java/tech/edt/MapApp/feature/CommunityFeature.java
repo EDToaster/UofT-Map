@@ -4,16 +4,15 @@ import com.arlib.floatingsearchview.suggestions.model.SearchSuggestion;
 
 /**
  * Created by Murad on 11/3/17.
- *
  * A feature submitted by the uoft community
  */
 
 public class CommunityFeature extends Feature implements SearchSuggestion{
 
-    String address;
-    String type;
-    String description;
-    String url;
+    private String address;
+    private String type;
+    private String description;
+    private String url;
 
 
     CommunityFeature(double lat, double lng, String name, String address,
