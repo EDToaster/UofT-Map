@@ -172,7 +172,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         refreshMapUI("all");
 
-        goToNinja(uni.getCurrentSelected().getLatLng(), DEFAULT_ZOOM, false);
+        goToLocation(uni.getCurrentSelected().getLatLng(), DEFAULT_ZOOM, false);
         refreshMarkers();
 
         for (Feature i : uni.getAllFeatures())
@@ -367,7 +367,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         setPolygon((Building) searchSuggestion);
                     }
 
-                    goToNinja(ll, FOCUSED_ZOOM, true);
+                    goToLocation(ll, FOCUSED_ZOOM, true);
                 }
             }
 
@@ -577,7 +577,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         } else if (tag.startsWith("c_")) {
                             String camp = tag.substring(2).trim();
                             if (uni.setCurrentSelected(camp)) {
-                                goToNinja(uni.getCurrentSelected().getLatLng(), DEFAULT_ZOOM, true);
+                                goToLocation(uni.getCurrentSelected().getLatLng(), DEFAULT_ZOOM, true);
                                 writePreference(KEY_DEFAULT_CAMPUS, camp);
                                 setCampusUISelected(tag);
                             }
@@ -883,7 +883,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
 
             LatLng ll = new LatLng(lat, lng);
-            goToNinja(ll, FOCUSED_ZOOM, true);
+            goToLocation(ll, FOCUSED_ZOOM, true);
         } catch (Exception e) {//don't know the name whoops
             toast("Error fetching location");
 
@@ -919,7 +919,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      * @param zoom zoom level for the movement
      *             -1: for current level
      */
-    public void goToNinja(LatLng ll, float zoom, boolean animate) {
+    public void goToLocation(LatLng ll, float zoom, boolean animate) {
         CameraUpdate up;
         if (zoom == -1) up = CameraUpdateFactory.newLatLng(ll);
         else up = CameraUpdateFactory.newLatLngZoom(ll, zoom);

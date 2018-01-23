@@ -11,10 +11,12 @@ import tech.edt.MapApp.util.Util;
 
 /**
  * Created by Murad on 11/1/17.
+ * An extension of Feature Class. Represents green spaces on campus.
+ * Searchable
  */
 
 public class GreenSpace extends Feature implements SearchSuggestion {
-    private String address;
+    private String address; //for later use
     private String description;
 
     GreenSpace(LatLng ll, String name, String address, String description) {

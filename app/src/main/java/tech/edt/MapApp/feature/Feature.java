@@ -99,6 +99,7 @@ public abstract class Feature implements SearchSuggestion {
                         (isClickable ? "\nClick for more info" : ""));
     }
 
+    //Constructing using parcels. Not implemented.
     public Feature(Parcel in){}
 
     public static final Parcelable.Creator<Feature> CREATOR =

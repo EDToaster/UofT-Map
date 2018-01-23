@@ -21,7 +21,7 @@ import tech.edt.MapApp.util.Util;
 
 /**
  * Created by class on 2017-10-24.
- * Extension of Feature class, every Building is a Search suggestion
+ * Extension of Feature class, every Food is a Search suggestion
  */
 
 public class Food extends Feature implements SearchSuggestion {

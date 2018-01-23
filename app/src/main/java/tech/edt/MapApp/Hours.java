@@ -20,7 +20,7 @@ import java.util.TimeZone;
 
 public class Hours {
 
-    public final Interval sunday, monday, tuesday, wednesday, thursday, friday, saturday;
+    private final Interval sunday, monday, tuesday, wednesday, thursday, friday, saturday;
     private String weekformat;
     private String hourformat;
 
@@ -53,7 +53,7 @@ public class Hours {
         private boolean closed;
         private long open, close;
 
-        protected Interval(JSONObject interval) throws JSONException {
+        Interval(JSONObject interval) throws JSONException {
             localDateFormat.setTimeZone(TimeZone.getTimeZone("EDT"));
             this.closed = interval.getBoolean("closed");
             this.open = (long) interval.getInt("open") * 1000;

@@ -5,6 +5,7 @@ import tech.edt.MapApp.util.Util;
 
 /**
  * Created by class on 2017-10-28.
+ * An extension of Feature Class. Represents biking racks.
  */
 
 public class BikePark extends Feature {
