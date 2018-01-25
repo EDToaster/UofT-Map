@@ -30,6 +30,8 @@ dependencies {
     compile 'com.google.android.gms:play-services:10.0.1'
     compile 'com.github.arimorty:floatingsearchview:2.1.1'
     compile 'com.android.support:preference-v14:25.4.0'
+    compile 'com.android.support:appcompat-v7:25.4.0'
+    compile 'com.android.support:design:25.4.0'
     compile 'com.github.medyo:android-about-page:1.2.2'
 
 

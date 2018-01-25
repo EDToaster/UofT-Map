@@ -14,6 +14,7 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.design.widget.BottomSheetDialogFragment;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.preference.PreferenceManager;
@@ -53,6 +54,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.regex.Pattern;
 
+import tech.edt.MapApp.dialog.BottomSheetFragment;
 import tech.edt.MapApp.dialog.BuildingInfoDialog;
 import tech.edt.MapApp.dialog.FoodInfoDialog;
 import tech.edt.MapApp.dialog.GreenSpaceDialog;
@@ -354,26 +356,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     Feature suggestion = (Feature) searchSuggestion;
                     mSearchView.setSearchFocused(false);
                     mSearchView.setSearchText(suggestion.toShortString());
-                    LatLng ll = suggestion.getLatLng();
-
-
-                    Marker tempMarker = suggestion.getMarker(mMap);
-                    persistent.clear();
-                    persistent.add(suggestion);
-                    refreshMarkers();
-                    tempMarker.showInfoWindow();
-
-                    if (searchSuggestion instanceof Building) {
-                        setPolygon((Building) searchSuggestion);
-                    }
-
-                    goToLocation(ll, FOCUSED_ZOOM, true);
+                    selectFeature(suggestion);
                 }
             }
 
             @Override
             public void onSearchAction(String currentQuery) {
-                //TODO: implement
+                ArrayList<Feature> suggestions =new GetSearchResultsTask().doInBackground(mSearchView.getQuery());
+                Feature suggestion = suggestions.get(0);
+                mSearchView.setSearchFocused(false);
+                mSearchView.setSearchText(suggestion.toShortString());
+                selectFeature(suggestion);
             }
 
         });
@@ -387,6 +380,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 }
                 if (item.getItemId() == R.id.action_submit) {
                     openLink(getString(R.string.feature_url));
+//                    BottomSheetDialogFragment bottomSheetDialogFragment = new BottomSheetFragment();
+//                    bottomSheetDialogFragment.show(getSupportFragmentManager(),
+//                            bottomSheetDialogFragment.getTag());
                 }
             }
         });
@@ -420,6 +416,22 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                     }
                 });
+
+    }
+
+    private void selectFeature(Feature feature){
+        LatLng ll = feature.getLatLng();
+        Marker tempMarker = feature.getMarker(mMap);
+        persistent.clear();
+        persistent.add(feature);
+        refreshMarkers();
+        tempMarker.showInfoWindow();
+
+        if (feature instanceof Building) {
+            setPolygon((Building) feature);
+        }
+
+        goToLocation(ll, FOCUSED_ZOOM, true);
 
     }
 
