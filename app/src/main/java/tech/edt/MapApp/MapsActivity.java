@@ -363,10 +363,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             @Override
             public void onSearchAction(String currentQuery) {
                 ArrayList<Feature> suggestions =new GetSearchResultsTask().doInBackground(mSearchView.getQuery());
-                Feature suggestion = suggestions.get(0);
-                mSearchView.setSearchFocused(false);
-                mSearchView.setSearchText(suggestion.toShortString());
-                selectFeature(suggestion);
+                if(suggestions.size() != 0) {
+                    Feature suggestion = suggestions.get(0);
+                    mSearchView.setSearchFocused(false);
+                    mSearchView.setSearchText(suggestion.toShortString());
+                    selectFeature(suggestion);
+                }
             }
 
         });
