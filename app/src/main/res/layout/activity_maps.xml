@@ -26,4 +26,8 @@
         app:floatingSearch_menu="@menu/searchmenu"
         app:floatingSearch_suggestionsListAnimDuration="250" />
 
+
+
 </RelativeLayout>
+
+
