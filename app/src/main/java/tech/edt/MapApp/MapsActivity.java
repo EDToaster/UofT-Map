@@ -54,7 +54,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.regex.Pattern;
 
-import tech.edt.MapApp.dialog.BottomSheetFragment;
+import tech.edt.MapApp.dialog.BottomSheetBuilding;
 import tech.edt.MapApp.dialog.BuildingInfoDialog;
 import tech.edt.MapApp.dialog.FoodInfoDialog;
 import tech.edt.MapApp.dialog.GreenSpaceDialog;
@@ -202,6 +202,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     BuildingInfoDialog bid = new BuildingInfoDialog(MapsActivity.this,
                             (Building) f);
                     bid.show();
+                    BottomSheetDialogFragment bottomSheetDialogFragment = new BottomSheetBuilding();
+                    bottomSheetDialogFragment.show(getSupportFragmentManager(),
+                            bottomSheetDialogFragment.getTag());
                 } else if (f instanceof Food) {
                     FoodInfoDialog fid = new FoodInfoDialog(MapsActivity.this, (Food) f);
                     fid.show();
@@ -382,9 +385,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 }
                 if (item.getItemId() == R.id.action_submit) {
                     openLink(getString(R.string.feature_url));
-//                    BottomSheetDialogFragment bottomSheetDialogFragment = new BottomSheetFragment();
-//                    bottomSheetDialogFragment.show(getSupportFragmentManager(),
-//                            bottomSheetDialogFragment.getTag());
+
                 }
             }
         });
