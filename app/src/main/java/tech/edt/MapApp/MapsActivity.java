@@ -54,8 +54,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.regex.Pattern;
 
-import tech.edt.MapApp.dialog.BottomSheetBuilding;
-import tech.edt.MapApp.dialog.BuildingInfoDialog;
+import tech.edt.MapApp.dialog.BottomSheetManager;
 import tech.edt.MapApp.dialog.FoodInfoDialog;
 import tech.edt.MapApp.dialog.GreenSpaceDialog;
 import tech.edt.MapApp.dialog.ServiceInfoDialog;
@@ -198,13 +197,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             @Override
             public void onInfoWindowClick(Marker marker) {
                 Feature f = (Feature) marker.getTag();
-                if (f instanceof Building) {
-                    BuildingInfoDialog bid = new BuildingInfoDialog(MapsActivity.this,
-                            (Building) f);
-                    bid.show();
-                    BottomSheetDialogFragment bottomSheetDialogFragment = new BottomSheetBuilding();
+                if (f.isClickable()) {
+                    BottomSheetDialogFragment bottomSheetDialogFragment = new BottomSheetManager();
+                    ((BottomSheetManager)bottomSheetDialogFragment).setFeature(f);
+
                     bottomSheetDialogFragment.show(getSupportFragmentManager(),
                             bottomSheetDialogFragment.getTag());
+
+
                 } else if (f instanceof Food) {
                     FoodInfoDialog fid = new FoodInfoDialog(MapsActivity.this, (Food) f);
                     fid.show();
