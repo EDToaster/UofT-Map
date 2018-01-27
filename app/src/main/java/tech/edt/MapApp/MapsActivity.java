@@ -54,11 +54,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.regex.Pattern;
 
-import tech.edt.MapApp.dialog.BottomSheetFragment;
-import tech.edt.MapApp.dialog.BuildingInfoDialog;
-import tech.edt.MapApp.dialog.FoodInfoDialog;
-import tech.edt.MapApp.dialog.GreenSpaceDialog;
-import tech.edt.MapApp.dialog.ServiceInfoDialog;
+import tech.edt.MapApp.dialog.BottomSheetManager;
 import tech.edt.MapApp.feature.BikePark;
 import tech.edt.MapApp.feature.Building;
 import tech.edt.MapApp.feature.CarPark;
@@ -198,21 +194,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             @Override
             public void onInfoWindowClick(Marker marker) {
                 Feature f = (Feature) marker.getTag();
-                if (f instanceof Building) {
-                    BuildingInfoDialog bid = new BuildingInfoDialog(MapsActivity.this,
-                            (Building) f);
-                    bid.show();
-                } else if (f instanceof Food) {
-                    FoodInfoDialog fid = new FoodInfoDialog(MapsActivity.this, (Food) f);
-                    fid.show();
-                } else if (f instanceof StudentService) {
-                    ServiceInfoDialog sid = new ServiceInfoDialog(MapsActivity.this,
-                            (StudentService) f);
-                    sid.show();
-                } else if (f instanceof GreenSpace) {
-                    GreenSpaceDialog sid = new GreenSpaceDialog(MapsActivity.this,
-                            (GreenSpace) f);
-                    sid.show();
+                if (f.isClickable()) {
+                    BottomSheetDialogFragment bottomSheetDialogFragment = new BottomSheetManager();
+                    ((BottomSheetManager)bottomSheetDialogFragment).setFeature(f);
+
+                    bottomSheetDialogFragment.show(getSupportFragmentManager(),
+                            bottomSheetDialogFragment.getTag());
+
+
                 }
             }
         });
@@ -382,9 +371,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 }
                 if (item.getItemId() == R.id.action_submit) {
                     openLink(getString(R.string.feature_url));
-//                    BottomSheetDialogFragment bottomSheetDialogFragment = new BottomSheetFragment();
-//                    bottomSheetDialogFragment.show(getSupportFragmentManager(),
-//                            bottomSheetDialogFragment.getTag());
+
                 }
             }
         });

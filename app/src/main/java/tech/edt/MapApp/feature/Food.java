@@ -2,6 +2,7 @@ package tech.edt.MapApp.feature;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Parcel;
 import android.util.Log;
@@ -36,7 +37,7 @@ public class Food extends Feature implements SearchSuggestion {
 
     public Food(double lat, double lng, String name, String address, String short_name, String url,
                 String imageURL, String desc, Hours hours, String[] tags) {
-        super(lat, lng, name, true, true);
+        super(lat, lng, name, true, true, Color.parseColor("#cc6600"));
         new GetImageTask().execute(imageURL);
         this.address = address;
         this.hours = hours;

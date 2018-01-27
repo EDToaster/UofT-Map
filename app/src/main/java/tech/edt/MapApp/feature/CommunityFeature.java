@@ -17,7 +17,7 @@ public class CommunityFeature extends Feature implements SearchSuggestion{
 
     CommunityFeature(double lat, double lng, String name, String address,
                      String type, String description) {
-        super(lat, lng, name, true, true);
+        super(lat, lng, name, true, true, 0);
 
         this.address = address;
         this.type = type;
@@ -27,7 +27,7 @@ public class CommunityFeature extends Feature implements SearchSuggestion{
 
     CommunityFeature(double lat, double lng, String name, String address,
                      String type, String description, String url) {
-        super(lat, lng, name, true, true);
+        super(lat, lng, name, true, true, 0);
 
         this.address = address;
         this.type = type;

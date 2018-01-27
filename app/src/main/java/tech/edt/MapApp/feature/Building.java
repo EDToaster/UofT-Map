@@ -1,5 +1,6 @@
 package tech.edt.MapApp.feature;
 
+import android.graphics.Color;
 import android.os.Parcel;
 import com.arlib.floatingsearchview.suggestions.model.SearchSuggestion;
 import com.google.android.gms.maps.model.LatLng;
@@ -22,7 +23,7 @@ public class Building extends Feature implements SearchSuggestion {
 
     public Building(double lat, double lng, String name, String code, String short_address,
                     String address, String short_name, ArrayList<LatLng> polygon) {
-        super(lat, lng, name, true, true);
+        super(lat, lng, name, true, true, Color.parseColor("#0099cc"));
         this.code = code;
         this.address = address;
         this.short_name = short_name;

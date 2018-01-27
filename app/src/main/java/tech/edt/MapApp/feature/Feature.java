@@ -1,5 +1,6 @@
 package tech.edt.MapApp.feature;
 
+import android.graphics.Color;
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -22,13 +23,15 @@ public abstract class Feature implements SearchSuggestion {
     private Marker marker;
     private boolean isSearchable;
     private boolean isClickable;
+    private int colour;
 
-    Feature(double lat, double lng, String name, boolean isSearchable, boolean isClickable) {
-        this(new LatLng(lat, lng), name, isSearchable, isClickable);
+    Feature(double lat, double lng, String name, boolean isSearchable, boolean isClickable,
+            int colour) {
+        this(new LatLng(lat, lng), name, isSearchable, isClickable, colour);
     }
 
-    Feature(LatLng ll, String name, boolean isSearchable, boolean isClickable) {
-
+    Feature(LatLng ll, String name, boolean isSearchable, boolean isClickable, int colour) {
+        this.colour = colour;
         this.latlng = ll;
         this.name = name;
         this.isSearchable = isSearchable;
@@ -38,6 +41,11 @@ public abstract class Feature implements SearchSuggestion {
     public boolean isSearchable() {
         return isSearchable;
     }
+
+    public boolean isClickable() {
+        return isClickable;
+    }
+
 
     public LatLng getLatLng() {
         return this.latlng;
@@ -116,5 +124,5 @@ public abstract class Feature implements SearchSuggestion {
                     return new Feature[size];
                 }
             };
-
+    public int getColour(){return colour;}
 }
