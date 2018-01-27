@@ -18,7 +18,7 @@ public class BikePark extends Feature {
     private String buildingCode;
 
     public BikePark(double lat, double lng, String name, String buildingCode, String desc) {
-        super(lat, lng, name, false, false);
+        super(lat, lng, name, false, false, 0);
         this.desc = desc;
         this.buildingCode = buildingCode;
     }

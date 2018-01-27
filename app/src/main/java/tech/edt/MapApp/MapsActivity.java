@@ -55,9 +55,6 @@ import java.util.HashMap;
 import java.util.regex.Pattern;
 
 import tech.edt.MapApp.dialog.BottomSheetManager;
-import tech.edt.MapApp.dialog.FoodInfoDialog;
-import tech.edt.MapApp.dialog.GreenSpaceDialog;
-import tech.edt.MapApp.dialog.ServiceInfoDialog;
 import tech.edt.MapApp.feature.BikePark;
 import tech.edt.MapApp.feature.Building;
 import tech.edt.MapApp.feature.CarPark;
@@ -205,17 +202,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                             bottomSheetDialogFragment.getTag());
 
 
-                } else if (f instanceof Food) {
-                    FoodInfoDialog fid = new FoodInfoDialog(MapsActivity.this, (Food) f);
-                    fid.show();
-                } else if (f instanceof StudentService) {
-                    ServiceInfoDialog sid = new ServiceInfoDialog(MapsActivity.this,
-                            (StudentService) f);
-                    sid.show();
-                } else if (f instanceof GreenSpace) {
-                    GreenSpaceDialog sid = new GreenSpaceDialog(MapsActivity.this,
-                            (GreenSpace) f);
-                    sid.show();
                 }
             }
         });

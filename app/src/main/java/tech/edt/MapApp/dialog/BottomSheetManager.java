@@ -33,13 +33,13 @@ public class BottomSheetManager extends BottomSheetDialogFragment {
     public void setupDialog(final Dialog dialog, int style) {
         View contentView = null;
 
+        //TODO: This can be simplified by having better text getters from features
         if (f instanceof Building) {
             contentView = View.inflate(getContext(), R.layout.bottomsheet_basic, null);
             dialog.setContentView(contentView);
             super.setupDialog(dialog, style);
 
             Building feature = (Building) f;
-
 
             TextView main_box = (TextView) contentView.findViewById(R.id.basic_main);
             main_box.setText(feature.getAddress());
@@ -50,8 +50,6 @@ public class BottomSheetManager extends BottomSheetDialogFragment {
             dialog.setContentView(contentView);
             super.setupDialog(dialog, style);
             Food feature = (Food) f;
-
-
 
 
             TextView main_box = (TextView) contentView.findViewById(R.id.food_main);
@@ -95,6 +93,7 @@ public class BottomSheetManager extends BottomSheetDialogFragment {
 
         TextView title = (TextView) contentView.findViewById(R.id.basic_title);
         title.setText(f.getName());
+        title.setTextColor(f.getColour());
 
 
     }

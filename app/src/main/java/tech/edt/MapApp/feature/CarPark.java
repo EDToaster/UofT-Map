@@ -22,7 +22,7 @@ public class CarPark extends Feature {
     //TODO: fix parking json
     public CarPark(double lat, double lng, String name,
                    String buildingCode, String address, String desc, String phone) {
-        super(lat, lng, name, false, false);
+        super(lat, lng, name, false, false, 0);
         this.desc = desc;
         this.buildingCode = buildingCode;
         this.address = address;

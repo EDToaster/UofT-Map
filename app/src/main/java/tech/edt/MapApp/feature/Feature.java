@@ -124,5 +124,5 @@ public abstract class Feature implements SearchSuggestion {
                     return new Feature[size];
                 }
             };
-
+    public int getColour(){return colour;}
 }

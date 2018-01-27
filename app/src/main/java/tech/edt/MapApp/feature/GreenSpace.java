@@ -1,5 +1,6 @@
 package tech.edt.MapApp.feature;
 
+import android.graphics.Color;
 import android.os.Parcel;
 
 import com.arlib.floatingsearchview.suggestions.model.SearchSuggestion;
@@ -20,7 +21,7 @@ public class GreenSpace extends Feature implements SearchSuggestion {
     private String description;
 
     GreenSpace(LatLng ll, String name, String address, String description) {
-        super(ll, name, true, true);
+        super(ll, name, true, true, Color.parseColor("#339933"));
         this.address = address;
         this.description = description;
 

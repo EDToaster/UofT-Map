@@ -1,5 +1,6 @@
 package tech.edt.MapApp.feature;
 
+import android.graphics.Color;
 import android.os.Parcel;
 
 import com.arlib.floatingsearchview.suggestions.model.SearchSuggestion;
@@ -23,7 +24,7 @@ public class StudentService extends Feature implements SearchSuggestion {
 
     StudentService(LatLng ll, String name,
                    String address, String phone, String url, String description) {
-        super(ll, name, true, true);
+        super(ll, name, true, true, Color.parseColor("#993399"));
         this.address = address;
         this.url = url;
         this.description = description;
