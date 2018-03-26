@@ -43,7 +43,8 @@
             android:parentActivityName=".MapsActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MapsActivity" />
+                android:value=".MapsActivity"
+                />
         </activity>
     </application>
 

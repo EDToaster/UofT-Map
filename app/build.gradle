@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
+    compileSdkVersion 26
     buildToolsVersion "26.0.2"
     defaultConfig {
         applicationId "tech.edt.MapApp"
@@ -27,11 +27,10 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:multidex:1.0.2'
-    compile 'com.google.android.gms:play-services:10.0.1'
     compile 'com.github.arimorty:floatingsearchview:2.1.1'
-    compile 'com.android.support:preference-v14:25.4.0'
-    compile 'com.android.support:appcompat-v7:25.4.0'
-    compile 'com.android.support:design:25.4.0'
+    compile 'com.android.support:preference-v14:26.1.0'
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.android.support:design:26.1.0'
     compile 'com.github.medyo:android-about-page:1.2.2'
 
 
@@ -45,4 +44,5 @@ dependencies {
     compile 'com.mikepenz:google-material-typeface:1.2.0@aar'
 
     testCompile 'junit:junit:4.12'
+    compile 'com.google.android.gms:play-services-maps:12.0.0'
 }
