@@ -135,6 +135,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         setUpDrawers();
 
         setUpPreferencesAndUniversity();
+
+
     }
 
     /**
@@ -258,6 +260,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
         });
 
+        enableFeatures(food, green, studentService);
 
     }
 
@@ -558,10 +561,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                         String tag = (String) drawerItem.getTag();
                         if (tag.startsWith("f_")) {
-                            drawerItem.withSetSelected(!drawerItem.isSelected());
-                            setVisibilityAndUpdateMarkers(tag,
-                                    drawerItem.isSelected());
-                            updateDrawerItem(drawerItem);
+                            enableFeatures((SecondaryDrawerItem) drawerItem);
                         } else if (tag.startsWith("s_")) {
                             switch (tag) {
                                 case T_FEEDBACK:
@@ -600,6 +600,20 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     }
                 })
                 .build();
+
+
+    }
+
+    /**Enable features on the map
+     * @param drawerItems draweritems whose features should be enabled
+     */
+    private void enableFeatures(SecondaryDrawerItem... drawerItems){
+        for(SecondaryDrawerItem drawerItem: drawerItems) {
+            drawerItem.withSetSelected(!drawerItem.isSelected());
+            setVisibilityAndUpdateMarkers((String) drawerItem.getTag(),
+                    drawerItem.isSelected());
+            updateDrawerItem(drawerItem);
+        }
     }
 
 
