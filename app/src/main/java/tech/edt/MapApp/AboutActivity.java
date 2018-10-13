@@ -32,7 +32,7 @@ public class AboutActivity extends AppCompatActivity {
                 .isRTL(false)
                 .setDescription("Unofficial University of Toronto map app. Designed and " +
                         "Developed by Howard Chen and Murad Akhundov in 2018")
-                .setImage(R.drawable.uoft)
+                .setImage(R.drawable.loading_gif)
                 .addItem(new Element().setTitle("Version " + BuildConfig.VERSION_NAME))
                 .addGitHub("EDToaster/MapAppRepo/", "Github")
                 .create();
