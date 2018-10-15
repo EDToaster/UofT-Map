@@ -202,7 +202,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 Feature f = (Feature) marker.getTag();
                 if (f.isClickable()) {
                     BottomSheetDialogFragment bottomSheetDialogFragment = new BottomSheetManager();
-                    ((BottomSheetManager)bottomSheetDialogFragment).setFeature(f);
+                    ((BottomSheetManager) bottomSheetDialogFragment).setFeature(f);
 
                     bottomSheetDialogFragment.show(getSupportFragmentManager(),
                             bottomSheetDialogFragment.getTag());
@@ -358,8 +358,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
             @Override
             public void onSearchAction(String currentQuery) {
-                ArrayList<Feature> suggestions =new GetSearchResultsTask().doInBackground(mSearchView.getQuery());
-                if(suggestions.size() != 0) {
+                ArrayList<Feature> suggestions = new GetSearchResultsTask().doInBackground(mSearchView.getQuery());
+                if (suggestions.size() != 0) {
                     Feature suggestion = suggestions.get(0);
                     mSearchView.setSearchFocused(false);
                     mSearchView.setSearchText(suggestion.toShortString());
@@ -415,7 +415,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
-    private void selectFeature(Feature feature){
+    private void selectFeature(Feature feature) {
         LatLng ll = feature.getLatLng();
         Marker tempMarker = feature.getMarker(mMap);
         persistent.clear();
@@ -458,7 +458,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private SecondaryDrawerItem bike;
     private SecondaryDrawerItem car;
     private SecondaryDrawerItem studentService;
-    private SecondaryDrawerItem safety;
     private SecondaryDrawerItem green;
     private SecondaryDrawerItem community;
 
@@ -498,9 +497,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .withName("Student Services").withSelectable(false).withIcon(Util.getStudentBMP()
                         .getID()).withTag(T_SS);
 
-        safety = new SecondaryDrawerItem().withIdentifier(26)
-                .withName("Safety").withSelectable(false).withIcon(Util.getSafetyBMP()
-                        .getID()).withTag(T_SAFETY);
+//        safety = new SecondaryDrawerItem().withIdentifier(26)
+//                .withName("Safety").withSelectable(false).withIcon(Util.getSafetyBMP()
+//                        .getID()).withTag(T_SAFETY);
 
         green = new SecondaryDrawerItem().withIdentifier(27)
                 .withName("Green Spaces").withSelectable(false).withIcon(Util.getGreenBMP()
@@ -604,11 +603,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
-    /**Enable features on the map
+    /**
+     * Enable features on the map
+     *
      * @param drawerItems draweritems whose features should be enabled
      */
-    private void enableFeatures(SecondaryDrawerItem... drawerItems){
-        for(SecondaryDrawerItem drawerItem: drawerItems) {
+    private void enableFeatures(SecondaryDrawerItem... drawerItems) {
+        for (SecondaryDrawerItem drawerItem : drawerItems) {
             drawerItem.withSetSelected(!drawerItem.isSelected());
             setVisibilityAndUpdateMarkers((String) drawerItem.getTag(),
                     drawerItem.isSelected());
@@ -637,22 +638,22 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         drawer.removeItems(21, 22, 23, 24, 25, 26, 27, 28);
 
         switch (camp) {
-            case "c_UTSG":
+            case T_UTSG:
                 drawer.addItemsAtPosition(pos, building,
                         food,
                         bike,
                         car,
                         studentService,
-                        safety,
+//                        safety,
                         green,
                         community);
                 break;
-            case "c_UTM":
+            case T_UTM:
                 drawer.addItemsAtPosition(pos, building,
                         food
                 );
                 break;
-            case "c_UTSC":
+            case T_UTSC:
                 drawer.addItemsAtPosition(pos, building,
                         food
                 );
@@ -667,7 +668,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      */
     private void setHybridUISelected(boolean isHybrid) {
         for (SecondaryDrawerItem item : hybridDrawerItems) {
-            if (item.getTag().equals("m_hybrid"))
+            if (item.getTag().equals(T_HYBRID))
                 item.withSetSelected(isHybrid);
             else
                 item.withSetSelected(!isHybrid);
